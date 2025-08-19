@@ -9627,10 +9627,10 @@ export default function Activity() {
                 </div>
               </div>
             </div> */}
-             <div data-v-4a7709f3="" className="box">
+             <div data-v-4a7709f3="" className="box" onClick={()=>navigate('/activity/ActivityDetail')}>
               <img
                 data-v-4a7709f3=""
-                src="assets/png/new/Banner_20240110083058enng.png"
+                src = "assets/png/Banner_20230930162805eioo.png"
                 className="act_1"
               />
               <div data-v-4a7709f3="" className="box-content">

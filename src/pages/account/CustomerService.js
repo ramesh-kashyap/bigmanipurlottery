@@ -4,6 +4,7 @@ export default function CustomerService() {
   const navigate = useNavigate();
   return (
     <div style={{fontSize: '12px'}}>
+       
     <svg
       xmlns="http://www.w3.org/2000/svg"
       style={{position: 'absolute', width: '0', height: '0'}}
@@ -9552,7 +9553,7 @@ export default function CustomerService() {
             />
           </div>
         </div>
-        <div data-v-f4c030dd="" data-v-26935615="" className="content"   onClick={() => (window.location.href = 'https://t.me/Andrew_O98')}>
+        {/* <div data-v-f4c030dd="" data-v-26935615="" className="content"   onClick={() => (window.location.href = 'https://t.me/Andrew_O98')}>
           <div data-v-f4c030dd="">
             <div data-v-f4c030dd="" className="content-item">
               <div data-v-f4c030dd="" className="content-item-title">
@@ -9571,8 +9572,8 @@ export default function CustomerService() {
             </div>
           </div>
           
-        </div>
-    
+        </div> */}
+{/*     
         <div data-v-f4c030dd="" data-v-26935615="" className="content">
           
           <div data-v-f4c030dd="">
@@ -9593,8 +9594,290 @@ export default function CustomerService() {
             </div>
           </div>
           
+
+        </div> */}
+        <div className="home-main" >
+<div data-v-0122c10a="" className="selfService" style={{ padding: ".26667rem" }}>
+  <h2 data-v-0122c10a="">Self Service</h2>
+  <ul data-v-0122c10a="">
+    <li data-v-0122c10a=""  onClick={() => window.open('https://t.me/it_zafira_6732', '_blank')}>
+      <div data-v-0122c10a="" className="service-text">
+        <div
+          data-v-0122c10a=""
+          className="van-image"
+          style={{ width: "40px", height: "40px" }}
+        >
+          <img
+            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/095721922-201595-11.png"
+            className="van-image__img"
+            alt="Deposit Not Received"
+          />
         </div>
-       
+        <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
+          Deposit Not Received
+        </span>
+      </div>
+      <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
+        <use data-v-392c0849="" xlinkHref="#icon-arrow" />
+      </svg>
+    </li>
+
+    <li data-v-0122c10a="" onClick={() => window.open('https://t.me/it_zafira_6732', '_blank')}>
+      <div data-v-0122c10a="" className="service-text">
+        <div
+          data-v-0122c10a=""
+          className="van-image"
+          style={{ width: "40px", height: "40px" }}
+        >
+          <img
+            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/100144905-201612-08.png"
+            className="van-image__img"
+            alt="Withdrawal Problem"
+          />
+        </div>
+        <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
+          Withdrawal Problem
+        </span>
+      </div>
+      <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
+        <use data-v-392c0849="" xlinkHref="#icon-arrow" />
+      </svg>
+    </li>
+
+    <li data-v-0122c10a=""onClick={() => window.open('https://t.me/it_zafira_6732', '_blank')} >
+      <div data-v-0122c10a="" className="service-text">
+        <div
+          data-v-0122c10a=""
+          className="van-image"
+          style={{ width: "40px", height: "40px" }}
+        >
+          <img
+            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/100210310-201613-01.png"
+            className="van-image__img"
+            alt="Change Login Password"
+          />
+        </div>
+        <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
+          Change Login Password
+        </span>
+      </div>
+      <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
+        <use data-v-392c0849="" xlinkHref="#icon-arrow" />
+      </svg>
+    </li>
+
+    <li data-v-0122c10a="" onClick={() => window.open('https://t.me/it_zafira_6732', '_blank')}>
+      <div data-v-0122c10a="" className="service-text">
+        <div
+          data-v-0122c10a=""
+          className="van-image"
+          style={{ width: "40px", height: "40px" }}
+        >
+          <img
+            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/095739444-201596-04.png"
+            className="van-image__img"
+            alt="IFSC Modification"
+          />
+        </div>
+        <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
+          IFSC Modification
+        </span>
+      </div>
+      <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
+        <use data-v-392c0849="" xlinkHref="#icon-arrow" />
+      </svg>
+    </li>
+
+    <li data-v-0122c10a="" onClick={() => window.open('https://t.me/it_zafira_6732', '_blank')}>
+      <div data-v-0122c10a="" className="service-text">
+        <div
+          data-v-0122c10a=""
+          className="van-image"
+          style={{ width: "40px", height: "40px" }}
+        >
+          <img
+            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/095854254-201602-06.png"
+            className="van-image__img"
+            alt="Change bank name"
+          />
+        </div>
+        <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
+          Change bank name
+        </span>
+      </div>
+      <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
+        <use data-v-392c0849="" xlinkHref="#icon-arrow" />
+      </svg>
+    </li>
+
+    <li data-v-0122c10a="" onClick={() => window.open('https://t.me/it_zafira_6732', '_blank')}>
+      <div data-v-0122c10a="" className="service-text">
+        <div
+          data-v-0122c10a=""
+          className="van-image"
+          style={{ width: "40px", height: "40px" }}
+        >
+          <img
+            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/100011355-201607-06.png"
+            className="van-image__img"
+            alt="Modify Bank Information"
+          />
+        </div>
+        <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
+          Modify Bank Information
+        </span>
+      </div>
+      <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
+        <use data-v-392c0849="" xlinkHref="#icon-arrow" />
+      </svg>
+    </li>
+
+    <li data-v-0122c10a="" onClick={() => window.open('https://t.me/it_zafira_6732', '_blank')}>
+      <div data-v-0122c10a="" className="service-text">
+        <div
+          data-v-0122c10a=""
+          className="van-image"
+          style={{ width: "40px", height: "40px" }}
+        >
+          <img
+            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/100028654-201608-05.png"
+            className="van-image__img"
+            alt="Add USDT Address"
+          />
+        </div>
+        <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
+          Add USDT Address
+        </span>
+      </div>
+      <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
+        <use data-v-392c0849="" xlinkHref="#icon-arrow" />
+      </svg>
+    </li>
+
+    <li data-v-0122c10a="" onClick={() => window.open('https://t.me/it_zafira_6732', '_blank')}>
+      <div data-v-0122c10a="" className="service-text">
+        <div
+          data-v-0122c10a=""
+          className="van-image"
+          style={{ width: "40px", height: "40px" }}
+        >
+          <img
+            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/112608536-248583-05.png"
+            className="van-image__img"
+            alt="Change USDT Address"
+          />
+        </div>
+        <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
+          Change USDT Address
+        </span>
+      </div>
+      <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
+        <use data-v-392c0849="" xlinkHref="#icon-arrow" />
+      </svg>
+    </li>
+
+    <li data-v-0122c10a="" onClick={() => window.open('https://t.me/it_zafira_6732', '_blank')}>
+      <div data-v-0122c10a="" className="service-text">
+        <div
+          data-v-0122c10a=""
+          className="van-image"
+          style={{ width: "40px", height: "40px" }}
+        >
+          <img
+            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Dev/System/124522128-2846-121439239-2840-黄色-01.png"
+            className="van-image__img"
+            alt="Activity Bonus"
+          />
+        </div>
+        <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
+          Activity Bonus
+        </span>
+      </div>
+      <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
+        <use data-v-392c0849="" xlinkHref="#icon-arrow" />
+      </svg>
+    </li>
+
+    <li data-v-0122c10a="" onClick={() => window.open('https://t.me/it_zafira_6732', '_blank')}>
+      <div data-v-0122c10a="" className="service-text">
+        <div
+          data-v-0122c10a=""
+          className="van-image"
+          style={{ width: "40px", height: "40px" }}
+        >
+          <img
+            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/084050261-201516-15.png"
+            className="van-image__img"
+            alt="Official Channel"
+          />
+        </div>
+        <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
+          【Big Manipur Game】Official Channel
+        </span>
+      </div>
+      <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
+        <use data-v-392c0849="" xlinkHref="#icon-arrow" />
+      </svg>
+    </li>
+
+    <li data-v-0122c10a="" onClick={() => window.open('https://t.me/it_zafira_6732', '_blank')}>
+      <div data-v-0122c10a="" className="service-text">
+        <div
+          data-v-0122c10a=""
+          className="van-image"
+          style={{ width: "40px", height: "40px" }}
+        >
+          <img
+            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/025555579-261743-15.png"
+            className="van-image__img"
+            alt="Find Teacher"
+          />
+        </div>
+        <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
+          Find Teacher
+        </span>
+      </div>
+      <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
+        <use data-v-392c0849="" xlinkHref="#icon-arrow" />
+      </svg>
+    </li>
+
+    <li data-v-0122c10a="" onClick={() => window.open('https://t.me/it_zafira_6732', '_blank')}>
+      <div data-v-0122c10a="" className="service-text">
+        <div
+          data-v-0122c10a=""
+          className="van-image"
+          style={{ width: "40px", height: "40px" }}
+        >
+          <img
+            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/094925172-201583-16.png"
+            className="van-image__img"
+            alt="Check Daman Official Website"
+          />
+        </div>
+        <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
+          Check Big Manipur Official Website
+        </span>
+      </div>
+      <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
+        <use data-v-392c0849="" xlinkHref="#icon-arrow" />
+      </svg>
+    </li>
+
+    <li data-v-0122c10a="" onClick={() => window.open('https://t.me/it_zafira_6732', '_blank')}>
+      <div data-v-0122c10a="">
+        <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
+          <use data-v-392c0849="" xlinkHref="#icon-custom_service" />
+        </svg>
+        <span data-v-0122c10a="">Online service</span>
+      </div>
+      <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
+        <use data-v-392c0849="" xlinkHref="#icon-arrow" />
+      </svg>
+    </li>
+  </ul>
+</div>
+</div>
       </div>
       <div
         className="customer"

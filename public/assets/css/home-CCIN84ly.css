@@ -6,6 +6,9 @@
     font-weight: 700;
     font-size: .4rem;
 }
+.home-main .selfService ul li[data-v-0122c10a]:not(:last-child) {
+    border-bottom: .01333rem solid var(--Dividing-line_color);
+}
 .cg-default.van-button .van-button__icon[data-v-d06787cb] {
     height: 100%;
     display: -webkit-box;
