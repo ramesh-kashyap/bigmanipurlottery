@@ -9754,7 +9754,7 @@ export default function Account() {
               <div data-v-7d799898="" onClick={()=>navigate('/wallet')}>
                 <svg data-v-7d799898="" className="svg-icon icon-wallets">
                   <use href="#icon-wallets"></use></svg
-                > <span data-v-7d799898="">Wallet</span>
+                > <span data-v-7d799898=""> {t('wallet')}</span>
               </div>
             </div>
             <div
@@ -9764,7 +9764,7 @@ export default function Account() {
               <div data-v-7d799898="" onClick={()=>navigate('/wallet/deposit')}>
                 <svg data-v-7d799898="" className="svg-icon icon-rechargeIcon">
                   <use href="#icon-rechargeIcon"></use></svg
-                > <span data-v-7d799898="">Deposit</span>
+                > <span data-v-7d799898="">{t('Deposit')}   </span>
               </div>
             </div>
             <div
