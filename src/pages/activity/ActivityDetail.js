@@ -9503,7 +9503,7 @@ export default function ActivityDetail() {
       >
         <div data-v-12a80a3e="" className="navbar-fixed">
           <div data-v-12a80a3e="" className="navbar__content">
-            <div data-v-12a80a3e="" className="navbar__content-left">
+            <div data-v-12a80a3e="" className="navbar__content-left" onClick={()=>navigate('/activity')}>
               <i
                 data-v-12a80a3e=""
                 className="van-badge__wrapper van-icon van-icon-arrow-left"
@@ -9520,7 +9520,7 @@ export default function ActivityDetail() {
           </div>
         </div>
       </div>
-      <div
+      {/* <div
         data-v-cfff515d=""
         className="active-container"
         style={{'--f13b4d11CurrentFontFamily': "'Roboto', 'Inter', 'sansSerif'"}}
@@ -9541,8 +9541,42 @@ export default function ActivityDetail() {
             </p>
           </div>
         </div>
-      </div>
-    
+      </div> */}
+      
+<div
+        data-v-cfff515d=""
+        className="active-container"
+        style={{'--f13b4d11CurrentFontFamily': "'Roboto', 'Inter', 'sansSerif'"}}
+      >
+        <img
+          data-v-cfff515d=""
+          className="banner"
+          src="/assets/png/new/Banner_20240131163932lnmf.png"
+        />
+  
+  <div data-v-cfff515d="" className="active-box">
+    <div data-v-cfff515d="" className="title">
+      Become Agent Enjoy Luxury Rewards
+    </div>
+    <div data-v-cfff515d="">
+      <p></p>
+      <blockquote>DamanGames Offer Agents With Luxury Rewards</blockquote>
+      <br /> {/* ✅ Correct */}
+      <blockquote>
+        After You Referral Someone And Meet The Requirement, You Need To Contact
+        Your Teacher To Receive The Corresponding Gold
+      </blockquote>
+      <br /> {/* ✅ Correct */}
+      <blockquote>
+        For More Details Visit DamanGames VIP Website : <br />{" "}
+        <a href="https://vip.bigmanipurlottery.in/" target="_blank" rel="noreferrer">
+          https://vip.bigmanipurlottery.in/
+        </a>
+      </blockquote>
+      <p></p>
+    </div>
+  </div>
+</div>
       <div
         className="customer"
         id="customerId"

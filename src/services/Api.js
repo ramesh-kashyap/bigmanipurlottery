@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const Api = axios.create({
 
-  baseURL: 'http://localhost:3003',
+  baseURL: 'https://gurugames.org',
   headers: {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*',
