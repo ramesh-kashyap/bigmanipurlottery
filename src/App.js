@@ -18,6 +18,8 @@ import K3 from './pages/bet/k3/K3';
 import K33 from './pages/bet/k3/K33';
 import K35 from './pages/bet/k3/K35';
 import K310 from './pages/bet/k3/K310';
+import Language from './components/Language'; 
+import CustomModal from './components/CustomModal';
 
 import PrivateRoute from './components/PrivateRoute'; // Import the PrivateRoute component
 import Account from './pages/account/Account';
@@ -120,6 +122,9 @@ function App() {
               <Dashboard />
           }
         />
+
+
+
         <Route
           path="/activity"
           element={
@@ -129,6 +134,10 @@ function App() {
           }
         />
         <Route path="/wallet" element={<PrivateRoute><Wallet/></PrivateRoute>}/>
+        <Route path="/language" element={<PrivateRoute><Language/></PrivateRoute>}/>
+          <Route path="/CustomModal" element={<PrivateRoute><CustomModal/></PrivateRoute>}/>
+
+
         <Route path="/promotion" element={<PrivateRoute><Promotion/></PrivateRoute>}/>
         <Route path="/promotion/PromotionShare" element={<PrivateRoute><PromotionShare/></PrivateRoute>}/>
         <Route path="/promotion/TeamPartner" element={<PrivateRoute><TeamPartner/></PrivateRoute>}/>

@@ -3,9 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import Api from '../../services/Api';
 import Loader from '../../components/Loader';
 import { useToast } from '../../components/ToastContext'; 
-
+import { useTranslation } from "react-i18next";
 
 export default function Account() {
+  const { t } = useTranslation();
 
     const [totalMoney, setTotalMoney] = useState(0);
     const [uid, setUid] = useState(null);
@@ -9731,7 +9732,7 @@ export default function Account() {
                 data-v-7d799898=""
                 className="totalSavings__container-header__title"
               >
-                <span data-v-7d799898="">Total balance</span
+                <span data-v-7d799898="">{t('total')}</span
                 >
               </div>
               <p
@@ -9753,7 +9754,7 @@ export default function Account() {
               <div data-v-7d799898="" onClick={()=>navigate('/wallet')}>
                 <svg data-v-7d799898="" className="svg-icon icon-wallets">
                   <use href="#icon-wallets"></use></svg
-                > <span data-v-7d799898="">Wallet</span>
+                > <span data-v-7d799898=""> {t('wallet')}</span>
               </div>
             </div>
             <div
@@ -9763,7 +9764,7 @@ export default function Account() {
               <div data-v-7d799898="" onClick={()=>navigate('/wallet/deposit')}>
                 <svg data-v-7d799898="" className="svg-icon icon-rechargeIcon">
                   <use href="#icon-rechargeIcon"></use></svg
-                > <span data-v-7d799898="">Deposit</span>
+                > <span data-v-7d799898="">{t('Deposit')}   </span>
               </div>
             </div>
             <div
@@ -10037,7 +10038,7 @@ export default function Account() {
             </div>
             <div
               data-v-a30d19b1=""
-              className="settingPanel__container-items__item ar-1px-b"
+              className="settingPanel__container-items__item ar-1px-b"  onClick={()=>navigate('/language')}
             >
               <div
                 data-v-a30d19b1=""
@@ -10045,10 +10046,14 @@ export default function Account() {
               >
                 <svg data-v-a30d19b1="" className="svg-icon icon-language">
                   <use href="#icon-language"></use></svg
-                ><span
-                  data-v-a30d19b1=""
-                  >Language</span
                 >
+                
+                <span
+                  data-v-a30d19b1=""
+                  >Language </span>
+
+
+
               </div>
               <div
                 data-v-a30d19b1=""
@@ -10056,7 +10061,7 @@ export default function Account() {
               >
                 <h5 data-v-a30d19b1="" style={{display: 'none'}}>1</h5>
                 <span data-v-a30d19b1="">English</span
-                ><i
+                > <i
                   data-v-a30d19b1=""
                   className="van-badge__wrapper van-icon van-icon-arrow"
                   style={{color: 'rgb(102, 102, 102)'}}
