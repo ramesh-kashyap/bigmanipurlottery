@@ -3,8 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import Api from '../../services/Api';
 import { useLocation } from 'react-router-dom';
 import { useToast } from '../../components/ToastContext'; 
+import { useTranslation } from "react-i18next";
+
 
 export default function Deposit(){
+    const { t } = useTranslation();
+  
   const [depositHistory, setDepositHistory] = useState([]);
 
 
@@ -394,11 +398,11 @@ const showSection = (sectionId) => {
                 <div data-v-12a80a3e="" className="navbar__content-center">
                   
                   <div data-v-12a80a3e="" className="navbar__content-title">
-                    Deposit
+                    {t('Deposit')}
                   </div>
                 </div>
                 <div data-v-12a80a3e="" className="navbar__content-right">
-                  <div data-v-36cc3380="" className="title" onClick={()=>navigate('/wallet/DepositHistory')}>Deposit history</div>
+                  <div data-v-36cc3380="" className="title" onClick={()=>navigate('/wallet/DepositHistory')}>{t('Deposit history')}</div>
                 </div>
               </div>
             </div>
@@ -410,7 +414,7 @@ const showSection = (sectionId) => {
                   data-v-98c90f53=""
                   src="/assets/png/balance-e39ce400.png"
                 />
-                Balance
+                {t('Balance')}
               </div>
             </div>
             <div data-v-98c90f53="" className="balanceAssets__main">
@@ -447,7 +451,7 @@ const showSection = (sectionId) => {
                     data-v-4f3d8608=""
                     className="Recharge__container-tabcard__bot"
                   >
-                    UPI-transfer
+                    {t('UPI-transfer')}
                   </div>
                 </div>
               </div>
@@ -518,7 +522,7 @@ const showSection = (sectionId) => {
                   <svg data-v-9e03166f="" className="svg-icon icon-quickpay2">
                     <use href="#icon-quickpay2"></use>
                   </svg>
-                  <p data-v-9e03166f="">Select channel</p>
+                  <p data-v-9e03166f="">{t('Select channel')}</p>
                 </div>
               </div>
               <div data-v-9e03166f="" className="rechargeTypes_list"  id="UsdtTrc" style={{ display: activeSection === 'UsdtTrc' ? 'grid' : 'none' }}>
@@ -529,7 +533,7 @@ const showSection = (sectionId) => {
                    
                   <div data-v-9e03166f="" className="other">
                     <div data-v-9e03166f="">USDT-Super</div>
-                    <div data-v-9e03166f="">Balance:10 - 1K</div>
+                    <div data-v-9e03166f="">{t('Balance')}:10 - 1K</div>
                     
                   </div>
                 </div>
@@ -539,7 +543,7 @@ const showSection = (sectionId) => {
                 >
                   <div data-v-9e03166f="" className="other">
                     <div data-v-9e03166f="">USDT-ceco</div>
-                    <div data-v-9e03166f="">Balance:10 - 5K</div>
+                    <div data-v-9e03166f="">{t('Balance')}:10 - 5K</div>
                     
                   </div>
                 </div>
@@ -554,7 +558,7 @@ const showSection = (sectionId) => {
                    
                   <div data-v-9e03166f="" className="other">
                     <div data-v-9e03166f="">USDT-Super</div>
-                    <div data-v-9e03166f="">Balance:300 - 50K</div>
+                    <div data-v-9e03166f="">{t('Balance')}:300 - 50K</div>
                     
                   </div>
                 </div>
@@ -564,7 +568,7 @@ const showSection = (sectionId) => {
                 >
                   <div data-v-9e03166f="" className="other">
                     <div data-v-9e03166f="">USDT-ceco</div>
-                    <div data-v-9e03166f="">Balance:500 - 50K</div>
+                    <div data-v-9e03166f="">{t('Balance')}:500 - 50K</div>
                     
                   </div>
                 </div>
@@ -575,14 +579,14 @@ const showSection = (sectionId) => {
                 <div data-v-9e03166f="" className={`Recharge__content-quickInfo__item ${activeSection === 'UsdtBep' ? 'item_active' : ''}`}  onClick={() => showSection('UsdtBep')}>
                   <div data-v-9e03166f="" className="other">
                     <div data-v-9e03166f="">USDT-ARpay</div>
-                    <div data-v-9e03166f="">Balance:10 - 1K</div>
+                    <div data-v-9e03166f="">{t('Balance')}:10 - 1K</div>
                     
                   </div>
                 </div>
                 <div data-v-9e03166f="" className={`Recharge__content-quickInfo__item ${activeSection === 'UsdtBep1' ? 'item_active' : ''}`}  onClick={() => showSection('UsdtBep1')}>
                   <div data-v-9e03166f="" className="other">
                     <div data-v-9e03166f="">USDT-Super</div>
-                    <div data-v-9e03166f="">Balance:10 - 5K</div>
+                    <div data-v-9e03166f="">{t('Balance')}:10 - 5K</div>
                     
                   </div>
                 </div>
@@ -592,7 +596,7 @@ const showSection = (sectionId) => {
                 <div data-v-9e03166f="" className={`Recharge__content-quickInfo__item ${activeSection === 'UsdtBep' ? 'item_active' : ''}`}  onClick={() => showSection('UsdtBep')}>
                   <div data-v-9e03166f="" className="other">
                     <div data-v-9e03166f="">USDT-ARpay</div>
-                    <div data-v-9e03166f="">Balance:10 - 1K</div>
+                    <div data-v-9e03166f="">{t('Balance')}:10 - 1K</div>
                     
                   </div>
                 </div>
@@ -610,7 +614,7 @@ const showSection = (sectionId) => {
                 {/* <img data-v-98c90f53="" src="/assets/png/usdt.png" alt="" style={{width:'20px',position:'absolute', left:'30px', top:'482px'}}/>                */}
                   <div data-v-9e03166f="" className="other">                  
                     <div data-v-9e03166f=""  style={{paddingLeft:'18px'}}>QR-ARpay</div>
-                    <div data-v-9e03166f="">Balance:200 - 3K</div>
+                    <div data-v-9e03166f="">{t('Balance')}:200 - 3K</div>
                     
                   </div>
                 </div>
@@ -618,7 +622,7 @@ const showSection = (sectionId) => {
                 {/* <img data-v-98c90f53="" src="/assets/png/usdt.png" alt="" style={{width:'20px',position:'absolute', left:'30px', top:'482px'}}/>  */}
                   <div data-v-9e03166f="" className="other">
                     <div data-v-9e03166f="" style={{paddingLeft:'18px'}}>QR-3cPay</div>
-                    <div data-v-9e03166f="">Balance:500 - 100K</div>
+                    <div data-v-9e03166f="">{t('Balance')}e:500 - 100K</div>
                     
                   </div>
                 </div>
@@ -629,7 +633,7 @@ const showSection = (sectionId) => {
                 {/* <img data-v-98c90f53="" src="/assets/png/usdt.png" alt="" style={{width:'20px',position:'absolute', left:'30px', top:'482px'}}/>                */}
                   <div data-v-9e03166f="" className="other">                  
                     <div data-v-9e03166f=""  style={{paddingLeft:'18px'}}>QR-ARpay</div>
-                    <div data-v-9e03166f="">Balance:300 - 30K</div>
+                    <div data-v-9e03166f="">{t('Balance')}:300 - 30K</div>
                     
                   </div>
                 </div>
@@ -637,7 +641,7 @@ const showSection = (sectionId) => {
                 {/* <img data-v-98c90f53="" src="/assets/png/usdt.png" alt="" style={{width:'20px',position:'absolute', left:'30px', top:'482px'}}/>  */}
                   <div data-v-9e03166f="" className="other">
                     <div data-v-9e03166f="" style={{paddingLeft:'18px'}}>QR-3cPay</div>
-                    <div data-v-9e03166f="">Balance:500 - 100K</div>
+                    <div data-v-9e03166f="">{t('Balance')}:500 - 100K</div>
                     
                   </div>
                 </div>
@@ -649,7 +653,7 @@ const showSection = (sectionId) => {
                 <svg data-v-9e03166f="" className="svg-icon icon-saveWallet">
                   <use href="#icon-saveWallet"></use>
                 </svg>
-                <p data-v-9e03166f="">Deposit amount</p>
+                <p data-v-9e03166f="">{t('Deposit amount')}</p>
               </div>
               <div
                 data-v-9e03166f=""
@@ -1142,7 +1146,7 @@ const showSection = (sectionId) => {
     className="Recharge__container-rechageBtn rechage_active" 
     onClick={handleDeposit}
   >
-    Deposit
+    {t('Deposit')}
   </div>
 ):
 (
@@ -1151,7 +1155,7 @@ const showSection = (sectionId) => {
     className="Recharge__container-rechageBtn rechage_active" 
     onClick={handleUpiDeposit}
   >
-    Deposit
+    {t('Deposit')}
   </div>
 )
 }
@@ -1168,7 +1172,7 @@ const showSection = (sectionId) => {
                 alt=""
               />
               <div data-v-9e03166f="" className="wait_text">
-                You have 1 unpaid order
+                {t('You have 1 unpaid order')}
               </div>
               <div
                 data-v-9e03166f=""
@@ -1180,7 +1184,7 @@ const showSection = (sectionId) => {
                 ><span data-v-9e03166f="">0</span
                 ><span data-v-9e03166f="">0</span>
               </div>
-              <div data-v-9e03166f="" className="go_pay">Go pay</div>
+              <div data-v-9e03166f="" className="go_pay">{t('Go pay')}</div>
             </div>
             
           </div>
@@ -1196,27 +1200,24 @@ const showSection = (sectionId) => {
                   <use href="#icon-shuoming"></use>
                 </svg>
               </div>
-              <p data-v-7cba6004="">Recharge instructions</p>
+              <p data-v-7cba6004="">{t('Recharge instructions')}</p>
             </div>
             <div data-v-7cba6004="" className="Recharge__container-intro__lists">
               
               <div data-v-7cba6004="" className="item">
                 <p data-v-7cba6004="">
-                  If the transfer time is up, please fill out the deposit form
-                  again.
+                  {t('If the transfer time is up, please fill out the deposit form again')}
                 </p>
                 <p data-v-7cba6004="">
-                  The transfer amount must match the order you created,
-                  otherwise the money cannot be credited successfully.
+                   {t('The transfer amount must match the order you created,otherwise the money cannot be credited successfully')}
+
                 </p>
                 <p data-v-7cba6004="">
-                  If you transfer the wrong amount, our company will not be
-                  responsible for the lost amount!
+                   {t('If you transfer the wrong amount, our company will not be responsible for the lost amount!')}
                 </p>
                 
                 <p data-v-7cba6004="">
-                  Note: do not cancel the deposit order after the money has been
-                  transferred.
+                  {t('Note: do not cancel the deposit order after the money has been transferred')}.
                 </p>
               </div>
               
@@ -1231,11 +1232,11 @@ const showSection = (sectionId) => {
             <div data-v-9f5f4114="" className="record__main-title">
               <svg data-v-9f5f4114="" className="svg-icon icon-historyHead">
                 <use href="#icon-historyHead"></use></svg
-              ><span data-v-9f5f4114="">Deposit history</span>
+              ><span data-v-9f5f4114="">{t('Deposit history')}</span>
             </div>
             
             {depositHistory.length === 0 ? (
-  <div>No Data</div>
+  <div>{t('No Data')}</div>
 ) : (
   depositHistory.slice(0, 5).map((history, index) => (
     <div data-v-9f5f4114="" key={index}>
@@ -1244,7 +1245,7 @@ const showSection = (sectionId) => {
           data-v-9f5f4114=""
           className="record__main-info__title flex_between"
         >
-          <div data-v-9f5f4114="" className="recharge_text">Deposit</div>
+          <div data-v-9f5f4114="" className="recharge_text">{t('Deposit')}</div>
           <div data-v-9f5f4114="" className="flex_between">
             <div data-v-9f5f4114="" className="rechargeFail">
               {history.status === 0 ? "Pending" : history.status === 1 ? "Complete" : "Failed"}
@@ -1255,28 +1256,28 @@ const showSection = (sectionId) => {
           data-v-9f5f4114=""
           className="record__main-info__money item flex_between"
         >
-          <span data-v-9f5f4114="">Balance</span
+          <span data-v-9f5f4114="">{t('Balance')}</span
           ><span data-v-9f5f4114="">{history.money}</span>
         </div>
         <div
           data-v-9f5f4114=""
           className="record__main-info__type item flex_between"
         >
-          <span data-v-9f5f4114="">Type</span
+          <span data-v-9f5f4114="">{t('Type')}</span
           ><span data-v-9f5f4114="">{history.type}</span>
         </div>
         <div
           data-v-9f5f4114=""
           className="record__main-info__time item flex_between"
         >
-          <span data-v-9f5f4114="">Time</span
+          <span data-v-9f5f4114=""> {t('Time')}</span
           ><span data-v-9f5f4114="">{formatTimestampToIST(history.time)}</span>
         </div>
         <div
           data-v-9f5f4114=""
           className="record__main-info__orderNumber item flex_between"
         >
-          <span data-v-9f5f4114="">Order number</span>
+          <span data-v-9f5f4114=""> {t('Order number')}</span>
           <div data-v-9f5f4114="">
             <span data-v-9f5f4114="">{history.id_order}</span
             ><svg data-v-9f5f4114="" className="svg-icon icon-copy" alt="">
@@ -1313,12 +1314,12 @@ const showSection = (sectionId) => {
             </div>
             <div data-v-3e71d3da="" className="dialog__container-content">
               <div data-v-36cc3380="" className="cancen_model_cnt">
-                Please select another amount
+                 {t('Please select another amount')}.
               </div>
             </div>
             <div data-v-3e71d3da="" className="dialog__container-footer">
-              <button data-v-3e71d3da="">OK</button
-              ><button data-v-3e71d3da="">Cancel</button>
+              <button data-v-3e71d3da=""> {t('OK')}</button
+              ><button data-v-3e71d3da=""> {t('Cancel')}</button>
             </div>
             
           </div>
@@ -1343,25 +1344,25 @@ const showSection = (sectionId) => {
             </div>
             <div data-v-3e71d3da="" className="dialog__container-title">
               <h1 data-v-3e71d3da="">
-                You have been disabled from C2C transactions for 0 hours
+                 {t('You have been disabled from C2C transactions for 0 hours')}
               </h1>
             </div>
             <div data-v-3e71d3da="" className="dialog__container-content">
               <div data-v-36cc3380="" className="forbidden_tip">
-                0 hours remaining
+                0  {t('hours remaining')}
               </div>
               <div data-v-36cc3380="" className="forbidden1">
-                Because your transactions failed 0 times in a row
+                 {t('Because your transactions failed 0 times in a row')}
               </div>
               <div data-v-36cc3380="" className="forbidden2">
-                C2C recharge is prohibited within 0 hours
+                 {t('C2C recharge is prohibited within 0 hours')}
               </div>
               <div data-v-36cc3380="" className="forbidden3">
-                If you have any questions, please contact customer service
+                 {t('If you have any questions, please contact customer service')}
               </div>
             </div>
             <div data-v-3e71d3da="" className="dialog__container-footer">
-              <button data-v-3e71d3da="">Sure</button
+              <button data-v-3e71d3da=""> {t('Sure')}</button
               >
             </div>
             
@@ -1385,16 +1386,15 @@ const showSection = (sectionId) => {
               />
             </div>
             <div data-v-3e71d3da="" className="dialog__container-title">
-              <h1 data-v-3e71d3da="">safety warning</h1>
+              <h1 data-v-3e71d3da=""> {t('safety warning')}</h1>
             </div>
             <div data-v-3e71d3da="" className="dialog__container-content">
               <div data-v-36cc3380="" className="cancen_model_cnt">
-                Please use your own PIX account to obtain the order and QR code
-                for recharge. Do not use the QR code provided by others to pay.
+                 {t('Please use your own PIX account to obtain the order and QR code for recharge. Do not use the QR code provided by others to pay')}.
               </div>
             </div>
             <div data-v-3e71d3da="" className="dialog__container-footer">
-              <button data-v-3e71d3da="">Confirm</button
+              <button data-v-3e71d3da=""> {t('Confirm')}</button
               >
             </div>
             

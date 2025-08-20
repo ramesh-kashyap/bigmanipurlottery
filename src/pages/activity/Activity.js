@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 export default function Activity() {
+   const { t } = useTranslation();
+  
   const navigate = useNavigate();
   const [activeLink , setActiveLink] = useState(null);
 
@@ -9538,12 +9541,12 @@ export default function Activity() {
       >
         <div data-v-4a7709f3="" className="activity-banner">
           <div data-v-4a7709f3="">
-            <div data-v-4a7709f3="" className="banner-title">Activity</div>
+            <div data-v-4a7709f3="" className="banner-title">{t('Activity')}</div>
             <div data-v-4a7709f3="" className="banner-para">
-              Please remember to follow the event page
+              {t('Please remember to follow the event page')}
             </div>
             <div data-v-4a7709f3="" className="banner-para">
-              We will launch user feedback activities from time to time
+              {t('We will launch user feedback activities from time to time')}
             </div>
           </div>
         </div>
@@ -9555,26 +9558,26 @@ export default function Activity() {
       <div data-v-4a7709f3="" className="a4 bgcontainer" onClick={()=>navigate('/activity/DailyTasks')}></div>   
   </div>
 
-  <span data-v-4a7709f3="" onClick={()=>navigate('/activity/DailyTasks')}>Activity Award</span>
+  <span data-v-4a7709f3="" onClick={()=>navigate('/activity/DailyTasks')}>{t('Activity Award')}</span>
 </div>
 
             <div data-v-4a7709f3="" className="header-item">
               <div data-v-4a7709f3="" className="van-badge__wrapper"onClick={()=>navigate('/main/InvitationBonus')}>             
                 <div data-v-4a7709f3="" className="a2 bgcontainer"></div>
               </div>
-              <span data-v-4a7709f3=""onClick={()=>navigate('/main/InvitationBonus')}>Invitation bonus</span>
+              <span data-v-4a7709f3=""onClick={()=>navigate('/main/InvitationBonus')}>{t('Invitation bonus')}</span>
             </div>
             <div data-v-4a7709f3="" className="header-item">
               <div data-v-4a7709f3="" className="van-badge__wrapper" onClick={()=>navigate('/main/Laundry')}>              
                 <div data-v-4a7709f3="" className="a3 bgcontainer"></div>
               </div>
-              <span data-v-4a7709f3=""onClick={()=>navigate('/main/Laundry')}>Betting rebate</span>
+              <span data-v-4a7709f3=""onClick={()=>navigate('/main/Laundry')}>{t('Betting rebate')}</span>
             </div>
             <div data-v-4a7709f3="" className="header-item">
               <div data-v-4a7709f3="" className="van-badge__wrapper" onClick={()=>navigate('/main/SuperJackpot')}>
               <div data-v-4a7709f3="" className="a4 bgcontainer"></div>
               </div>
-              <span data-v-4a7709f3=""onClick={()=>navigate('/main/SuperJackpot')}>Super Jackpot</span>
+              <span data-v-4a7709f3=""onClick={()=>navigate('/main/SuperJackpot')}>{t('Super Jackpot')}</span>
             </div>
             
           </div>
@@ -9588,10 +9591,10 @@ export default function Activity() {
                 data-origin="/assets/png/signInBanner-33f86d3f.png"
                 src="/assets/png/signInBanner-33f86d3f.png"
               />
-              <div data-v-4a7709f3="" className="content-para">Gifts</div>
+              <div data-v-4a7709f3="" className="content-para">{t('Gifts')}</div>
               
               <p data-v-4a7709f3="">
-                Enter the redemption code to receive gift rewards
+                {t('Enter the redemption code to receive gift rewards')}
               </p>
             </div>
             <div data-v-4a7709f3="" className="content-title" onClick={()=>navigate('/activity/DailySignIn')}>
@@ -9603,11 +9606,10 @@ export default function Activity() {
                 src="/assets/png/giftRedeem-45917887.png"
               />
               <div data-v-4a7709f3="" className="content-para">
-                Attendance bonus
+                {t('Attendance bonus')}
               </div>
               <p data-v-4a7709f3="">
-                The more consecutive days you sign in, the higher the reward
-                will be.
+                {t('The more consecutive days you sign in, the higher the reward will be')}.
               </p>
             </div>
           </div>
@@ -9635,7 +9637,7 @@ export default function Activity() {
               />
               <div data-v-4a7709f3="" className="box-content">
                 <div data-v-4a7709f3="" className="box-title">
-                  Become Agent Enjoy Luxury Rewards
+                  {t('Become Agent Enjoy Luxury Rewards')}
                 </div>
               </div>
             </div>
@@ -9647,7 +9649,7 @@ export default function Activity() {
               />
               <div data-v-4a7709f3="" className="box-content">
                 <div data-v-4a7709f3="" className="box-title">
-                  Big Manipur Tips and Trick Avoid Scammer
+                  {t('Big Manipur Tips and Trick Avoid Scammer')}
                 </div>
               </div>
             </div>
@@ -9659,7 +9661,7 @@ export default function Activity() {
               />
               <div data-v-4a7709f3="" className="box-content">
                 <div data-v-4a7709f3="" className="box-title">
-                  Big Manipur Official Channel
+                  {t('Big Manipur Official Channel')}
                 </div>
               </div>
             </div>
@@ -9670,7 +9672,7 @@ export default function Activity() {
                 className="act_3"
               />
               <div data-v-4a7709f3="" className="box-content">
-                <div data-v-4a7709f3="" className="box-title">Betting Rebate</div>
+                <div data-v-4a7709f3="" className="box-title">{t('Betting Rebate')}</div>
               </div>
             </div>
             <div data-v-4a7709f3="" className="box">
@@ -9680,7 +9682,7 @@ export default function Activity() {
                 className="act_4"
               />
               <div data-v-4a7709f3="" className="box-content">
-                <div data-v-4a7709f3="" className="box-title">Real-Time Rebate</div>
+                <div data-v-4a7709f3="" className="box-title">{t('Real-Time Rebate')}</div>
               </div>
             </div>
             <div data-v-4a7709f3="" className="box">
@@ -9690,7 +9692,7 @@ export default function Activity() {
                 className="act_5"
               />
               <div data-v-4a7709f3="" className="box-content">
-                <div data-v-4a7709f3="" className="box-title">Super Jackpot</div>
+                <div data-v-4a7709f3="" className="box-title">{t('Super Jackpot')}</div>
               </div>
             </div>
             <div data-v-4a7709f3="" className="box">
@@ -9701,13 +9703,13 @@ export default function Activity() {
               />
               <div data-v-4a7709f3="" className="box-content">
                 <div data-v-4a7709f3="" className="box-title">
-                  Youtube Creative Video
+                  {t('Youtube Creative Video')}
                 </div>
               </div>
             </div>
           </div>
           
-          <div className="van-list__finished-text">No more</div>
+          <div className="van-list__finished-text">{t('No more')}</div>
           
           <div className="van-list__placeholder"></div>
         </div>
@@ -9745,26 +9747,26 @@ export default function Activity() {
             <div data-v-6ab3f23e="" className="tabbar__container-item"><svg data-v-6ab3f23e=""
                     className="svg-icon icon-home" onClick={()=> navigate('/index')}>
                     <use href="#icon-home"></use>
-                </svg><span data-v-6ab3f23e="" onClick={() => navigate('/index')}>Home</span></div>
+                </svg><span data-v-6ab3f23e="" onClick={() => navigate('/index')}>{t('Home')}</span></div>
             <div data-v-6ab3f23e="" className={`tabbar__container-item ${activeLink === '/activity' ? 'active':''}`}><svg data-v-6ab3f23e=""
                     className="svg-icon icon-activity" onClick={()=> navigate('/activity')}><use href="#icon-activity"></use>
                    
                 </svg>
-                <span data-v-6ab3f23e="" onClick={()=> navigate('/activity')}>Activity</span></div>
+                <span data-v-6ab3f23e="" onClick={()=> navigate('/activity')}>{t('Activity')}</span></div>
             <div data-v-6ab3f23e="" className="tabbar__container-item" onClick={()=> navigate('/promotion')}><svg data-v-6ab3f23e=""
                     className="svg-icon icon-promotion" onClick={()=> navigate('/promotion')}>
                     <use href="#icon-promotion"></use>
                 </svg>
                 <div data-v-6ab3f23e="" className="promotionBg"></div>
                 <span data-v-6ab3f23e="" onClick={()=> navigate('/promotion')}>
-                    Promotion</span>
+                    {t('Promotion')}</span>
             </div>
             <div data-v-6ab3f23e="" className="tabbar__container-item"><svg data-v-6ab3f23e="" className="svg-icon icon-wallet">
             <use href="#icon-wallet" onClick={()=> navigate('/wallet')}></use>
-                </svg><span data-v-6ab3f23e=""  onClick={()=> navigate('/wallet')}>Wallet</span></div>
+                </svg><span data-v-6ab3f23e=""  onClick={()=> navigate('/wallet')}>{t('Wallet')}</span></div>
             <div data-v-6ab3f23e="" className="tabbar__container-item"><svg data-v-6ab3f23e="" className="svg-icon icon-main"  onClick={()=> navigate('/account')}>
             <use href="#icon-main"></use>
-                </svg><span data-v-6ab3f23e="" onClick={()=> navigate('/account')}>Account</span></div>
+                </svg><span data-v-6ab3f23e="" onClick={()=> navigate('/account')}>{t('Account')}</span></div>
         </div>
       
     </div>

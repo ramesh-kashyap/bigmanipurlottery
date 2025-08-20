@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Api from '../../services/Api';
 import { useToast } from '../../components/ToastContext'; 
+import { t } from 'i18next';
 
 
 export default function Promotion(){
@@ -9599,7 +9600,7 @@ export default function Promotion(){
             </div>
             <div data-v-12a80a3e="" className="navbar__content-center">
               
-              <div data-v-12a80a3e="" className="navbar__content-title">Agency</div>
+              <div data-v-12a80a3e="" className="navbar__content-title">{t('Agency')}</div>
             </div>
             <div data-v-12a80a3e="" className="navbar__content-right">
               <svg data-v-600663f7="" className="svg-icon icon-subordinate" onClick={()=>navigate('/promotion/Subordinate')}>
@@ -9617,10 +9618,10 @@ export default function Promotion(){
       >
         <div data-v-6cf5705a="" className="amount">{promotion?.yesterdayComm }</div>
         <div data-v-6cf5705a="" className="amount_txt">
-          Yesterday's total commission
+          {t('Yesterday Total Commission')}
         </div>
         <div data-v-6cf5705a="" className="tip">
-          Upgrade the level to increase commission income
+         {t('Upgrade the level to increase commission income')}
         </div>
         <div data-v-6cf5705a="" className="info_content">
           <div data-v-6cf5705a="" className="info">
@@ -9628,31 +9629,31 @@ export default function Promotion(){
               <svg data-v-6cf5705a="" className="svg-icon icon-directSubordinates">
                 <use href="#icon-directSubordinates"></use>
               </svg>
-              Direct subordinates
+              {t('Direct subordinates')}
             </div>
             <div data-v-6cf5705a="" className="line1 r">
               <div data-v-6cf5705a="">      {directTeamDetails ? directTeamDetails.todayRegisterCount : 0}
               </div>
-              number of register
+              {t('number of register')}
             </div>
             <div data-v-6cf5705a="" className="line2 r">
               <div data-v-6cf5705a="">{directTeamDetails ? directTeamDetails.todayDepositNumber : 0}</div>
-              Deposit number
+              {t('Deposit number')}
             </div>
             <div data-v-6cf5705a="" className="line3 r">
               <div data-v-6cf5705a="">{directTeamDetails ? directTeamDetails.todayDepositAmount : 0}</div>
-              Deposit amount
+              {t('Deposit amount')}
             </div>
             <div data-v-6cf5705a="" className="line1 r">
               <div data-v-6cf5705a="">{directTeamDetails ? directTeamDetails.todayFirstDepositCount : 0}</div>
-              Number of people making first deposit
+              {t('Number of people making first deposit')}
             </div>
           </div>
           <div data-v-6cf5705a="" className="info">
             <div data-v-6cf5705a="" className="head u2"  style={{ color: "#e74c3c" }}>
               <svg data-v-6cf5705a="" className="svg-icon icon-teamSubordinates">
                 <use href="#icon-teamSubordinates"></use></svg
-              >Team subordinates
+              >{t('Team subordinates')}
             </div>
             <div data-v-6cf5705a="" className="line1">
   <div data-v-6cf5705a="">
@@ -9661,7 +9662,7 @@ export default function Promotion(){
       ? (teamSubordinatesDetails.todayRegisterCount - directTeamDetails.todayRegisterCount) 
       : 0}
   </div>
-  Number of register
+ {t('Number of register')}
 </div>
 
 <div data-v-6cf5705a="" className="line2">
@@ -9671,7 +9672,7 @@ export default function Promotion(){
       ? (teamSubordinatesDetails.todayDepositNumber - directTeamDetails.todayDepositNumber) 
       : 0}
   </div>
-  Deposit number
+  {t('Deposit number')}
 </div>
 
 <div data-v-6cf5705a="" className="line3">
@@ -9681,7 +9682,7 @@ export default function Promotion(){
       ? (teamSubordinatesDetails.todayDepositAmount - directTeamDetails.todayDepositAmount) 
       : 0}
   </div>
-  Deposit amount
+  {t('Deposit amount')}
 </div>
 
 <div data-v-6cf5705a="" className="line1">
@@ -9691,7 +9692,7 @@ export default function Promotion(){
       ? (teamSubordinatesDetails.todayFirstDepositCount - directTeamDetails.todayFirstDepositCount) 
       : 0}
   </div>
-  Number of people making first deposit
+  {t('Number of people making first deposit')}
 </div>
 
           </div>
@@ -9703,14 +9704,14 @@ export default function Promotion(){
         style={{'--f13b4d11-currentFontFamily': "'Roboto', 'Inter', 'sans-serif'"}}
       >
         <div data-v-600663f7="" className="shareBtnContainer">
-          <button data-v-600663f7="" className="shareBtn" onClick={()=>navigate('/promotion/PromotionShare')}> INVITATION LINK </button>
+          <button data-v-600663f7="" className="shareBtn" onClick={()=>navigate('/promotion/PromotionShare')}> {t('INVITATION LINK')} </button>
         </div>
         <div data-v-600663f7="" className="promote__cell">
           <div data-v-600663f7="" className="promote__cell-item" onClick={()=>navigate('/promotion/TeamPartner')}>
             <div data-v-600663f7="" className="label">
               <svg data-v-600663f7="" className="svg-icon icon-team_partner">
                 <use href="#icon-team_partner"></use></svg
-              > <span data-v-600663f7="">Partner rewards</span>
+              > <span data-v-600663f7="">{t('Partner rewards')}</span>
             </div>
             <div data-v-600663f7="" className="arrow">
               <i
@@ -9725,7 +9726,7 @@ export default function Promotion(){
             <div data-v-600663f7="" className="label">
               <svg data-v-600663f7="" className="svg-icon icon-copy_Code">
                 <use href="#icon-copy_Code"></use></svg
-              > <a href="#"><span data-v-600663f7="">Copy invitation code</span></a>
+              > <a href="#"><span data-v-600663f7="">{t('Copy invitation code')}</span></a>
             </div>
             <div data-v-600663f7="" className="arrow">
               <span data-v-600663f7=""
@@ -9743,7 +9744,7 @@ export default function Promotion(){
             <div data-v-600663f7="" className="label">
               <svg data-v-600663f7="" className="svg-icon icon-team_port">
                 <use href="#icon-team_port"></use></svg
-              ><span data-v-600663f7="">Subordinate data</span>
+              ><span data-v-600663f7="">{t('Subordinate data')}</span>
             </div>
             <div data-v-600663f7="" className="arrow">
               <i
@@ -9758,7 +9759,7 @@ export default function Promotion(){
             <div data-v-600663f7="" className="label">
               <svg data-v-600663f7="" className="svg-icon icon-commission">
                 <use href="#icon-commission"></use></svg
-              ><span data-v-600663f7="">Commission detail</span>
+              ><span data-v-600663f7="">{t('Commission detail')}</span>
             </div>
             <div data-v-600663f7="" className="arrow">
               <i
@@ -9773,7 +9774,7 @@ export default function Promotion(){
             <div data-v-600663f7="" className="label">
               <svg data-v-600663f7="" className="svg-icon icon-invite_reg">
                 <use href="#icon-invite_reg"></use></svg
-              ><span data-v-600663f7="">Invitation rules</span>
+              ><span data-v-600663f7="">{t('Invitation rules')}</span>
             </div>
             <div data-v-600663f7="" className="arrow">
               <i
@@ -9788,7 +9789,7 @@ export default function Promotion(){
             <div data-v-600663f7="" className="label">
               <svg data-v-600663f7="" className="svg-icon icon-server">
                 <use href="#icon-server"></use></svg
-              ><span data-v-600663f7="">Agent line customer service</span>
+              ><span data-v-600663f7="">{t('Agent line customer service')}</span>
             </div>
             <div data-v-600663f7="" className="arrow">
               <i
@@ -9803,7 +9804,7 @@ export default function Promotion(){
             <div data-v-600663f7="" className="label">
               <svg data-v-600663f7="" className="svg-icon icon-rebateRatio">
                 <use href="#icon-rebateRatio"></use></svg
-              ><span data-v-600663f7="">Rebate ratio</span>
+              ><span data-v-600663f7="">{t('Rebate ratio')}</span>
             </div>
             <div data-v-600663f7="" className="arrow">
               <i
@@ -9819,25 +9820,25 @@ export default function Promotion(){
           <div data-v-600663f7="" className="commission__title">
             <svg data-v-600663f7="" className="svg-icon icon-promotionData">
               <use href="#icon-promotionData"></use></svg
-            ><span data-v-600663f7="">promotion data</span>
+            ><span data-v-600663f7="">{t('promotion data')}</span>
           </div>
           <div data-v-600663f7="" className="commission__body">
             <div data-v-600663f7="">
               <span data-v-600663f7="">{commission ? commission.last7Days || 0 : 0}</span
-              ><span data-v-600663f7="">This Week</span>
+              ><span data-v-600663f7="">{t('This Week')}</span>
             </div>
            <span
               data-v-600663f7=""
             > </span>
             <div data-v-600663f7="">
               <span data-v-600663f7="">{commission ? commission.totalCommission || 0 : 0}</span
-              ><span data-v-600663f7="">Total commission</span>
+              ><span data-v-600663f7="">{t('Total commission')}</span>
             </div>
           </div>
           <div data-v-600663f7="" className="commission__body" style={{"marginBottom": '2rem'}}>
             <div data-v-600663f7="">
               <span data-v-600663f7="">{teamSubordinatesDetails ? teamSubordinatesDetails.directSubordinatesCount : 0}</span
-              ><span data-v-600663f7="">direct subordinate </span>
+              ><span data-v-600663f7="">{t('direct subordinate')} </span>
             </div>
             <span
               data-v-600663f7=""
@@ -9845,7 +9846,7 @@ export default function Promotion(){
             <div data-v-600663f7="">
               <span data-v-600663f7="">{teamSubordinatesDetails ? teamSubordinatesDetails.totalNumberOfRegister : 0}</span
               ><span data-v-600663f7=""
-                >Total number of subordinates in the team </span
+                >{t('Total number of subordinates in the team')} </span
               >
             </div>
           </div>
@@ -9870,12 +9871,12 @@ export default function Promotion(){
             <div data-v-6ab3f23e="" className="tabbar__container-item"><svg data-v-6ab3f23e=""
                     className="svg-icon icon-home" onClick={()=> navigate('/index')}>
                     <use href="#icon-home"></use>
-                </svg><span data-v-6ab3f23e="" onClick={() => navigate('/index')}>Home</span></div>
+                </svg><span data-v-6ab3f23e="" onClick={() => navigate('/index')}>{('Home')}</span></div>
             <div data-v-6ab3f23e="" className="tabbar__container-item" ><svg data-v-6ab3f23e=""
                     className="svg-icon icon-activity" onClick={()=> navigate('/activity')}><use href="#icon-activity"></use>
                    
                 </svg>
-                <span data-v-6ab3f23e="" onClick={()=> navigate('/activity')}>Activity</span></div>
+                <span data-v-6ab3f23e="" onClick={()=> navigate('/activity')}>{('Activity')}</span></div>
             <div data-v-6ab3f23e="" className={`tabbar__container-item ${activeLink === '/promotion' ? 'active':''}`} onClick={()=> navigate('/promotion')}><svg data-v-6ab3f23e=""
                     className="svg-icon icon-promotion" onClick={()=> navigate('/promotion')}>
                     <use href="#icon-promotion"></use>
