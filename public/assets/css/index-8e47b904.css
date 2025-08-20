@@ -134,7 +134,7 @@
 }
 
 .register__container-button .login[data-v-e26f70e7] {
-    border: .01333rem solid var(--main-color);
+    border: .01333rem solid #f88e59;
     text-shadow: none;
     background: transparent;
     box-shadow: none;
@@ -149,7 +149,7 @@
 
 .register__container-button .loginin[data-v-e26f70e7] {
     font-size: .4rem;
-    color: var(--main-color);
+    color: #f78b58;
     font-weight: 700;
     margin-left: .22667rem
 }

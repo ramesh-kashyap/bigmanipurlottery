@@ -1,8 +1,44 @@
-import React from 'react'
+import React, {  useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+import Api from '../../services/Api';
 export default function GameStats() {
   const navigate = useNavigate();
-  return (
+  
+ const [selectedTab, setSelectedTab] = useState('Today');
+  const [tabData, setTabData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+ 
+  const games = ['wingo', 'k3', '5d'];
+  const gameNames = {
+    wingo: 'Wingo',
+    k3: 'K3',
+    '5d': '5D',
+  };
+
+  
+  useEffect(() => {
+    console.log('hello1');
+    const fetchStats = async () => {
+      console.log('hello');
+      try {
+        const res = await Api.get(`/api/webapi/getGameStats`);
+        console.log('check:',res);
+        setTabData(res.data);
+      } catch (error) {
+        console.error('Failed to fetch stats:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchStats();
+  }, []);
+const tabs = ['Today', 'Yesterday', 'This week', 'This month'];
+  
+
+return (
     <div style={{fontSize: '12px'}}>
 
 
@@ -9525,19 +9561,22 @@ export default function GameStats() {
                 className="van-tabs__nav van-tabs__nav--card"
                 aria-orientation="horizontal"
               >
-                <div
-                  id="van-tabs-1-0"
-                  role="tab"
-                  className="van-tab van-tab--card van-tab--active"
-                  tabIndex="0"
-                  aria-selected="true"
-                  aria-controls="van-tab-2"
-                >
-                  <span className="van-tab__text van-tab__text--ellipsis"
-                    >Today</span
-                  >
-                </div>
-                <div
+                 {tabs.map((tab, index) => (
+  <div
+    key={tab}
+    id={`van-tabs-1-${index}`}
+    role="tab"
+    className={`van-tab van-tab--card ${selectedTab === tab ? 'van-tab--active' : ''}`}
+    tabIndex={selectedTab === tab ? 0 : -1}
+    aria-selected={selectedTab === tab}
+    aria-controls={`van-tab-${index + 2}`}
+    onClick={() => setSelectedTab(tab)}
+  >
+    <span className="van-tab__text van-tab__text--ellipsis">{tab}</span>
+  </div>
+))}
+
+                {/* <div
                   id="van-tabs-1-1"
                   role="tab"
                   className="van-tab van-tab--card"
@@ -9572,7 +9611,7 @@ export default function GameStats() {
                   <span className="van-tab__text van-tab__text--ellipsis"
                     >This month</span
                   >
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="van-tabs__content"></div>
@@ -9582,14 +9621,32 @@ export default function GameStats() {
       </div>
 
 
+
       
 
       <div data-v-0fabbe57="" className="gamestats-container-banner">
-        <h1 data-v-0fabbe57="">₹1,299.50</h1>
+        <h1 data-v-0fabbe57="">₹{
+['wingo', 'k3', 'nd5']
+.reduce((sum, gameKey) => {
+const game = tabData?.[selectedTab]?.[gameKey];
+if (!game) return sum;
+// Remove ₹ and commas, convert to number
+const betAmount = parseFloat(game.totalBet.replace(/[₹,]/g, '')) || 0;
+return sum + betAmount;
+}, 0)
+.toFixed(2)
+}</h1>
         <span data-v-0fabbe57="">Total bet</span>
       </div>
       <div data-v-0fabbe57="" className="gamestats-container-list-wrapper">
-        <div data-v-0fabbe57="" className="gamestats-container-items">
+         {['wingo', 'k3', '5d'].map((gameKey) => {
+      const game = tabData?.[selectedTab]?.[gameKey] || {
+        totalBet: '₹0.00',
+        winningAmount: '₹0.00',
+        numBets: 0,
+      };
+      return (
+        <div data-v-0fabbe57="" className="gamestats-container-items" key={gameKey}>
           <div data-v-0fabbe57="" className="gamestats-container-item">
             <h1 data-v-0fabbe57="">
               <img
@@ -9598,7 +9655,7 @@ export default function GameStats() {
                 className=""
                 data-origin="/assets/png/loterry-13b4d059.png"
                 src="/assets/png/loterry-13b4d059.png"
-              /><span data-v-0fabbe57="">lottery</span>
+              /><span data-v-0fabbe57="">{gameKey}</span>
             </h1>
             <div data-v-0fabbe57="" className="gamestats-container-item-content">
               <img
@@ -9614,21 +9671,23 @@ export default function GameStats() {
               >
                 <div data-v-0fabbe57="">
                   <h4 data-v-0fabbe57="">Total bet</h4>
-                  <h5 data-v-0fabbe57="">₹1,242.00</h5>
+                  <h5 data-v-0fabbe57="">{game.totalBet}</h5>
                 </div>
                 <div data-v-0fabbe57="">
                   <h4 data-v-0fabbe57="">Number of bets</h4>
-                  <h5 data-v-0fabbe57="">158</h5>
+                  <h5 data-v-0fabbe57="">{game.numBets}</h5>
                 </div>
                 <div data-v-0fabbe57="">
                   <h4 data-v-0fabbe57="">Winning amount</h4>
-                  <span data-v-0fabbe57="">₹886.90</span>
+                  <span data-v-0fabbe57="">{game.winningAmount}</span>
                 </div>
               </div>
             </div>
           </div>
          
         </div>
+        );
+    })}
       </div>
 
       <div

@@ -9634,7 +9634,7 @@ export default function BetRecords() {
                       </div>
                     </div>
                   </div>
-                  <div className="fun-tab-item funtab_item">
+                  {/* <div className="fun-tab-item funtab_item">
                     <div className="fun-tab-item__wrap">
                       <div className="fun-tab-item__label">
                         <div data-v-1d8fbc24="" className="tab_item">
@@ -9689,7 +9689,7 @@ export default function BetRecords() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   <div
                     className="fun-tabs__active-line"
                     style={{
@@ -9719,64 +9719,7 @@ export default function BetRecords() {
                         className="van-badge__wrapper van-icon van-icon-arrow-down"
                         ></i
                       >
-                      <div
-                        className="van-overlay"
-                        role="button"
-                        tabIndex="0"
-                        data-v-0a298b45=""
-                        style={{zIndex: '2001', display: isVisible ? 'block' : 'none'}}
-                      >
-                      </div>
-                      <div
-                        role="dialog"
-                        tabIndex="0"
-                        className="van-popup van-popup--round van-popup--bottom"
-                        data-v-0a298b45=""
-                        style={{zIndex: '2001', display: isVisible ? 'block' : 'none'}}
-                      >
-                        <div data-v-0a298b45="" className="list">
-                          <div data-v-0a298b45="" className={`item ${selectSection ? 'active':''}`} onClick={handleSection}>
-                            <div data-v-0a298b45="">
-                              <img
-                                data-v-0a298b45=""
-                                className="img"
-                                data-origin="/assets/png/lotterycategory_202307140102511fow.png"
-                                src="/assets/png/lotterycategory_202307140102511fow.png"
-                              />Win Go
-                            </div>
-                          </div>
-                          <div data-v-0a298b45="" className={`item ${selectSection ? 'active':''}`}>
-                            <div data-v-0a298b45="">
-                              <img
-                                data-v-0a298b45=""
-                                className="img"
-                                data-origin="/assets/png/lotterycategory_20230714010246lyuc.png"
-                                src="/assets/png/lotterycategory_20230714010246lyuc.png"
-                              />Trx Win Go
-                            </div>
-                          </div>
-                          <div data-v-0a298b45="" className={`item ${selectSection ? 'active':''}`} >
-                            <div data-v-0a298b45="">
-                              <img
-                                data-v-0a298b45=""
-                                className="img"
-                                data-origin="/assets/png/lotterycategory_2023071401023322dy.png"
-                                src="/assets/png/lotterycategory_2023071401023322dy.png"
-                              />5D
-                            </div>
-                          </div>
-                          <div data-v-0a298b45="" className={`item ${selectSection ? 'active':''}`} >
-                            <div data-v-0a298b45="">
-                              <img
-                                data-v-0a298b45=""
-                                className="img"
-                                data-origin="/assets/png/lotterycategory_20230714010227swu2.png"
-                                src="/assets/png/lotterycategory_20230714010227swu2.png"
-                              />K3
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                 
                     </div>
                   </div>
                   <div
@@ -9794,15 +9737,22 @@ export default function BetRecords() {
                         className="van-badge__wrapper van-icon van-icon-arrow-down" onClick={handleSecondToggle}
                         ></i
                       >
-                      <div
+                     
+                     
+                    </div>
+                  </div>
+                   </div>
+
+                     <div
                         className="van-overlay"
                         role="button"
                         tabIndex="0"
                         data-v-1d8fbc24=""
                         style={{zIndex: '2002', display: isSecondVisible ? 'block' : 'none'}}
+                        onClick={() => setIsVisible(false)} 
                       >
                       </div>
-                      <div
+                   <div
                         role="dialog"
                         tabIndex="0"
                         className="van-popup van-popup--round van-popup--bottom"
@@ -10276,9 +10226,70 @@ export default function BetRecords() {
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
+
+
+                           <div
+                        className="van-overlay"
+                        role="button"
+                        tabIndex="0"
+                        data-v-0a298b45=""
+                        style={{zIndex: '2001', display: isVisible ? 'block' : 'none'}}
+                        onClick={() => setIsVisible(false)} 
+                      >
+                      </div>
+                      <div
+                        role="dialog"
+                        tabIndex="0"
+                        className="van-popup van-popup--round van-popup--bottom"
+                        data-v-0a298b45=""
+                        style={{zIndex: '2001', display: isVisible ? 'block' : 'none'}}
+                      >
+                        <div data-v-0a298b45="" className="list">
+                          <div data-v-0a298b45="" className={`item ${selectSection ? 'active':''}`} onClick={handleSection}>
+                            <div data-v-0a298b45="">
+                              <img
+                                data-v-0a298b45=""
+                                className="img"
+                                data-origin="/assets/png/lotterycategory_202307140102511fow.png"
+                                src="/assets/png/lotterycategory_202307140102511fow.png"
+                              />Win Go
+                            </div>
+                          </div>
+                          {/* <div data-v-0a298b45="" className={`item ${selectSection ? 'active':''}`}>
+                            <div data-v-0a298b45="">
+                              <img
+                                data-v-0a298b45=""
+                                className="img"
+                                data-origin="/assets/png/lotterycategory_20230714010246lyuc.png"
+                                src="/assets/png/lotterycategory_20230714010246lyuc.png"
+                              />Trx Win Go
+                            </div>
+                          </div> */}
+                          <div data-v-0a298b45="" className={`item ${selectSection ? 'active':''}`} >
+                            <div data-v-0a298b45="">
+                              <img
+                                data-v-0a298b45=""
+                                className="img"
+                                data-origin="/assets/png/lotterycategory_2023071401023322dy.png"
+                                src="/assets/png/lotterycategory_2023071401023322dy.png"
+                              />5D
+                            </div>
+                          </div>
+                          <div data-v-0a298b45="" className={`item ${selectSection ? 'active':''}`} >
+                            <div data-v-0a298b45="">
+                              <img
+                                data-v-0a298b45=""
+                                className="img"
+                                data-origin="/assets/png/lotterycategory_20230714010227swu2.png"
+                                src="/assets/png/lotterycategory_20230714010227swu2.png"
+                              />K3
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      
+               
               </div>
               <div data-v-1d8fbc24=""></div>
             </div>
@@ -10378,10 +10389,10 @@ export default function BetRecords() {
                       </ul>
                     </div>
                   </div>
-                  <img
+                  {/* <img
                     data-v-1d8fbc24=""
                     src="/assets/png/moonBar-f80ac733.png"
-                  />
+                  /> */}
                   <div data-v-1d8fbc24="" className="bet-container-lottery-note">
                     <div
                       data-v-1d8fbc24=""

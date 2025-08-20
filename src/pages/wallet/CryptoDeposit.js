@@ -1,20 +1,23 @@
 import { useState, useEffect } from "react";
 import React from 'react';
 import Api from '../../services/Api';
-import { useToast } from '../../components/ToastContext'; 
+import { useToast } from '../../components/ToastContext';
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { QRCodeCanvas } from 'qrcode.react'; // Or use QRCodeSVG if you prefer SVG rendering
+import Loader from '../../components/Loader';
 
 
-
-export default function CryptoDeposit(){
+export default function CryptoDeposit() {
 
   const [isButtonActive, setButtonActive] = useState(true); // For button state
   const [utr, setUtr] = useState(''); // For UTR input
   const [money, setMoney] = useState(''); // For storing money from location
   const [currency, setCurrency] = useState(''); // For storing money from location
   const [adminData, setAdminData] = useState(''); // For storing money from location
+  const [walletAddress, setWalletAddress] = useState(''); // For storing money from location
+
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
 
@@ -58,32 +61,64 @@ export default function CryptoDeposit(){
         const response = await Api.get('/api/webapi/GetUserInfo');
         if (response.data.status) {
           setAdminData(response.data.data.adminData);
-         
+
         } else {
           setError('Failed to fetch user info');
         }
       } catch (err) {
         setError('Error fetching user info');
-        console.error(err);
-      } 
+
+      }
     };
 
     fetchUserInfo();
   }, []);
 
   // Step 1: Use useEffect to handle setting the money state
-  useEffect(() => {
+  useEffect(async () => {
     if (location.state && location.state.money && location.state.currency) {
-      setMoney(location.state.money);
-      setCurrency(location.state.currency);
-      console.log(location.state.currency);
+
+      const money = location.state.money;
+      const method = location.state.currency;
+      try {
+        const response = await Api.post('/api/webapi/cryptoDeposit', {
+          amount: money,
+          method: method,
+        });
+
+        if (response.data.success) {
+
+          console.log("api call done");
+
+          setMoney(response.data.amount);
+          setCurrency(response.data.method);
+          setWalletAddress(response.data.walletAddress);
+
+        } else {
+          setError('Failed to fetch user info');
+        }
+      } catch (err) {
+        setError('Error fetching user info');
+
+      } finally {
+        setLoading(false);
+      }
+
 
     } else {
-       
 
       navigate('/wallet/deposit'); // Redirect if no money data
     }
   }, [location, navigate]);
+
+
+
+   const handlePop = (e) => {
+      // force navigation instead of letting user go back
+      navigate("/wallet/deposit");
+    };
+
+
 
   // Step 2: Handle UTR input change and button state
   const handleInputChange = (e) => {
@@ -95,11 +130,11 @@ export default function CryptoDeposit(){
   };
 
   const handlePay = async () => {
-        
-//     if(utr.length < 12){
-//       showToast('UTR must be 12 digit long.', 'succes');
-// return;
-//     }
+
+    //     if(utr.length < 12){
+    //       showToast('UTR must be 12 digit long.', 'succes');
+    // return;
+    //     }
 
 
     try {
@@ -109,8 +144,8 @@ export default function CryptoDeposit(){
         tx_id: utr,
       });
 
-      if (response.data.message==='Order Submitted successfully') {
-        console.log('Recharge Done Successfully'); 
+      if (response.data.message === 'Order Submitted successfully') {
+        console.log('Recharge Done Successfully');
         navigate('/wallet/deposit', { state: { msg: 'Order created successfully' } });
       } else {
 
@@ -138,68 +173,62 @@ export default function CryptoDeposit(){
       showToast('Error copying the code', 'error');
     }
   };
+     if (loading) {
+          return      <Loader/>
+          // You can replace this with a spinner if needed
+        }
+  return (
+    <div className="" style={{ fontSize: '12px' }}>
 
-    return(
-<div className="" style={{fontSize: '12px'}}>
+      <div id="app" data-v-app="">
 
-    <div id="app" data-v-app="">
-       
         <div data-v-003e4505="" id="home" className="red-home content"
-            style={{'--f13b4d11CurrentFontFamily': "'Roboto', 'Inter', 'sansSerif'"}}>
-            <div data-v-12a80a3e="" data-v-003e4505="" className="navbar white">
-                <div data-v-12a80a3e="" className="navbar-fixed">
-                    <div data-v-12a80a3e="" className="navbar__content">
-                        <div data-v-12a80a3e="" className="navbar__content-left"><img data-v-003e4505=""
-                                src="/assets/png/BDGPRO2.png"
-                                alt=""/></div>
-                        <div data-v-12a80a3e="" className="navbar__content-center">
-                            <div data-v-12a80a3e="" className="navbar__content-title"></div>
-                        </div>
-                      
-                    </div>
+          style={{ '--f13b4d11CurrentFontFamily': "'Roboto', 'Inter', 'sansSerif'" }}>
+          <div data-v-12a80a3e="" data-v-003e4505="" className="navbar white">
+            <div data-v-12a80a3e="" className="navbar-fixed">
+              <div data-v-12a80a3e="" className="navbar__content">
+                <div data-v-12a80a3e="" className="navbar__content-left"><img data-v-003e4505=""
+                  src="/assets/png/BDGPRO2.jpg"
+                  alt="" /></div>
+                <div data-v-12a80a3e="" className="navbar__content-center">
+                  <div data-v-12a80a3e="" className="navbar__content-title"></div>
                 </div>
 
-                
+              </div>
             </div>
-            
-            <div className="container11">
-          
-              <div  className="" style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '40px',}}>
-                
-                    <div data-v-67e25db3="" className="maindiv" style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',  borderRadius: '10px', width: '100%', margin: '0 auto', background: `url('/assets/bottom-ccedfa9a.png')`,backgroundPositionX:'center',backgroundRepeat: 'no-repeat', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',}}>
 
-                    <div data-v-67e25db3="" className="sec1" style={{ textAlign: 'center'}}>
-                            <div data-v-67e25db3="" className="ti1" style={{fontSize: '1.2em', fontWeight: 'bold', marginTop: '5px', color: '#333',}}>CountDown</div>
-                            <div data-v-67e25db3="" className="time" style={{fontSize: '1.2em', color: '#ff0000'}}> {formatTime(timeLeft)}</div>
-                        </div>
 
-                        <div data-v-67e25db3="" className="sec1" style={{margin: '10px 0', textAlign: 'center',}}>
-                            <div data-v-67e25db3="" className="ti1" style={{fontSize: '1.2em', fontWeight: 'bold', marginBottom: '5px', color: '#333'}}>{currency} Payment</div>
-                            <div data-v-67e25db3="" className="time" style={{fontSize: '2em', color: '#ff0000'}}>${money}( ₹{money * 90})</div>
-                        </div>
-                        <div data-v-67e25db3="" className="sec2" style={{margin: '10px 0', textAlign: 'center'}}>
-                            <div data-v-67e25db3="" className="ti2" style={{fontSize: '1.2em', fontWeight: 'bold', marginBottom: '5px', color: '#333'}}>Copy Wallet Address</div>
-                            <div data-v-67e25db3="" className="num2" style={{fontSize: '1.2em', color: '#555', display: 'flex', justifyContent: 'center', alignItems: 'center',}}>
-                                {currency =='USDT(BEP20)'? adminData[0]?.bep20 : adminData[0]?.trc20 }
-                                <svg data-v-67e25db3="" className="c5" xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none" style={{marginLeft: '1px'}} onClick={() => fetchPromotionInfo(currency =='USDT(BEP20)'? adminData[0]?.bep20 : adminData[0]?.trc20 )}>
-                                    <rect data-v-67e25db3="" x="1" y="3" width="8" height="9" rx="1" stroke="black"></rect>
-                                    <path data-v-67e25db3="" d="M9.5 10H10C10.5523 10 11 9.55228 11 9V2C11 1.44772 10.5523 1 10 1H4C3.44772 1 3 1.44772 3 2V3" stroke="black"></path>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    
-                  
-               
-                 
+          </div>
 
-                  
+          <div className="container11">
+
+            <div className="" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '40px', }}>
+
+              <div data-v-67e25db3="" className="maindiv" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', borderRadius: '10px', width: '100%', margin: '0 auto', background: `url('/assets/bottom-ccedfa9a.png')`, backgroundPositionX: 'center', backgroundRepeat: 'no-repeat', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', }}>
+
+                <div data-v-67e25db3="" className="sec1" style={{ textAlign: 'center' }}>
+                  <div data-v-67e25db3="" className="ti1" style={{ fontSize: '1.2em', fontWeight: 'bold', marginTop: '5px', color: '#333', }}>CountDown</div>
+                  <div data-v-67e25db3="" className="time" style={{ fontSize: '1.2em', color: '#ff0000' }}> {formatTime(timeLeft)}</div>
                 </div>
 
+                <div data-v-67e25db3="" className="sec1" style={{ margin: '10px 0', textAlign: 'center', }}>
+                  <div data-v-67e25db3="" className="ti1" style={{ fontSize: '1.2em', fontWeight: 'bold', marginBottom: '5px', color: '#333' }}>{currency} Payment</div>
+                  <div data-v-67e25db3="" className="time" style={{ fontSize: '2em', color: '#ff0000' }}>${money}</div>
+                </div>
 
-                  <div data-v-7cba6004="" data-v-36cc3380=""      className="Recharge__container-intro" style={{marginTop: '40px'}}>
-                   
-                       {/* <div data-v-9e03166f="" className="Recharge__content-paymoney       boxStyle" style={{display: 'grid', gridTemplateColumns: 'repeat(2, minmax(100px, 2fr))', gridTemplateRows: 'repeat(2, minmax(100px, 2fr))'}}>
+              </div>
+
+
+
+
+
+
+            </div>
+
+
+            <div data-v-7cba6004="" data-v-36cc3380="" className="Recharge__container-intro" style={{ marginTop: '40px' }}>
+
+              {/* <div data-v-9e03166f="" className="Recharge__content-paymoney       boxStyle" style={{display: 'grid', gridTemplateColumns: 'repeat(2, minmax(100px, 2fr))', gridTemplateRows: 'repeat(2, minmax(100px, 2fr))'}}>
 
                         <div data-v-9e03166f="" className="Recharge__content-paymoney__money-input radius" style={{width: '81%', height: '65px', display: 'flex', alignItems: 'center', justifyContent: 'space-between',background: '#fff',  marginTop: '.26667rem'}}>
                             <div data-v-9e03166f="" className="" >
@@ -256,63 +285,64 @@ export default function CryptoDeposit(){
 
 
                     </div> */}
-                    <div data-v-7cba6004="" data-v-36cc3380=""      className="Recharge__container-intro">
-                   
-    <div data-v-9e03166f="" className="Recharge__content-paymoney">
-         
-        <div data-v-9e03166f="" className="" style={{width: '100%', height: 'auto',  display: 'flex',
-            flexDirection: 'column',
-        justifyContent: 'spaceAround',
-       
-        }}>
+              <div data-v-7cba6004="" data-v-36cc3380="" className="Recharge__container-intro">
+
+                <div data-v-9e03166f="" className="Recharge__content-paymoney">
+
+                  <div data-v-9e03166f="" className="" style={{
+                    width: '100%', height: 'auto', display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'spaceAround',
+
+                  }}>
 
 
-            <div data-v-67e25db3="" className="codeqr">
-       
-            <div data-v-67e25db3="" className="imgqr" style={{
-               width: '150px',
-               height: '150px',
-              
-                borderRadius: '8px', marginLeft: '80px',}}>
-                                     <QRCodeCanvas  value=                                {currency =='USDT(BEP20)'? adminData[0]?.bep20 : adminData[0]?.trc20 }
-  size={150} level={"H"} includeMargin={true} />
+                    <div data-v-67e25db3="" className="codeqr">
 
-            </div>
-          </div>
-            <div data-v-9e03166f="" className="place-right" style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '9%',}}>
-                {/* <h3 style={{color:'#fff'}}>Note: Please Submit UTR Number After Done Payment</h3> */}
-            </div>
-        </div>
+                      <div data-v-67e25db3="" className="imgqr" style={{
+                        width: '150px',
+                        height: '150px',
 
-    </div>
-</div>
-   
+                        borderRadius: '8px', marginLeft: '80px',
+                      }}>
+                        <QRCodeCanvas value={walletAddress} size={150} level={"H"} includeMargin={true} />
 
-   
-
-   <div data-v-9e03166f="" className="Recharge__content-paymoney__money-input radius">
-    <div data-v-9e03166f="" className="van-cell van-field van-field--disabled amount-input" modelmodifiers="[object Object]">
-      <div className="van-cell__value van-field__value">
-        <div className="van-field__body">
-          <input type="text" inputmode="numeric" id="van-field-3-input" className="van-field__control" value={utr}
-            placeholder=" Please enter the Transaction Hash" onChange={handleInputChange}
-            />
-        </div>
-        </div>
-        </div>
-        </div>
-
-                        <div data-v-9e03166f="" className="Recharge__container-rechageBtn" onClick={handlePay} style={{ 
-    backgroundColor: isButtonActive ? '' : '#c4933f'
-  }}>Submit</div>
+                      </div>
                     </div>
-                    
-                
-                      
+                    <div data-v-9e03166f="" className="place-right" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '9%', }}>
+                      {/* <h3 style={{color:'#fff'}}>Note: Please Submit UTR Number After Done Payment</h3> */}
+                    </div>
                   </div>
-              
+
                 </div>
-                
               </div>
-  
-</div>)}
+
+
+
+
+              <div data-v-9e03166f="" className="Recharge__content-paymoney__money-input radius">
+                <div data-v-9e03166f="" className="van-cell van-field van-field--disabled amount-input" style={{ marginLeft: '0px' }} modelmodifiers="[object Object]">
+                  <div className="van-cell__value van-field__value">
+                    <div className="van-field__body">
+                      <input type="text" inputmode="numeric" id="van-field-3-input" className="van-field__control" readOnly value={walletAddress}
+                        placeholder=" "
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div data-v-9e03166f="" className="Recharge__container-rechageBtn" onClick={() => fetchPromotionInfo(walletAddress)} style={{ background: '#f88556', color: '#fff' }}> Copy </div>
+              <div data-v-9e03166f="" className="Recharge__container-rechageBtn"  onClick={() => (window.location.href = "/wallet/deposit")}> Back  </div>
+            </div>
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>)
+}

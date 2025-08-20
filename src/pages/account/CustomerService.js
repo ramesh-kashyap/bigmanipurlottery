@@ -9608,7 +9608,7 @@ export default function CustomerService() {
           style={{ width: "40px", height: "40px" }}
         >
           <img
-            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/095721922-201595-11.png"
+            src="/assets/png/icons/wallet.png"
             className="van-image__img"
             alt="Deposit Not Received"
           />
@@ -9630,7 +9630,7 @@ export default function CustomerService() {
           style={{ width: "40px", height: "40px" }}
         >
           <img
-            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/100144905-201612-08.png"
+            src="/assets/png/icons/withdraw.png"
             className="van-image__img"
             alt="Withdrawal Problem"
           />
@@ -9652,7 +9652,7 @@ export default function CustomerService() {
           style={{ width: "40px", height: "40px" }}
         >
           <img
-            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/100210310-201613-01.png"
+            src="/assets/png/icons/changePassowrd.png"
             className="van-image__img"
             alt="Change Login Password"
           />
@@ -9674,7 +9674,7 @@ export default function CustomerService() {
           style={{ width: "40px", height: "40px" }}
         >
           <img
-            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/095739444-201596-04.png"
+            src="/assets/png/icons/ifsc.png"
             className="van-image__img"
             alt="IFSC Modification"
           />
@@ -9696,7 +9696,7 @@ export default function CustomerService() {
           style={{ width: "40px", height: "40px" }}
         >
           <img
-            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/095854254-201602-06.png"
+            src="/assets/png/icons/chnageBank.png"
             className="van-image__img"
             alt="Change bank name"
           />
@@ -9718,7 +9718,7 @@ export default function CustomerService() {
           style={{ width: "40px", height: "40px" }}
         >
           <img
-            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/100011355-201607-06.png"
+            src="/assets/png/icons/modBank.png"
             className="van-image__img"
             alt="Modify Bank Information"
           />
@@ -9740,7 +9740,7 @@ export default function CustomerService() {
           style={{ width: "40px", height: "40px" }}
         >
           <img
-            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/100028654-201608-05.png"
+            src="/assets/png/icons/addUSDT.png"
             className="van-image__img"
             alt="Add USDT Address"
           />
@@ -9762,7 +9762,7 @@ export default function CustomerService() {
           style={{ width: "40px", height: "40px" }}
         >
           <img
-            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/112608536-248583-05.png"
+            src="/assets/png/icons/changeUSDT.png"
             className="van-image__img"
             alt="Change USDT Address"
           />
@@ -9784,7 +9784,7 @@ export default function CustomerService() {
           style={{ width: "40px", height: "40px" }}
         >
           <img
-            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Dev/System/124522128-2846-121439239-2840-黄色-01.png"
+            src="/assets/png/icons/bonus.png"
             className="van-image__img"
             alt="Activity Bonus"
           />
@@ -9806,7 +9806,7 @@ export default function CustomerService() {
           style={{ width: "40px", height: "40px" }}
         >
           <img
-            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/084050261-201516-15.png"
+            src="/assets/png/icons/officialChanel.png"
             className="van-image__img"
             alt="Official Channel"
           />
@@ -9828,7 +9828,7 @@ export default function CustomerService() {
           style={{ width: "40px", height: "40px" }}
         >
           <img
-            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/025555579-261743-15.png"
+            src="/assets/png/icons/teacher.png"
             className="van-image__img"
             alt="Find Teacher"
           />
@@ -9850,7 +9850,7 @@ export default function CustomerService() {
           style={{ width: "40px", height: "40px" }}
         >
           <img
-            src="https://worktracking-imgs.oss-ap-southeast-1.aliyuncs.com/Prod/System/094925172-201583-16.png"
+            src="/assets/png/icons/officialSite.png"
             className="van-image__img"
             alt="Check Daman Official Website"
           />
@@ -9865,11 +9865,19 @@ export default function CustomerService() {
     </li>
 
     <li data-v-0122c10a="" onClick={() => window.open('https://t.me/it_zafira_6732', '_blank')}>
-      <div data-v-0122c10a="">
-        <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
-          <use data-v-392c0849="" xlinkHref="#icon-custom_service" />
-        </svg>
-        <span data-v-0122c10a="">Online service</span>
+      <div data-v-0122c10a="" className="service-text">
+       <div
+          data-v-0122c10a=""
+          className="van-image"
+          style={{ width: "40px", height: "40px" }}
+        >
+          <img
+            src="/assets/png/icons/customer-service.png"
+            className="van-image__img"
+            alt="Check Daman Official Website"
+          />
+        </div>
+        <span  data-v-0122c10a="" style={{ marginLeft: "10px" }}>Online service</span>
       </div>
       <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
         <use data-v-392c0849="" xlinkHref="#icon-arrow" />

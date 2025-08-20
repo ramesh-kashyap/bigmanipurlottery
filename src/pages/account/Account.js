@@ -540,14 +540,14 @@ export default function Account() {
       >
         <path
           d="M14.5 8C13.8406 8.37652 13.2062 8.79103 12.6 9.24051C11.5625 10.0097 10.6074 10.8814 9.75 11.8402C6.79377 15.1463 5 19.4891 5 24.2455C5 34.6033 13.5066 43 24 43C34.4934 43 43 34.6033 43 24.2455C43 19.4891 41.2062 15.1463 38.25 11.8402C37.3926 10.8814 36.4375 10.0097 35.4 9.24051C34.7938 8.79103 34.1594 8.37652 33.5 8"
-          stroke="var(--main-color)"
+          stroke="#f68756"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         ></path>
         <path
           d="M24 4V24"
-          stroke="var(--main-color)"
+          stroke="#f68756"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -563,7 +563,7 @@ export default function Account() {
           fillRule="evenodd"
           clipRule="evenodd"
           d="M14.9946 30.4322C23.0148 30.4322 29.5165 23.7194 29.5165 15.4388C29.5165 7.15811 23.0148 0.445312 14.9946 0.445312C6.97433 0.445312 0.472656 7.15811 0.472656 15.4388C0.472656 23.7194 6.97433 30.4322 14.9946 30.4322ZM10.0356 7.31738C9.29556 7.31738 8.616 7.72604 8.26904 8.37971L5.96505 12.7204C5.5728 13.4594 5.68198 14.3644 6.23872 14.9889L13.5008 23.1351C14.2961 24.0273 15.6913 24.0273 16.4866 23.1351L23.7487 14.9889C24.3054 14.3644 24.4146 13.4594 24.0224 12.7204L21.7184 8.37971C21.3714 7.72603 20.6918 7.31738 19.9518 7.31738H10.0356Z"
-          fill="var(--main-color)"
+          fill="#f68756"
         ></path>
       </symbol>
       <symbol
@@ -10038,7 +10038,7 @@ export default function Account() {
             </div>
             <div
               data-v-a30d19b1=""
-              className="settingPanel__container-items__item ar-1px-b"  onClick={()=>navigate('/language')}
+              className="settingPanel__container-items__item ar-1px-b"  onClick={()=>navigate()}
             >
               <div
                 data-v-a30d19b1=""

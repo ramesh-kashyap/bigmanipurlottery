@@ -1169,11 +1169,11 @@ html:lang(ar) .phoneInput__container-input input[data-v-50aa8bb0] {
 .signIn__container-button .register[data-v-33f88764] {
     width: 7.73333rem;
     height: 1.06667rem;
-    color: var(--main-color);
+    color: #f68756;
     font-size: .48rem;
     background: transparent;
     border-radius: 1.06667rem;
-    border: .01333rem solid var(--main-color);
+    border: .01333rem solid #f68756;
     box-shadow: none;
     text-shadow: none;
     margin-top: .53333rem

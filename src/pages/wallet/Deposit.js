@@ -455,7 +455,7 @@ const showSection = (sectionId) => {
                   </div>
                 </div>
               </div>
-              <div
+              {/* <div
                 data-v-4f3d8608=""
                  className={`Recharge__container-tabcard__items ${activeSection === 'UsdtBep' || activeSection ==='UsdtBep1' ? 'active' : ''}`}  onClick={() => showSection('UsdtBep')}
               >
@@ -479,7 +479,7 @@ const showSection = (sectionId) => {
                     USDT
                   </div>
                 </div>
-              </div>              
+              </div>               */}
               <div
                 data-v-4f3d8608=""
                 className={`Recharge__container-tabcard__items ${activeSection === 'UsdtTrc' || activeSection === 'UsdtTrc1' ? 'active' : ''}`} onClick={() => showSection('UsdtTrc')}
