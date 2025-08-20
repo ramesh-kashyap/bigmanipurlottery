@@ -281,7 +281,7 @@ return(
 
        
 
-        <div data-v-10d1559c="" className="TeamReport__C-body-item-detail" style={{color:'white'}}>
+        <div data-v-10d1559c="" className="TeamReport__C-body-item-detail" >
           <div data-v-10d1559c="" className="TeamReport__C-body-item-detail-lv">
             Level<span data-v-10d1559c="">{history.level}</span>
           </div>

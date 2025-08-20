@@ -9808,7 +9808,7 @@ const [isDropdownOpen, setIsDropdownOpen] = useState(false);
                   </svg>
                   <div data-v-33f88764="" className="font24">Forgot password</div>
                 </div>
-                <div data-v-33f88764="" className="customcon"   onClick={() => (window.location.href = 'https://t.me/Andrew_O98')}>
+                <div data-v-33f88764="" className="customcon"   onClick={() => (window.location.href = 'https://t.me/it_zafira_6732')}>
                   <svg
                     data-v-33f88764=""
                     className="svg-icon icon-customer_b forgetbg forgetbg"

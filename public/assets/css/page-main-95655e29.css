@@ -1092,9 +1092,9 @@ html:lang(ar) .financialServices__container-box>div>div .icon-shadow[data-v-acd6
     -webkit-justify-content: center;
     justify-content: center;
     width: 100%;
-    padding-block:.13333rem;color: var(--main-color);
+    padding-block:.13333rem;color: #f9945c;
     background: var(--bg_color_L1);
-    border: .01333rem solid var(--main-color);
+    border: .01333rem solid #f9945c;
     border-radius: .66667rem;
     font-size: .4rem;
     gap: .32rem
