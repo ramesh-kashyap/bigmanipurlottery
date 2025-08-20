@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Api from '../../services/Api'
 import { useToast } from '../../components/ToastContext'; 
+import { useTranslation } from "react-i18next";
 
 export default function Withdraw() {
+     const { t } = useTranslation();
  
   
 
@@ -9735,12 +9737,12 @@ const fetchWithdrawHistory= async () => {
           />
         </div>
         <div data-v-3e71d3da="" className="dialog__container-title">
-          <h1 data-v-3e71d3da="">Withdrawal Request Successful</h1>
+          <h1 data-v-3e71d3da="">{t('Withdrawal Request Successful')}</h1>
         </div>
         <div data-v-3e71d3da="" className="dialog__container-content">
           <div data-v-80a607a5="" className="c2cTip" style={{fontSize:'.333rem'}}>
             <p data-v-80a607a5="">
-            We will complete the withdrawal within 2 hours! <span>Please wait patiently...</span>
+            {t('We will complete the withdrawal within 2 hours!')} <span>{t('Please wait patiently')}</span>
             </p>
           </div>
         </div>
@@ -9769,11 +9771,11 @@ const fetchWithdrawHistory= async () => {
               <div data-v-12a80a3e="" className="navbar__content-center">
                 
                 <div data-v-12a80a3e="" className="navbar__content-title">
-                  Withdraw
+                  {t('Withdraw')}
                 </div>
               </div>
               <div data-v-12a80a3e="" className="navbar__content-right" onClick={()=>navigate('/wallet/WithdrawHistory')}>
-                <span data-v-80a607a5="">Withdrawal history</span>
+                <span data-v-80a607a5="">{t('Withdrawal history')}</span>
               </div>
             </div>
           </div>
@@ -9787,7 +9789,7 @@ const fetchWithdrawHistory= async () => {
                   data-v-0879c174=""
                   src="/assets/png/balance-e39ce400.png"
                 />
-                Available balance
+                {t('Available balance')}
               </div>
             </div>
             <div data-v-0879c174="" className="balanceAssets__main">
@@ -9809,7 +9811,7 @@ const fetchWithdrawHistory= async () => {
                   src="/assets/png/payNameIcon_20240313185300ivg6.png"
                 />
               </div>
-              <span data-v-9bae072d=""> BANK CARD</span>
+              <span data-v-9bae072d=""> {t('BANK CARD')}</span>
             </div>
             <div data-v-9bae072d="" className={`${activeSection === 'section2' ? 'select' : ''}`} onClick={() => showSection('section2')} style={{display:'none'}}>
               <div data-v-9bae072d="">
@@ -9856,7 +9858,7 @@ const fetchWithdrawHistory= async () => {
 
     <div data-v-ef5c8333="" className="addWithdrawType-top" onClick={()=>navigate('/withdraw/addbank')} style={{display: account_number == null ? 'block':'none' , height : '1.99rem'}}>
               <img data-v-ef5c8333="" src="/assets/png/add-1ad7f3f5.png"  style={{position:'relative', top: '10px', left : '70px'}}/><span
-                data-v-ef5c8333="" style={{position:'relative', top: '23px' , left : '-25px'}}>Add Account Number</span>
+                data-v-ef5c8333="" style={{position:'relative', top: '23px' , left : '-25px'}}>{t('Add Account Number')}</span>
             </div>
           <div data-v-cb5583fe="" className="explain">
             <div data-v-cb5583fe="" className="input">
@@ -9872,12 +9874,12 @@ const fetchWithdrawHistory= async () => {
             <div data-v-cb5583fe="" className="balance bank">
               <div data-v-cb5583fe="">
                 <span data-v-cb5583fe=""
-                  >Withdrawable balance
+                  >{t('Withdrawable balance')}
                   <h6 data-v-cb5583fe="" className="yellow">₹{userInfo ? userInfo.money :0}</h6></span
                 ><input data-v-cb5583fe="" type="button" value="All" />
               </div>
               <div data-v-cb5583fe="">
-                <span data-v-cb5583fe="">Withdrawal amount received</span>
+                <span data-v-cb5583fe="">{t('Withdrawal amount received')}</span>
                 <div data-v-cb5583fe="" className="rightD">
                   <span data-v-cb5583fe="" className="yellow">₹0.00</span>
                 </div>
@@ -9905,7 +9907,7 @@ const fetchWithdrawHistory= async () => {
     </div>
             <div data-v-ef5c8333="" className="addWithdrawType-top" onClick={()=>navigate('/wallet/Withdraw/AddUSDT')} style={{display: walletAddress !== null ? 'none':'block',height:'1.99rem'}}>
               <img data-v-ef5c8333="" src="/assets/png/add-1ad7f3f5.png"  style={{position:'relative', top: '7px', left: '58px'}}/><span
-                data-v-ef5c8333="" style={{position:'relative', top: '25px' , left : '-26px'}}>Add USDT Trc20</span>
+                data-v-ef5c8333="" style={{position:'relative', top: '25px' , left : '-26px'}}>{t('Add')}USDT Trc20</span>
             </div>
             {/* <div data-v-ef5c8333="" className="addWithdrawType-text">
               Need to add beneficiary information to be able to withdraw money
@@ -9942,7 +9944,7 @@ const fetchWithdrawHistory= async () => {
             <div data-v-cb5583fe="" className="balance usdt">
               <div data-v-cb5583fe="">
                 <span data-v-cb5583fe=""
-                  >Withdrawable balance
+                  >{t('Withdrawable balance')}
                   <h6 data-v-cb5583fe="" className="yellow">₹{userInfo?userInfo.money:0}</h6></span
                 ><input data-v-cb5583fe="" type="button" value="All" />
               </div>
@@ -10007,7 +10009,7 @@ const fetchWithdrawHistory= async () => {
             <div data-v-cb5583fe="" className="balance usdt">
               <div data-v-cb5583fe="">
                 <span data-v-cb5583fe=""
-                  >Withdrawable balance
+                  >{t('Withdrawable balance')}
                   <h6 data-v-cb5583fe="" className="yellow">₹{userInfo?userInfo.money:0}</h6></span
                 ><input data-v-cb5583fe="" type="button" value="All" />
               </div>
@@ -10030,7 +10032,7 @@ style={{ zIndex: 2017, display: showPassword ? '' : 'none' }}
   <svg data-v-80a607a5="" className="svg-icon icon-safeIcon">
     <use xlinkHref="#icon-safeIcon"></use>
   </svg>
-  <h1 data-v-80a607a5="">Security verification</h1>
+  <h1 data-v-80a607a5="">{t('Security verification')}</h1>
 </div>
 
 <input data-v-80a607a5="" type="text" className="is-hidden" />
@@ -10041,7 +10043,7 @@ style={{ zIndex: 2017, display: showPassword ? '' : 'none' }}
     <svg data-v-ea5b66c8="" className="svg-icon icon-editPswIcon passwordInput__container-label__icon passwordInput__container-label__icon">
       <use xlinkHref="#icon-editPswIcon"></use>
     </svg>
-    <span data-v-ea5b66c8="">Please enter your login password</span>  
+    <span data-v-ea5b66c8="">{t('Please enter your login password')}</span>  
   </div>
 
   <div data-v-ea5b66c8="" className="passwordInput__container-input">
@@ -10067,12 +10069,12 @@ style={{ zIndex: 2017, display: showPassword ? '' : 'none' }}
 </div>
 
 <span data-v-80a607a5="" className="red">
-  To secure your balance, please enter your password
+  {t('To secure your balance, please enter your password')}
 </span>
 
 <div data-v-80a607a5="" className="btnD">
-  <button data-v-80a607a5="" onClick={()=>{setShowPassword(false)}}>Return</button>
-  <button data-v-80a607a5="" onClick={confirmWithdraw}>Confirm withdrawal</button>
+  <button data-v-80a607a5="" onClick={()=>{setShowPassword(false)}}>{t('Return')}</button>
+  <button data-v-80a607a5="" onClick={confirmWithdraw}>{t('Confirm withdrawal')}</button>
 </div>
 </div>
 
@@ -10082,7 +10084,7 @@ style={{ zIndex: 2017, display: showPassword ? '' : 'none' }}
 </div>
           
           <div data-v-80a607a5="" className="recycleBtnD">
-            <button data-v-80a607a5="" className="recycleBtn" onClick={()=>{setShowPassword(true)}}>Withdraw</button>
+            <button data-v-80a607a5="" className="recycleBtn" onClick={()=>{setShowPassword(true)}}>{t('Withdraw')}</button>
           </div>
       
           <div
@@ -10093,33 +10095,29 @@ style={{ zIndex: 2017, display: showPassword ? '' : 'none' }}
             <div data-v-76eb7f31="" className="br">
               
               <p data-v-76eb7f31="">
-                Need to bet <span data-v-470caa86="" className="red">₹{needToBet}</span> to
-                be able to withdraw
+               {t('Need to bet')} <span data-v-470caa86="" className="red">₹{needToBet}</span> {t('to be able to withdraw')}
               </p>
               <p data-v-76eb7f31="">
-                Withdraw time
+                {t('Withdraw time')}
                 <span data-v-76eb7f31="" className="red">00.00-23:59</span>
               </p>
               <p data-v-76eb7f31="">
-                Inday Remaining Withdrawal Times<span
+                {t('Inday Remaining Withdrawal Times')}<span
                   data-v-76eb7f31=""
                   className="red"
                   >3</span
                 >
               </p>
               <p data-v-76eb7f31="">
-                Withdrawal amount range
+                {t('Withdrawal amount range')}
                 <span data-v-76eb7f31="" className="red">₹110-₹50,000</span>
               </p>
               
               <p data-v-76eb7f31="">
-                Please confirm your beneficial account information before
-                withdrawing. If your information is incorrect, our company will
-                not be liable for the amount of loss
+                {t('Please confirm your beneficial account information before withdrawing. If your information is incorrect, our company will not be liable for the amount of loss')}
               </p>
               <p data-v-76eb7f31="">
-                If your beneficial information is incorrect, please contact
-                customer service
+                {t('If your beneficial information is incorrect, please contact customer service')}
               </p>
             </div>
           </div>
@@ -10132,12 +10130,12 @@ style={{ zIndex: 2017, display: showPassword ? '' : 'none' }}
               <svg data-v-30972a14="" className="svg-icon icon-historyHead">
                 <use href="#icon-historyHead"></use>
               </svg>
-              <h1 data-v-30972a14="" >Withdrawal history</h1>
+              <h1 data-v-30972a14="" >{t('Withdrawal history')}</h1>
             </div>
 
 
             {withdrawHistory.length === 0 ? (
-          <div>No Data</div>
+          <div>{t('No Data')}</div>
         ) : (
           withdrawHistory.slice(0, 5).map((history, index) => (
 
@@ -10151,7 +10149,7 @@ style={{ zIndex: 2017, display: showPassword ? '' : 'none' }}
                   data-v-30972a14=""
                   className="rechargeh__container-content__item-header ar-1px-b"
                 >
-                  <span data-v-30972a14="">Withdraw</span
+                  <span data-v-30972a14="">{t('Withdraw')}</span
                   ><span
     data-v-e4760c44=""
     className="stateG"
@@ -10166,19 +10164,19 @@ style={{ zIndex: 2017, display: showPassword ? '' : 'none' }}
                   className="rechargeh__container-content__item-body"
                 >
                   <div data-v-30972a14="">
-                    <span data-v-30972a14="">Balance</span
+                    <span data-v-30972a14="">{t('Balance')}</span
                     ><span data-v-30972a14="">{history.money}</span>
                   </div>
                   <div data-v-30972a14="">
-                    <span data-v-30972a14="">Type</span
+                    <span data-v-30972a14="">{t('Type')}</span
                     ><span data-v-30972a14=""> {history.walletType}</span>
                   </div>
                   <div data-v-30972a14="">
-                    <span data-v-30972a14="">Time</span
+                    <span data-v-30972a14="">{t('Time')}</span
                     ><span data-v-30972a14="">{formatTimestampToIST(history.time)}</span>
                   </div>
                   <div data-v-30972a14="">
-                    <span data-v-30972a14="">Order number</span
+                    <span data-v-30972a14="">{t('Order number')}</span
                     ><span data-v-30972a14="">{history.id_order}</span
                     ><svg data-v-30972a14="" className="svg-icon icon-copy">
                       <use href="#icon-copy"></use>
@@ -10192,7 +10190,7 @@ style={{ zIndex: 2017, display: showPassword ? '' : 'none' }}
           ))
         )}
             <div data-v-30972a14="" className="rechargeh__container-footer">
-              <button data-v-30972a14="" onClick={()=>navigate('/wallet')}>All history</button>
+              <button data-v-30972a14="" onClick={()=>navigate('/wallet')}>{t('All history')}</button>
             </div>
           </div>
         </div>
@@ -10212,22 +10210,20 @@ style={{ zIndex: 2017, display: showPassword ? '' : 'none' }}
               />
             </div>
             <div data-v-3e71d3da="" className="dialog__container-title">
-              <h1 data-v-3e71d3da="">C2C withdrawal successful</h1>
+              <h1 data-v-3e71d3da=""> {t('C2C withdrawal successful')}</h1>
             </div>
             <div data-v-3e71d3da="" className="dialog__container-content">
               <div data-v-80a607a5="" className="c2cTip">
                 <h1 data-v-80a607a5="">
-                  Please come back and click [Confirm Payment] after receiving
-                  the transfer
+                  {t('Please come back and click [Confirm Payment] after receiving the transfer')}
                 </h1>
                 <p data-v-80a607a5="">
-                  C2C withdrawal rewards will be automatically issued after you
-                  click <span>[Confirm Arrival]</span>!
+                 {t(' C2C withdrawal rewards will be automatically issued after you click')}<span>{t('[Confirm Arrival]')}</span>!
                 </p>
               </div>
             </div>
             <div data-v-3e71d3da="" className="dialog__container-footer">
-              <button data-v-3e71d3da="">Confirm</button
+              <button data-v-3e71d3da="">{t('Confirm')}</button
               >
             </div>
             
@@ -10255,11 +10251,11 @@ style={{ zIndex: 2017, display: showPassword ? '' : 'none' }}
             </div>
             <div data-v-3e71d3da="" className="dialog__container-content">
               <h1 data-v-80a607a5="">
-                You must recharge to enable the withdrawal function
+                {t('You must recharge to enable the withdrawal function')}
               </h1>
             </div>
             <div data-v-3e71d3da="" className="dialog__container-footer">
-              <button data-v-3e71d3da="">Confirm</button
+              <button data-v-3e71d3da="">{t('Confirm')}</button
               >
             </div>
             <img

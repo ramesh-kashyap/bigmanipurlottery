@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import Api from '../../services/Api';
 // import withdrawHistory from './withdrawHistory';
 import { useToast } from '../../components/ToastContext'; 
+import { useTranslation } from "react-i18next";
+
 
 
 const formatDate = (timestamp) => {
@@ -18,6 +20,7 @@ const formatDate = (timestamp) => {
 
 export default function WithdrawHistory() {
 
+     const { t } = useTranslation();
 
   const [isVisible, setIsVisible] = useState(false);
   const [isSecondVisible, setIsSecondVisible] = useState(false);
@@ -9670,7 +9673,7 @@ console.log(formattedFullDate);
               <div data-v-12a80a3e="" className="navbar__content-center">
                
                 <div data-v-12a80a3e="" className="navbar__content-title">
-                  Withdrawal history
+                  {t('Withdrawal history')}
                 </div>
               </div>
               <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -9702,7 +9705,7 @@ console.log(formattedFullDate);
                       <svg data-v-e4760c44="" className="svg-icon icon-all">
                         <use href="#icon-all"></use>
                       </svg>
-                      All
+                      {t('All')}
                     </div></span
                   >
                 </div>
@@ -9720,7 +9723,7 @@ console.log(formattedFullDate);
                         data-v-e4760c44=""
                         src="/assets/png/payNameIcon_20240821190505sggk.png"
                       />
-                      BANK CARD
+                     {t('BANK CARD')}
                     </div></span
                   >
                 </div>
@@ -9791,7 +9794,7 @@ console.log(formattedFullDate);
             {filteredHistory.length === 0 ? (
           <div data-v-cbab7763="" className="infiniteScroll__loading">
            
-          <div data-v-cbab7763="">No more</div>
+          <div data-v-cbab7763="">{t('No more')}</div>
         </div>
         ) : (
           filteredHistory.map((history, index) => (
@@ -9799,7 +9802,7 @@ console.log(formattedFullDate);
             
             <div key={index} data-v-e4760c44="" className="rechargeh__container-content__item">
               <div data-v-e4760c44="" className="rechargeh__container-content__item-header ar-1px-b">
-                <span data-v-e4760c44="">Withdraw</span>
+                <span data-v-e4760c44="">{t('Withdraw')}</span>
                 <span
     data-v-e4760c44=""
     className="stateG"
@@ -9811,15 +9814,15 @@ console.log(formattedFullDate);
               </div>
               <div data-v-e4760c44="" className="rechargeh__container-content__item-body">
                 <div data-v-e4760c44="">
-                  <span data-v-e4760c44="">Balance</span>
+                  <span data-v-e4760c44="">{t('Balance')}</span>
                   <span data-v-e4760c44="">{history.money}</span>
                 </div>
                 <div data-v-e4760c44="">
-                  <span data-v-e4760c44="">Type</span>
+                  <span data-v-e4760c44="">{t('Type')}</span>
                   <span data-v-e4760c44="">{history.walletType}</span>
                 </div>
                 <div data-v-e4760c44="">
-                  <span data-v-e4760c44="">Time</span>
+                  <span data-v-e4760c44="">{t('Time')}</span>
                   <span data-v-e4760c44="">{formatDate(history.time)}</span>
                 </div>
                
@@ -9827,7 +9830,7 @@ console.log(formattedFullDate);
                
 
                 <div data-v-e4760c44="">
-                  <span data-v-e4760c44="">Order number</span>
+                  <span data-v-e4760c44="">{t('Order number')}</span>
                   <span data-v-e4760c44="">{history.id_order}</span>
                   <svg data-v-e4760c44="" className="svg-icon icon-copy"       onClick={() => fetchPromotionInfo(history?.id_order)} // Trigger fetchPromotionInfo on click
                   >
@@ -9867,13 +9870,13 @@ console.log(formattedFullDate);
   <div data-v-10d1559c="" className="van-picker">
     <div className="van-picker__toolbar"style={{backgroundColor:'#fae59f'}}>
       <button type="button" className="van-picker__cancel van-haptics-feedback" onClick={handleCancel}>
-        Cancel</button
+        {t('Cancel')}</button
       ><button
         type="button"
         className="van-picker__confirm van-haptics-feedback"
         onClick={handleConfirm}
       >
-        Confirm
+        {t('Confirm')}
       </button>
     </div>
     
@@ -9898,7 +9901,7 @@ console.log(formattedFullDate);
             className="van-picker-column__item van-picker-column__item--selected" id="All" onClick={()=>tier('All')}
             style={{height: '44px'}} 
           >
-            <div className="van-ellipsis">All</div>
+            <div className="van-ellipsis">{t('All')}</div>
           </li>
           <li
             role="button"
@@ -9906,7 +9909,7 @@ console.log(formattedFullDate);
             className="van-picker-column__item" id="Pending" onClick={()=>tier('Pending')}
             style={{height: '44px'}}
           >
-            <div className="van-ellipsis">Pending</div>
+            <div className="van-ellipsis">{t('Pending')}</div>
           </li>
           <li
             role="button"
@@ -9914,7 +9917,7 @@ console.log(formattedFullDate);
             className="van-picker-column__item" id="Success" onClick={()=>tier('Success')}
             style={{height: '44px'}}
           >
-            <div className="van-ellipsis">Success</div>
+            <div className="van-ellipsis">{t('Success')}</div>
           </li>
           <li
             role="button"
@@ -9922,7 +9925,7 @@ console.log(formattedFullDate);
             className="van-picker-column__item" id="Failed" onClick={()=>tier('Failed')}
             style={{height: '44px'}}
           >
-            <div className="van-ellipsis">Failed</div>
+            <div className="van-ellipsis">{t('Failed')}</div>
           </li>
           
         </ul>
@@ -9948,12 +9951,12 @@ console.log(formattedFullDate);
   <div data-v-10d1559c="" className="van-picker">
     <div className="van-picker__toolbar">
       <button type="button" className="van-picker__cancel van-haptics-feedback" onClick={handleSecondCancel}>
-        Cancel
+        {t('Cancel')}
       </button>
-      <div className="van-picker__title van-ellipsis">Choose a date</div>
+      <div className="van-picker__title van-ellipsis">{t('Choose a date')}</div>
       <button type="button" className="van-picker__confirm van-haptics-feedback"         onClick={handleConfirm2}
       >
-        Confirm
+       {t('Confirm')}
       </button>
     </div>
     

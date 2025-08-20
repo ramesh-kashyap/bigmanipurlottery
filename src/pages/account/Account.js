@@ -9587,7 +9587,7 @@ export default function Account() {
               <div data-v-12a80a3e="" className="navbar__content-center">
                 
                 <div data-v-12a80a3e="" className="navbar__content-title">
-                  Settings Center
+                  {t('Settings Center')}
                 </div>
               </div>
               <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -9618,7 +9618,7 @@ export default function Account() {
                 />
               </div>
               <div data-v-5bd44e74="" className="userInfo__container-content-uid">
-                <span data-v-5bd44e74="">UID</span
+                <span data-v-5bd44e74="">{t('UID')}</span
                 ><span data-v-5bd44e74="">|</span
                 ><span data-v-5bd44e74="">{uid}</span
                 ><svg data-v-5bd44e74="" className="svg-icon icon-copy" onClick={() => fetchPromotionInfo(uid)}>
@@ -9629,7 +9629,7 @@ export default function Account() {
                 data-v-5bd44e74=""
                 className="userInfo__container-content-logintime"
               >
-                <span data-v-5bd44e74="">Last login:&nbsp;</span
+                <span data-v-5bd44e74="">{t('Last login')}:&nbsp;</span
                 ><span data-v-5bd44e74="">{lastlogin}</span>
               </div>
               <div
@@ -9732,7 +9732,7 @@ export default function Account() {
                 data-v-7d799898=""
                 className="totalSavings__container-header__title"
               >
-                <span data-v-7d799898="">{t('total')}</span
+                <span data-v-7d799898="">{t('Total balance')}</span
                 >
               </div>
               <p
@@ -9754,7 +9754,7 @@ export default function Account() {
               <div data-v-7d799898="" onClick={()=>navigate('/wallet')}>
                 <svg data-v-7d799898="" className="svg-icon icon-wallets">
                   <use href="#icon-wallets"></use></svg
-                > <span data-v-7d799898=""> {t('wallet')}</span>
+                > <span data-v-7d799898="">{t('Wallet')}</span>
               </div>
             </div>
             <div
@@ -9764,7 +9764,7 @@ export default function Account() {
               <div data-v-7d799898="" onClick={()=>navigate('/wallet/deposit')}>
                 <svg data-v-7d799898="" className="svg-icon icon-rechargeIcon">
                   <use href="#icon-rechargeIcon"></use></svg
-                > <span data-v-7d799898="">{t('Deposit')}   </span>
+                > <span data-v-7d799898="">{t('Deposit')}</span>
               </div>
             </div>
             <div
@@ -9774,7 +9774,7 @@ export default function Account() {
               <div data-v-7d799898="" onClick={()=>navigate('/wallet/withdraw')}>
                 <svg data-v-7d799898="" className="svg-icon icon-widthdrawBlue">
                   <use href="#icon-widthdrawBlue"></use></svg
-                ><span data-v-7d799898="">Withdraw</span>
+                ><span data-v-7d799898="">{t('Withdraw')}</span>
               </div>
             </div>
             <div
@@ -9784,7 +9784,7 @@ export default function Account() {
               <div data-v-7d799898="" onClick={()=>navigate('/Vip')}>
                 <svg data-v-7d799898="" className="svg-icon icon-VipIcon">
                   <use href="#icon-VipIcon"></use></svg
-                > <span data-v-7d799898="">VIP</span>
+                > <span data-v-7d799898="">{t('VIP')}</span>
               </div>
             </div>
           </div>
@@ -9805,8 +9805,8 @@ export default function Account() {
                 data-v-acd6d46f=""
                 className="financialServices__container-box-para" onClick={()=>navigate('/main/BetRecords')}
               >
-               <h3 data-v-acd6d46f="">Game History</h3>
-                <span data-v-acd6d46f="">My game history</span>
+               <h3 data-v-acd6d46f="">{t('Game History')}</h3>
+                <span data-v-acd6d46f="">{t('My game history')}</span>
               </div>
             </div>
             <div data-v-acd6d46f="">
@@ -9817,9 +9817,9 @@ export default function Account() {
                 data-v-acd6d46f=""
                 className="financialServices__container-box-para"  onClick={()=>navigate('/wallet/TransAction')}
               >
-                              <h3 data-v-acd6d46f="">Transaction</h3>
+                              <h3 data-v-acd6d46f="">{t('Transaction')}</h3>
 
-                <span data-v-acd6d46f="">My transaction history</span>
+                <span data-v-acd6d46f="">{t('My transaction history')}</span>
               </div>
             </div>
             <div data-v-acd6d46f="">
@@ -9830,8 +9830,8 @@ export default function Account() {
                 data-v-acd6d46f=""
                 className="financialServices__container-box-para" onClick={()=>navigate('/wallet/DepositHistory')}
               >
-               <h3 data-v-acd6d46f="">Deposit</h3>
-                <span data-v-acd6d46f="">My deposit history</span>
+               <h3 data-v-acd6d46f="">{t('Deposit')}</h3>
+                <span data-v-acd6d46f="">{t('My deposit history')}</span>
               </div>
             </div>
             <div data-v-acd6d46f="">
@@ -9842,8 +9842,8 @@ export default function Account() {
                 data-v-acd6d46f=""
                 className="financialServices__container-box-para" onClick={()=>navigate('/wallet/WithdrawHistory')}
               >
-                 <h3 data-v-acd6d46f="">Withdraw</h3>
-                <span data-v-acd6d46f="">My withdraw history</span>
+                 <h3 data-v-acd6d46f="">{t('Withdraw')}</h3>
+                <span data-v-acd6d46f="">{t('My withdraw history')}</span>
               </div>
             </div>
           </div>
@@ -9869,7 +9869,7 @@ export default function Account() {
 
                 <span
                   data-v-a30d19b1=""
-                  >Notification</span
+                  >{t('Notification')}</span
                 >
               </div>
               <div
@@ -9877,7 +9877,7 @@ export default function Account() {
                 className="settingPanel__container-items-right"
               >
                 <h5 data-v-a30d19b1="">1</h5>
-                <span data-v-a30d19b1="" style={{display: 'none'}}>English</span
+                <span data-v-a30d19b1="" style={{display: 'none'}}>{t('English')}</span
                 ><i
                   data-v-a30d19b1=""
                   className="van-badge__wrapper van-icon van-icon-arrow"
@@ -9900,7 +9900,7 @@ export default function Account() {
 
                 <span
                   data-v-a30d19b1=""    
-                  >Gifts</span
+                  >{t('Gifts')}</span
                 >
               </div>
               <div
@@ -9908,7 +9908,7 @@ export default function Account() {
                 className="settingPanel__container-items-right"
               >
                 <h5 data-v-a30d19b1="" style={{display: 'none'}}>1</h5>
-                <span data-v-a30d19b1="" style={{display: 'none'}}>English</span
+                <span data-v-a30d19b1="" style={{display: 'none'}}>{t('English')}</span
                 ><i
                   data-v-a30d19b1=""
                   className="van-badge__wrapper van-icon van-icon-arrow"
@@ -9930,7 +9930,7 @@ export default function Account() {
                   <use href="#icon-tournament"></use></svg
                 ><span
                   data-v-a30d19b1=""
-                  >My tournament</span
+                  >{t('My tournament')}</span
                 >
               </div>
               <div
@@ -9938,7 +9938,7 @@ export default function Account() {
                 className="settingPanel__container-items-right"
               >
                 <h5 data-v-a30d19b1="" style={{display: 'none'}}>1</h5>
-                <span data-v-a30d19b1="" style={{display: 'none'}}>English</span
+                <span data-v-a30d19b1="" style={{display: 'none'}}>{t('English')}</span
                 ><i
                   data-v-a30d19b1=""
                   className="van-badge__wrapper van-icon van-icon-arrow"
@@ -9960,7 +9960,7 @@ export default function Account() {
                   <use href="#icon-productCode"></use></svg
                 ><span
                   data-v-a30d19b1=""
-                  >Product code</span
+                  > {t('Product code')}</span
                 >
               </div>
               <div
@@ -9968,7 +9968,7 @@ export default function Account() {
                 className="settingPanel__container-items-right"
               >
                 <h5 data-v-a30d19b1="" style={{display: 'none'}}>1</h5>
-                <span data-v-a30d19b1="" style={{display: 'none'}}>English</span
+                <span data-v-a30d19b1="" style={{display: 'none'}}> {t('English')}</span
                 ><i
                   data-v-a30d19b1=""
                   className="van-badge__wrapper van-icon van-icon-arrow"
@@ -9990,7 +9990,7 @@ export default function Account() {
                   <use href="#icon-myDraw"></use></svg
                 ><span
                   data-v-a30d19b1=""
-                  >my draw</span
+                  >{t('my draw')}</span
                 >
               </div>
               <div
@@ -9998,7 +9998,7 @@ export default function Account() {
                 className="settingPanel__container-items-right"
               >
                 <h5 data-v-a30d19b1="" style={{display: 'none'}}>1</h5>
-                <span data-v-a30d19b1="" style={{display: 'none'}}>English</span
+                <span data-v-a30d19b1="" style={{display: 'none'}}>{t('English')}</span
                 ><i
                   data-v-a30d19b1=""
                   className="van-badge__wrapper van-icon van-icon-arrow"
@@ -10020,14 +10020,14 @@ export default function Account() {
                 >
                 <span
                   data-v-a30d19b1=""
-                  >Game statistics</span>
+                  > {t('Game statistics')}</span>
               </div>
               <div
                 data-v-a30d19b1=""
                 className="settingPanel__container-items-right"
               >
                 <h5 data-v-a30d19b1="" style={{display: 'none'}}>1</h5>
-                <span data-v-a30d19b1="" style={{display: 'none'}}>English</span
+                <span data-v-a30d19b1="" style={{display: 'none'}}>{t('English')}</span
                 ><i
                   data-v-a30d19b1=""
                   className="van-badge__wrapper van-icon van-icon-arrow"
@@ -10050,7 +10050,7 @@ export default function Account() {
                 
                 <span
                   data-v-a30d19b1=""
-                  >Language </span>
+                  > {t('Language')}</span>
 
 
 
@@ -10060,7 +10060,7 @@ export default function Account() {
                 className="settingPanel__container-items-right"
               >
                 <h5 data-v-a30d19b1="" style={{display: 'none'}}>1</h5>
-                <span data-v-a30d19b1="">English</span
+                <span data-v-a30d19b1="">{t('English')}</span
                 > <i
                   data-v-a30d19b1=""
                   className="van-badge__wrapper van-icon van-icon-arrow"
@@ -10074,7 +10074,7 @@ export default function Account() {
         
         <div data-v-159bf81f="" data-v-a78765c7="" className="serviceCenter-wrap">
           <div data-v-159bf81f="" className="serviceCenter__container">
-            <h1 data-v-159bf81f="">Service center</h1>
+            <h1 data-v-159bf81f=""> {t('Service Center')}</h1>
             <div data-v-159bf81f="" className="serviceCenter__container-items">
               <div
                 data-v-159bf81f=""
@@ -10085,7 +10085,7 @@ export default function Account() {
                 >
                <span
                   data-v-159bf81f=""
-                  >Settings</span
+                  > {t('Settings')}</span
                 >
 
               </div>
@@ -10098,7 +10098,7 @@ export default function Account() {
                 >
                <span
                   data-v-159bf81f=""
-                  >Feedback</span
+                  > {t('Feedback')}</span
                 >
               </div>
               <div
@@ -10113,7 +10113,8 @@ export default function Account() {
                 >
                 <span
                   data-v-159bf81f=""
-                  >Announcement</span
+                  > {t('Announcement')}
+                  </span
                 >
               </div>
               <div
@@ -10125,7 +10126,7 @@ export default function Account() {
                 >
                <span
                   data-v-159bf81f=""
-                  >24/7 Customer service</span
+                  > {t('24/7 Customer Service')}</span
                 >
               </div>
               <div
@@ -10137,7 +10138,7 @@ export default function Account() {
                 >
                <span
                   data-v-159bf81f=""
-                  >Beginner's Guide</span
+                  > {t('Beginner Guide')}</span
                 >
               </div>
               <div
@@ -10150,7 +10151,7 @@ export default function Account() {
 
                 <span
                   data-v-159bf81f=""
-                  >About us</span
+                  > {t('About us')}</span
                 >
               </div>
             </div>
@@ -10160,7 +10161,7 @@ export default function Account() {
               <svg data-v-159bf81f="" className="svg-icon icon-logout">
                 <use href="#icon-logout"></use></svg
               >
-              Log out
+              {t('Log out')}
             </button>
           </div>
           
@@ -10181,12 +10182,12 @@ export default function Account() {
                 />
               </div>
               <div data-v-3e71d3da="" className="dialog__container-title">
-                <h1 data-v-3e71d3da="">Do you want to log out?</h1>
+                <h1 data-v-3e71d3da=""> {t('Do you want to log out?')}</h1>
               </div>
               <div data-v-3e71d3da="" className="dialog__container-content"></div>
               <div data-v-3e71d3da="" className="dialog__container-footer">
-                <button data-v-3e71d3da="">Confirm</button
-                ><button data-v-3e71d3da="">Cancel</button>
+                <button data-v-3e71d3da="">Confirm. {t('Confirm')}</button
+                ><button data-v-3e71d3da="">Cancel {t('Cancel')}</button>
               </div>
               
             </div>

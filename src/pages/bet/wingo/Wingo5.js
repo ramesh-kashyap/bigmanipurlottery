@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useToast } from '../../../components/ToastContext'; 
+import { useTranslation } from "react-i18next";
 
 
 
@@ -51,6 +52,7 @@ const getPopupClass = (item) => {
 export default function Wingo5() {
   const { showToast } = useToast();
 
+   const { t } = useTranslation();
 
     const navigate = useNavigate();
 
@@ -10038,11 +10040,11 @@ export default function Wingo5() {
           <svg data-v-7dd1adab="" className="svg-icon icon-lottyWallet">
             <use href="#icon-lottyWallet"></use>
           </svg>
-          <div data-v-7dd1adab="">Wallet balance</div>
+          <div data-v-7dd1adab="">{t('Wallet balance')}</div>
         </div>
         <div data-v-7dd1adab="" className="Wallet__C-balance-l3">
-        <div data-v-7dd1adab="" onClick={()=>navigate('/wallet/withdraw')}>Withdraw</div>
-        <div data-v-7dd1adab="" onClick={()=>navigate('/wallet/deposit')}>Deposit</div>
+        <div data-v-7dd1adab="" onClick={()=>navigate('/wallet/withdraw')}>{t('Withdraw')}</div>
+        <div data-v-7dd1adab="" onClick={()=>navigate('/wallet/deposit')}>{t('Deposit')}</div>
         </div>
       </div>
     </div>
@@ -10052,12 +10054,10 @@ export default function Wingo5() {
       </svg>
       <div className="noticeBar__container-body">
         <div className="noticeBar__container-body-text">
-          Be cautious of counterfeit websites mimicking our Khel Mantra official
-          site, do not transfer money to anyone, including agents, and keep
-          payment receipts and UTR numbers confidential.
+          {t('Be cautious of counterfeit websites mimicking our Khel Mantra official site, do not transfer money to anyone, including agents, and keep payment receipts and UTR numbers confidential')}
         </div>
       </div>
-      <button className="hotIcon">Detail</button>
+      <button className="hotIcon">{t('Detail')}</button>
     </div>
     <div data-v-17d56002="" data-v-5d71c3fd="" className="GameList__C">
     <div data-v-17d56002="" className="GameList__C-item" onClick={() => {
@@ -10095,23 +10095,20 @@ export default function Wingo5() {
         >
           <div data-v-0bba67ea="" className="TimeLeft__C-PreSale">
             <div data-v-0bba67ea="" className="TimeLeft__C-PreSale-head">
-              How to play
+              {t('How to play')}
             </div>
             <div data-v-0bba67ea="" className="TimeLeft__C-PreSale-body">
               <div data-v-0bba67ea="">
                 <p >
                   <font
                     face="Arial, Microsoft YaHei, \\5FAE软雅黑, \\5B8B体, Malgun Gothic, Meiryo, sans-serif"
-                    >1 minutes 1 issue, 45 seconds to order, 15 seconds waiting
-                    for the draw. It opens all day. The total number of trade is
-                    1440 issues.</font
+                    > {t('1 minutes 1 issue, 45 seconds to order, 15 seconds waiting for the draw. It opens all day. The total number of trade is 1440 issues')}.</font
                   ><br />
                 </p>
                 <p >
                   <font
                     face="Arial, Microsoft YaHei, \\5FAE软雅黑, \\5B8B体, Malgun Gothic, Meiryo, sans-serif"
-                    >If you spend 100 to trade, after deducting 2 service fee,
-                    your contract amount is 98:</font
+                    >{t('If you spend 100 to trade, after deducting 2 service fee,your contract amount is 98')}:</font
                   >
                 </p>
                 <p >
@@ -10121,11 +10118,10 @@ export default function Wingo5() {
                   ><span
                     style={{
                       fontFamily: "'Arial', 'Microsoft YaHei', 'Malgun Gothic', 'Meiryo', 'sans-serif',"}}                  
-                    >Select</span
+                    >{t('Select')}</span
                   ><font
                     face="Arial, Microsoft YaHei, \\5FAE软雅黑, \\5B8B体, Malgun Gothic, Meiryo, sans-serif"
-                    >green: if the result shows 1,3,7,9 you will get (98*2)
-                    196;If the result shows 5, you will get (98*1.5) 147</font
+                    >green: if the result shows 1,3,7,9 you will get (98*2) 196;If the result shows 5, you will get (98*1.5) 147 </font
                   >
                 </p>
                 <p >

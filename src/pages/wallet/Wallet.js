@@ -3,11 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import Api from '../../services/Api';
 import Loader from '../../components/Loader';
 
+import { useTranslation } from "react-i18next";
 
  
 
 export default function Promotion(){
   const navigate = useNavigate();
+    const { t } = useTranslation();
+  
 
   const [totalMoney, setTotalMoney] = useState(0);
   const [thirdPartyWallet, setThirdPartyWallet] = useState(0);
@@ -9637,7 +9640,7 @@ export default function Promotion(){
                 <div data-v-12a80a3e="" className="navbar__content-center">
                   
                   <div data-v-12a80a3e="" className="navbar__content-title">
-                    Wallet
+                    {t('Wallet')}
                   </div>
                 </div>
                 <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -9649,15 +9652,15 @@ export default function Promotion(){
               <use href="#icon-wallet1"></use>
             </svg>
             <div data-v-0dabd3fc="">₹{totalMoney}</div>
-            <span data-v-0dabd3fc="">Total balance</span>
+            <span data-v-0dabd3fc="">{t('Total balance')}</span>
             <div data-v-0dabd3fc="">
               <div data-v-0dabd3fc="">
                 <p data-v-0dabd3fc="" className="total">{totalWithdraw}</p>
-                <p data-v-0dabd3fc="">Total withdraw amount</p>
+                <p data-v-0dabd3fc="">{t('Total Withdraw Amount')}</p>
               </div>
               <div data-v-0dabd3fc="">
                 <p data-v-0dabd3fc="" className="total">{totalRecharge}</p>
-                <p data-v-0dabd3fc="">Total deposit amount</p>
+                <p data-v-0dabd3fc="">{t('Total deposit amount')}</p>
               </div>
             </div>
           </div>
@@ -9687,7 +9690,7 @@ export default function Promotion(){
                   <div className="van-circle__text">100%</div>
                 </div>
                 <h3 data-v-0dabd3fc="">₹{totalMoney}</h3>
-                <span data-v-0dabd3fc="">Main wallet</span>
+                <span data-v-0dabd3fc="">{t('Main wallet')}</span>
               </div>
               <div data-v-0dabd3fc="" className="progressBarsR">
                 <div data-v-0dabd3fc="" className="van-circle">
@@ -9711,12 +9714,12 @@ export default function Promotion(){
                   <div className="van-circle__text">100%</div>
                 </div>
                 <h3 data-v-0dabd3fc="">₹{thirdPartyWallet}</h3>
-                <span data-v-0dabd3fc="">3rd party wallet</span>
+                <span data-v-0dabd3fc="">{t('3rd party wallet')}</span>
               </div>
             </div>
             <div data-v-0dabd3fc="" className="recycleBtnD">
               <button data-v-0dabd3fc="" className="recycleBtn" onClick={transferMoney}  disabled={isDisabled}>
-                Main wallet transfer
+                {t('Main wallet transfer')}
               </button>
             </div>
             <div data-v-0dabd3fc="" className="userDetail">
@@ -9727,7 +9730,7 @@ export default function Promotion(){
                     src="/assets/png/rechargeIcon-e515aee4.png" onClick={()=>navigate('/wallet/deposit')}
                   />
                 </div>
-                <span data-v-0dabd3fc="" onClick={()=>navigate('/wallet/deposit')}>Deposit</span>
+                <span data-v-0dabd3fc="" onClick={()=>navigate('/wallet/deposit')}>{t('Deposit')}</span>
               </div>
               <div data-v-0dabd3fc=""onClick={()=>navigate('/wallet/withdraw')}>
                 <div data-v-0dabd3fc="" className="imgD">
@@ -9736,7 +9739,7 @@ export default function Promotion(){
                     src="/assets/png/widthdrawBlue-80197e64.png"
                   />
                 </div>
-               <span data-v-0dabd3fc="" onClick={()=>navigate('/wallet/withdraw')}>Withdraw</span>
+               <span data-v-0dabd3fc="" onClick={()=>navigate('/wallet/withdraw')}>{t('Withdraw')}</span>
               </div>
               <div data-v-0dabd3fc=""  onClick={()=>navigate('/wallet/DepositHistory')}>
                 <div data-v-0dabd3fc="" className="imgD">
@@ -9745,7 +9748,7 @@ export default function Promotion(){
                     src="/assets/png/rechargeHistory-b5a853c0.png"
                   />
                 </div>
-                <span data-v-0dabd3fc="">Deposit history</span>
+                <span data-v-0dabd3fc="">{t('Deposit history')}</span>
               </div>
               <div data-v-0dabd3fc=""onClick={()=>navigate('/wallet/WithdrawHistory')}>
                 <div data-v-0dabd3fc="" className="imgD">
@@ -9754,7 +9757,7 @@ export default function Promotion(){
                     src="/assets/png/withdrawHistory-fb2bafcf.png"
                   />
                 </div>
-                <span data-v-0dabd3fc="" onClick={()=>navigate('/wallet/WithdrawHistory')}>Withdrawal history</span>
+                <span data-v-0dabd3fc="" onClick={()=>navigate('/wallet/WithdrawHistory')}>{t('Withdrawal history')}</span>
               </div>
             </div>
           </div>
