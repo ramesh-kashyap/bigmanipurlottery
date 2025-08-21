@@ -9,6 +9,7 @@ import ChartList from '../k3/components/ChartList';
 import BetPopup from '../k3/components/BetPopup';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useTranslation } from "react-i18next";
 
 
 const SOCKET_URL = 'https://gurugames.org';
@@ -27,6 +28,7 @@ const countDownDate =new Date("2030-07-16T23:59:59.9999999+01:00").getTime();
 
 
 export default function K3(){
+   const { t } = useTranslation();
 
     const [gameJoin, setGameJoin] = useState('game1');
     const [activeTime, setActiveTime] =useState('time1');
