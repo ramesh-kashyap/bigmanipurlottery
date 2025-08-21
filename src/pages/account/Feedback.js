@@ -1,6 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
+
 export default function Feedback() {
+      const { t } = useTranslation();
+
   const navigate = useNavigate();
   return (
     <div style={{fontSize: '12px'}}> 
@@ -9506,7 +9510,7 @@ export default function Feedback() {
               </div>
               <div data-v-12a80a3e="" className="navbar__content-center">
                 <div data-v-12a80a3e="" className="navbar__content-title">
-                  Feedback
+                  {t('Feedback')}
                 </div>
               </div>
               <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -9530,8 +9534,8 @@ export default function Feedback() {
             </div>
           </div>
           <div data-v-00fab4aa="" className="feedback-container-content-describe">
-            <h5 data-v-00fab4aa="">Send helpful feedback</h5>
-            <h5 data-v-00fab4aa="">Chance to win Mystery Rewards</h5>
+            <h5 data-v-00fab4aa="">{t('Send helpful feedback')}</h5>
+            <h5 data-v-00fab4aa="">{t('Chance to win Mystery Rewards')}</h5>
             <div data-v-00fab4aa="">
               <img
                 data-v-00fab4aa=""
@@ -9542,7 +9546,7 @@ export default function Feedback() {
           </div>
         </div>
         <div data-v-00fab4aa="" className="feedback-container-footer">
-          <button data-v-00fab4aa="">Submit</button>
+          <button data-v-00fab4aa="">{t('Submit')}</button>
         </div>
       </div>
       <div

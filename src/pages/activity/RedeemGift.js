@@ -1,6 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
+
 export default function RedeemGift() {
+      const { t } = useTranslation();
+  
   const navigate = useNavigate();
   return (
     <div style={{fontSize: '12px'}}>
@@ -9521,7 +9525,7 @@ export default function RedeemGift() {
                 <div data-v-12a80a3e="" className="navbar__content-center">
                  
                   <div data-v-12a80a3e="" className="navbar__content-title">
-                    Gift
+                    {t('Gift')}
                   </div>
                 </div>
                 <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -9540,16 +9544,16 @@ export default function RedeemGift() {
         </div>
         <div data-v-695ca243="" className="redeem-container-content">
           <div data-v-695ca243="" className="redeem-container-receive">
-            <p data-v-695ca243="">Hi</p>
-            <p data-v-695ca243="">We have a gift for you</p>
-            <h4 data-v-695ca243="">Please enter the gift code below</h4>
+            <p data-v-695ca243="">{t('Hi')}</p>
+            <p data-v-695ca243="">{t('We have a gift for you')}</p>
+            <h4 data-v-695ca243="">{t('Please enter the gift code below')}</h4>
             <input
               data-v-695ca243=""
               type="text"
               auto-complete="new-password"
               autoComplete="off"
               placeholder="Please enter gift code"
-            /><button data-v-695ca243="">Receive</button>
+            /><button data-v-695ca243="">{t('Receive')}</button>
           </div>
           <div data-v-695ca243="" className="redeem-container-record">
             <div data-v-695ca243="" className="redeem-container-record-title">
@@ -9557,7 +9561,7 @@ export default function RedeemGift() {
                 <use href="#icon-giftHistory"></use></svg
               ><span
                 data-v-695ca243=""
-                >History</span
+                >{t('History')}</span
               >
             </div>
             <div data-v-695ca243="" className="redeem-container-record-itemsBox">
@@ -9577,7 +9581,7 @@ export default function RedeemGift() {
                     <svg data-v-f84b843f="" className="svg-icon icon-empty">
                       <use href="#icon-empty"></use>
                     </svg>
-                    <p data-v-f84b843f="">No data</p>
+                    <p data-v-f84b843f="">{t('No data')}</p>
                   </div>
                 </div>
               </div>

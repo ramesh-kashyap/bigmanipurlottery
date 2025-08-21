@@ -8,8 +8,10 @@ import 'swiper/css/pagination';
 import { Navigation, Autoplay } from 'swiper/modules';
 import Api from '../../services/Api';
 import CustomModal from '../../components/CustomModal';
+import { useTranslation } from "react-i18next";
 
 export default function Dashboard() {
+   const { t } = useTranslation();
 
 
 
@@ -9759,10 +9761,8 @@ const [isVisible, setIsVisible] = useState(true);
                     <use href="#icon-noticeBarSpeaker"></use>
                 </svg>
                 <div className="noticeBar__container-body">
-                    <div className="noticeBar__container-body-text">Our customer service never send a link to the member,if
-                        you received a link from someone who pro-claimed as Khel Mantra customer service do not click the
-                        link to prevent being hack or lost data. Thank you</div>
-                </div><button className="hotIcon">Detail</button>
+                    <div className="noticeBar__container-body-text">{t('Our customer service never send a link to the member,if you received a link from someone who pro-claimed as Khel Mantra customer service do not click the link to prevent being hack or lost data. Thank you')}</div>
+                </div><button className="hotIcon">{t('Detail')}</button>
             </div>
            
 
@@ -9786,7 +9786,7 @@ const [isVisible, setIsVisible] = useState(true);
         src="/assets/popular-044514e1.png"
       />
       <div data-v-5cc5cfb9="" className="game_text">
-        Popular
+         {t('Popular')}
       </div>
     </div>
     <div data-v-5cc5cfb9="" className="row-item" onClick={() => goToSection("lottery")}>
@@ -9803,7 +9803,7 @@ const [isVisible, setIsVisible] = useState(true);
         src="/assets/lottery-c0a9176b.png"
       />
       <div data-v-5cc5cfb9="" className="game_text">
-        Lottery
+         {t('Lottery')}
       </div>
     </div>
   </div>
@@ -9822,7 +9822,7 @@ const [isVisible, setIsVisible] = useState(true);
         src="/assets/video-c9dce622.png"
       />
       <div data-v-5cc5cfb9="" className="game_text">
-        Casino
+         {t('Casino')}
       </div>
     </div>
     <div data-v-5cc5cfb9="" className="row-item row-small game_slot"  onClick={() => goToSection("slot")}>
@@ -9840,7 +9840,7 @@ const [isVisible, setIsVisible] = useState(true);
         src="/assets/slot-bf07af03.png"
       />
       <div data-v-5cc5cfb9="" className="game_text">
-        Slots
+         {t('Slots')}
       </div>
     </div>
     {/* <div data-v-5cc5cfb9="" className="row-item row-small game_sport">
@@ -9876,7 +9876,7 @@ const [isVisible, setIsVisible] = useState(true);
         src="/assets/chess-9c4d1dff.png"
       />
       <div data-v-5cc5cfb9="" className="game_text">
-        Rummy
+         {t('Rummy')}
       </div>
     </div>
     <div data-v-5cc5cfb9="" className="row-item row-small game_fish" onClick={() => goToSection("fishing")}>
@@ -9894,7 +9894,7 @@ const [isVisible, setIsVisible] = useState(true);
         src="/assets/fish-a70df76d.png"
       />
       <div data-v-5cc5cfb9="" className="game_text">
-        Fishing
+         {t('Fishing')}
       </div>
     </div>
     <div data-v-5cc5cfb9="" className="row-item row-small game_flash" onClick={() => goToSection("original")}>
@@ -9912,7 +9912,7 @@ const [isVisible, setIsVisible] = useState(true);
         src="/assets/flash-eac62fa4.png"
       />
       <div data-v-5cc5cfb9="" className="game_text">
-        Original
+         {t('Original')}
       </div>
     </div>
   </div>
@@ -9925,10 +9925,10 @@ const [isVisible, setIsVisible] = useState(true);
       className="daman-title daman-line"
     >
       <div data-v-c50131ba="" className="daman-title-left">
-        <span data-v-c50131ba="">Lottery</span>
+        <span data-v-c50131ba=""> {t('Lottery')}</span>
       </div>
       <div data-v-c50131ba="" className="btn-all" onClick={() => handleNavigation('/dashboard/AllGames')}>
-        <p data-v-c50131ba="">All</p>
+        <p data-v-c50131ba="">{t('All')}</p>
         {/* <span data-v-c50131ba="">4</span> */}
         <svg
           data-v-c50131ba=""
@@ -9950,7 +9950,7 @@ const [isVisible, setIsVisible] = useState(true);
     </div>
     <div data-v-36646609="" className="daman-lottery">
       <div data-v-36646609="" className="daman_img" onClick={() => handleNavigation('/wingo')}>
-        <h3 data-v-36646609="">Win Go</h3>
+        <h3 data-v-36646609=""> Win Go</h3>
         <img
           loading="lazy"
           data-v-36646609=""
@@ -10014,10 +10014,10 @@ const [isVisible, setIsVisible] = useState(true);
       className="daman-title daman-line"
     >
       <div data-v-c50131ba="" className="daman-title-left">
-        <span data-v-c50131ba="">Original</span>
+        <span data-v-c50131ba="">{t('Original')}</span>
       </div>
       <div data-v-c50131ba="" className="btn-all" onClick={() => handleNavigation('/dashboard/AllGames')}>
-        <p data-v-c50131ba="">All</p>
+        <p data-v-c50131ba="">{t('All')}</p>
         {/* <span data-v-c50131ba="">41</span> */}
         <svg
           data-v-c50131ba=""
@@ -10105,10 +10105,10 @@ const [isVisible, setIsVisible] = useState(true);
       className="daman-title daman-line"
     >
       <div data-v-c50131ba="" className="daman-title-left">
-        <span data-v-c50131ba="">Platform recommendation</span>
+        <span data-v-c50131ba="">{t('Platform recommendation')}</span>
       </div>
       <div data-v-c50131ba="" className="btn-all" onClick={() => handleNavigation('/dashboard/AllGames')}>
-        <p data-v-c50131ba="">All</p>
+        <p data-v-c50131ba="">{t('All')}</p>
         {/* <span data-v-c50131ba="">6</span> */}
         <svg
           data-v-c50131ba=""
@@ -10252,10 +10252,10 @@ const [isVisible, setIsVisible] = useState(true);
       className="daman-title daman-line"
     >
       <div data-v-c50131ba="" className="daman-title-left">
-        <span data-v-c50131ba="">Slots</span>
+        <span data-v-c50131ba="">{t('Slots')}</span>
       </div>
       <div data-v-c50131ba="" className="btn-all" onClick={() => handleNavigation('/dashboard/AllGames')}>
-        <p data-v-c50131ba="">All</p>
+        <p data-v-c50131ba="">{t('All')}</p>
        
         <svg
           data-v-c50131ba=""
@@ -10344,10 +10344,10 @@ const [isVisible, setIsVisible] = useState(true);
       className="daman-title daman-line"
     >
       <div data-v-c50131ba="" className="daman-title-left">
-        <span data-v-c50131ba="">Rummy</span>
+        <span data-v-c50131ba="">{t('Rummy')}</span>
       </div>
       <div data-v-c50131ba="" className="btn-all" onClick={() => handleNavigation('/dashboard/AllGames')}>
-        <p data-v-c50131ba="">All</p>
+        <p data-v-c50131ba="">{t('All')}</p>
        
         <svg
           data-v-c50131ba=""
@@ -10441,10 +10441,10 @@ const [isVisible, setIsVisible] = useState(true);
       className="daman-title daman-line"
     >
       <div data-v-c50131ba="" className="daman-title-left">
-        <span data-v-c50131ba="">Casino</span>
+        <span data-v-c50131ba="">{t('Casino')}</span>
       </div>
       <div data-v-c50131ba="" className="btn-all" onClick={() => handleNavigation('/dashboard/AllGames')}>
-        <p data-v-c50131ba="">All</p>
+        <p data-v-c50131ba="">{t('All')}</p>
         {/* <span data-v-c50131ba="">6</span> */}
         <svg
           data-v-c50131ba=""
@@ -10534,10 +10534,10 @@ const [isVisible, setIsVisible] = useState(true);
       className="daman-title daman-line"
     >
       <div data-v-c50131ba="" className="daman-title-left">
-        <span data-v-c50131ba="">Fishing</span>
+        <span data-v-c50131ba="">{t('Fishing')}</span>
       </div>
       <div data-v-c50131ba="" className="btn-all" onClick={() => handleNavigation('/dashboard/AllGames')}>
-        <p data-v-c50131ba="">All</p>
+        <p data-v-c50131ba="">{t('All')}</p>
         {/* <span data-v-c50131ba="">6</span> */}
         <svg
           data-v-c50131ba=""
@@ -10631,7 +10631,7 @@ const [isVisible, setIsVisible] = useState(true);
 
             
             <div data-v-ffb14677="" data-v-003e4505="" className="luckyWinners__container">
-                <h1 data-v-ffb14677="">Winning information</h1>
+                <h1 data-v-ffb14677="">{t('Winning information')}</h1>
                 <div data-v-ffb14677="" className="luckyWinners__container-wrapper">
                     <div data-v-ffb14677="" style={{position: 'relative'}}>
                         <div data-v-ffb14677="" className="luckyWinners__container-wrapper__item">
@@ -10647,8 +10647,7 @@ const [isVisible, setIsVisible] = useState(true);
                                     data-origin="/assets/png/vendorlogo_20240102165536rgfg.png"/>
                             </div>
                             <div data-v-ffb14677="" className="luckyWinners__container-wrapper__item-winAmount">
-                                <h1 data-v-ffb14677="">Receive ₹185.00</h1><span data-v-ffb14677="">Winning
-                                    amount</span>
+                                <h1 data-v-ffb14677="">{t('Receive')} ₹185.00</h1><span data-v-ffb14677="">{t('Winning amount')}</span>
                             </div>
                         </div>
                         <div data-v-ffb14677="" className="luckyWinners__container-wrapper__item">
@@ -10664,7 +10663,7 @@ const [isVisible, setIsVisible] = useState(true);
                                     data-origin="/assets/png/lotterycategory_202307140102511fow.png"/>
                             </div>
                             <div data-v-ffb14677="" className="luckyWinners__container-wrapper__item-winAmount">
-                                <h1 data-v-ffb14677="">Receive ₹19.60</h1><span data-v-ffb14677="">Winning amount</span>
+                                <h1 data-v-ffb14677="">{t('Receive')} ₹19.60</h1><span data-v-ffb14677="">{t('Winning amount')}</span>
                             </div>
                         </div>
                         <div data-v-ffb14677="" className="luckyWinners__container-wrapper__item">
@@ -10679,7 +10678,7 @@ const [isVisible, setIsVisible] = useState(true);
                                     data-origin="/assets/png/lotterycategory_202307140102511fow.png"/>
                             </div>
                             <div data-v-ffb14677="" className="luckyWinners__container-wrapper__item-winAmount">
-                                <h1 data-v-ffb14677="">Receive ₹19.60</h1><span data-v-ffb14677="">Winning amount</span>
+                                <h1 data-v-ffb14677="">{t('Receive')} ₹19.60</h1><span data-v-ffb14677="">{t('Winning amount')}</span>
                             </div>
                         </div>
                         <div data-v-ffb14677="" className="luckyWinners__container-wrapper__item">
@@ -10694,7 +10693,7 @@ const [isVisible, setIsVisible] = useState(true);
                                     data-origin="/assets/png/lotterycategory_202307140102511fow.png"/>
                             </div>
                             <div data-v-ffb14677="" className="luckyWinners__container-wrapper__item-winAmount">
-                                <h1 data-v-ffb14677="">Receive ₹39.20</h1><span data-v-ffb14677="">Winning amount</span>
+                                <h1 data-v-ffb14677="">{t('Receive')} ₹39.20</h1><span data-v-ffb14677="">{t('Winning amount')}</span>
                             </div>
                         </div>
                         <div data-v-ffb14677="" className="luckyWinners__container-wrapper__item">
@@ -10709,7 +10708,7 @@ const [isVisible, setIsVisible] = useState(true);
                                     data-origin="/assets/png/lotterycategory_202307140102511fow.png"/>
                             </div>
                             <div data-v-ffb14677="" className="luckyWinners__container-wrapper__item-winAmount">
-                                <h1 data-v-ffb14677="">Receive ₹31.36</h1><span data-v-ffb14677="">Winning amount</span>
+                                <h1 data-v-ffb14677="">Receive ₹31.36</h1><span data-v-ffb14677="">{t('Winning amount')}</span>
                             </div>
                         </div>
                         <div data-v-ffb14677="" className="luckyWinners__container-wrapper__item">
@@ -10731,7 +10730,7 @@ const [isVisible, setIsVisible] = useState(true);
                 </div>
             </div>
             <div data-v-84514e8e="" data-v-003e4505="" className="dailyProfitRank">
-                <div data-v-84514e8e="" className="title"><b data-v-84514e8e=""></b>Today's earnings chart</div>
+                <div data-v-84514e8e="" className="title"><b data-v-84514e8e=""></b>{t('Today earnings chart')}</div>
                 <div data-v-84514e8e="" className="dailyProfitRank__content">
                     <div data-v-84514e8e="" className="dailyProfitRank__content-topThree">
                         <div data-v-84514e8e="" className="dailyProfitRank__content-topThree__item"
@@ -10822,9 +10821,9 @@ const [isVisible, setIsVisible] = useState(true);
 }}>
     <div className="van-dialog__header">
       <div data-v-9cd12fb2="" className="header">
-        <div data-v-9cd12fb2="" className="title">Extra first deposit bonus</div>
+        <div data-v-9cd12fb2="" className="title">{('Extra first deposit bonus')}</div>
         <div data-v-9cd12fb2="" className="tip">
-          Each account can only receive rewards once
+          {t('Each account can only receive rewards once')}
         </div>
       </div>
     </div>
@@ -10833,12 +10832,12 @@ const [isVisible, setIsVisible] = useState(true);
         <div data-v-48dabef8="" className="first_list-item">
           <div data-v-48dabef8="" className="head">
             <div data-v-48dabef8="" className="title">
-              First deposit<span data-v-48dabef8="">400</span>
+              {t('First deposit')}<span data-v-48dabef8="">400</span>
             </div>
             <div data-v-48dabef8="" className="orange">+ ₹48.00</div>
           </div>
           <div data-v-48dabef8="" className="description">
-            Deposit 400 for the first time and you will receive 48 bonus
+            {('Deposit 400 for the first time and you will receive 48 bonus')}
           </div>
           <div data-v-48dabef8="" className="foot">
             <div data-v-bff59ba2="" data-v-48dabef8="" className="progress" style={{
@@ -11065,7 +11064,7 @@ const [isVisible, setIsVisible] = useState(true);
             style={{ cursor: 'pointer' }}
           /> */}
           <div data-v-b3bd7e49="" className="text"    // Trigger APK download
-            style={{ cursor: 'pointer' }}>Add to Desktop</div>
+            style={{ cursor: 'pointer' }}>{t('Add to Desktop')}</div>
         </div>
       )}
         
@@ -11078,12 +11077,12 @@ const [isVisible, setIsVisible] = useState(true);
             <div data-v-6ab3f23e="" className={`tabbar__container-item ${activeLink === '/index' ? 'active':''}`}><svg data-v-6ab3f23e=""
                     className="svg-icon icon-home" onClick={()=> navigate('/index')}>
                     <use href="#icon-home"></use>
-                </svg><span data-v-6ab3f23e="" onClick={() => navigate('/index')}>Home</span></div>
+                </svg><span data-v-6ab3f23e="" onClick={() => navigate('/index')}> {t('Home')}</span></div>
             <div data-v-6ab3f23e="" className="tabbar__container-item"><svg data-v-6ab3f23e=""
                     className="svg-icon icon-activity" onClick={()=> navigate('/activity')}><use href="#icon-activity"></use>
                    
                 </svg>
-                <span data-v-6ab3f23e="" onClick={()=> navigate('/activity')}>Activity</span></div>
+                <span data-v-6ab3f23e="" onClick={()=> navigate('/activity')}>{t('Activity')}</span></div>
             <div data-v-6ab3f23e="" className="tabbar__container-item">
             
             <svg data-v-6ab3f23e=""
@@ -11092,14 +11091,14 @@ const [isVisible, setIsVisible] = useState(true);
                 </svg>
                 <div data-v-6ab3f23e="" className="promotionBg"></div>
                 <span data-v-6ab3f23e="" onClick={()=> navigate('/promotion')}>
-                    Promotion</span>
+                    {t('Promotion')}</span>
             </div>
             <div data-v-6ab3f23e="" className="tabbar__container-item"><svg data-v-6ab3f23e="" className="svg-icon icon-wallet">
             <use href="#icon-wallet" onClick={()=> navigate('/wallet')}></use>
-                </svg><span data-v-6ab3f23e=""  onClick={()=> navigate('/wallet')}>Wallet</span></div>
+                </svg><span data-v-6ab3f23e=""  onClick={()=> navigate('/wallet')}>{t('Wallet')}</span></div>
             <div data-v-6ab3f23e="" className="tabbar__container-item"><svg data-v-6ab3f23e="" className="svg-icon icon-main"  onClick={()=> navigate('/account')}>
             <use href="#icon-main"></use>
-                </svg><span data-v-6ab3f23e="" onClick={()=> navigate('/account')}>Account</span></div>
+                </svg><span data-v-6ab3f23e="" onClick={()=> navigate('/account')}>{t('Account')}</span></div>
         </div>
     </div>
     </div>

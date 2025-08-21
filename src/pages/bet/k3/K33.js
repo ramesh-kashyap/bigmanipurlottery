@@ -10,6 +10,7 @@ import BetPopup from '../k3/components/BetPopup';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import { useTranslation } from "react-i18next";
 
 const SOCKET_URL = 'https://gurugames.org';
 
@@ -27,6 +28,7 @@ const countDownDate =new Date("2030-07-16T23:59:59.9999999+01:00").getTime();
 
 
 export default function K3(){
+   const { t } = useTranslation();
 
     const [gameJoin, setGameJoin] = useState('game1');
     const [activeTime, setActiveTime] =useState('time1');
@@ -561,11 +563,11 @@ useEffect(() => {
               <svg data-v-7dd1adab="" className="svg-icon icon-lottyWallet">
                 <use href="#icon-lottyWallet"></use>
               </svg>
-              <div data-v-7dd1adab="">Wallet balance</div>
+              <div data-v-7dd1adab="">{t('Wallet balance')}</div>
             </div>
             <div data-v-7dd1adab="" className="Wallet__C-balance-l3">
-              <div data-v-7dd1adab="" onClick={()=>navigate('/wallet/withdraw')}>Withdraw</div>
-              <div data-v-7dd1adab="" onClick={()=>navigate('/wallet/deposit')}>Deposit</div>
+              <div data-v-7dd1adab="" onClick={()=>navigate('/wallet/withdraw')}>{t('Withdraw')}</div>
+              <div data-v-7dd1adab="" onClick={()=>navigate('/wallet/deposit')}>{t('Deposit')}</div>
             </div>
           </div>
         </div>
@@ -575,12 +577,10 @@ useEffect(() => {
           </svg>
           <div className="noticeBar__container-body">
             <div className="noticeBar__container-body-text">
-              Welcome to Khel Mantra! We have a variety of games, promos and bonus
-              for you to enjoy, so why wait? Go register and enjoy the variety
-              reward awaits you.
+             {t('Welcome to Big Manipur We have a variety of games, promos and bonus for you to enjoy, so why wait? Go register and enjoy the variety reward awaits you')}
             </div>
           </div>
-          <button className="hotIcon">Detail</button>
+          <button className="hotIcon">{t('Detail')}</button>
         </div>
         <div data-v-17d56002="" data-v-d024c659="" className="GameList__C">
         <div data-v-17d56002="" className="GameList__C-item" onClick={() => {navigate('/AllLotteryGames/K3');}}>
@@ -607,7 +607,7 @@ useEffect(() => {
         <div data-v-75b35bf5="" className="K3TL__C">
           <div data-v-75b35bf5="" className="K3TL__C-l1">
             <div data-v-75b35bf5="" className="left">
-              <div data-v-75b35bf5="">Period</div>
+              <div data-v-75b35bf5="">{t('Period')}</div>
               <div data-v-75b35bf5="" className="K3TL__C-rule">
                 <svg
                   data-v-75b35bf5=""
@@ -624,10 +624,10 @@ useEffect(() => {
                     strokeWidth="1.2"
                   ></path>
                 </svg>
-                How to play
+                {t('How to play')}
               </div>
             </div>
-            <div data-v-75b35bf5="">Time remaining</div>
+            <div data-v-75b35bf5="">{t('Time remaining')}</div>
           </div>
           <div data-v-75b35bf5="" className="K3TL__C-l2">
             <div data-v-75b35bf5="">{period}</div>
@@ -659,10 +659,10 @@ useEffect(() => {
             <div data-v-8a4509d7="">{time.seconds2}</div>
           </div>
           <div data-v-8a4509d7="" className="K3B__C-nav" >
-            <div data-v-8a4509d7="" className={`${gameJoin === 'game1' ? 'active' : ''}`}  onClick={() => showSection('game1')}>Total</div>
-            <div data-v-8a4509d7="" className={`${gameJoin === 'game2' ? 'active' : ''}`}  onClick={() => showSection('game2')}>2 same</div>
-            <div data-v-8a4509d7="" className={`${gameJoin === 'game3' ? 'active' : ''}`}  onClick={() => showSection('game3')}>3 same</div>
-            <div data-v-8a4509d7="" className={`${gameJoin === 'game4' ? 'active' : ''}`}  onClick={() => showSection('game4')}>Different</div>
+            <div data-v-8a4509d7="" className={`${gameJoin === 'game1' ? 'active' : ''}`}  onClick={() => showSection('game1')}>{t('Total')}</div>
+            <div data-v-8a4509d7="" className={`${gameJoin === 'game2' ? 'active' : ''}`}  onClick={() => showSection('game2')}>2 {t('same')}</div>
+            <div data-v-8a4509d7="" className={`${gameJoin === 'game3' ? 'active' : ''}`}  onClick={() => showSection('game3')}>3 {t('same')}</div>
+            <div data-v-8a4509d7="" className={`${gameJoin === 'game4' ? 'active' : ''}`}  onClick={() => showSection('game4')}>{t('Different')}</div>
           </div>
           <div
   data-v-ed0c8e79=""
@@ -768,19 +768,19 @@ useEffect(() => {
     <div data-v-ed0c8e79="" className="K3B__C-odds-rate">207.36X</div>
   </div>
   <div data-v-ed0c8e79="" className="num numA" onClick={() => addToListJoin('b')}>
-    <div data-v-ed0c8e79="" className="">Big</div>
+    <div data-v-ed0c8e79="" className="">{t('Big')}</div>
     <div data-v-ed0c8e79="" className="K3B__C-odds-rate">2X</div>
   </div>
   <div data-v-ed0c8e79="" className="num numB" onClick={() => addToListJoin('s')}>
-    <div data-v-ed0c8e79="" className="">Small</div>
+    <div data-v-ed0c8e79="" className="">{t('Small')}</div>
     <div data-v-ed0c8e79="" className="K3B__C-odds-rate">2X</div>
   </div>
   <div data-v-ed0c8e79="" className="num numC" onClick={() => addToListJoin('l')}>
-    <div data-v-ed0c8e79="" className="">Odd</div>
+    <div data-v-ed0c8e79="" className="">{t('Odd')}</div>
     <div data-v-ed0c8e79="" className="K3B__C-odds-rate">2X</div>
   </div>
   <div data-v-ed0c8e79="" className="num numD" onClick={() => addToListJoin('c')}>
-    <div data-v-ed0c8e79="" className="">Even</div>
+    <div data-v-ed0c8e79="" className="">{t('Even')}</div>
     <div data-v-ed0c8e79="" className="K3B__C-odds-rate">2X</div>
   </div>
 </div>
@@ -889,9 +889,9 @@ useEffect(() => {
 
         </div>
         <div data-v-72f81e71="" data-v-d024c659="" className="RecordNav__C">
-          <div data-v-72f81e71="" className={`${activeHistory === 'history1' ? 'active' : ''}`} onClick={()=>showHistory('history1')}>Game history</div>
-          <div data-v-72f81e71="" className={`${activeHistory === 'history2' ? 'active':''}`} onClick={()=>showHistory('history2')}>Chart</div>
-          <div data-v-72f81e71="" className={`${activeHistory === 'history3' ? 'active':''}`} onClick={()=>showHistory('history3')}>My history</div>
+          <div data-v-72f81e71="" className={`${activeHistory === 'history1' ? 'active' : ''}`} onClick={()=>showHistory('history1')}>{t('Game history')}</div>
+          <div data-v-72f81e71="" className={`${activeHistory === 'history2' ? 'active':''}`} onClick={()=>showHistory('history2')}>{t('Chart')}</div>
+          <div data-v-72f81e71="" className={`${activeHistory === 'history3' ? 'active':''}`} onClick={()=>showHistory('history3')}>{t('My history')}</div>
         </div>
         <div
           data-v-4e09079f=""
@@ -904,9 +904,9 @@ useEffect(() => {
         >
           <div data-v-4e09079f="" className="GameRecord__C-head">
             <div data-v-4e09079f="" className="van-row">
-              <div data-v-4e09079f="" className="van-col van-col--10">Period</div>
-              <div data-v-4e09079f="" className="van-col van-col--4">Sum</div>
-              <div data-v-4e09079f="" className="van-col van-col--10">Results</div>
+              <div data-v-4e09079f="" className="van-col van-col--10">{t('Period')}</div>
+              <div data-v-4e09079f="" className="van-col van-col--4">{t('Sum')}</div>
+              <div data-v-4e09079f="" className="van-col van-col--10">{t('Results')}</div>
             </div>
           </div>
           
@@ -965,8 +965,8 @@ useEffect(() => {
               <div data-v-d024c659=""></div>
             </div>
             <div data-v-3e71d3da="" className="dialog__container-footer">
-              <button data-v-3e71d3da="">Confirm</button
-              ><button data-v-3e71d3da="">Cancel</button>
+              <button data-v-3e71d3da="">{t('Confirm')}</button
+              ><button data-v-3e71d3da="">{t('Cancel')}</button>
             </div>
           </div>
           <div data-v-3e71d3da="" className="dialog__outside"></div>
@@ -986,9 +986,9 @@ useEffect(() => {
       
         <div data-v-4159c83a="" className="Trend__C-head">
           <div data-v-4159c83a="" className="van-row">
-            <div data-v-4159c83a="" className="van-col van-col--8">Period</div>
-            <div data-v-4159c83a="" className="van-col van-col--6">Results</div>
-            <div data-v-4159c83a="" className="van-col van-col--10">Number</div>
+            <div data-v-4159c83a="" className="van-col van-col--8">{t('Period')}</div>
+            <div data-v-4159c83a="" className="van-col van-col--6">{t('Results')}</div>
+            <div data-v-4159c83a="" className="van-col van-col--10">{t('Number')}</div>
           </div>
         </div>
 
@@ -1034,7 +1034,7 @@ useEffect(() => {
       id="history3" style={{ display: activeHistory === 'history3' ? 'block' : 'none' }}>
       <div data-v-cffd8c9f="" className="MyGameRecord__C-head">
         <div data-v-cffd8c9f="" className="MyGameRecord__C-head-moreB">
-          Detail
+          {t('Detail')}
           <svg data-v-cffd8c9f="" className="svg-icon icon-rightCircle">
             <use href="#icon-rightCircle"></use>
           </svg>
@@ -1049,34 +1049,34 @@ useEffect(() => {
 
    
     <div data-v-a5ef3154="" className="MyGameRecordList__C-detail" style={{ display:'none' }}>
-        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-text">Details</div>
-        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-line">Order number <div data-v-a5ef3154="">
+        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-text">{t('Details')}</div>
+        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-line">{t('Order number')} <div data-v-a5ef3154="">
                 K32024090215592148858774f <svg data-v-a5ef3154="" className="svg-icon icon-copy">
                     <use href="#icon-copy"></use>
                 </svg></div>
         </div>
-        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-line">Period <div data-v-a5ef3154="">
+        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-line">{t('Period')} <div data-v-a5ef3154="">
                 20240902090960</div>
         </div>
-        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-line">Purchase amount <div data-v-a5ef3154="">
+        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-line">{t('Purchase amount')} <div data-v-a5ef3154="">
                 ₹15.00</div>
         </div>
-        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-line">Quantity <div data-v-a5ef3154="">1</div>
+        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-line">{t('Quantity')} <div data-v-a5ef3154="">1</div>
         </div>
-        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-line">Amount after tax <div data-v-a5ef3154=""
+        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-line">{t('Amount after tax')} <div data-v-a5ef3154=""
                 className="red">₹14.70</div>
         </div>
-        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-line">Tax <div data-v-a5ef3154="">₹0.30</div>
+        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-line">{t('Tax')} <div data-v-a5ef3154="">₹0.30</div>
         </div>
-        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-line">Result <div data-v-a5ef3154=""
+        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-line">{t('Result')} <div data-v-a5ef3154=""
                 className="numList">
                 <div data-v-a5ef3154="" className="n5"></div>
                 <div data-v-a5ef3154="" className="n6"></div>
                 <div data-v-a5ef3154="" className="n1"></div>
             </div>
         </div>
-        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-line noLine">Select <div data-v-a5ef3154=""
-                className="line1"><span data-v-a5ef3154="" className="">2 same numbers:</span><span data-v-a5ef3154=""
+        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-line noLine">{t('Select')} <div data-v-a5ef3154=""
+                className="line1"><span data-v-a5ef3154="" className="">2 {t('same numbers')}:</span><span data-v-a5ef3154=""
                     className="btn actionViolet">11</span><span data-v-a5ef3154=""
                     className="btn actionViolet">22</span><span data-v-a5ef3154=""
                     className="btn actionViolet">33</span><span data-v-a5ef3154=""
@@ -1087,13 +1087,13 @@ useEffect(() => {
                     data-v-a5ef3154="" className="btn actionRedGreen">55|1,3,4</span><span data-v-a5ef3154=""
                     className="btn actionRedGreen">66|1,3,4</span></div>
         </div>
-        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-line">Status <div data-v-a5ef3154=""
-                className="red">Failed</div>
+        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-line">{t('Status')} <div data-v-a5ef3154=""
+                className="red">{t('Failed')}</div>
         </div>
         <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-line">Win/lose <div data-v-a5ef3154=""
                 className="red">- ₹14.70</div>
         </div>
-        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-line">Order time <div data-v-a5ef3154="">
+        <div data-v-a5ef3154="" className="MyGameRecordList__C-detail-line">{t('Order time')} <div data-v-a5ef3154="">
                 2024-09-02 15:59:21</div>
         </div>
     </div>
@@ -1146,20 +1146,20 @@ setShowBetPopup={setShowBetPopup} fetchMyBets={fetchMyBets} fetchUserInfo={fetch
         >
           <div data-v-2d418cc5="" className="WinningTip__C-body">
             <div data-v-2d418cc5="" className="WinningTip__C-body-l1">
-              Congratulations
+              {t('Congratulations')}
             </div>
             <div data-v-2d418cc5="" className="WinningTip__C-body-l2">
               <div data-v-2d418cc5="" className="line1"></div>
               <div data-v-2d418cc5="" className="line2">
                 <div data-v-2d418cc5=""></div>
-                <div data-v-2d418cc5="" className="yuan">Small</div>
-                <div data-v-2d418cc5="">Even</div>
+                <div data-v-2d418cc5="" className="yuan">{t('Small')}</div>
+                <div data-v-2d418cc5="">{t('Even')}</div>
               </div>
             </div>
             <div data-v-2d418cc5="" className="WinningTip__C-body-l3">
-              <div data-v-2d418cc5="" className="head">Bonus</div>
+              <div data-v-2d418cc5="" className="head">{t('Bonus')}</div>
               <div data-v-2d418cc5="" className="bonus"></div>
-              <div data-v-2d418cc5="" className="gameDetail">Period:</div>
+              <div data-v-2d418cc5="" className="gameDetail">{t('Period')}:</div>
             </div>
             <div data-v-2d418cc5="" className="WinningTip__C-body-l4">
               <div data-v-2d418cc5="" className="acitveBtn"></div>
@@ -1225,19 +1225,19 @@ setShowBetPopup={setShowBetPopup} fetchMyBets={fetchMyBets} fetchUserInfo={fetch
         </div>
         <div data-v-baf77bdf="" className="FDB__C-H">
           <div data-v-baf77bdf="" className="active">
-            <span data-v-baf77bdf="">Big</span
+            <span data-v-baf77bdf="">{t('Big')}</span
             ><span data-v-baf77bdf="">1.98</span>
           </div>
           <div data-v-baf77bdf="" className="">
-            <span data-v-baf77bdf="">Small</span
+            <span data-v-baf77bdf="">{t('Small')}</span
             ><span data-v-baf77bdf="">1.98</span>
           </div>
           <div data-v-baf77bdf="" className="">
-            <span data-v-baf77bdf="">Odd</span
+            <span data-v-baf77bdf="">{t('Odd')}</span
             ><span data-v-baf77bdf="">1.98</span>
           </div>
           <div data-v-baf77bdf="" className="">
-            <span data-v-baf77bdf="">Even</span
+            <span data-v-baf77bdf="">{t('Even')}</span
             ><span data-v-baf77bdf="">1.98</span>
           </div>
         </div>
@@ -1284,7 +1284,7 @@ setShowBetPopup={setShowBetPopup} fetchMyBets={fetchMyBets} fetchUserInfo={fetch
           </div>
         </div>
         <div data-v-7181abf7="" className="Betting__Popup-body-line">
-          Balance
+         {t('Balance')}
           <div data-v-7181abf7="" className="Betting__Popup-body-line-list">
             <div
               data-v-7181abf7=""
@@ -1304,7 +1304,7 @@ setShowBetPopup={setShowBetPopup} fetchMyBets={fetchMyBets} fetchUserInfo={fetch
           </div>
         </div>
         <div data-v-7181abf7="" className="Betting__Popup-body-line">
-          Quantity
+          {t('Quantity')}
           <div data-v-7181abf7="" className="Betting__Popup-body-line-btnL">
             <div data-v-7181abf7="" className="Betting__Popup-btn bgcolor">
               -
@@ -1376,16 +1376,16 @@ setShowBetPopup={setShowBetPopup} fetchMyBets={fetchMyBets} fetchUserInfo={fetch
         </div>
         <div data-v-7181abf7="" className="Betting__Popup-body-line">
           <span data-v-7181abf7="" className="Betting__Popup-agree active"
-            >I agree</span
+            >{t('I agree')}</span
           ><span data-v-7181abf7="" className="Betting__Popup-preSaleShow"
             >《Pre-sale rules》</span
           >
         </div>
       </div>
       <div data-v-7181abf7="" className="Betting__Popup-foot">
-        <div data-v-7181abf7="" className="Betting__Popup-foot-c">Cancel</div>
+        <div data-v-7181abf7="" className="Betting__Popup-foot-c">{t('Cancel')}</div>
         <div data-v-7181abf7="" className="Betting__Popup-foot-s bgcolor">
-          Total amount₹1.00
+          {t('Total amount')}₹1.00
         </div>
       </div>
       
@@ -1414,19 +1414,19 @@ setShowBetPopup={setShowBetPopup} fetchMyBets={fetchMyBets} fetchUserInfo={fetch
         </div>
         <div data-v-baf77bdf="" className="FDB__C-H">
           <div data-v-baf77bdf="" className="active">
-            <span data-v-baf77bdf="">Big</span
+            <span data-v-baf77bdf="">{t('Big')}</span
             ><span data-v-baf77bdf="">1.98</span>
           </div>
           <div data-v-baf77bdf="" className="">
-            <span data-v-baf77bdf="">Small</span
+            <span data-v-baf77bdf="">{t('Small')}</span
             ><span data-v-baf77bdf="">1.98</span>
           </div>
           <div data-v-baf77bdf="" className="">
-            <span data-v-baf77bdf="">Odd</span
+            <span data-v-baf77bdf="">{t('Odd')}</span
             ><span data-v-baf77bdf="">1.98</span>
           </div>
           <div data-v-baf77bdf="" className="">
-            <span data-v-baf77bdf="">Even</span
+            <span data-v-baf77bdf="">{t('Even')}</span
             ><span data-v-baf77bdf="">1.98</span>
           </div>
         </div>
@@ -1473,7 +1473,7 @@ setShowBetPopup={setShowBetPopup} fetchMyBets={fetchMyBets} fetchUserInfo={fetch
           </div>
         </div>
         <div data-v-7181abf7="" className="Betting__Popup-body-line">
-          Balance
+          {t('Balance')}
           <div data-v-7181abf7="" className="Betting__Popup-body-line-list">
             <div
               data-v-7181abf7=""
@@ -1493,7 +1493,7 @@ setShowBetPopup={setShowBetPopup} fetchMyBets={fetchMyBets} fetchUserInfo={fetch
           </div>
         </div>
         <div data-v-7181abf7="" className="Betting__Popup-body-line">
-          Quantity
+          {t('Quantity')}
           <div data-v-7181abf7="" className="Betting__Popup-body-line-btnL">
             <div data-v-7181abf7="" className="Betting__Popup-btn bgcolor">
               -
@@ -1565,16 +1565,16 @@ setShowBetPopup={setShowBetPopup} fetchMyBets={fetchMyBets} fetchUserInfo={fetch
         </div>
         <div data-v-7181abf7="" className="Betting__Popup-body-line">
           <span data-v-7181abf7="" className="Betting__Popup-agree active"
-            >I agree</span
+            >{t('I agree')}</span
           ><span data-v-7181abf7="" className="Betting__Popup-preSaleShow"
             >《Pre-sale rules》</span
           >
         </div>
       </div>
       <div data-v-7181abf7="" className="Betting__Popup-foot">
-        <div data-v-7181abf7="" className="Betting__Popup-foot-c">Cancel</div>
+        <div data-v-7181abf7="" className="Betting__Popup-foot-c">{t('Cancel')}</div>
         <div data-v-7181abf7="" className="Betting__Popup-foot-s bgcolor">
-          Total amount₹1.00
+          {t('Total amount')}₹1.00
         </div>
       </div>
       

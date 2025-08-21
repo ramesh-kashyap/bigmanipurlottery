@@ -2,11 +2,13 @@ import {React, useState} from 'react';
 import { useNavigate  } from 'react-router-dom';
 import Api from '../../services/Api';
 import { useToast } from '../../components/ToastContext'; 
- 
+ import { useTranslation } from "react-i18next";
+
 
 
 
 export default function Register() {
+              const { t } = useTranslation();
 
 
   const { showToast } = useToast();
@@ -83,7 +85,7 @@ export default function Register() {
           </div>
           <div data-v-12a80a3e="" className="navbar__content-center">
             <div data-v-12a80a3e="" className="navbar__content-title">
-              Bind mailbox
+              {t('Bind mailbox')}
             </div>
           </div>
           <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -100,7 +102,7 @@ export default function Register() {
                 className="svg-icon icon-email emailinput__container-label__icon emailinput__container-label__icon"
               >
                 <use href="#icon-email"></use></svg
-              ><span data-v-4499df08="">Mail</span>
+              ><span data-v-4499df08="">{t('Mail')}</span>
             </div>
             <div data-v-4499df08="" className="emailinput__container-input">
               <input
@@ -127,7 +129,7 @@ export default function Register() {
             className="svg-icon icon-safeIcon verifyInput__container-label__icon verifyInput__container-label__icon"
           >
             <use href="#icon-safeIcon"></use></svg
-          ><span data-v-484b25b1="">Verification Code</span>
+          ><span data-v-484b25b1="">{t('Verification Code')}</span>
         </div>
         <div data-v-484b25b1="" className="verifyInput__container-input">
           <input
@@ -138,7 +140,7 @@ export default function Register() {
             onChange={(e) => setOtp(e.target.value)}
             maxLength="6"
           /><button data-v-484b25b1="" className="">
-            <span data-v-484b25b1="" onClick={handleSendOtp}>Send</span>
+            <span data-v-484b25b1="" onClick={handleSendOtp}>{t('Send')}</span>
           </button>
         </div>
         <div
@@ -150,8 +152,8 @@ export default function Register() {
             data-v-484b25b1=""
             className="van-badge__wrapper van-icon van-icon-warning-o"
             ></i
-          ><span data-v-484b25b1="">Did not receive verification code?</span
-          ><span data-v-484b25b1="">Contact customer service</span>
+          ><span data-v-484b25b1="">{t('Did not receive verification code')}?</span
+          ><span data-v-484b25b1="">{t('Contact customer service')}</span>
         </div>
       </div>
       <div
@@ -159,12 +161,12 @@ export default function Register() {
         className="updateP-container-tips"
         style={{display: 'none'}}
         >
-        <span data-v-eca8202a="">Please enter the confirmation code!</span>
+        <span data-v-eca8202a="">{t('Please enter the confirmation code')}!</span>
       </div>
       <div data-v-eca8202a="" className="bind-button">
         <button data-v-eca8202a=""           style={{display: 'none'}}
-        >Next step</button
-        ><button data-v-eca8202a="" onClick={handleBindEmail}>Bind</button>
+        >{t('Next step')}</button
+        ><button data-v-eca8202a="" onClick={handleBindEmail}>{t('Bind')}</button>
       </div>
     </div>
     <div data-v-c0caae78="" data-v-eca8202a="" className="dialog inactive">
@@ -184,11 +186,11 @@ export default function Register() {
           />
         </div>
         <div data-v-c0caae78="" className="dialog__container-title">
-          <h1 data-v-c0caae78="">bind successfully</h1>
+          <h1 data-v-c0caae78="">{t('bind successfully')}</h1>
         </div>
         <div data-v-c0caae78="" className="dialog__container-content"></div>
         <div data-v-c0caae78="" className="dialog__container-footer">
-        <button data-v-c0caae78="">Confirm</button>
+        <button data-v-c0caae78="">{t('Confirm')}</button>
         </div>
       </div>
       <div data-v-c0caae78="" className="dialog__outside"></div>

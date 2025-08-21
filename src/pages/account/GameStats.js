@@ -1,8 +1,11 @@
 import React, {  useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 import Api from '../../services/Api';
 export default function GameStats() {
+        const { t } = useTranslation();
+  
   const navigate = useNavigate();
   
  const [selectedTab, setSelectedTab] = useState('Today');
@@ -35,8 +38,12 @@ export default function GameStats() {
 
     fetchStats();
   }, []);
-const tabs = ['Today', 'Yesterday', 'This week', 'This month'];
-  
+const tabs = [
+    t("Today"),
+    t("Yesterday"),
+    t("This week"),
+    t("This month"),
+  ];  
 
 return (
     <div style={{fontSize: '12px'}}>
@@ -9546,7 +9553,7 @@ return (
               </div>
               <div data-v-12a80a3e="" className="navbar__content-center">
                 <div data-v-12a80a3e="" className="navbar__content-title">
-                  Game statistics
+                  {t('Game statistics')}
                 </div>
               </div>
               <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -9636,7 +9643,7 @@ return sum + betAmount;
 }, 0)
 .toFixed(2)
 }</h1>
-        <span data-v-0fabbe57="">Total bet</span>
+        <span data-v-0fabbe57="">{t('Total bet')}</span>
       </div>
       <div data-v-0fabbe57="" className="gamestats-container-list-wrapper">
          {['wingo', 'k3', '5d'].map((gameKey) => {
@@ -9670,15 +9677,15 @@ return sum + betAmount;
                 className="gamestats-container-item-content-list"
               >
                 <div data-v-0fabbe57="">
-                  <h4 data-v-0fabbe57="">Total bet</h4>
+                  <h4 data-v-0fabbe57="">{t('Total bet')}</h4>
                   <h5 data-v-0fabbe57="">{game.totalBet}</h5>
                 </div>
                 <div data-v-0fabbe57="">
-                  <h4 data-v-0fabbe57="">Number of bets</h4>
+                  <h4 data-v-0fabbe57="">{t('Number of bets')}</h4>
                   <h5 data-v-0fabbe57="">{game.numBets}</h5>
                 </div>
                 <div data-v-0fabbe57="">
-                  <h4 data-v-0fabbe57="">Winning amount</h4>
+                  <h4 data-v-0fabbe57="">{t('Winning amount')}</h4>
                   <span data-v-0fabbe57="">{game.winningAmount}</span>
                 </div>
               </div>

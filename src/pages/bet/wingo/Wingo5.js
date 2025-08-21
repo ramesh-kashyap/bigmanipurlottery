@@ -10054,7 +10054,7 @@ export default function Wingo5() {
       </svg>
       <div className="noticeBar__container-body">
         <div className="noticeBar__container-body-text">
-          {t('Be cautious of counterfeit websites mimicking our Khel Mantra official site, do not transfer money to anyone, including agents, and keep payment receipts and UTR numbers confidential')}
+          {t('Be cautious of counterfeit websites mimicking our Big Manipur official site, do not transfer money to anyone, including agents, and keep payment receipts and UTR numbers confidential')}
         </div>
       </div>
       <button className="hotIcon">{t('Detail')}</button>
@@ -10121,7 +10121,7 @@ export default function Wingo5() {
                     >{t('Select')}</span
                   ><font
                     face="Arial, Microsoft YaHei, \\5FAE软雅黑, \\5B8B体, Malgun Gothic, Meiryo, sans-serif"
-                    >green: if the result shows 1,3,7,9 you will get (98*2) 196;If the result shows 5, you will get (98*1.5) 147 </font
+                    >{t('green: if the result shows 1,3,7,9 you will get (98*2) 196;If the result shows 5, you will get (98*1.5) 147')} </font
                   >
                 </p>
                 <p >
@@ -10131,11 +10131,10 @@ export default function Wingo5() {
                   ><span
                     style={{
                       fontFamily: "'Arial', 'Microsoft YaHei', 'Malgun Gothic', 'Meiryo', 'sans-serif',"}}
-                    >Select</span
+                    > {t('Select')}</span
                   ><font
                     face="Arial, Microsoft YaHei, \\5FAE软雅黑, \\5B8B体, Malgun Gothic, Meiryo, sans-serif"
-                    >red: if the result shows 2,4,6,8 you will get (98*2) 196;If
-                    the result shows 0, you will get (98*1.5) 147</font
+                    >{t('red: if the result shows 2,4,6,8 you will get (98*2) 196;If the result shows 0, you will get (98*1.5) 147')}</font
                   >
                 </p>
                 <p >
@@ -10145,39 +10144,35 @@ export default function Wingo5() {
                   ><span
                     style={{
                       fontFamily: "'Arial', 'Microsoft YaHei', 'Malgun Gothic', 'Meiryo', 'sans-serif',"}}
-                    >Select</span
+                    >{t('Select')}</span
                   ><font
                     face="Arial, Microsoft YaHei, \\5FAE软雅黑, \\5B8B体, Malgun Gothic, Meiryo, sans-serif"
-                    >violet:if the result shows 0 or 5, you will get (98*4.5)
-                    441</font
+                    >{t('violet:if the result shows 0 or 5, you will get (98*4.5) 441')}</font
                   >
                 </p>
                 <p >
                   <font
                     face="Arial, Microsoft YaHei, \\5FAE软雅黑, \\5B8B体, Malgun Gothic, Meiryo, sans-serif"
-                    >4. Select number:if the result is the same as the number
-                    you selected, you will get (98*9) 882</font
+                    >4. {t('Select number:if the result is the same as the number you selected, you will get (98*9) 882')}</font
                   >
                 </p>
                 <p >
                   <font
                     face="Arial, Microsoft YaHei, \\5FAE软雅黑, \\5B8B体, Malgun Gothic, Meiryo, sans-serif"
-                    >5. Select big: if the result shows 5,6,7,8,9 you will get
-                    (98 * 2) 196</font
+                    >5. {t('Select big: if the result shows 5,6,7,8,9 you will get (98 * 2) 196')}</font
                   >
                 </p>
                 <p >
                   <font
                     face="Arial, Microsoft YaHei, \\5FAE软雅黑, \\5B8B体, Malgun Gothic, Meiryo, sans-serif"
-                    >6. Select small: if the result shows 0,1,2,3,4 you will get
-                    (98 * 2) 196</font
+                    >6. {('Select small: if the result shows 0,1,2,3,4 you will get (98 * 2) 196 ')}</font
                   >
                 </p>
               </div>
             </div>
             <div data-v-0bba67ea="" className="TimeLeft__C-PreSale-foot">
               <div data-v-0bba67ea="" className="TimeLeft__C-PreSale-foot-btn" onClick={setIsPlayCancel}>
-              Close
+              {t('Close')}
               </div>
             </div>
           </div>
@@ -10197,7 +10192,7 @@ export default function Wingo5() {
             d="M23.67 3H12.33C6.66 3 5.25 4.515 5.25 10.56V27.45C5.25 31.44 7.44 32.385 10.095 29.535L10.11 29.52C11.34 28.215 13.215 28.32 14.28 29.745L15.795 31.77C17.01 33.375 18.975 33.375 20.19 31.77L21.705 29.745C22.785 28.305 24.66 28.2 25.89 29.52C28.56 32.37 30.735 31.425 30.735 27.435V10.56C30.75 4.515 29.34 3 23.67 3ZM11.67 18C10.845 18 10.17 17.325 10.17 16.5C10.17 15.675 10.845 15 11.67 15C12.495 15 13.17 15.675 13.17 16.5C13.17 17.325 12.495 18 11.67 18ZM11.67 12C10.845 12 10.17 11.325 10.17 10.5C10.17 9.675 10.845 9 11.67 9C12.495 9 13.17 9.675 13.17 10.5C13.17 11.325 12.495 12 11.67 12ZM24.345 17.625H16.095C15.48 17.625 14.97 17.115 14.97 16.5C14.97 15.885 15.48 15.375 16.095 15.375H24.345C24.96 15.375 25.47 15.885 25.47 16.5C25.47 17.115 24.96 17.625 24.345 17.625ZM24.345 11.625H16.095C15.48 11.625 14.97 11.115 14.97 10.5C14.97 9.885 15.48 9.375 16.095 9.375H24.345C24.96 9.375 25.47 9.885 25.47 10.5C25.47 11.115 24.96 11.625 24.345 11.625Z"
             fill="currentColor"
           ></path></svg
-        >How to play
+        >{t('How to play')}
       </div>
       <div data-v-3e4c6499="" className="TimeLeft__C-name">Win Go 1 min</div>
       <div data-v-3e4c6499="" className="TimeLeft__C-num">
@@ -10209,7 +10204,7 @@ export default function Wingo5() {
         ))}
       </div>
       <div data-v-3e4c6499="" className="TimeLeft__C-id">{period}</div>
-      <div data-v-3e4c6499="" className="TimeLeft__C-text">Time remaining</div>
+      <div data-v-3e4c6499="" className="TimeLeft__C-text">{t('Time remaining')}</div>
       <div data-v-3e4c6499="" className="TimeLeft__C-time">
         <div data-v-3e4c6499="">0</div>
         <div data-v-3e4c6499="">{time.minute}</div>
@@ -10231,9 +10226,9 @@ export default function Wingo5() {
         <div data-v-4aca9bd1="">{time.seconds2}</div>
       </div>
       <div data-v-4aca9bd1="" className="Betting__C-head">
-        <div data-v-4aca9bd1="" className="Betting__C-head-g" onClick={() => handleOpenPopup('Green')}>Green</div>
-        <div data-v-4aca9bd1="" className="Betting__C-head-p" onClick={() => handleOpenPopup('Violet')}>Violet</div>
-        <div data-v-4aca9bd1="" className="Betting__C-head-r" onClick={() => handleOpenPopup('Red')}>Red</div>
+        <div data-v-4aca9bd1="" className="Betting__C-head-g" onClick={() => handleOpenPopup('Green')}>{t('Green')}</div>
+        <div data-v-4aca9bd1="" className="Betting__C-head-p" onClick={() => handleOpenPopup('Violet')}>{t('Violet')}</div>
+        <div data-v-4aca9bd1="" className="Betting__C-head-r" onClick={() => handleOpenPopup('Red')}>{t('Red')}</div>
       </div>
       <div data-v-4aca9bd1="" className="Betting__C-numC">
         <div data-v-4aca9bd1="" className="Betting__C-numC-item0" onClick={() => handleOpenPopup('0')}></div>
@@ -10248,7 +10243,7 @@ export default function Wingo5() {
         <div data-v-4aca9bd1="" className="Betting__C-numC-item9" onClick={() => handleOpenPopup('9')}></div>
       </div>
       <div data-v-4aca9bd1="" className="Betting__C-multiple">
-        <div data-v-4aca9bd1="" className="Betting__C-multiple-l">Random</div>
+        <div data-v-4aca9bd1="" className="Betting__C-multiple-l">{t('Random')}</div>
         <div data-v-4aca9bd1="" className={`Betting__C-multiple-r ${quantity === '1' || quantity === 1 ? 'active' : ''}`}
                     onClick={() => handleSelectQuantity('1')}>
           X1
@@ -10266,18 +10261,18 @@ export default function Wingo5() {
            
       </div>
       <div data-v-4aca9bd1="" className="Betting__C-foot">
-        <div data-v-4aca9bd1="" className="Betting__C-foot-b" onClick={() => handleOpenPopup('Big')}>Big</div>
-        <div data-v-4aca9bd1="" className="Betting__C-foot-s" onClick={() => handleOpenPopup('Small')}>Small</div>
+        <div data-v-4aca9bd1="" className="Betting__C-foot-b" onClick={() => handleOpenPopup('Big')}>{t('Big')}</div>
+        <div data-v-4aca9bd1="" className="Betting__C-foot-s" onClick={() => handleOpenPopup('Small')}>{t('Small')}</div>
       </div>
     </div>
     <div data-v-72f81e71="" data-v-5d71c3fd="" className="RecordNav__C">
-      <div data-v-72f81e71="" className={` ${activeSection === 'section1' ? 'active' : ''}`} onClick={() => showSection('section1')}>Game history</div>
-      <div data-v-72f81e71="" className={` ${activeSection === 'section2' ? 'active' : ''}`} onClick={() => showSection('section2')}>Chart</div>
-      <div data-v-72f81e71="" className={` ${activeSection === 'section3' ? 'active' : ''}`} onClick={() => showSection('section3')}>My history</div>
+      <div data-v-72f81e71="" className={` ${activeSection === 'section1' ? 'active' : ''}`} onClick={() => showSection('section1')}>{t('Game history')}</div>
+      <div data-v-72f81e71="" className={` ${activeSection === 'section2' ? 'active' : ''}`} onClick={() => showSection('section2')}>{t('Chart')}</div>
+      <div data-v-72f81e71="" className={` ${activeSection === 'section3' ? 'active' : ''}`} onClick={() => showSection('section3')}>{t('My history')}</div>
     </div>
     <div data-v-4b21e13b="" data-v-5d71c3fd="" className="MyGameRecord__C game-record"   listapi="e=>_(f.WinGoGetNoaverageEmerdList,e).then(t=>t.data)" emerdapi="e=>_(f.WinGoGetEmerdList,e).then(t=>t.data)" id="section3" style={{ display: activeSection === 'section3' ? 'block' : 'none' }}>
       <div data-v-4b21e13b="" className="MyGameRecord__C-head">
-        <div data-v-4b21e13b="" className="MyGameRecord__C-head-moreB">Detail <svg data-v-4b21e13b=""
+        <div data-v-4b21e13b="" className="MyGameRecord__C-head-moreB">{t('Detail')} <svg data-v-4b21e13b=""
             className="svg-icon icon-rightCircle">
             <use href="#icon-rightCircle"></use>
           </svg></div>
@@ -10321,14 +10316,14 @@ export default function Wingo5() {
     <div data-v-d485a39d="" data-v-5d71c3fd="" className="Trend__C game-record" apifun="e=>_(f.WinGoGetMyEmerdList,e).then(t=>t.data)" gopathname="AllLotteryGames-BettingRecordWin" id="section2" style={{ display: activeSection === 'section2' ? 'block' : 'none' }}>
       <div data-v-d485a39d="" className="Trend__C-head">
         <div data-v-d485a39d="" className="van-row">
-          <div data-v-d485a39d="" className="van-col van-col--8">Period</div>
-          <div data-v-d485a39d="" className="van-col van-col--16">Number</div>
+          <div data-v-d485a39d="" className="van-col van-col--8">{t('Period')}</div>
+          <div data-v-d485a39d="" className="van-col van-col--16">{t('Number')}</div>
         </div>
       </div>
       <div data-v-d485a39d="" className="Trend__C-body1">
-        <div data-v-d485a39d="" className="Trend__C-body1-line">Statistic (last 100 Periods)</div>
+        <div data-v-d485a39d="" className="Trend__C-body1-line">{t('Statistic (last 100 Periods')}</div>
         <div data-v-d485a39d="" className="Trend__C-body1-line lottery">
-          <div data-v-d485a39d="">Winning number</div>
+          <div data-v-d485a39d="">{t('Winning number')}</div>
           <div data-v-d485a39d="" className="Trend__C-body1-line-num">
             <div data-v-d485a39d="">0</div>
             <div data-v-d485a39d="">1</div>
@@ -10343,7 +10338,7 @@ export default function Wingo5() {
           </div>
         </div>
         <div data-v-d485a39d="" className="Trend__C-body1-line">
-          <div data-v-d485a39d="">Missing</div>
+          <div data-v-d485a39d="">{t('Missing')}</div>
           <div data-v-d485a39d="" className="Trend__C-body1-line-num">
             <div data-v-d485a39d="">2</div>
             <div data-v-d485a39d="">23</div>
@@ -10358,7 +10353,7 @@ export default function Wingo5() {
           </div>
         </div>
         <div data-v-d485a39d="" className="Trend__C-body1-line">
-          <div data-v-d485a39d="">Avg missing</div>
+          <div data-v-d485a39d="">{t('Avg missing')}</div>
           <div data-v-d485a39d="" className="Trend__C-body1-line-num">
             <div data-v-d485a39d="">7</div>
             <div data-v-d485a39d="">13</div>
@@ -10373,7 +10368,7 @@ export default function Wingo5() {
           </div>
         </div>
         <div data-v-d485a39d="" className="Trend__C-body1-line">
-          <div data-v-d485a39d="">Frequency</div>
+          <div data-v-d485a39d="">{t('Frequency')}</div>
           <div data-v-d485a39d="" className="Trend__C-body1-line-num">
             <div data-v-d485a39d="">12</div>
             <div data-v-d485a39d="">9</div>
@@ -10388,7 +10383,7 @@ export default function Wingo5() {
           </div>
         </div>
         <div data-v-d485a39d="" className="Trend__C-body1-line">
-          <div data-v-d485a39d="">Max consecutive</div>
+          <div data-v-d485a39d="">{t('Max consecutive')}</div>
           <div data-v-d485a39d="" className="Trend__C-body1-line-num">
             <div data-v-d485a39d="">2</div>
             <div data-v-d485a39d="">2</div>
@@ -10437,10 +10432,10 @@ export default function Wingo5() {
     <div data-v-481307ec="" data-v-5d71c3fd="" className="GameRecord__C game-record" apifun="e=>_(f.WinGoGetMyEmerdList,e).then(t=>t.data)" listapi="e=>_(f.WinGoGetNoaverageEmerdList,e).then(t=>t.data)" emerdapi="e=>_(f.WinGoGetEmerdList,e).then(t=>t.data)"  gopathname="AllLotteryGames-BettingRecordWin" id="section1" style={{ display: activeSection === 'section1' ? 'block' : 'none' }}>
       <div data-v-481307ec="" className="GameRecord__C-head">
         <div data-v-481307ec="" className="van-row">
-          <div data-v-481307ec="" className="van-col van-col--8">Period</div>
-          <div data-v-481307ec="" className="van-col van-col--5">Number</div>
-          <div data-v-481307ec="" className="van-col van-col--5">Big Small</div>
-          <div data-v-481307ec="" className="van-col van-col--6">Color</div>
+          <div data-v-481307ec="" className="van-col van-col--8">{t('Period')}</div>
+          <div data-v-481307ec="" className="van-col van-col--5">{t('Number')}</div>
+          <div data-v-481307ec="" className="van-col van-col--5">{t('Big Small')}</div>
+          <div data-v-481307ec="" className="van-col van-col--6">{t('Color')}</div>
         </div>
       </div>
       <div data-v-481307ec="" className="GameRecord__C-body">
@@ -10504,8 +10499,8 @@ export default function Wingo5() {
           <div data-v-5d71c3fd=""></div>
         </div>
         <div data-v-3e71d3da="" className="dialog__container-footer">
-          <button data-v-3e71d3da="">Confirm</button
-          ><button data-v-3e71d3da="">Cancel</button>
+          <button data-v-3e71d3da="">{t('Confirm')}</button
+          ><button data-v-3e71d3da="">{t('Cancel')}</button>
         </div>
         
       </div>
@@ -10519,22 +10514,22 @@ export default function Wingo5() {
     >
       <div data-v-e44179e3="" className="WinningTip__C-body">
         <div data-v-e44179e3="" className="WinningTip__C-body-l1">
-          Congratulations
+          {t('Congratulations')}!
         </div>
         <div data-v-e44179e3="" className="WinningTip__C-body-l2 typeundefined">
-          Lottery results
+          {t('Lottery results')}:
           <div data-v-e44179e3=""></div>
           <div data-v-e44179e3="" className="WinningNum"></div>
           <div data-v-e44179e3="">Small</div>
         </div>
         <div data-v-e44179e3="" className="WinningTip__C-body-l3">
-          <div data-v-e44179e3="" className="head">Bonus</div>
+          <div data-v-e44179e3="" className="head">{t('Bonus')}</div>
           <div data-v-e44179e3="" className="bonus"></div>
-          <div data-v-e44179e3="" className="gameDetail">Period:</div>
+          <div data-v-e44179e3="" className="gameDetail">{t('Period')}:</div>
         </div>
         <div data-v-e44179e3="" className="WinningTip__C-body-l4">
           <div data-v-e44179e3="" className="acitveBtn"></div>
-          3 seconds auto close
+          3 {t('seconds auto close')}
         </div>
         <div data-v-e44179e3="" className="closeBtn"></div>
         <i
@@ -10581,15 +10576,15 @@ export default function Wingo5() {
         >
           <div data-v-7f36fe93="" className="Betting__Popup-1">
             <div data-v-7f36fe93="" className="Betting__Popup-head">
-              <div data-v-7f36fe93="" className="Betting__Popup-head-title">Win Go 1Min</div>
+              <div data-v-7f36fe93="" className="Betting__Popup-head-title">{t('Win Go 1Min')}</div>
               <div data-v-7f36fe93="" className="Betting__Popup-head-selectName">
-                <span data-v-7f36fe93="">Select</span>
+                <span data-v-7f36fe93="">{t('Select')}</span>
                 <span data-v-7f36fe93="">{selectedItem}</span>
               </div>
             </div>
             <div data-v-7f36fe93="" className="Betting__Popup-body">
               <div data-v-7f36fe93="" className="Betting__Popup-body-line">
-                Balance
+                {t('Balance')}
                 <div data-v-7f36fe93="" className="Betting__Popup-body-line-list">
                   <div data-v-7f36fe93=""  className={`Betting__Popup-body-line-item ${balance === 1 ? 'bgcolor' : ''}`}
                     onClick={() => handleSelectBalance(1)}>1</div>
@@ -10602,7 +10597,7 @@ export default function Wingo5() {
                 </div>
               </div>
               <div data-v-7f36fe93="" className="Betting__Popup-body-line">
-                Quantity
+                {t('Quantity')}
                 <div data-v-7f36fe93="" className="Betting__Popup-body-line-btnL">
                   <div data-v-7f36fe93="" className="Betting__Popup-btn bgcolor" onClick={() => setQuantity((prev) => prev > 0 ? prev - 1 : 0)}>-</div>
                   <div data-v-7f36fe93="" className="van-cell van-field Betting__Popup-input">
@@ -10676,8 +10671,8 @@ export default function Wingo5() {
               
             </div>
             <div data-v-7f36fe93="" className="Betting__Popup-foot">
-              <div data-v-7f36fe93="" className="Betting__Popup-foot-c" onClick={handleClosePopup}>Cancel</div>
-              <div data-v-7f36fe93="" className="Betting__Popup-foot-s bgcolor"  onClick={handleJoin} >Total amount ₹{quantity*balance}.00</div>
+              <div data-v-7f36fe93="" className="Betting__Popup-foot-c" onClick={handleClosePopup}>{t('Cancel')}</div>
+              <div data-v-7f36fe93="" className="Betting__Popup-foot-s bgcolor"  onClick={handleJoin} >{t('Total amount')}₹{quantity*balance}.00</div>
             </div>
           </div>
         </div>
@@ -10706,9 +10701,9 @@ export default function Wingo5() {
     <div data-v-e44179e3="" data-v-5d71c3fd="" className="WinningTip__C" style={{ display: isVisible ? '' : 'none' }}>
       <div data-v-e44179e3="" className="WinningTip__C-body isL">
         
-        <div data-v-e44179e3="" className="WinningTip__C-body-l1 isL">Sorry</div>
+        <div data-v-e44179e3="" className="WinningTip__C-body-l1 isL">{t('Sorry')}</div>
 
-        <div data-v-e44179e3="" className={`WinningTip__C-body-l2 type${lastBet.result}`}>Lottery results 
+        <div data-v-e44179e3="" className={`WinningTip__C-body-l2 type${lastBet.result}`}>{t('Lottery results')}:
           <div data-v-e44179e3="">
             {lastBet.result === 0 ? 'Red Violet'
               : lastBet.result === 5 ? 'Green Violet'
@@ -10721,12 +10716,12 @@ export default function Wingo5() {
         </div>
 
         <div data-v-e44179e3="" className="WinningTip__C-body-l3">
-          <div data-v-e44179e3="" className="isLose">Lose</div>
-          <div data-v-e44179e3="" className="gameDetail">Period: 1 min {lastBet.stage}</div>
+          <div data-v-e44179e3="" className="isLose">{t('Lose')}</div>
+          <div data-v-e44179e3="" className="gameDetail">{t('Period')}: 1 min {lastBet.stage}</div>
         </div>
 
         <div data-v-e44179e3="" className="WinningTip__C-body-l4">
-          <div data-v-e44179e3="" className="acitveBtn"></div> 3 seconds auto close
+          <div data-v-e44179e3="" className="acitveBtn"></div> 3 {t('seconds auto close')}
         </div>
 
         <div data-v-e44179e3="" className="closeBtn" onClick={toggleVisibility}></div>
@@ -10737,9 +10732,9 @@ export default function Wingo5() {
   ) : (
     <div data-v-e44179e3="" data-v-5d71c3fd="" className="WinningTip__C" style={{ display: isVisible ? '' : 'none' }}>
       <div data-v-e44179e3="" className="WinningTip__C-body" style={{ backgroundImage : `url('/assets/png/win-popup.png')` }}>
-        <div data-v-e44179e3="" className="WinningTip__C-body-l1">Congratulations</div>
+        <div data-v-e44179e3="" className="WinningTip__C-body-l1">{t('Congratulations')}</div>
         <div data-v-e44179e3="" className={`WinningTip__C-body-l2 type${lastBet.result}`}>
-          Lottery results
+         {t(' Lottery results')}:
           <div data-v-e44179e3="">
             {lastBet.result === 0 ? 'Red Violet'
               : lastBet.result === 5 ? 'Green Violet'
@@ -10749,15 +10744,16 @@ export default function Wingo5() {
           <div data-v-e44179e3="">{lastBet.result < 5 ? 'Small' : 'Big'}</div>
         </div>
         <div data-v-e44179e3="" className="WinningTip__C-body-l3">
-          <div data-v-e44179e3="" className="head">Bonus</div>
+          <div data-v-e44179e3="" className="head">{t('Bonus')}
+          </div>
           <div data-v-e44179e3="" className="bonus">₹{lastBet.get}</div>
           <div data-v-e44179e3="" className="gameDetail">
-            Period:1min {lastBet.stage}
+           {t('Period')}:1min {lastBet.stage}
           </div>
         </div>
         <div data-v-e44179e3="" className="WinningTip__C-body-l4">
           <div data-v-e44179e3="" className="acitveBtn"></div>
-          3 seconds auto close
+          3 {t('seconds auto close')}
         </div>
         <div data-v-e44179e3="" className="closeBtn" onClick={toggleVisibility}></div>
         <i

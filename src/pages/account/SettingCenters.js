@@ -2,8 +2,12 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Api from '../../services/Api';
+import { useTranslation } from "react-i18next";
+
 
 export default function GetUserInfo() {
+            const { t } = useTranslation();
+  
 
   const [getUserInfo, setGetUserInfo] = useState(null);
   const [name, setName] = useState('');
@@ -9562,7 +9566,7 @@ style={{maskType: 'alpha'}}
           </div>
           <div data-v-12a80a3e="" className="navbar__content-center">
             <div data-v-12a80a3e="" className="navbar__content-title">
-              Settings Center
+              {t('Settings Center')}
             </div>
           </div>
           <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -9597,7 +9601,7 @@ style={{maskType: 'alpha'}}
             />
           </div>
           <div data-v-5bd44e74="" className="userInfo__container-content-uid">
-            <span data-v-5bd44e74="">UID</span
+            <span data-v-5bd44e74="">{t('UID')}</span
             ><span data-v-5bd44e74="">|</span
             ><span data-v-5bd44e74="">11693333</span
             ><svg data-v-5bd44e74="" className="svg-icon icon-copy">
@@ -9609,7 +9613,7 @@ style={{maskType: 'alpha'}}
             className="userInfo__container-content-logintime"
             style={{display: 'none'}}
           >
-            <span data-v-5bd44e74="">Last login:&nbsp;</span
+            <span data-v-5bd44e74="">{t('Last login')}:&nbsp;</span
             ><span data-v-5bd44e74="">2024-08-13 16:00:44</span>
           </div>
           <div
@@ -9627,7 +9631,7 @@ style={{maskType: 'alpha'}}
         className="userInfo__container-content-right"
         
       >
-        <h5 data-v-5bd44e74="">Change avatar</h5>
+        <h5 data-v-5bd44e74="">{t('Change avatar')}</h5>
       </div>
     </div>
     <div
@@ -9653,7 +9657,7 @@ style={{maskType: 'alpha'}}
           className="userInfo__container-setting-center-header-edit"
           onClick={()=>navigate('/Avatar')}
         >
-          <span data-v-5bd44e74="">Change avatar</span
+          <span data-v-5bd44e74="">{t('Change avatar')}</span
           ><i
             data-v-5bd44e74=""
             className="van-badge__wrapper van-icon van-icon-arrow"
@@ -9667,7 +9671,7 @@ style={{maskType: 'alpha'}}
         className="userInfo__container-setting-center-content ar-1px-b"
         onClick={ ()=>{setShowPopup(true)} }
       >
-        <h5 data-v-5bd44e74="">Nickname</h5>
+        <h5 data-v-5bd44e74="">{t('Nickname')}</h5>
         <div data-v-5bd44e74="">
           <span data-v-5bd44e74=""> {getUserInfo ? getUserInfo.name_user : 0}</span
           ><i
@@ -9699,7 +9703,7 @@ style={{maskType: 'alpha'}}
                           data-v-2c18a1cc=""
                           className="info-dialog-header-left"
                         ></span>
-                        <h5 data-v-2c18a1cc="">Change Nickname</h5>
+                        <h5 data-v-2c18a1cc="">{t('Change Nickname')}</h5>
                         <span
                           data-v-2c18a1cc=""
                           className="info-dialog-header-right"
@@ -9715,7 +9719,7 @@ style={{maskType: 'alpha'}}
                             className="svg-icon icon-dialogNickname"
                           >
                           </svg
-                          ><span data-v-5bd44e74="">Nickname</span>
+                          ><span data-v-5bd44e74="">{t('Nickname')}</span>
                         </div>
                         <input
                           data-v-5bd44e74=""
@@ -9728,8 +9732,7 @@ style={{maskType: 'alpha'}}
                           onChange={(e)=>{setName(e.target.value)}}
                         />
                         <h4 data-v-5bd44e74="" style={{display: 'none'}}>
-                          Please do not enter a Nickname with more than 12
-                          characters
+                         {t('Please do not enter a Nickname with more than 12 characters')}
                         </h4>
                       </div>
                       <div data-v-2c18a1cc="" className="info-dialog-footer">
@@ -9750,7 +9753,7 @@ style={{maskType: 'alpha'}}
                     >
                       <div className="van-button__content"   
                       >
-                        <span className="van-button__text">Confirm</span
+                        <span className="van-button__text">{t('Confirm')}</span
                         >
                       </div>
                     </button>
@@ -9764,7 +9767,7 @@ style={{maskType: 'alpha'}}
         data-v-5bd44e74=""
         className="userInfo__container-setting-center-content"
       >
-        <h5 data-v-5bd44e74="">UID</h5>
+        <h5 data-v-5bd44e74="">{t('UID')}</h5>
         <div data-v-5bd44e74="">
           <span data-v-5bd44e74="">{getUserInfo ? getUserInfo.id_user : 0}</span
           ><svg data-v-5bd44e74="" className="svg-icon icon-copy">
@@ -9783,7 +9786,7 @@ style={{maskType: 'alpha'}}
   >
     <div data-v-6af1b9df="" className="setting-items-wrapper">
       <div data-v-6af1b9df="" className="content-sub_title">
-        <div data-v-6af1b9df="">Security information</div>
+        <div data-v-6af1b9df="">{t('Security information')}</div>
       </div>
       <div data-v-6af1b9df="" className="phone_container">
         <div data-v-6af1b9df="" className="phone_container-item" onClick={()=>navigate('/main/SettingCenter/LoginPassword')}>
@@ -9793,10 +9796,10 @@ style={{maskType: 'alpha'}}
                 <use href="#icon-editIcon"></use>
               </svg>
             </figure>
-            <span data-v-6af1b9df="">Login password</span>
+            <span data-v-6af1b9df="">{t('Login password')}</span>
           </div>
           <div data-v-6af1b9df="" className="phone_container-item-right">
-            <span data-v-6af1b9df="">Edit</span
+            <span data-v-6af1b9df="">{t('Edit')}</span
             ><i
               data-v-6af1b9df=""
               className="van-badge__wrapper van-icon van-icon-arrow"
@@ -9816,11 +9819,11 @@ style={{maskType: 'alpha'}}
               <svg data-v-6af1b9df="" className="svg-icon icon-messageIcon">
                 <use href="#icon-messageIcon"></use>
               </svg>
-            </figure><span data-v-6af1b9df="">Bind mailbox</span>
+            </figure><span data-v-6af1b9df="">{t('Bind mailbox')}</span>
           </div>
           <div data-v-6af1b9df="" className="phone_container-item-right">
             <div data-v-6af1b9df="" className="emailright">
-              <div data-v-6af1b9df="">to bind</div>
+              <div data-v-6af1b9df="">{t('to bind')}</div>
             </div>
             <i
               data-v-6af1b9df=""
@@ -9841,10 +9844,10 @@ style={{maskType: 'alpha'}}
                 <use href="#icon-googleIcon"></use>
               </svg>
             </figure>
-            <span data-v-6af1b9df="">Google Verification</span>
+            <span data-v-6af1b9df="">{t('Google Verification')}</span>
           </div>
           <div data-v-6af1b9df="">
-            <span data-v-6af1b9df="">Unopened</span
+            <span data-v-6af1b9df="">{t('Unopened')}</span
             ><i
               data-v-6af1b9df=""
               className="van-badge__wrapper van-icon van-icon-arrow"
@@ -9863,7 +9866,7 @@ style={{maskType: 'alpha'}}
                 <use href="#icon-versionUpdateIcon"></use>
               </svg>
             </figure>
-            <span data-v-6af1b9df="">Updated version</span>
+            <span data-v-6af1b9df="">{t('Updated version')}</span>
           </div>
           <div data-v-6af1b9df="">
             <h5 data-v-6af1b9df="">1.0.9</h5>
@@ -9886,7 +9889,7 @@ style={{maskType: 'alpha'}}
      '--f13b4d11CurrentFontFamily': "'Roboto', 'Inter', 'sansSerif'",
     }}
   >
-    delete all cache
+   {t('delete all cache')}
   </div>
   <div
     data-v-96e240c3=""

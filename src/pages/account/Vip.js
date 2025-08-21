@@ -4,9 +4,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import Api from '../../services/Api';
 import VipBenefits from './VipBenefits';
+import { useTranslation } from "react-i18next";
+
 
 // import { Navigation, Pagination } from 'swiper/modules';
 export default function Vip() {
+     const { t } = useTranslation();
+  
   const navigate = useNavigate();
   const [vhistory, setVhistory] = useState([]);
   const [activeHistory, setActiveHistroy] =useState('history1');
@@ -9639,7 +9643,7 @@ const claimBonus= async (id) => {
                 </div>
                 <div data-v-12a80a3e="" className="navbar__content-center">
                   <div data-v-12a80a3e="" className="navbar__content-title">
-                    VIP
+                    {t('VIP')}
                   </div>
                 </div>
                 <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -9668,16 +9672,16 @@ const claimBonus= async (id) => {
         <div data-v-92d3d2e1="" className="vip-content">
           <div data-v-92d3d2e1="" className="vip-content-empirical">
             <div data-v-92d3d2e1="">
-              <p data-v-92d3d2e1="" className="red">{vipdetails?.experience} EXP</p>
-              <p data-v-92d3d2e1="">My experience</p>
+              <p data-v-92d3d2e1="" className="red">{vipdetails?.experience} {t('EXP')}</p>
+              <p data-v-92d3d2e1="">{t('My experience')}</p>
             </div>
             <div data-v-92d3d2e1="">
-              <p data-v-92d3d2e1="" className="timeTop"><span>{daysLeft}</span> Days</p>
-              <p data-v-92d3d2e1="">Payout time</p>
+              <p data-v-92d3d2e1="" className="timeTop"><span>{daysLeft}</span> {t('Days')}</p>
+              <p data-v-92d3d2e1="">{t('Payout time')}</p>
             </div>
           </div>
           <div data-v-92d3d2e1="" className="vip-content-tip">
-            VIP level rewards are settled at 2:00 am on the 1st of every month
+            {t('VIP level rewards are settled at 2:00 am on the 1st of every month')}
           </div>
           <div data-v-31cfa30d="" data-v-92d3d2e1="" className="vip-content-card">
             <div data-v-31cfa30d="" className="vip-content-card-item">
@@ -9717,17 +9721,17 @@ const claimBonus= async (id) => {
         <img data-v-31cfa30d="" src="/assets/png/1-d951dc6d.png" alt="VIP1" />
         <h1 data-v-31cfa30d="" className="level1">VIP1</h1>
         <img data-v-31cfa30d="" src="/assets/png/ununlocked-b5a4c7d0.png" alt="Not open" />
-        <span data-v-31cfa30d="">Not open yet</span>
+        <span data-v-31cfa30d="">{t('Not open yet')}</span>
       </div>
       <div data-v-31cfa30d="" className="mb30">
-        <p data-v-31cfa30d="">Upgrading VIP1 requires <br />{3000 - Math.min(vipdetails?.experience, 3000)} EXP</p>
+        <p data-v-31cfa30d="">{t('Upgrading VIP1 requires')} <br />{3000 - Math.min(vipdetails?.experience, 3000)} {t('EXP')}</p>
       </div>
       <div data-v-31cfa30d="" className="border level1">
-        Bet ₹1 = 1EXP
+        {t('Bet')} ₹1 = 1{t('EXP')}
       </div>
     </div>
     <div data-v-31cfa30d="" className="itemInfo-bottom">
-      <p data-v-31cfa30d="">VIP1</p>
+      <p data-v-31cfa30d="">{t('VIP')}1</p>
       <div data-v-31cfa30d="">
         <div
           data-v-31cfa30d=""
@@ -9754,7 +9758,7 @@ const claimBonus= async (id) => {
         </span>
         <span data-v-31cfa30d="">
           {/* How much experience is needed to level up */}
-          {3000 - Math.min(vipdetails?.experience, 3000)} EXP can be leveled up
+          {3000 - Math.min(vipdetails?.experience, 3000)} {t('EXP can be leveled up')}
         </span>
       </div>
     </div>
@@ -9780,23 +9784,23 @@ const claimBonus= async (id) => {
                           data-v-31cfa30d=""
                           src="/assets/png/2-5df32e87.png"
                         />
-                        <h1 data-v-31cfa30d="" className="level2">VIP2</h1>
+                        <h1 data-v-31cfa30d="" className="level2">{t('VIP')}2</h1>
                         <img
                           data-v-31cfa30d=""
                           src="/assets/png/ununlocked-b5a4c7d0.png"
-                        /><span data-v-31cfa30d="">Not open yet</span>
+                        /><span data-v-31cfa30d="">{t('Not open yet')}</span>
                       </div>
                       <div data-v-31cfa30d="" className="mb30">
                         <p data-v-31cfa30d="">
-                          Upgrading VIP2 requires <br />{30000 - Math.min(vipdetails?.experience, 30000)}EXP
+                          {t('Upgrading VIP2 requires')} <br />{30000 - Math.min(vipdetails?.experience, 30000)}{t('EXP')}
                         </p>
                       </div>
                       <div data-v-31cfa30d="" className="border level2">
-                        Bet ₹1=1EXP
+                        {t('Bet')} ₹1=1{t('EXP')}
                       </div>
                     </div>
                     <div data-v-31cfa30d="" className="itemInfo-bottom">
-                      <p data-v-31cfa30d="">VIP2</p>
+                      <p data-v-31cfa30d="">{t('VIP2')}</p>
                       <div data-v-31cfa30d="">
                         <div
                           data-v-31cfa30d=""
@@ -9818,7 +9822,7 @@ const claimBonus= async (id) => {
                         <span data-v-31cfa30d="" className="level level2"
                           >{Math.min(vipdetails?.experience, 30000)}/30000</span
                         ><span data-v-31cfa30d=""
-                          >{30000 - Math.min(vipdetails?.experience, 30000)} EXP can be leveled up</span
+                          >{30000 - Math.min(vipdetails?.experience, 30000)} {t('EXP can be leveled up')}</span
                         >
                       </div>
                     </div>
@@ -9838,27 +9842,27 @@ const claimBonus= async (id) => {
     <div data-v-31cfa30d="" className="itemInfo-head">
       <div data-v-31cfa30d="">
         <img data-v-31cfa30d="" src="/assets/png/2-5df32e87.png" alt="VIP3" />
-        <h1 data-v-31cfa30d="" className="level3">VIP3</h1>
+        <h1 data-v-31cfa30d="" className="level3">{t('VIP')}3</h1>
         <img
           data-v-31cfa30d=""
           src="/assets/png/ununlocked-b5a4c7d0.png"
           alt="Not open"
         />
-        <span data-v-31cfa30d="">Not open yet</span>
+        <span data-v-31cfa30d="">{t('Not open yet')}</span>
       </div>
       <div data-v-31cfa30d="" className="mb30">
         {/* Calculate remaining experience for VIP3 */}
         <p data-v-31cfa30d="">
-          Upgrading VIP3 requires <br />
-          {400000 - Math.min(vipdetails?.experience, 400000)} EXP
+          {t('Upgrading VIP3 requires')} <br />
+          {400000 - Math.min(vipdetails?.experience, 400000)} {t('EXP')}
         </p>
       </div>
       <div data-v-31cfa30d="" className="border level3">
-        Bet ₹1 = 1EXP
+        {t('Bet')} ₹1 = 1{t('EXP')}
       </div>
     </div>
     <div data-v-31cfa30d="" className="itemInfo-bottom">
-      <p data-v-31cfa30d="">VIP3</p>
+      <p data-v-31cfa30d="">{t('VIP')}3</p>
       <div data-v-31cfa30d="">
         <div
           data-v-31cfa30d=""
@@ -9882,7 +9886,7 @@ const claimBonus= async (id) => {
         </span>
         <span data-v-31cfa30d="">
           {/* Display remaining EXP needed to level up */}
-          {400000 - Math.min(vipdetails?.experience, 400000)} EXP can be leveled up
+          {400000 - Math.min(vipdetails?.experience, 400000)} {t('EXP can be leveled up')}
         </span>
       </div>
     </div>
@@ -9903,27 +9907,27 @@ const claimBonus= async (id) => {
     <div data-v-31cfa30d="" className="itemInfo-head">
       <div data-v-31cfa30d="">
         <img data-v-31cfa30d="" src="/assets/png/2-5df32e87.png" alt="VIP4" />
-        <h1 data-v-31cfa30d="" className="level4">VIP4</h1>
+        <h1 data-v-31cfa30d="" className="level4">{t('VIP')}4</h1>
         <img
           data-v-31cfa30d=""
           src="/assets/png/ununlocked-b5a4c7d0.png"
           alt="Not open yet"
         />
-        <span data-v-31cfa30d="">Not open yet</span>
+        <span data-v-31cfa30d="">{t('Not open yet')}</span>
       </div>
       <div data-v-31cfa30d="" className="mb30">
         {/* Calculate remaining experience for VIP4 */}
         <p data-v-31cfa30d="">
-          Upgrading VIP4 requires <br />
-          {4000000 - Math.min(vipdetails?.experience, 4000000)} EXP
+         {t(' Upgrading VIP4 requires')} <br />
+          {4000000 - Math.min(vipdetails?.experience, 4000000)} {t('EXP')}
         </p>
       </div>
       <div data-v-31cfa30d="" className="border level4">
-        Bet ₹1 = 1EXP
+        {t('Bet')} ₹1 = 1{t('EXP')}
       </div>
     </div>
     <div data-v-31cfa30d="" className="itemInfo-bottom">
-      <p data-v-31cfa30d="">VIP4</p>
+      <p data-v-31cfa30d="">{t('VIP')}4</p>
       <div data-v-31cfa30d="">
         <div
           data-v-31cfa30d=""
@@ -9945,7 +9949,7 @@ const claimBonus= async (id) => {
           {Math.min(vipdetails?.experience, 4000000)}/4000000
         </span>
         <span data-v-31cfa30d="">
-          {4000000 - Math.min(vipdetails?.experience, 4000000)} EXP can be leveled up
+          {4000000 - Math.min(vipdetails?.experience, 4000000)} {t('EXP can be leveled up')}
         </span>
       </div>
     </div>
@@ -9966,27 +9970,27 @@ const claimBonus= async (id) => {
     <div data-v-31cfa30d="" className="itemInfo-head">
       <div data-v-31cfa30d="">
         <img data-v-31cfa30d="" src="/assets/png/2-5df32e87.png" alt="VIP5" />
-        <h1 data-v-31cfa30d="" className="level5">VIP5</h1>
+        <h1 data-v-31cfa30d="" className="level5">{t('VIP')}5</h1>
         <img
           data-v-31cfa30d=""
           src="/assets/png/ununlocked-b5a4c7d0.png"
           alt="Not open yet"
         />
-        <span data-v-31cfa30d="">Not open yet</span>
+        <span data-v-31cfa30d="">{t('Not open yet')}</span>
       </div>
       <div data-v-31cfa30d="" className="mb30">
         {/* Calculate remaining experience for VIP5 */}
         <p data-v-31cfa30d="">
-          Upgrading VIP5 requires <br />
-          {20000000 - Math.min(vipdetails?.experience, 20000000)} EXP
+          {t('Upgrading VIP5 requires')} <br />
+          {20000000 - Math.min(vipdetails?.experience, 20000000)} {t('EXP')}
         </p>
       </div>
       <div data-v-31cfa30d="" className="border level5">
-        Bet ₹1 = 1EXP
+        {t('Bet')} ₹1 = 1{t('EXP')}
       </div>
     </div>
     <div data-v-31cfa30d="" className="itemInfo-bottom">
-      <p data-v-31cfa30d="">VIP5</p>
+      <p data-v-31cfa30d="">{t('VIP')}5</p>
       <div data-v-31cfa30d="">
         <div
           data-v-31cfa30d=""
@@ -10008,7 +10012,7 @@ const claimBonus= async (id) => {
           {Math.min(vipdetails?.experience, 20000000)}/20000000
         </span>
         <span data-v-31cfa30d="">
-          {20000000 - Math.min(vipdetails?.experience, 20000000)} EXP can be leveled up
+          {20000000 - Math.min(vipdetails?.experience, 20000000)} {t('EXP can be leveled up')}
         </span>
       </div>
     </div>
@@ -10029,27 +10033,27 @@ const claimBonus= async (id) => {
     <div data-v-31cfa30d="" className="itemInfo-head">
       <div data-v-31cfa30d="">
         <img data-v-31cfa30d="" src="/assets/png/2-5df32e87.png" alt="VIP6" />
-        <h1 data-v-31cfa30d="" className="level6">VIP6</h1>
+        <h1 data-v-31cfa30d="" className="level6">{t('VIP')}6</h1>
         <img
           data-v-31cfa30d=""
           src="/assets/png/ununlocked-b5a4c7d0.png"
           alt="Not open yet"
         />
-        <span data-v-31cfa30d="">Not open yet</span>
+        <span data-v-31cfa30d="">{t('Not open yet')}</span>
       </div>
       <div data-v-31cfa30d="" className="mb30">
         {/* Calculate remaining experience for VIP6 */}
         <p data-v-31cfa30d="">
-          Upgrading VIP6 requires <br />
-          {80000000 - Math.min(vipdetails?.experience, 80000000)} EXP
+          {t('Upgrading VIP6 requires')} <br />
+          {80000000 - Math.min(vipdetails?.experience, 80000000)} {t('EXP')}
         </p>
       </div>
       <div data-v-31cfa30d="" className="border level6">
-        Bet ₹1 = 1EXP
+        {t('Bet')} ₹1 = 1{t('EXP')}
       </div>
     </div>
     <div data-v-31cfa30d="" className="itemInfo-bottom">
-      <p data-v-31cfa30d="">VIP6</p>
+      <p data-v-31cfa30d="">{t('VIP')}6</p>
       <div data-v-31cfa30d="">
         <div
           data-v-31cfa30d=""
@@ -10071,7 +10075,7 @@ const claimBonus= async (id) => {
           {Math.min(vipdetails?.experience, 80000000)}/80000000
         </span>
         <span data-v-31cfa30d="">
-          {80000000 - Math.min(vipdetails?.experience, 80000000)} EXP can be leveled up
+          {80000000 - Math.min(vipdetails?.experience, 80000000)} {t('EXP can be leveled up')}
         </span>
       </div>
     </div>
@@ -10092,27 +10096,27 @@ const claimBonus= async (id) => {
     <div data-v-31cfa30d="" className="itemInfo-head">
       <div data-v-31cfa30d="">
         <img data-v-31cfa30d="" src="/assets/png/2-5df32e87.png" alt="VIP7" />
-        <h1 data-v-31cfa30d="" className="level7">VIP7</h1>
+        <h1 data-v-31cfa30d="" className="level7">{t('VIP')}7</h1>
         <img
           data-v-31cfa30d=""
           src="/assets/png/ununlocked-b5a4c7d0.png"
           alt="Not open yet"
         />
-        <span data-v-31cfa30d="">Not open yet</span>
+        <span data-v-31cfa30d="">{t('Not open yet')}</span>
       </div>
       <div data-v-31cfa30d="" className="mb30">
         {/* Calculate remaining experience for VIP7 */}
         <p data-v-31cfa30d="">
-          Upgrading VIP7 requires <br />
-          {300000000 - Math.min(vipdetails?.experience, 300000000)} EXP
+          {t('Upgrading VIP7 requires')} <br />
+          {300000000 - Math.min(vipdetails?.experience, 300000000)}{t('EXP')}
         </p>
       </div>
       <div data-v-31cfa30d="" className="border level7">
-        Bet ₹1 = 1EXP
+        {t('Bet')} ₹1 = 1{t('EXP')}
       </div>
     </div>
     <div data-v-31cfa30d="" className="itemInfo-bottom">
-      <p data-v-31cfa30d="">VIP7</p>
+      <p data-v-31cfa30d="">{t('VIP7')}</p>
       <div data-v-31cfa30d="">
         <div
           data-v-31cfa30d=""
@@ -10134,7 +10138,7 @@ const claimBonus= async (id) => {
           {Math.min(vipdetails?.experience, 300000000)}/300000000
         </span>
         <span data-v-31cfa30d="">
-          {300000000 - Math.min(vipdetails?.experience, 300000000)} EXP can be leveled up
+          {300000000 - Math.min(vipdetails?.experience, 300000000)} {t('EXP can be leveled up')}
         </span>
       </div>
     </div>
@@ -10159,23 +10163,23 @@ const claimBonus= async (id) => {
                           data-v-31cfa30d=""
                           src="/assets/png/2-5df32e87.png"
                         />
-                        <h1 data-v-31cfa30d="" className="level2">VIP8</h1>
+                        <h1 data-v-31cfa30d="" className="level2">{t('VIP8')}</h1>
                         <img
                           data-v-31cfa30d=""
                           src="/assets/png/ununlocked-b5a4c7d0.png"
-                        /><span data-v-31cfa30d="">Not open yet</span>
+                        /><span data-v-31cfa30d="">{t('Not open yet')}</span>
                       </div>
                       <div data-v-31cfa30d="" className="mb30">
                         <p data-v-31cfa30d="">
-                          Upgrading VIP8 requires <br />999998849EXP
+                          {t('Upgrading VIP8 requires')} <br />999998849{t('EXP')}
                         </p>
                       </div>
                       <div data-v-31cfa30d="" className="border level8">
-                        Bet ₹1=1EXP
+                        {t('Bet')} ₹1=1{t('EXP')}
                       </div>
                     </div>
                     <div data-v-31cfa30d="" className="itemInfo-bottom">
-                      <p data-v-31cfa30d="">VIP8</p>
+                      <p data-v-31cfa30d="">{t('VIP8')}</p>
                       <div data-v-31cfa30d="">
                         <div
                           data-v-31cfa30d=""
@@ -10195,7 +10199,7 @@ const claimBonus= async (id) => {
                         <span data-v-31cfa30d="" className="level level8"
                           >1151/1000000000</span
                         ><span data-v-31cfa30d=""
-                          >1000000000 EXP can be leveled up</span
+                          >1000000000 {t('EXP can be leveled up')}</span
                         >
                       </div>
                     </div>
@@ -10219,23 +10223,23 @@ const claimBonus= async (id) => {
                           data-v-31cfa30d=""
                           src="/assets/png/2-5df32e87.png"
                         />
-                        <h1 data-v-31cfa30d="" className="level2">VIP9</h1>
+                        <h1 data-v-31cfa30d="" className="level2">{t('VIP')}9</h1>
                         <img
                           data-v-31cfa30d=""
                           src="/assets/png/ununlocked-b5a4c7d0.png"
-                        /><span data-v-31cfa30d="">Not open yet</span>
+                        /><span data-v-31cfa30d="">{t('Not open yet')}</span>
                       </div>
                       <div data-v-31cfa30d="" className="mb30">
                         <p data-v-31cfa30d="">
-                          Upgrading VIP9 requires <br />4999998849EXP
+                         {t('Upgrading VIP9 requires')} <br />4999998849EXP
                         </p>
                       </div>
                       <div data-v-31cfa30d="" className="border level9">
-                        Bet ₹1=1EXP
+                        {t('Bet')} ₹1=1 {t('EXP')}
                       </div>
                     </div>
                     <div data-v-31cfa30d="" className="itemInfo-bottom">
-                      <p data-v-31cfa30d="">VIP9</p>
+                      <p data-v-31cfa30d="">{t('VIP')}9</p>
                       <div data-v-31cfa30d="">
                         <div
                           data-v-31cfa30d=""
@@ -10255,7 +10259,7 @@ const claimBonus= async (id) => {
                         <span data-v-31cfa30d="" className="level level9"
                           >1151/5000000000</span
                         ><span data-v-31cfa30d=""
-                          >5000000000 EXP can be leveled up</span
+                          >5000000000 {t('EXP can be leveled up')}</span
                         >
                       </div>
                     </div>
@@ -10279,23 +10283,23 @@ const claimBonus= async (id) => {
                           data-v-31cfa30d=""
                           src="/assets/png/2-5df32e87.png"
                         />
-                        <h1 data-v-31cfa30d="" className="level2">VIP10</h1>
+                        <h1 data-v-31cfa30d="" className="level2">{t('VIP')}10</h1>
                         <img
                           data-v-31cfa30d=""
                           src="/assets/png/ununlocked-b5a4c7d0.png"
-                        /><span data-v-31cfa30d="">Not open yet</span>
+                        /><span data-v-31cfa30d="">{t('Not open yet')}</span>
                       </div>
                       <div data-v-31cfa30d="" className="mb30">
                         <p data-v-31cfa30d="">
-                          Upgrading VIP10 requires <br />{9999999999 - Math.min(vipdetails?.experience, 9999999999)}EXP
+                          {t('Upgrading VIP10 requires')} <br />{9999999999 - Math.min(vipdetails?.experience, 9999999999)}EXP
                         </p>
                       </div>
                       <div data-v-31cfa30d="" className="border level10">
-                        Bet ₹1=1EXP
+                        {t('Bet')} ₹1=1{t('EXP')}
                       </div>
                     </div>
                     <div data-v-31cfa30d="" className="itemInfo-bottom">
-                      <p data-v-31cfa30d="">VIP10</p>
+                      <p data-v-31cfa30d="">{t('VIP')}10</p>
                       <div data-v-31cfa30d="">
                         <div
                           data-v-31cfa30d=""
@@ -10316,7 +10320,7 @@ const claimBonus= async (id) => {
                         <span data-v-31cfa30d="" className="level level10"
                           > {Math.min(vipdetails?.experience, 9999999999)}/9999999999</span
                         ><span data-v-31cfa30d=""
-                          >{9999999999 - Math.min(vipdetails?.experience, 9999999999)} EXP can be leveled up</span
+                          >{9999999999 - Math.min(vipdetails?.experience, 9999999999)} {t('EXP can be leveled up')}</span
                         >
                       </div>
                     </div>
@@ -10338,7 +10342,7 @@ const claimBonus= async (id) => {
         <svg data-v-4e842459="" className="svg-icon icon-crown">
           <use xlinkHref="#icon-crown"></use>
         </svg>
-        <h1 data-v-4e842459="">My benefits</h1>
+        <h1 data-v-4e842459="">{t('My benefits')}</h1>
       </div>
 
       <div data-v-4e842459="" className="vip-content-myWelfare-con">
@@ -10358,17 +10362,17 @@ const claimBonus= async (id) => {
                 </div>
               </div>
               <div data-v-4e842459="" className="card-bottom">
-                <h1 data-v-4e842459="">Level up rewards</h1>
-                <span data-v-4e842459="">Each account can only receive 1 time</span>
+                <h1 data-v-4e842459="">{t('Level up rewards')}</h1>
+                <span data-v-4e842459="">{t('Each account can only receive 1 time')}</span>
               </div>
             </div>
             {bonus.rname == 0 ?
               <button data-v-4e842459="" className="active" onClick={() => claimBonus(bonus.id)}>
-              Receive
+              {t('Receive')}
             </button>
             :
             <button data-v-4e842459="" className="noActive">
-              Received
+              {t('Received')}
              </button>
           }
           </div>
@@ -10393,7 +10397,7 @@ const claimBonus= async (id) => {
                 <svg data-v-4e842459="" className="svg-icon icon-crown">
                   <use href="#icon-crown"></use>
                 </svg>
-                <h1 data-v-4e842459="">My benefits</h1>
+                <h1 data-v-4e842459="">{t('My benefits')}</h1>
               </div>
               <div data-v-4e842459="" className="vip-content-myWelfare-con"></div>
             </div>
@@ -10404,8 +10408,8 @@ const claimBonus= async (id) => {
             className="vip-content-recordVsrule"
           >
             <div data-v-eaa4a307="" className="vip-content-recordVsrule-head">
-              <button data-v-eaa4a307="" className={activeHistory === 'history1' ? 'active' : ''} id="history1" onClick={() =>(setVipHistory('history1'))}>History</button
-              ><button data-v-eaa4a307="" className={activeHistory === 'history2' ? 'active' : ''} id="history2" onClick={() =>(setVipHistory('history2'))}>Rules</button>
+              <button data-v-eaa4a307="" className={activeHistory === 'history1' ? 'active' : ''} id="history1" onClick={() =>(setVipHistory('history1'))}> {t('History')}</button
+              ><button data-v-eaa4a307="" className={activeHistory === 'history2' ? 'active' : ''} id="history2" onClick={() =>(setVipHistory('history2'))}>{t('Rules')}</button>
             </div>
             <div data-v-eaa4a307="" className="vip-content-recordVsrule-con" style={{display: activeHistory === 'history1' ? 'block':'none'}}>
             {vhistory.length === 0 ? (
@@ -10417,20 +10421,20 @@ const claimBonus= async (id) => {
            <svg data-v-f84b843f="" className="svg-icon icon-empty">
              <use href="#icon-empty"></use>
            </svg>
-           <p data-v-f84b843f="">No data</p>
+           <p data-v-f84b843f="">{t('No data')}</p>
          </div>
         ) : (
           vhistory.map((history, index) => (
               <div key={index} data-v-eaa4a307="" className="item ar-1px-b">
                 <div data-v-eaa4a307="" className="item-left">
-                  <span data-v-eaa4a307="" className="blue">Experience Bonus</span
-                  ><span data-v-eaa4a307="">Betting EXP</span
+                  <span data-v-eaa4a307="" className="blue">{t('Experience Bonus')}</span
+                  ><span data-v-eaa4a307="">{t('Betting EXP')}</span
                   ><span data-v-eaa4a307="">{history.updated_at}</span>
                 </div>
                 <div data-v-eaa4a307="" className="item-right">
                   <span data-v-eaa4a307=""></span
                   ><span data-v-eaa4a307=""></span
-                  ><span data-v-eaa4a307="" className="green">{history.amount} EXP</span>
+                  ><span data-v-eaa4a307="" className="green">{history.amount} {t('EXP')}</span>
                 </div>
               </div>
             
@@ -10444,8 +10448,8 @@ const claimBonus= async (id) => {
             <div data-v-eaa4a307="" className="vip-content-recordVsrule-con"  style={{display: activeHistory === 'history2' ? 'block':'none'}}>
                 <div data-v-eaa4a307="" className="con-content">
                   <div data-v-eaa4a307="" className="con-content__title">
-                    <h1 data-v-eaa4a307="">VIP privileges</h1>
-                    <p data-v-eaa4a307="">VIP rule description</p>
+                    <h1 data-v-eaa4a307="">{t('VIP privileges')}</h1>
+                    <p data-v-eaa4a307="">{t('VIP rule description')}</p>
                   </div>
                   <div data-v-eaa4a307="" className="con-content__rules">
                     <div
@@ -10459,7 +10463,7 @@ const claimBonus= async (id) => {
                         data-v-eaa4a307=""
                         className="con-content__rules-item__title"
                       >
-                        Upgrade standard
+                        {t('Upgrade standard')}
                       </div>
                       <div
                         data-v-eaa4a307=""
@@ -10586,7 +10590,7 @@ const claimBonus= async (id) => {
                         data-v-eaa4a307=""
                         className="con-content__rules-item__title"
                       >
-                        Monthly reward
+                        {t('Monthly reward')}
                       </div>
                       <div
                         data-v-eaa4a307=""

@@ -561,11 +561,11 @@ useEffect(() => {
               <svg data-v-7dd1adab="" className="svg-icon icon-lottyWallet">
                 <use href="#icon-lottyWallet"></use>
               </svg>
-              <div data-v-7dd1adab="">Wallet balance</div>
+              <div data-v-7dd1adab="">{t('Wallet balance')}</div>
             </div>
             <div data-v-7dd1adab="" className="Wallet__C-balance-l3">
-              <div data-v-7dd1adab="" onClick={()=>navigate('/wallet/withdraw')}>Withdraw</div>
-              <div data-v-7dd1adab="" onClick={()=>navigate('/wallet/deposit')}>Deposit</div>
+              <div data-v-7dd1adab="" onClick={()=>navigate('/wallet/withdraw')}>{t('Withdraw')}</div>
+              <div data-v-7dd1adab="" onClick={()=>navigate('/wallet/deposit')}>{t('Deposit')}</div>
             </div>
           </div>
         </div>
@@ -575,7 +575,7 @@ useEffect(() => {
           </svg>
           <div className="noticeBar__container-body">
             <div className="noticeBar__container-body-text">
-              Welcome to Khel Mantra! We have a variety of games, promos and bonus
+              Welcome to Big Manipur!We have a variety of games, promos and bonus
               for you to enjoy, so why wait? Go register and enjoy the variety
               reward awaits you.
             </div>
@@ -607,7 +607,7 @@ useEffect(() => {
         <div data-v-75b35bf5="" className="K3TL__C">
           <div data-v-75b35bf5="" className="K3TL__C-l1">
             <div data-v-75b35bf5="" className="left">
-              <div data-v-75b35bf5="">Period</div>
+              <div data-v-75b35bf5="">{t('Period')}</div>
               <div data-v-75b35bf5="" className="K3TL__C-rule">
                 <svg
                   data-v-75b35bf5=""
@@ -624,10 +624,10 @@ useEffect(() => {
                     strokeWidth="1.2"
                   ></path>
                 </svg>
-                How to play
+                {t('How to play')}
               </div>
             </div>
-            <div data-v-75b35bf5="">Time remaining</div>
+            <div data-v-75b35bf5="">{t('Time remaining')}</div>
           </div>
           <div data-v-75b35bf5="" className="K3TL__C-l2">
             <div data-v-75b35bf5="">{period}</div>
@@ -659,10 +659,10 @@ useEffect(() => {
             <div data-v-8a4509d7="">{time.seconds2}</div>
           </div>
           <div data-v-8a4509d7="" className="K3B__C-nav" >
-            <div data-v-8a4509d7="" className={`${gameJoin === 'game1' ? 'active' : ''}`}  onClick={() => showSection('game1')}>Total</div>
-            <div data-v-8a4509d7="" className={`${gameJoin === 'game2' ? 'active' : ''}`}  onClick={() => showSection('game2')}>2 same</div>
-            <div data-v-8a4509d7="" className={`${gameJoin === 'game3' ? 'active' : ''}`}  onClick={() => showSection('game3')}>3 same</div>
-            <div data-v-8a4509d7="" className={`${gameJoin === 'game4' ? 'active' : ''}`}  onClick={() => showSection('game4')}>Different</div>
+            <div data-v-8a4509d7="" className={`${gameJoin === 'game1' ? 'active' : ''}`}  onClick={() => showSection('game1')}>{t('Total')}</div>
+            <div data-v-8a4509d7="" className={`${gameJoin === 'game2' ? 'active' : ''}`}  onClick={() => showSection('game2')}>2 {t('same')}</div>
+            <div data-v-8a4509d7="" className={`${gameJoin === 'game3' ? 'active' : ''}`}  onClick={() => showSection('game3')}>3 {t('same')}</div>
+            <div data-v-8a4509d7="" className={`${gameJoin === 'game4' ? 'active' : ''}`}  onClick={() => showSection('game4')}>{t('Different')}</div>
           </div>
           <div
   data-v-ed0c8e79=""
@@ -768,19 +768,19 @@ useEffect(() => {
     <div data-v-ed0c8e79="" className="K3B__C-odds-rate">207.36X</div>
   </div>
   <div data-v-ed0c8e79="" className="num numA" onClick={() => addToListJoin('b')}>
-    <div data-v-ed0c8e79="" className="">Big</div>
+    <div data-v-ed0c8e79="" className="">{t('Big')}</div>
     <div data-v-ed0c8e79="" className="K3B__C-odds-rate">2X</div>
   </div>
   <div data-v-ed0c8e79="" className="num numB" onClick={() => addToListJoin('s')}>
-    <div data-v-ed0c8e79="" className="">Small</div>
+    <div data-v-ed0c8e79="" className="">{t('Small')}</div>
     <div data-v-ed0c8e79="" className="K3B__C-odds-rate">2X</div>
   </div>
   <div data-v-ed0c8e79="" className="num numC" onClick={() => addToListJoin('l')}>
-    <div data-v-ed0c8e79="" className="">Odd</div>
+    <div data-v-ed0c8e79="" className="">{t('Odd')}</div>
     <div data-v-ed0c8e79="" className="K3B__C-odds-rate">2X</div>
   </div>
   <div data-v-ed0c8e79="" className="num numD" onClick={() => addToListJoin('c')}>
-    <div data-v-ed0c8e79="" className="">Even</div>
+    <div data-v-ed0c8e79="" className="">{t('Even')}</div>
     <div data-v-ed0c8e79="" className="K3B__C-odds-rate">2X</div>
   </div>
 </div>

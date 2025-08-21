@@ -1,8 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Api from '../../services/Api';
+// import { t } from 'i18next';
+import { useTranslation } from "react-i18next";
+
 
 export default function BetRecords() {
+      const { t } = useTranslation();
+  
   const navigate =  useNavigate();
   const [isVisible, setIsVisible] = useState(false);
   const [isSecondVisible, setIsSecondVisible] = useState(false);
@@ -9596,7 +9601,7 @@ export default function BetRecords() {
               </div>
               <div data-v-12a80a3e="" className="navbar__content-center">
                 <div data-v-12a80a3e="" className="navbar__content-title">
-                  Bet history
+                  {t('Bet History')}
                 </div>
               </div>
               <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -9629,7 +9634,7 @@ export default function BetRecords() {
                         <div data-v-1d8fbc24="" className="tab_item tab_active">
                           <svg data-v-1d8fbc24="" className="svg-icon icon-lottery">
                             <use href="#icon-lottery"></use></svg
-                          ><span data-v-1d8fbc24="">Lottery</span>
+                          ><span data-v-1d8fbc24="">{t('Lottery')}</span>
                         </div>
                       </div>
                     </div>
@@ -9713,7 +9718,7 @@ export default function BetRecords() {
                       <span
                         data-v-fa757a88=""
                         className="ar-searchbar__selector-default"
-                        >Win Go</span
+                        >{t('Win Go')}</span
                       ><i
                         data-v-fa757a88=""
                         className="van-badge__wrapper van-icon van-icon-arrow-down"
@@ -9731,7 +9736,7 @@ export default function BetRecords() {
                       <span
                         data-v-fa757a88=""
                         className="ar-searchbar__selector-default" onClick={handleSecondToggle}
-                        >Choose a date</span
+                        >{t('Choose a date')}</span
                       ><i
                         data-v-fa757a88=""
                         className="van-badge__wrapper van-icon van-icon-arrow-down" onClick={handleSecondToggle}
@@ -9765,16 +9770,16 @@ export default function BetRecords() {
                               type="button"
                               className="van-picker__cancel van-haptics-feedback"  onClick={handleSecondCancel}
                             >
-                              Cancel
+                              {t('Cancel')}
                             </button>
                             <div className="van-picker__title van-ellipsis">
-                              Choose a date
+                             {t('Choose a date')}
                             </div>
                             <button
                               type="button"
                               className="van-picker__confirm van-haptics-feedback"  onClick={handleSecondCancel}
                             >
-                              Confirm
+                              {t('Confirm')}
                             </button>
                           </div>
                           <div
@@ -10252,7 +10257,7 @@ export default function BetRecords() {
                                 className="img"
                                 data-origin="/assets/png/lotterycategory_202307140102511fow.png"
                                 src="/assets/png/lotterycategory_202307140102511fow.png"
-                              />Win Go
+                              />{t('Win Go')}
                             </div>
                           </div>
                           {/* <div data-v-0a298b45="" className={`item ${selectSection ? 'active':''}`}>
@@ -10304,7 +10309,7 @@ export default function BetRecords() {
           >
               {betRecords.length === 0 ? (
           <div data-v-61888f52="" className="infiniteScroll__loading">
-          <div data-v-61888f52="">No more</div>
+          <div data-v-61888f52="">{t('No more')}</div>
         </div>
         ) : (
           betRecords.map((history, index) => (
@@ -10318,8 +10323,8 @@ export default function BetRecords() {
                       className="bet-container-lottery-card-header ar-1px-b"
                     >
                       <div data-v-1d8fbc24="">
-                        <h2 data-v-1d8fbc24="" style={{fontSize: '120%'}}>Win Go</h2>
-                        <span data-v-1d8fbc24="" className="colorE98613" style={{marginLeft:'310px'}}>lose</span>
+                        <h2 data-v-1d8fbc24="" style={{fontSize: '120%'}}>{t('Win Go')}</h2>
+                        <span data-v-1d8fbc24="" className="colorE98613" style={{marginLeft:'310px'}}>{t('lose')}</span>
                       </div>
                       <p data-v-1d8fbc24="">{formatTimestampToIST(history.time)}</p>
                     </div>
@@ -10336,7 +10341,7 @@ export default function BetRecords() {
                             >
                               <use href="#icon-round"></use>
                             </svg>
-                            <h2 data-v-1d8fbc24="">Type</h2></span
+                            <h2 data-v-1d8fbc24="">{t('Type')}</h2></span
                           ><span data-v-1d8fbc24="">{history.game}</span>
                         </li>
                         <li data-v-1d8fbc24="">
@@ -10347,7 +10352,7 @@ export default function BetRecords() {
                             >
                               <use href="#icon-round"></use>
                             </svg>
-                            <h2 data-v-1d8fbc24="">Period</h2></span
+                            <h2 data-v-1d8fbc24="">{t('Period')}</h2></span
                           ><span data-v-1d8fbc24="">{history.stage}</span>
                         </li>
                         <li data-v-1d8fbc24="">
@@ -10358,7 +10363,7 @@ export default function BetRecords() {
                             >
                               <use href="#icon-round"></use>
                             </svg>
-                            <h2 data-v-1d8fbc24="">Order number</h2></span
+                            <h2 data-v-1d8fbc24="">{t('Order number')}</h2></span
                           ><span data-v-1d8fbc24=""
                             >{history.id_product}</span
                           >
@@ -10371,7 +10376,7 @@ export default function BetRecords() {
                             >
                               <use href="#icon-round"></use>
                             </svg>
-                            <h2 data-v-1d8fbc24="">Select</h2></span
+                            <h2 data-v-1d8fbc24="">{t('Select')}</h2></span
                           >
                           <p data-v-1d8fbc24="">{history.bet}</p>
                         </li>
@@ -10383,7 +10388,7 @@ export default function BetRecords() {
                             >
                               <use href="#icon-round"></use>
                             </svg>
-                            <h2 data-v-1d8fbc24="">Total bet</h2></span
+                            <h2 data-v-1d8fbc24="">{t('Total bet')}</h2></span
                           ><span data-v-1d8fbc24="">{history.amount}</span>
                         </li>
                       </ul>
@@ -10402,15 +10407,15 @@ export default function BetRecords() {
                         <div data-v-1d8fbc24="">
                           <svg data-v-1d8fbc24="" className="svg-icon icon-round">
                             <use href="#icon-round"></use></svg
-                          >Lottery results
+                          >{t('Lottery results')}
                         </div>
                         <h2 data-v-1d8fbc24="">
                           <svg data-v-1d8fbc24="" className="svg-icon icon-round">
                             <use href="#icon-round"></use>
                           </svg>
                           <p data-v-1d8fbc24="">1</p>
-                          <span data-v-1d8fbc24="" className="small">Small</span
-                          ><span data-v-1d8fbc24="" className="green">Green</span>
+                          <span data-v-1d8fbc24="" className="small">{t('Small')}</span
+                          ><span data-v-1d8fbc24="" className="green">{t('Green')}</span>
                         </h2>
                       </div>
                     </div>
@@ -10424,7 +10429,7 @@ export default function BetRecords() {
                           className="bet-container-lottery-note-box-para"
                         >
                           <h3 data-v-1d8fbc24="">{history.money}</h3>
-                          <span data-v-1d8fbc24="">Actual amount</span>
+                          <span data-v-1d8fbc24="">{t('Actual amount')}</span>
                         </div>
                       </div>
                       <div data-v-1d8fbc24="">
@@ -10433,7 +10438,7 @@ export default function BetRecords() {
                           className="bet-container-lottery-note-box-para"
                         >
                           <h3 data-v-1d8fbc24="">{history.fee}</h3>
-                          <span data-v-1d8fbc24="">Winnings</span>
+                          <span data-v-1d8fbc24="">{t('Winnings')}</span>
                         </div>
                       </div>
                       <div data-v-1d8fbc24="">
@@ -10442,7 +10447,7 @@ export default function BetRecords() {
                           className="bet-container-lottery-note-box-para"
                         >
                           <h3 data-v-1d8fbc24="">{history.fee}</h3>
-                          <span data-v-1d8fbc24="">Handling fee</span>
+                          <span data-v-1d8fbc24="">{t('Handling fee')}</span>
                         </div>
                       </div>
                       <div data-v-1d8fbc24="">
@@ -10451,7 +10456,7 @@ export default function BetRecords() {
                           className="bet-container-lottery-note-box-para"
                         >
                           <h4 data-v-1d8fbc24="" className="h4_red">{history.fee}</h4>
-                          <span data-v-1d8fbc24="">Profit/loss</span>
+                          <span data-v-1d8fbc24="">{t('Profit')}/{t('loss')}</span>
                         </div>
                       </div>
                     </div>
