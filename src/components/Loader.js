@@ -15,7 +15,7 @@ export default function Loader() {
       }}
     >
       <img 
-        src="/assets/spinner.png"   // put your spinner image path here
+        src="/assets/spinner.gif"   // put your spinner image path here
         alt="Loading..." 
         style={{ width: "130px", height: "100px" }} 
       />

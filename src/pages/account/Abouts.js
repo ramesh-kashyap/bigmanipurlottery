@@ -1,6 +1,8 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 export default function Abouts() {
+   const { t } = useTranslation();
   const navigate = useNavigate();
   return (
     <div style={{fontSize: '12px'}}>
@@ -9507,7 +9509,7 @@ export default function Abouts() {
                 </div>
                 <div data-v-12a80a3e="" className="navbar__content-center">
                   <div data-v-12a80a3e="" className="navbar__content-title">
-                    About us
+                    {t('About us')}
                   </div>
                 </div>
                 <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -9532,8 +9534,7 @@ export default function Abouts() {
               >
               <span
                 data-v-6616fdfe=""
-                >Confidentiality Agreement</span>
-              
+                > {t('Confidentiality Agreement')}</span>
             </div>
             <i
               data-v-6616fdfe=""
@@ -9548,7 +9549,7 @@ export default function Abouts() {
                 <use href="#icon-riskProtocal"></use></svg
               ><span
                 data-v-6616fdfe=""
-                >Risk Disclosure Agreement</span>
+                > {t('Risk Disclosure Agreement')}</span>
 
             </div>
             <i

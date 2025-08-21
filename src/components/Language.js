@@ -22,6 +22,7 @@ const Language = () => {
 
   return (
   <div style={{ display: "flex", flexDirection: "column", gap: "15px", justifyContent: "center", alignItems: "center", marginTop: "20px" }}>
+    <div data-v-12a80a3e="" data-v-00fab4aa="" class="navbar"><div data-v-12a80a3e="" class="navbar-fixed"><div data-v-12a80a3e="" class="navbar__content"><div data-v-12a80a3e="" class="navbar__content-left"  onClick={()=>navigate('/account')}><i data-v-12a80a3e="" class="van-badge__wrapper van-icon van-icon-arrow-left"></i></div><div data-v-12a80a3e="" class="navbar__content-center"><div data-v-12a80a3e="" class="navbar__content-title">Language</div></div><div data-v-12a80a3e="" class="navbar__content-right"></div></div></div></div>
   {/* English Option */}
   <label
     className="item"

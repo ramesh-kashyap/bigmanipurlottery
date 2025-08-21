@@ -134,7 +134,7 @@ function App() {
           }
         />
         <Route path="/wallet" element={<PrivateRoute><Wallet/></PrivateRoute>}/>
-        <Route path="/language" element={<PrivateRoute><Language/></PrivateRoute>}/>
+        <Route path="/account/language" element={<PrivateRoute><Language/></PrivateRoute>}/>
           <Route path="/CustomModal" element={<PrivateRoute><CustomModal/></PrivateRoute>}/>
 
 

@@ -9760,7 +9760,7 @@ const [isVisible, setIsVisible] = useState(true);
                 </svg>
                 <div className="noticeBar__container-body">
                     <div className="noticeBar__container-body-text">Our customer service never send a link to the member,if
-                        you received a link from someone who pro-claimed as Khel Mantra customer service do not click the
+                        you received a link from someone who pro-claimed as Big Manipur customer service do not click the
                         link to prevent being hack or lost data. Thank you</div>
                 </div><button className="hotIcon">Detail</button>
             </div>

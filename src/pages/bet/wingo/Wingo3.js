@@ -10096,7 +10096,7 @@ export default function Wingo3() {
       </svg>
       <div className="noticeBar__container-body">
         <div className="noticeBar__container-body-text">
-          Be cautious of counterfeit websites mimicking our Khel Mantra official
+          Be cautious of counterfeit websites mimicking our Big Manipur official
           site, do not transfer money to anyone, including agents, and keep
           payment receipts and UTR numbers confidential.
         </div>

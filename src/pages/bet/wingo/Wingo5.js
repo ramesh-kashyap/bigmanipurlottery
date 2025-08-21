@@ -10054,7 +10054,7 @@ export default function Wingo5() {
       </svg>
       <div className="noticeBar__container-body">
         <div className="noticeBar__container-body-text">
-          {t('Be cautious of counterfeit websites mimicking our Khel Mantra official site, do not transfer money to anyone, including agents, and keep payment receipts and UTR numbers confidential')}
+          {t('Be cautious of counterfeit websites mimicking our Big Manipur official site, do not transfer money to anyone, including agents, and keep payment receipts and UTR numbers confidential')}
         </div>
       </div>
       <button className="hotIcon">{t('Detail')}</button>

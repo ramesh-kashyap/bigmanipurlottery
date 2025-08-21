@@ -572,7 +572,7 @@ useEffect(() => {
           </svg>
           <div className="noticeBar__container-body">
             <div className="noticeBar__container-body-text">
-              Welcome to Khel Mantra! We have a variety of games, promos and bonus
+              Welcome to Big Manipur! We have a variety of games, promos and bonus
               for you to enjoy, so why wait? Go register and enjoy the variety
               reward awaits you.
             </div>

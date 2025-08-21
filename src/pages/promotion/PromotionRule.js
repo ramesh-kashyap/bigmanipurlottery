@@ -9746,7 +9746,7 @@
               </svg>
               <div data-v-baf81808="" className="promotion-title">08</div>
               <div data-v-baf81808="" className="promotion-txt">
-                The final interpretation of this activity belongs to Khel Mantra
+                The final interpretation of this activity belongs to Big Manipur
               </div>
             </div>
           </div>

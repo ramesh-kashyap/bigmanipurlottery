@@ -1,6 +1,8 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from "react-i18next";
 export default function AboutDetail() {
+  const { t } = useTranslation();
  const navigate = useNavigate();
   return (
     <div style={{fontSize: '12px'}}>
@@ -137,7 +139,7 @@ export default function AboutDetail() {
               </div>
               <div data-v-12a80a3e="" className="navbar__content-center">
                 <div data-v-12a80a3e="" className="navbar__content-title">
-                  Confidentiality Agreement
+                  {t('Confidentiality Agreement')}
                 </div>
               </div>
               <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -169,10 +171,10 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                This Privacy Policy describes Our policies and procedures on the
+                   {t(`This Privacy Policy describes Our policies and procedures on the
                 collection, use and disclosure of Your information when You use
                 the Service and tells You about Your privacy rights and how the
-                law protects You.
+                law protects You.`)}
               </p>
             </h3>
             <h1
@@ -187,7 +189,7 @@ export default function AboutDetail() {
                 'backgroundColor': 'rgb(250, 250, 250)'
             }}
             >
-              Interpretation and Definitions
+                 {t('Interpretation and Definitions')}
             </h1>
             <h2
               style={{ 'boxSizing':' inherit',
@@ -200,7 +202,7 @@ export default function AboutDetail() {
                 'backgroundColor': 'rgb(250, 250, 250)'
               }}
             >
-              Interpretation
+                 {t('Interpretation')}
             </h2>
             <h3
               className="text-xs-center"
@@ -225,8 +227,8 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                The words of which the initial letter is capitalized have
-                meanings defined under the following conditions.
+                {t(`The words of which the initial letter is capitalized have
+                meanings defined under the following conditions.`)}
               </p>
               <p
                    style={{
@@ -238,8 +240,8 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                The following definitions shall have the same meaning regardless
-                of whether they appear in singular or in plural.
+               {t(`The following definitions shall have the same meaning regardless
+                of whether they appear in singular or in plural.`)}
               </p>
             </h3>
             <h2
@@ -253,7 +255,7 @@ export default function AboutDetail() {
                 'backgroundColor': 'rgb(250, 250, 250)'
               }}
             >
-              Definitions
+             {t(`Definitions`)}
             </h2>
             <h3
               className="text-xs-center"
@@ -278,7 +280,7 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                For the purposes of this Privacy Policy:
+                {t(`For the purposes of this Privacy Policy:`)}
               </p>
               <ul
                 style={{
@@ -316,10 +318,10 @@ export default function AboutDetail() {
                         margin:' 0px',
                         fontWeight: 'bolder'
                        }}
-                      >You</span
-                    >means the individual accessing or using the Service, or the
+                      >{t(`You`)}</span
+                    >{t(`means the individual accessing or using the Service, or the
                     company, or other legal entity on behalf of which such
-                    individual is accessing or using the Service, as applicable.
+                    individual is accessing or using the Service, as applicable.`)}
                   </p>
                 </li>
                 <li
@@ -347,9 +349,9 @@ export default function AboutDetail() {
                         margin:' 0px',
                         fontWeight: 'bolder'
                        }}
-                      >Company</span
-                    >(referred to as either "the Company", "We", "Us" or "Our"
-                    in this Agreement) refers to Big Manipur.
+                      >{t(`Company`)}</span
+                    >{t(`(referred to as either "the Company", "We", "Us" or "Our"
+                    in this Agreement) refers to Big Manipur.`)}
                   </p>
                 </li>
                 <li
@@ -368,14 +370,12 @@ export default function AboutDetail() {
                     margin:' 0px',
                     fontWeight: 'bolder'
         }}
-                
-                    
-                    >Affiliate</span
-                  >means an entity that controls, is controlled by or is under
+                    >{t(`Affiliate`)}</span
+                  >{t(`means an entity that controls, is controlled by or is under
                   common control with a party, where "control" means ownership
                   of 50% or more of the shares, equity interest or other
                   securities entitled to vote for election of directors or other
-                  managing authority.
+                  managing authority.`)}
                 </li>
                 <li
                  style={{
@@ -393,9 +393,9 @@ export default function AboutDetail() {
                     margin:' 0px',
                     fontWeight: 'bolder'
         }}
-                    >Account</span
-                  >means a unique account created for You to access our Service
-                  or parts of our Service.
+                    >{t(`Account`)}</span
+                  >{t(`means a unique account created for You to access our Service
+                  or parts of our Service.`)}
                 </li>
                 <li
                  style={{
@@ -413,9 +413,9 @@ export default function AboutDetail() {
                     margin:' 0px',
                     fontWeight: 'bolder'
         }}
-                    >Website</span
-                  >refers to<a href="https://www.bigmanipurlottery.in/account" target="_blank">Big Manipur</a
-                  >Pro, accessible from <a
+                    >{t(`Website`)}</span
+                  >{t(`refers to`)}<a href="https://www.bigmanipurlottery.in/account" target="_blank">Big Manipur</a
+                  >{t(`Pro, accessible from`)} <a
                     href="https://www.bigmanipurlottery.in/account"
                     target="_blank"
                     >https://www.bigmanipurlottery.in/account</a
@@ -437,8 +437,8 @@ export default function AboutDetail() {
                     margin:' 0px',
                     fontWeight: 'bolder'
         }}
-                    >Service</span
-                  >refers to the Website.
+                    >{t(`Service`)}</span
+                  >{t(`refers to the Website.`)}
                 </li>
                 <li
                  style={{
@@ -456,8 +456,8 @@ export default function AboutDetail() {
                     margin:' 0px',
                     fontWeight: 'bolder'
         }}
-                    >Country</span
-                  >refers to: Uttar Pradesh, India
+                    >{t(`Country`)}</span
+                  >{t(`refers to: Uttar Pradesh, India`)}
                 </li>
                 <li
                  style={{
@@ -484,13 +484,13 @@ export default function AboutDetail() {
                         margin:' 0px',
                         fontWeight: 'bolder'
                        }}
-                      >Service Provider</span
-                    >means any natural or legal person who processes the data on
+                      >{t(`Service Provider`)}</span
+                    >{t(`means any natural or legal person who processes the data on
                     behalf of the Company. It refers to third-party companies or
                     individuals employed by the Company to facilitate the
                     Service, to provide the Service on behalf of the Company, to
                     perform services related to the Service or to assist the
-                    Company in analyzing how the Service is used.
+                    Company in analyzing how the Service is used.`)}
                   </p>
                 </li>
                 <li
@@ -509,10 +509,10 @@ export default function AboutDetail() {
                     margin:' 0px',
                     fontWeight: 'bolder'
         }}
-                    >Third-party Social Media Service</span
-                  >refers to any website or any social network website through
+                    >{t(`Third-party Social Media Service`)}</span
+                  >{t(`refers to any website or any social network website through
                   which a User can log in or create an account to use the
-                  Service.
+                  Service.`)}
                 </li>
                 <li
                  style={{
@@ -539,9 +539,9 @@ export default function AboutDetail() {
                         margin:' 0px',
                         fontWeight: 'bolder'
                        }}
-                      >Personal Data</span
-                    >is any information that relates to an identified or
-                    identifiable individual.
+                      >{t(`Personal Data`)}</span
+                    >{t(`is any information that relates to an identified or
+                    identifiable individual.`)}
                   </p>
                 </li>
                 <li
@@ -560,11 +560,11 @@ export default function AboutDetail() {
                     margin:' 0px',
                     fontWeight: 'bolder'
         }}
-                    >Cookies</span
-                  >are small files that are placed on Your computer, mobile
+                    >{t(`Cookies`)}</span
+                  >{t(`are small files that are placed on Your computer, mobile
                   device or any other device by a website, containing the
                   details of Your browsing history on that website among its
-                  many uses.
+                  many uses.`)}
                 </li>
                 <li
                  style={{
@@ -582,9 +582,9 @@ export default function AboutDetail() {
                     margin:' 0px',
                     fontWeight: 'bolder'
         }}
-                    >Device</span
-                  >means any device that can access the Service such as a
-                  computer, a cellphone or a digital tablet.
+                    >{t(`Device`)}</span
+                  >{t(`means any device that can access the Service such as a
+                  computer, a cellphone or a digital tablet.`)}
                 </li>
                 <li
                  style={{
@@ -602,10 +602,10 @@ export default function AboutDetail() {
                     margin:' 0px',
                     fontWeight: 'bolder'
         }}
-                    >Usage Data</span
-                  >refers to data collected automatically, either generated by
+                    >{t(`Usage Data`)}</span
+                  >{t(`refers to data collected automatically, either generated by
                   the use of the Service or from the Service infrastructure
-                  itself (for example, the duration of a page visit).
+                  itself (for example, the duration of a page visit).`)}
                 </li>
               </ul>
             </h3>
@@ -621,7 +621,7 @@ export default function AboutDetail() {
                 'backgroundColor': 'rgb(250, 250, 250)'
             }}
             >
-              Collecting and Using Your Personal Data
+              {t(`Collecting and Using Your Personal Data`)}
             </h1>
             <h2
               style={{ 'boxSizing':' inherit',
@@ -634,7 +634,7 @@ export default function AboutDetail() {
                 'backgroundColor': 'rgb(250, 250, 250)'
               }}
             >
-              Types of Data Collected
+              {t(`Types of Data Collected`)}
             </h2>
             <h3
               style={{ 'boxSizing':' inherit',
@@ -647,7 +647,7 @@ export default function AboutDetail() {
                 'backgroundColor': 'rgb(250, 250, 250)'
               }}
             >
-              Personal Data
+              {t(`Personal Data`)}
             </h3>
             <h3
               className="text-xs-center"
@@ -672,10 +672,10 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                While using Our Service, We may ask You to provide Us with
+                {t(`While using Our Service, We may ask You to provide Us with
                 certain personally identifiable information that can be used to
                 contact or identify You. Personally identifiable information may
-                include, but is not limited to:
+                include, but is not limited to:`)}
               </p>
               <ul
                 style={{
@@ -697,7 +697,7 @@ export default function AboutDetail() {
                     margin:' 0px'
         }}
                 >
-                  Email address
+                  {t(`Email address`)}
                 </li>
                 <li
                  style={{
@@ -707,7 +707,7 @@ export default function AboutDetail() {
                     margin:' 0px'
         }}
                 >
-                  First name and last name
+                  {t(`First name and last name`)}
                 </li>
                 <li
                  style={{
@@ -717,7 +717,7 @@ export default function AboutDetail() {
                     margin:' 0px'
         }}
                 >
-                  Phone number
+                  {t(`Phone number`)}
                 </li>
                 <li
                  style={{
@@ -727,7 +727,7 @@ export default function AboutDetail() {
                     margin:' 0px'
         }}
                 >
-                  Address, State, Province, ZIP/Postal code, City
+                  {t(`Address, State, Province, ZIP/Postal code, City`)}
                 </li>
                 <li
                  style={{
@@ -737,7 +737,7 @@ export default function AboutDetail() {
                     margin:' 0px'
         }}
                 >
-                  Usage Data
+                   {t(`Usage Data`)}
                 </li>
               </ul>
             </h3>
@@ -752,7 +752,7 @@ export default function AboutDetail() {
                 'backgroundColor': 'rgb(250, 250, 250)'
               }}
             >
-              Usage Data
+              {t(`Usage Data`)}
             </h3>
             <h3
               className="text-xs-center"
@@ -777,7 +777,7 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                Usage Data is collected automatically when using the Service.
+                {t(`Usage Data is collected automatically when using the Service.`)}
               </p>
               <p
                    style={{
@@ -789,11 +789,11 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                Usage Data may include information such as Your Device's
+                {t(`Usage Data may include information such as Your Device's
                 Internet Protocol address (e.g. IP address), browser type,
                 browser version, the pages of our Service that You visit, the
                 time and date of Your visit, the time spent on those pages,
-                unique device identifiers and other diagnostic data.
+                unique device identifiers and other diagnostic data.`)}
               </p>
               <p
                    style={{
@@ -805,12 +805,12 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                When You access the Service by or through a mobile device, We
+                {t(`When You access the Service by or through a mobile device, We
                 may collect certain information automatically, including, but
                 not limited to, the type of mobile device You use, Your mobile
                 device unique ID, the IP address of Your mobile device, Your
                 mobile operating system, the type of mobile Internet browser You
-                use, unique device identifiers and other diagnostic data.
+                use, unique device identifiers and other diagnostic data.`)}
               </p>
               <p
                    style={{
@@ -822,9 +822,26 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                We may also collect information that Your browser sends whenever
+                {t(`When You access the Service by or through a mobile device, We
+                may collect certain information automatically, including, but
+                not limited to, the type of mobile device You use, Your mobile
+                device unique ID, the IP address of Your mobile device, Your
+                mobile operating system, the type of mobile Internet browser You
+                use, unique device identifiers and other diagnostic data.`)}
+              </p>
+              <p
+                   style={{
+                  'boxSizing': 'inherit',
+                 ' marginBottom': '16px',
+                  'backgroundRepeat': 'noRepeat',
+                  padding: '0px',
+                  'fontSize': '14px',
+                  'textAlign': 'start'
+                }}
+              >
+                {t(`We may also collect information that Your browser sends whenever
                 You visit our Service or when You access the Service by or
-                through a mobile device.
+                through a mobile device.`)}
               </p>
             </h3>
             <h3
@@ -838,7 +855,7 @@ export default function AboutDetail() {
                 'backgroundColor': 'rgb(250, 250, 250)'
               }}
             >
-              Tracking Technologies and Cookies
+              {t(`Tracking Technologies and Cookies`)}
             </h3>
             <h3
               className="text-xs-center"
@@ -863,10 +880,10 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                We use Cookies and similar tracking technologies to track the
+                {t(`We use Cookies and similar tracking technologies to track the
                 activity on Our Service and store certain information. Tracking
                 technologies used are beacons, tags, and scripts to collect and
-                track information and to improve and analyze Our Service.
+                track information and to improve and analyze Our Service.`)}
               </p>
               <p
                    style={{
@@ -878,10 +895,10 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                You can instruct Your browser to refuse all Cookies or to
+                {t(`You can instruct Your browser to refuse all Cookies or to
                 indicate when a Cookie is being sent. However, if You do not
                 accept Cookies, You may not be able to use some parts of our
-                Service.
+                Service.`)}
               </p>
               <p
                    style={{
@@ -893,10 +910,10 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                Cookies can be "Persistent" or "Session" Cookies. Persistent
+                {t(`Cookies can be "Persistent" or "Session" Cookies. Persistent
                 Cookies remain on your personal computer or mobile device when
-                You go offline, while Session Cookies are de1eted as soon as You
-                close your web browser.
+                You go offline, while Session Cookies are deleted as soon as You
+                close your web browser.`)}
               </p>
               <p
                    style={{
@@ -908,8 +925,8 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                We use both session and persistent Cookies for the purposes set
-                out below:
+                {t(`We use both session and persistent Cookies for the purposes set
+                out below:`)}
               </p>
               <ul
                 style={{
@@ -948,7 +965,7 @@ export default function AboutDetail() {
                         margin:' 0px',
                         fontWeight: 'bolder'
                        }}
-                      >Necessary / Essential Cookies</span
+                      >{t(`Necessary / Essential Cookies`)}</span
                     >
                   </p>
                   <p
@@ -960,7 +977,7 @@ export default function AboutDetail() {
     }}
          
                   >
-                    Type: Session Cookies
+                    {t(`Type: Session Cookies`)}
                   </p>
                   <p
                           style={{
@@ -971,7 +988,7 @@ export default function AboutDetail() {
     }}
          
                   >
-                    Administered by: Us
+                    {t(`Administered by: Us`)}
                   </p>
                   <p
                           style={{
@@ -982,12 +999,12 @@ export default function AboutDetail() {
     }}
          
                   >
-                    Purpose: These Cookies are essential to provide You with
+                   {t(`Purpose: These Cookies are essential to provide You with
                     services available through the Website and to enable You to
                     use some of its features. They help to authenticate users
                     and prevent fraudulent use of user accounts. Without these
                     Cookies, the services that You have asked for cannot be
-                    provided, and We only use these Cookies to provide You with
+                    provided, and We only use these Cookies to provide You with`)}
                     those services.
                   </p>
                 </li>
@@ -1016,7 +1033,7 @@ export default function AboutDetail() {
                         margin:' 0px',
                         fontWeight: 'bolder'
                        }}
-                      >Cookies Policy / Notice Acceptance Cookies</span
+                      >{t(`Cookies Policy / Notice Acceptance Cookies`)}</span
                     >
                   </p>
                   <p
@@ -1028,7 +1045,7 @@ export default function AboutDetail() {
     }}
          
                   >
-                    Type: Persistent Cookies
+                    {t(`Type: Persistent Cookies`)}
                   </p>
                   <p
                           style={{
@@ -1039,7 +1056,7 @@ export default function AboutDetail() {
     }}
          
                   >
-                    Administered by: Us
+                    {t(`Administered by: Us`)}
                   </p>
                   <p
                           style={{
@@ -1050,8 +1067,8 @@ export default function AboutDetail() {
     }}
          
                   >
-                    Purpose: These Cookies identify if users have accepted the
-                    use of cookies on the Website.
+                    {t(`Purpose: These Cookies identify if users have accepted the
+                    use of cookies on the Website.`)}
                   </p>
                 </li>
                 <li
@@ -1079,7 +1096,7 @@ export default function AboutDetail() {
                         margin:' 0px',
                         fontWeight: 'bolder'
                        }}
-                      >Functionality Cookies</span
+                      >{t(`Functionality Cookies`)}</span
                     >
                   </p>
                   <p
@@ -1091,7 +1108,7 @@ export default function AboutDetail() {
     }}
          
                   >
-                    Type: Persistent Cookies
+                    {t(`Type: Persistent Cookies`)}
                   </p>
                   <p
                           style={{
@@ -1113,12 +1130,12 @@ export default function AboutDetail() {
     }}
          
                   >
-                    Purpose: These Cookies allow us to remember choices You make
+                    {t(`Purpose: These Cookies allow us to remember choices You make
                     when You use the Website, such as remembering your login
                     details or language preference. The purpose of these Cookies
                     is to provide You with a more personal experience and to
                     avoid You having to re-enter your preferences every time You
-                    use the Website.
+                    use the Website.`)}
                   </p>
                 </li>
               </ul>
@@ -1132,8 +1149,8 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                For more information about the cookies we use and your choices
-                regarding cookies, please visit our Cookies Policy.
+                {t(`For more information about the cookies we use and your choices
+                regarding cookies, please visit our Cookies Policy.`)}
               </p>
             </h3>
             <h2
@@ -1147,7 +1164,7 @@ export default function AboutDetail() {
                 'backgroundColor': 'rgb(250, 250, 250)'
               }}
             >
-              Use of Your Personal Data
+              {t(`Use of Your Personal Data`)}
             </h2>
             <h3
               className="text-xs-center"
@@ -1172,7 +1189,7 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                The Company may use Personal Data for the following purposes:
+                {t(`The Company may use Personal Data for the following purposes:`)}
               </p>
               <ul
                 style={{
@@ -1202,8 +1219,8 @@ export default function AboutDetail() {
                     margin:' 0px',
                     fontWeight: 'bolder'
         }}
-                    >To provide and maintain our Service</span
-                  >, including to monitor the usage of our Service.
+                    >{t(`To provide and maintain our Service`)}</span
+                  >{t(`, including to monitor the usage of our Service.`)}
                 </li>
                 <li
                  style={{
@@ -1221,11 +1238,11 @@ export default function AboutDetail() {
                     margin:' 0px',
                     fontWeight: 'bolder'
         }}
-                    >To manage Your Account:</span
-                  >to manage Your registration as a user of the Service. The
+                    >{t(`To manage Your Account:`)}</span
+                  >{t(`to manage Your registration as a user of the Service. The
                   Personal Data You provide can give You access to different
                   functionalities of the Service that are available to You as a
-                  registered user.
+                  registered user.`)}
                 </li>
                 <li
                  style={{
@@ -1243,11 +1260,11 @@ export default function AboutDetail() {
                     margin:' 0px',
                     fontWeight: 'bolder'
         }}
-                    >For the performance of a contract:</span
-                  >the development, compliance and undertaking of the purchase
+                    >{t(`For the performance of a contract:`)}</span
+                  >{t(`the development, compliance and undertaking of the purchase
                   contract for the products, items or services You have
                   purchased or of any other contract with Us through the
-                  Service.
+                  Service.`)}
                 </li>
                 <li
                  style={{
@@ -1265,14 +1282,14 @@ export default function AboutDetail() {
                     margin:' 0px',
                     fontWeight: 'bolder'
         }}
-                    >To contact You:</span
-                  >To contact You by email, telephone calls, SMS, or other
+                    >{t(`To contact You:`)}</span
+                  >{t(`To contact You by email, telephone calls, SMS, or other
                   equivalent forms of electronic communication, such as a mobile
-                  application's push notifications regarding upda7es or
+                  application's push notifications regarding updates or
                   informative communications related to the functionalities,
                   products or contracted services, including the security
-                  upda7es, when necessary or reasonable for their
-                  implementation.
+                  updates, when necessary or reasonable for their
+                  implementation.`)}
                 </li>
                 <li
                  style={{
@@ -1290,11 +1307,11 @@ export default function AboutDetail() {
                     margin:' 0px',
                     fontWeight: 'bolder'
         }}
-                    >To provide You</span
-                  >with news, special offers and general information about other
+                    >{t(`To provide You`)}</span
+                  >{t(`with news, special offers and general information about other
                   goods, services and events which we offer that are similar to
                   those that you have already purchased or enquired about unless
-                  You have opted not to receive such information.
+                  You have opted not to receive such information.`)}
                 </li>
                 <li
                  style={{
@@ -1312,8 +1329,8 @@ export default function AboutDetail() {
                     margin:' 0px',
                     fontWeight: 'bolder'
         }}
-                    >To manage Your requests:</span
-                  >To attend and manage Your requests to Us.
+                    >{t(`To manage Your requests:`)}</span
+                  >{t(`To attend and manage Your requests to Us.`)}
                 </li>
               </ul>
               <p
@@ -1326,8 +1343,8 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                We may share your personal information in the following
-                situations:
+                {t(`We may share your personal information in the following
+                situations:`)}
               </p>
               <ul
                 style={{
@@ -1357,9 +1374,9 @@ export default function AboutDetail() {
                     margin:' 0px',
                     fontWeight: 'bolder'
         }}
-                    >With Service Providers:</span
-                  >We may share Your personal information with Service Providers
-                  to monitor and analyze the use of our Service, to contact You.
+                    >{t(`With Service Providers:`)}</span
+                  >{t(`We may share Your personal information with Service Providers
+                  to monitor and analyze the use of our Service, to contact You.`)}
                 </li>
                 <li
                  style={{
@@ -1377,11 +1394,11 @@ export default function AboutDetail() {
                     margin:' 0px',
                     fontWeight: 'bolder'
         }}
-                    >For Business transfers:</span
-                  >We may share or transfer Your personal information in
+                    >{t(`For Business transfers:`)}</span
+                  >{t(`We may share or transfer Your personal information in
                   connection with, or during negotiations of, any merger, sale
                   of Company assets, financing, or acquisition of all or a
-                  portion of our business to another company.
+                  portion of our business to another company.`)}
                 </li>
                 <li
                  style={{
@@ -1399,12 +1416,12 @@ export default function AboutDetail() {
                     margin:' 0px',
                     fontWeight: 'bolder'
         }}
-                    >With Affiliates:</span
-                  >We may share Your information with Our affiliates, in which
+                    >{t(`With Affiliates:`)}</span
+                  >{t(`We may share Your information with Our affiliates, in which
                   case we will require those affiliates to honor this Privacy
                   Policy. Affiliates include Our parent company and any other
                   subsidiaries, joint venture partners or other companies that
-                  We control or that are under common control with Us.
+                  We control or that are under common control with Us.`)}
                 </li>
                 <li
                  style={{
@@ -1422,9 +1439,9 @@ export default function AboutDetail() {
                     margin:' 0px',
                     fontWeight: 'bolder'
         }}
-                    >With Business partners:</span
-                  >We may share Your information with Our business partners to
-                  offer You certain products, services or promotions.
+                    >{t(`With Business partners:`)}</span
+                  >{t(`We may share Your information with Our business partners to
+                  offer You certain products, services or promotions.`)}
                 </li>
                 <li
                  style={{
@@ -1442,8 +1459,8 @@ export default function AboutDetail() {
                     margin:' 0px',
                     fontWeight: 'bolder'
         }}
-                    >With other users:</span
-                  >when You share personal information or otherwise interact in
+                    >{t(`With other users:`)}</span
+                  >{t(`when You share personal information or otherwise interact in
                   the public areas with other users, such information may be
                   viewed by all users and may be publicly distributed outside.
                   If You interact with other users or register through a
@@ -1451,7 +1468,7 @@ export default function AboutDetail() {
                   Third-Party Social Media Service may see You name, profile,
                   pictures and description of Your activity. Similarly, other
                   users will be able to view descriptions of Your activity,
-                  communicate with You and view Your profile.
+                  communicate with You and view Your profile.`)}
                 </li>
               </ul>
             </h3>
@@ -1466,7 +1483,7 @@ export default function AboutDetail() {
                 'backgroundColor': 'rgb(250, 250, 250)'
               }}
             >
-              Retention of Your Personal Data
+             {t(`Retention of Your Personal Data`)}
             </h2>
             <h3
               className="text-xs-center"
@@ -1491,12 +1508,12 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                The Company will retain Your Personal Data only for as long as
+                {t(`The Company will retain Your Personal Data only for as long as
                 is necessary for the purposes set out in this Privacy Policy. We
                 will retain and use Your Personal Data to the extent necessary
                 to comply with our legal obligations (for example, if we are
                 required to retain your data to comply with applicable laws),
-                resolve disputes, and enforce our legal agreements and policies.
+                resolve disputes, and enforce our legal agreements and policies.`)}
               </p>
               <p
                    style={{
@@ -1508,12 +1525,12 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                The Company will also retain Usage Data for internal analysis
+               {t(`The Company will also retain Usage Data for internal analysis
                 purposes. Usage Data is generally retained for a shorter period
                 of time, except when this data is used to strengthen the
                 security or to improve the functionality of Our Service, or We
                 are legally obligated to retain this data for longer time
-                periods.
+                periods.`)}
               </p>
             </h3>
             <h2
@@ -1527,7 +1544,7 @@ export default function AboutDetail() {
                 'backgroundColor': 'rgb(250, 250, 250)'
               }}
             >
-              Transfer of Your Personal Data
+              {t(`Transfer of Your Personal Data`)}
             </h2>
             <h3
               className="text-xs-center"
@@ -1552,13 +1569,27 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                Your information, including Personal Data, is processed at the
+                {t(`Your information, including Personal Data, is processed at the
                 Company's operating offices and in any other places where the
                 parties involved in the processing are located. It means that
                 this information may be transferred to — and maintained on —
                 computers located outside of Your state, province, country or
                 other governmental jurisdiction where the data protection laws
-                may differ than those from Your jurisdiction.
+                may differ than those from Your jurisdiction.`)}
+              </p>
+               
+              <p
+                   style={{
+                  'boxSizing': 'inherit',
+                 ' marginBottom': '16px',
+                  'backgroundRepeat': 'noRepeat',
+                  padding: '0px',
+                  'fontSize': '14px',
+                  'textAlign': 'start'
+                }}
+              >
+                {t(`Your consent to this Privacy Policy followed by Your submission
+                of such information represents Your agreement to that transfer.`)}
               </p>
               <p
                    style={{
@@ -1570,26 +1601,14 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                Your consent to this Privacy Policy followed by Your submission
-                of such information represents Your agreement to that transfer.
-              </p>
-              <p
-                   style={{
-                  'boxSizing': 'inherit',
-                 ' marginBottom': '16px',
-                  'backgroundRepeat': 'noRepeat',
-                  padding: '0px',
-                  'fontSize': '14px',
-                  'textAlign': 'start'
-                }}
-              >
-                The Company will take all steps reasonably necessary to ensure
+                {t(`The Company will take all steps reasonably necessary to ensure
                 that Your data is treated securely and in accordance with this
                 Privacy Policy and no transfer of Your Personal Data will take
                 place to an organization or a country unless there are adequate
                 controls in place including the security of Your data and other
-                personal information.
+                personal information.`)}
               </p>
+              
             </h3>
             <h2
               style={{ 'boxSizing':' inherit',
@@ -1602,7 +1621,7 @@ export default function AboutDetail() {
                 'backgroundColor': 'rgb(250, 250, 250)'
               }}
             >
-              Disclosure of Your Personal Data
+              {t(`Disclosure of Your Personal Data`)}
             </h2>
             <h3
               style={{ 'boxSizing':' inherit',
@@ -1615,7 +1634,7 @@ export default function AboutDetail() {
                 'backgroundColor': 'rgb(250, 250, 250)'
               }}
             >
-              Business Transactions
+              {t(`Business Transactions`)}
             </h3>
             <h3
               className="text-xs-center"
@@ -1640,10 +1659,10 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                If the Company is involved in a merger, acquisition or asset
+                {t(`If the Company is involved in a merger, acquisition or asset
                 sale, Your Personal Data may be transferred. We will provide
                 notice before Your Personal Data is transferred and becomes
-                subject to a different Privacy Policy.
+                subject to a different Privacy Policy.`)}
               </p>
             </h3>
             <h3
@@ -1657,7 +1676,7 @@ export default function AboutDetail() {
                 'backgroundColor': 'rgb(250, 250, 250)'
               }}
             >
-              Law enforcement
+              {t(`Law enforcement`)}
             </h3>
             <h3
               className="text-xs-center"
@@ -1682,10 +1701,10 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                Under certain circumstances, the Company may be required to
+                {t(`Under certain circumstances, the Company may be required to
                 disclose Your Personal Data if required to do so by law or in
                 response to valid requests by public authorities (e.g. a court
-                or a government agency).
+                or a government agency).`)}
               </p>
             </h3>
             <h3
@@ -1699,7 +1718,7 @@ export default function AboutDetail() {
                 'backgroundColor': 'rgb(250, 250, 250)'
               }}
             >
-              Other legal requirements
+              {t(`Other legal requirements`)}
             </h3>
             <h3
               className="text-xs-center"
@@ -1724,8 +1743,8 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                The Company may disclose Your Personal Data in the good faith
-                belief that such action is necessary to:
+                {t(`The Company may disclose Your Personal Data in the good faith
+                belief that such action is necessary to:`)}
               </p>
               <ul
                 style={{
@@ -1747,7 +1766,7 @@ export default function AboutDetail() {
                     margin:' 0px'
         }}
                 >
-                  Comply with a legal obligation
+                  {t(`Comply with a legal obligation`)}
                 </li>
                 <li
                  style={{
@@ -1757,7 +1776,7 @@ export default function AboutDetail() {
                     margin:' 0px'
         }}
                 >
-                  Protect and defend the rights or property of the Company
+                  {t(`Protect and defend the rights or property of the Company`)}
                 </li>
                 <li
                  style={{
@@ -1767,8 +1786,8 @@ export default function AboutDetail() {
                     margin:' 0px'
         }}
                 >
-                  Prevent or investigate possible wrongdoing in connection with
-                  the Service
+                  {t(`Prevent or investigate possible wrongdoing in connection with
+                  the Service`)}
                 </li>
                 <li
                  style={{
@@ -1778,8 +1797,8 @@ export default function AboutDetail() {
                     margin:' 0px'
         }}
                 >
-                  Protect the personal safety of Users of the Service or the
-                  public
+                  {t(`Protect the personal safety of Users of the Service or the
+                  public`)}
                 </li>
                 <li
                  style={{
@@ -1789,7 +1808,7 @@ export default function AboutDetail() {
                     margin:' 0px'
         }}
                 >
-                  Protect against legal liability
+                  {t(`Protect against legal liability`)}
                 </li>
               </ul>
             </h3>
@@ -1804,7 +1823,7 @@ export default function AboutDetail() {
                 'backgroundColor': 'rgb(250, 250, 250)'
               }}
             >
-              Security of Your Personal Data
+              {t(`Security of Your Personal Data`)}
             </h2>
             <h3
               className="text-xs-center"
@@ -1829,11 +1848,11 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                The security of Your Personal Data is important to Us, but
+                {t(`The security of Your Personal Data is important to Us, but
                 remember that no method of transmission over the Internet, or
                 method of electronic storage is 100% secure. While We strive to
                 use commercially acceptable means to protect Your Personal Data,
-                We cannot guarantee its absolute security.
+                We cannot guarantee its absolute security.`)}
               </p>
             </h3>
             <h1
@@ -1848,7 +1867,7 @@ export default function AboutDetail() {
                 'backgroundColor': 'rgb(250, 250, 250)'
             }}
             >
-              Children's Privacy
+              {t(`Children's Privacy`)}
             </h1>
             <h3
               className="text-xs-center"
@@ -1873,14 +1892,14 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                Our Service does not address anyone under the age of 13. We do
+                {t(`Our Service does not address anyone under the age of 13. We do
                 not knowingly collect personally identifiable information from
                 anyone under the age of 13. If You are a parent or guardian and
                 You are aware that Your child has provided Us with Personal
                 Data, please contact Us. If We become aware that We have
                 collected Personal Data from anyone under the age of 13 without
                 verification of parental consent, We take steps to remove that
-                information from Our servers.
+                information from Our servers.`)}
               </p>
               <p
                    style={{
@@ -1892,10 +1911,10 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                If We need to rely on consent as a legal basis for processing
+                {t(`If We need to rely on consent as a legal basis for processing
                 Your information and Your country requires consent from a
                 parent, We may require Your parent's consent before We collect
-                and use that information.
+                and use that information.`)}
               </p>
             </h3>
             <h1
@@ -1910,7 +1929,7 @@ export default function AboutDetail() {
                 'backgroundColor': 'rgb(250, 250, 250)'
             }}
             >
-              Links to Other Websites
+              {t(`Links to Other Websites`)}
             </h1>
             <h3
               className="text-xs-center"
@@ -1935,10 +1954,10 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                Our Service may contain links to other websites that are not
+               {t(`Our Service may contain links to other websites that are not
                 operated by Us. If You click on a third party link, You will be
                 directed to that third party's site. We strongly advise You to
-                review the Privacy Policy of every site You visit.
+                review the Privacy Policy of every site You visit.`)}
               </p>
               <p
                    style={{
@@ -1950,9 +1969,9 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                We have no control over and assume no responsibility for the
+                {t(`We have no control over and assume no responsibility for the
                 content, privacy policies or practices of any third party sites
-                or services.
+                or services.`)}
               </p>
             </h3>
             <h1
@@ -1967,7 +1986,7 @@ export default function AboutDetail() {
                 'backgroundColor': 'rgb(250, 250, 250)'
             }}
             >
-              Changes to this Privacy Policy
+              {t(`Changes to this Privacy Policy`)}
             </h1>
             <h3
               className="text-xs-center"
@@ -1992,9 +2011,9 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                We may update our Privacy Policy from time to time. We will
+                {t(`We may update our Privacy Policy from time to time. We will
                 notify You of any changes by posting the new Privacy Policy on
-                this page.
+                this page.`)}
               </p>
               <p
                    style={{
@@ -2006,9 +2025,9 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                We will let You know via email and/or a prominent notice on Our
+                {t(`We will let You know via email and/or a prominent notice on Our
                 Service, prior to the change becoming effective and update the
-                "Last updated" date at the top of this Privacy Policy.
+                "Last updated" date at the top of this Privacy Policy.`)}
               </p>
               <p
                    style={{
@@ -2020,9 +2039,9 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                You are advised to review this Privacy Policy periodically for
+                {t(`You are advised to review this Privacy Policy periodically for
                 any changes. Changes to this Privacy Policy are effective when
-                they are posted on this page.
+                they are posted on this page.`)}
               </p>
             </h3>
             <h1
@@ -2037,7 +2056,7 @@ export default function AboutDetail() {
                 'backgroundColor': 'rgb(250, 250, 250)'
             }}
             >
-              Contact Us
+              {t(`Contact Us`)}
             </h1>
             <h3
               className="text-xs-center"
@@ -2062,8 +2081,8 @@ export default function AboutDetail() {
                   'textAlign': 'start'
                 }}
               >
-                If you have any questions about this Privacy Policy, You can
-                contact us:
+                {t(`If you have any questions about this Privacy Policy, You can
+                contact us:`)}
               </p>
               <ul
                 style={{
@@ -2085,7 +2104,7 @@ export default function AboutDetail() {
                     margin:' 0px'
         }}
                 >
-                  By visiting this page on our website:<a
+                  {t(`By visiting this page on our website:`)}<a
                     href="https://www.bigmanipurlottery.in"
                     target="_blank"
                     >https://www.bigmanipurlottery.in/login</a

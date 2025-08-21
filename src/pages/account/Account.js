@@ -10038,7 +10038,7 @@ export default function Account() {
             </div>
             <div
               data-v-a30d19b1=""
-              className="settingPanel__container-items__item ar-1px-b"  onClick={()=>navigate()}
+              className="settingPanel__container-items__item ar-1px-b"  onClick={()=>navigate('/account/language')}
             >
               <div
                 data-v-a30d19b1=""
@@ -10060,7 +10060,7 @@ export default function Account() {
                 className="settingPanel__container-items-right"
               >
                 <h5 data-v-a30d19b1="" style={{display: 'none'}}>1</h5>
-                <span data-v-a30d19b1="">{t('English')}</span
+                <span data-v-a30d19b1=""></span
                 > <i
                   data-v-a30d19b1=""
                   className="van-badge__wrapper van-icon van-icon-arrow"
