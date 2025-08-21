@@ -1,16 +1,14 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from "react-i18next";
+
 export default function Guide() {
+          const { t } = useTranslation();
+  
   const navigate = useNavigate();
   return (
     <div style={{ fontSize: '12px' }}>
 
-
-
-
-
-
-   
 
     <div id="app" data-v-app="">
       <div
@@ -141,7 +139,7 @@ export default function Guide() {
               </div>
               <div data-v-12a80a3e="" className="navbar__content-center">
                 <div data-v-12a80a3e="" className="navbar__content-title">
-                  Beginner's Guide
+                  {t('Beginner Guide')}
                 </div>
               </div>
               <div data-v-12a80a3e="" className="navbar__content-right"></div>

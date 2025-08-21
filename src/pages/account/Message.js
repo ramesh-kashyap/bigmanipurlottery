@@ -1,6 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
+
 export default function Message() {
+       const { t } = useTranslation();
+  
     const navigate = useNavigate();
   return (
     <div style={{fontSize:  '12px'}}>
@@ -9505,7 +9509,7 @@ export default function Message() {
               </div>
               <div data-v-12a80a3e="" className="navbar__content-center">
                 <div data-v-12a80a3e="" className="navbar__content-title">
-                  Announcement
+                  {t('Announcement')}
                 </div>
               </div>
               <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -9526,18 +9530,11 @@ export default function Message() {
               <svg data-v-00f99608="" className="svg-icon icon-notificationIcon">
                 <use href="#icon-notificationIcon"></use></svg
               ><span data-v-00f99608=""
-                >AVOID FRAUD AND SUBMIT DEPOSIT TO SELF-SERVICE BIG MANIPUR</span
+                >{t('AVOID FRAUD AND SUBMIT DEPOSIT TO SELF-SERVICE BIG MANIPUR')}</span
               >
             </div>
             <div data-v-00f99608="" className="notification-container-content-desc">
-              If your deposit not receive, please send it directly to BIG MANIPUR
-              Self-service Center (https://www.91service.in/wap/indexE.jsp) with
-              provided proof deposit full detail showing (time,date,UTR number,
-              amount and UPI ID receiver), wait till already get process, do not
-              send to another person and trust anyone claiming to represent
-              BIG MANIPUR. Always verify their authenticity through the official
-              community channels provided by BIG MANIPUR. Your safety and trust in
-              our community is very important to us .
+             {t('If your deposit not receive, please send it directly to BIG MANIPUR Self-service Center (https://www.91service.in/wap/indexE.jsp) with provided proof deposit full detail showing (time,date,UTR number,amount and UPI ID receiver), wait till already get process, do not send to another person and trust anyone claiming to represent BIG MANIPUR. Always verify their authenticity through the official community channels provided by BIG MANIPUR. Your safety and trust in our community is very important to us')}
             </div>
             <h5 data-v-00f99608="">2024-03-27 22:15:42</h5>
           </div>
@@ -9548,12 +9545,10 @@ export default function Message() {
             >
               <svg data-v-00f99608="" className="svg-icon icon-notificationIcon">
                 <use href="#icon-notificationIcon"></use></svg
-              ><span data-v-00f99608="">Stay Vigilant - BIG MANIPUR Notify</span>
+              ><span data-v-00f99608="">{t('Stay Vigilant - BIG MANIPUR Notify')}</span>
             </div>
             <div data-v-00f99608="" className="notification-container-content-desc">
-              Be cautious of counterfeit websites mimicking our BIG MANIPUR official
-              site, do not transfer money to anyone, including agents, and keep
-              payment receipts and UTR numbers confidential.
+              {t('Be cautious of counterfeit websites mimicking our BIG MANIPUR official site, do not transfer money to anyone, including agents, and keep  payment receipts and UTR numbers confidential')}
             </div>
             <h5 data-v-00f99608="">2024-08-14 10:31:38</h5>
           </div>
@@ -9564,14 +9559,10 @@ export default function Message() {
             >
               <svg data-v-00f99608="" className="svg-icon icon-notificationIcon">
                 <use href="#icon-notificationIcon"></use></svg
-              ><span data-v-00f99608="">BIG MANIPUR </span>
+              ><span data-v-00f99608="">{t('BIG MANIPUR')} </span>
             </div>
             <div data-v-00f99608="" className="notification-container-content-desc">
-              We sincerely apologize for the inconvenience caused during our
-              recent maintenance. We diligently to enhance these systems,
-              ensuring a smoother and more efficient experience for you. Please
-              try to submit on self-service center and email if was there an
-              issue you encounter.
+              {t('We sincerely apologize for the inconvenience caused during our recent maintenance. We diligently to enhance these systems,ensuring a smoother and more efficient experience for you. Please try to submit on self-service center and email if was there an issue you encounter.')}
             </div>
             <h5 data-v-00f99608="">2024-09-03 13:09:18</h5>
           </div>
@@ -9583,18 +9574,11 @@ export default function Message() {
               <svg data-v-00f99608="" className="svg-icon icon-notificationIcon">
                 <use href="#icon-notificationIcon"></use></svg
               ><span data-v-00f99608=""
-                >Important Announcement About Deposit
+                >{t('Important Announcement About Deposit')}
               </span>
             </div>
             <div data-v-00f99608="" className="notification-container-content-desc">
-              Due to unstable of bank india will have delay or failed on
-              payment, so if you are experiencing any issues with making a
-              payment, we recommend switching to a different payment channel and
-              attempting to deposit again. to ensure your transaction smooth and
-              fast we suggesting to do payment using barcode method or PAYTM
-              method, also for using PhonePe sometimes will encountering delay
-              or failed payment, Your satisfaction is our priority. Thank you
-              for your understanding and continued support.
+              {t('Due to unstable of bank india will have delay or failed on payment, so if you are experiencing any issues with making a  payment, we recommend switching to a different payment channel and attempting to deposit again. to ensure your transaction smooth and fast we suggesting to do payment using barcode method or PAYTM method, also for using PhonePe sometimes will encountering delay or failed payment, Your satisfaction is our priority. Thank you for your understanding and continued support')}.
             </div>
             <h5 data-v-00f99608="">2024-06-04 20:00:14</h5>
           </div>
@@ -9606,20 +9590,16 @@ export default function Message() {
               <svg data-v-00f99608="" className="svg-icon icon-notificationIcon">
                 <use href="#icon-notificationIcon"></use></svg
               ><span data-v-00f99608=""
-                >PREVENTING BEING SCAMMED / HACKED DUE SOMEONE PROCLAIMING AS
-                BIG MANIPUR CUSTOMER SERVICE
+                > {t('PREVENTING BEING SCAMMED / HACKED DUE SOMEONE PROCLAIMING AS BIG MANIPUR CUSTOMER SERVICE')}
               </span>
             </div>
             <div data-v-00f99608="" className="notification-container-content-desc">
-              Our customer service never send a link to the member,if you
-              received a link from someone who pro-claimed as BIG MANIPUR customer
-              service do not click the link to prevent being hack or lost data.
-              Thank you
+              {t('Our customer service never send a link to the member,if you received a link from someone who pro-claimed as BIG MANIPUR customer service do not click the link to prevent being hack or lost data. Thank you')}
             </div>
             <h5 data-v-00f99608="">2023-12-31 19:49:50</h5>
           </div>
           <div data-v-61888f52="" className="infiniteScroll__loading">
-            <div data-v-61888f52="">No more</div>
+            <div data-v-61888f52="">{t('No more')}</div>
           </div>
         </div>
       </div>

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Api from '../../services/Api';
+import { useTranslation } from "react-i18next";
 
 
 export default function Notification() {
   const navigate = useNavigate();
+    const { t } = useTranslation();
 
 
   const [loginLogs, setLoginLogs] = useState([]);
@@ -174,7 +176,7 @@ export default function Notification() {
               <div data-v-12a80a3e="" className="navbar__content-center">
                
                 <div data-v-12a80a3e="" className="navbar__content-title">
-                  Notification
+                  {t('Notification')}
                 </div>
               </div>
               <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -194,7 +196,7 @@ export default function Notification() {
               <svg data-v-8084bf25="" className="svg-icon icon-notification svg svg">
                 <use href="#icon-notification"></use>
               </svg>
-              <span data-v-8084bf25="">LOGIN NOTIFICATION</span>
+              <span data-v-8084bf25="">{t('LOGIN NOTIFICATION')}</span>
             </div>
             <svg data-v-8084bf25="" className="svg-icon icon-messageGarbage svg svg">
               <use href="#icon-messageGarbage"></use>
@@ -204,14 +206,14 @@ export default function Notification() {
             {new Date(log.created_at).toLocaleString()}
           </div>
           <div data-v-8084bf25="" className="sysMessage__container-msgWrapper__item-content">
-            Your account is logged in {new Date(log.created_at).toLocaleString()}
+            {t('Your account is logged in')} {new Date(log.created_at).toLocaleString()}
           </div>
         </div>
       ))}
         
           <div data-v-61888f52="" className="infiniteScroll__loading">
            
-            <div data-v-61888f52="">No more</div>
+            <div data-v-61888f52="">{t('No more')}</div>
           </div>
         </div>
       </div>

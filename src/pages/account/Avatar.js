@@ -1,10 +1,12 @@
 import React from 'react';
 import Api from '../../services/Api';
 import { useNavigate } from 'react-router-dom';
+ import { useTranslation } from "react-i18next";
 
 
 
 export default function Register() {
+              const { t } = useTranslation();
 
 
   const navigate = useNavigate();
@@ -9533,7 +9535,7 @@ const handleImageClick = async (imageSrc) => {
               </div>
               <div data-v-12a80a3e="" className="navbar__content-center">
                 <div data-v-12a80a3e="" className="navbar__content-title">
-                  Change avatar
+                  {t('Change avatar')}
                 </div>
               </div>
               <div data-v-12a80a3e="" className="navbar__content-right"></div>

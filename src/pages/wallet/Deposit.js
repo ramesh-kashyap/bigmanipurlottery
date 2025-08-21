@@ -196,12 +196,12 @@ const showSection = (sectionId) => {
         });
 
         console.log(response.data);
-
+const newTab = window.open("", "_blank");
         // Check if the response was successful
         if (response.data.status ) {
             // Navigate to the payUrl
-          window.open(response.data.data, '_blank', 'noopener,noreferrer');
-        } else {
+newTab.location = response.data.data;
+         } else {
             // Handle failure case
             setError("Failed to create UPI payment order. Please try again.");
         }

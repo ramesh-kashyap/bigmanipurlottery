@@ -8,21 +8,21 @@ import 'swiper/css/pagination';
 import { Navigation, Autoplay } from 'swiper/modules';
 import Api from '../../services/Api';
 import CustomModal from '../../components/CustomModal';
+import { useTranslation } from "react-i18next";
 
 export default function Flash() {
+                const { t } = useTranslation();
   
   const [activeSection, setActiveSection] = useState('section3');
 
  
   const tabs = [
-    { id: 'section3', label: 'Mini Games' },
-    { id: 'section4', label: 'Lottery' },
-    { id: 'section5', label: 'Casino' },
-    { id: 'section6', label: 'Fishing' },
-    { id: 'section7', label: 'Rummy' },
-    { id: 'section8', label: 'Slot' },
-    
- 
+    { id: 'section3', label: t('Mini Games') },
+    { id: 'section4', label: t('Lottery') },
+    { id: 'section5', label: t('Casino') },
+    { id: 'section6', label: t('Fishing') },
+    { id: 'section7', label: t('Rummy') },
+    { id: 'section8', label: t('Slot') },
   ];
 
 
@@ -403,7 +403,7 @@ export default function Flash() {
                 </div>
                 <div data-v-12a80a3e="" className="navbar__content-center">
                   <div data-v-12a80a3e="" className="navbar__content-title">
-                    All Games
+                    {t('All Games')}
                   </div>
                 </div>
                 <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -453,7 +453,7 @@ export default function Flash() {
           <div data-v-0a9bf0c5="" className="allGames__container-list">
             <div data-v-e4c17073="" data-v-0a9bf0c5="" className="gamesList__container" id="section3" style={{ display: activeSection === 'section3' ? 'grid' : 'none' }}>
               <div data-v-e4c17073="" className="gamesList__container-title">
-                Mini Games
+                {t('Mini Games')}
               </div>
               <div
                 data-v-df3cc798=""
@@ -810,28 +810,28 @@ export default function Flash() {
 
             </div>
            <div data-v-e4c17073="" data-v-0a9bf0c5="" class="gamesList__container"id="section4" style={{ display: activeSection === 'section4' ? 'block' : 'none' }}>
-              <div data-v-e4c17073="" class="gamesList__container-title">Lottery</div>
+              <div data-v-e4c17073="" class="gamesList__container-title">{t('Lottery')}</div>
               <div data-v-df3cc798="" data-v-e4c17073="" class="gameListGrid__container all_container">
                 <div data-v-acaadf81="" data-v-df3cc798="" class="lottery_container">
 
                   <div data-v-acaadf81="" class="lotterySlotItem" onClick={() => handleNavigation('/wingo')}>
                     <img data-v-acaadf81="" class="" data-origin="/assets/lotterycategory_20240123160120h4kw.png" src="/assets/lotterycategory_20240123160120h4kw.png"/><span data-v-acaadf81="">Win Go</span>
                       <h4 data-v-acaadf81="">
-                        <div data-v-acaadf81="">Guess Number</div>
+                        <div data-v-acaadf81="">{t('Guess Number')}</div>
                         <div data-v-acaadf81="">Green/Red/Violet to win</div>
                       </h4>
                   </div>
                   <div data-v-acaadf81="" class="lotterySlotItem" onClick={() => handleNavigation('/AllLotteryGames/K3')}>
                     <img data-v-acaadf81="" class="ar-lazyload" data-origin="/assets/lotterycategory_20240123160129bev8.png" src="/assets/lotterycategory_20240123160129bev8.png"/><span data-v-acaadf81="">K3</span>
                       <h4 data-v-acaadf81="">
-                        <div data-v-acaadf81="">Guess Number</div>
+                        <div data-v-acaadf81="">{t('Guess Number')}</div>
                         <div data-v-acaadf81="">Big/Small/Odd/Even</div>
                       </h4>
                   </div>
                   <div data-v-acaadf81="" class="lotterySlotItem" onClick={() => handleNavigation('/home/AllLotteryGames/5D')}>
                     <img data-v-acaadf81="" class="ar-lazyload" data-origin="/assets/lotterycategory_20240123160137lok5.png" src="/assets/lotterycategory_20240123160137lok5.png"/><span data-v-acaadf81="">5D</span>
                       <h4 data-v-acaadf81="">
-                        <div data-v-acaadf81="">Guess Number</div>
+                        <div data-v-acaadf81="">{t('Guess Number')}</div>
                         <div data-v-acaadf81="">Big/Small/Odd/Even</div>
                       </h4>
                   </div>
@@ -847,7 +847,7 @@ export default function Flash() {
             </div>
 
             <div data-v-e4c17073="" data-v-0a9bf0c5="" class="gamesList__container" id="section5" style={{ display: activeSection === 'section5' ? 'grid' : 'none' }}>
-              <div data-v-e4c17073="" class="gamesList__container-title">Casino</div>
+              <div data-v-e4c17073="" class="gamesList__container-title">{t('Casino')}</div>
               <div data-v-df3cc798="" data-v-e4c17073="" class="gameListGrid__container all_container">
                 <div data-v-df3cc798="" class="otherGame">
                  
@@ -934,7 +934,7 @@ export default function Flash() {
             </div>  
             <div data-v-e4c17073="" data-v-0a9bf0c5="" className="gamesList__container" id="section6" style={{ display: activeSection === 'section6' ? 'grid' : 'none' }}>
               <div data-v-e4c17073="" className="gamesList__container-title">
-                Fishing
+                {t('Fishing')}
               </div>
 
               <div
@@ -1045,7 +1045,7 @@ export default function Flash() {
 
             <div data-v-e4c17073="" data-v-0a9bf0c5="" className="gamesList__container" id="section7" style={{ display: activeSection === 'section7' ? 'grid' : 'none' }}>
               <div data-v-e4c17073="" className="gamesList__container-title">
-                Rummy
+                {t('Rummy')}
               </div>
 
               <div
@@ -1228,7 +1228,7 @@ export default function Flash() {
 
              <div data-v-e4c17073="" data-v-0a9bf0c5="" className="gamesList__container" id="section8" style={{ display: activeSection === 'section8' ? 'grid' : 'none' }}>
               <div data-v-e4c17073="" className="gamesList__container-title">
-                Slot
+                {t('Slot')}
               </div>
 
               <div

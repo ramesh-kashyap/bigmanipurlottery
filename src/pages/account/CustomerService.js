@@ -1,6 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
+
 export default function CustomerService() {
+        const { t } = useTranslation();
+  
   const navigate = useNavigate();
   return (
     <div style={{fontSize: '12px'}}>
@@ -9503,7 +9507,7 @@ export default function CustomerService() {
                 </div>
                 <div data-v-12a80a3e="" className="navbar__content-center">
                   <div data-v-12a80a3e="" className="navbar__content-title">
-                    Customer Service
+                    {t('Customer Service')}
                   </div>
                 </div>
                 <div data-v-12a80a3e="" className="navbar__content-right" onClick={()=>navigate('/index')}> 
@@ -9598,7 +9602,7 @@ export default function CustomerService() {
         </div> */}
         <div className="home-main" >
 <div data-v-0122c10a="" className="selfService" style={{ padding: ".26667rem" }}>
-  <h2 data-v-0122c10a="">Self Service</h2>
+  <h2 data-v-0122c10a="">{t('Self Service')}</h2>
   <ul data-v-0122c10a="">
     <li data-v-0122c10a=""  onClick={() => window.open('https://t.me/it_zafira_6732', '_blank')}>
       <div data-v-0122c10a="" className="service-text">
@@ -9614,7 +9618,7 @@ export default function CustomerService() {
           />
         </div>
         <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
-          Deposit Not Received
+          {t('Deposit Not Received')}
         </span>
       </div>
       <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
@@ -9636,7 +9640,7 @@ export default function CustomerService() {
           />
         </div>
         <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
-          Withdrawal Problem
+          {t('Withdrawal Problem')}
         </span>
       </div>
       <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
@@ -9658,7 +9662,7 @@ export default function CustomerService() {
           />
         </div>
         <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
-          Change Login Password
+          {t('Change Login Password')}
         </span>
       </div>
       <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
@@ -9680,7 +9684,7 @@ export default function CustomerService() {
           />
         </div>
         <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
-          IFSC Modification
+          {t('IFSC Modification')}
         </span>
       </div>
       <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
@@ -9702,7 +9706,7 @@ export default function CustomerService() {
           />
         </div>
         <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
-          Change bank name
+          {t('Change bank name')}
         </span>
       </div>
       <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
@@ -9724,7 +9728,7 @@ export default function CustomerService() {
           />
         </div>
         <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
-          Modify Bank Information
+          {t('Modify Bank Information')}
         </span>
       </div>
       <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
@@ -9746,7 +9750,7 @@ export default function CustomerService() {
           />
         </div>
         <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
-          Add USDT Address
+         {t('Add USDT Address')}
         </span>
       </div>
       <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
@@ -9768,7 +9772,7 @@ export default function CustomerService() {
           />
         </div>
         <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
-          Change USDT Address
+         {t('Change USDT Address')}
         </span>
       </div>
       <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
@@ -9790,7 +9794,7 @@ export default function CustomerService() {
           />
         </div>
         <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
-          Activity Bonus
+          {t('Activity Bonus')}
         </span>
       </div>
       <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
@@ -9812,7 +9816,7 @@ export default function CustomerService() {
           />
         </div>
         <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
-          【Big Manipur Game】Official Channel
+          {t('Big Manipur GameOfficial Channel')}
         </span>
       </div>
       <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
@@ -9834,7 +9838,7 @@ export default function CustomerService() {
           />
         </div>
         <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
-          Find Teacher
+          {t('Find Teacher')}
         </span>
       </div>
       <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
@@ -9856,7 +9860,7 @@ export default function CustomerService() {
           />
         </div>
         <span data-v-0122c10a="" style={{ marginLeft: "10px" }}>
-          Check Big Manipur Official Website
+          {t('Check Big Manipur Official Website')}
         </span>
       </div>
       <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
@@ -9877,7 +9881,7 @@ export default function CustomerService() {
             alt="Check Daman Official Website"
           />
         </div>
-        <span  data-v-0122c10a="" style={{ marginLeft: "10px" }}>Online service</span>
+        <span  data-v-0122c10a="" style={{ marginLeft: "10px" }}>{t('Online service')}</span>
       </div>
       <svg data-v-392c0849="" data-v-0122c10a="" className="svg-icon">
         <use data-v-392c0849="" xlinkHref="#icon-arrow" />

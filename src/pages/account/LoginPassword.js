@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Api from '../../services/Api'
+import { useTranslation } from "react-i18next";
+
 export default function LoginPassword() {
+              const { t } = useTranslation();
+  
   const [seeEye, setSeeEye] = useState('');
   // const toggleEye = (eyeId) => {
   //   setSeeEye(prevState => prevState === eyeId ? '' : eyeId);
@@ -179,7 +183,7 @@ export default function LoginPassword() {
               </div>
               <div data-v-12a80a3e="" className="navbar__content-center">
                 <div data-v-12a80a3e="" className="navbar__content-title">
-                  Change login password
+                  {t('Change login password')}
                 </div>
               </div>
               <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -198,7 +202,7 @@ export default function LoginPassword() {
                 className="svg-icon icon-editPswIcon passwordInput__container-label__icon passwordInput__container-label__icon"
               >
                 <use href="#icon-editPswIcon"></use></svg
-              ><span data-v-ea5b66c8="">Login password</span>
+              ><span data-v-ea5b66c8="">{t('Login password')}</span>
             </div>
             <div data-v-ea5b66c8="" className="passwordInput__container-input">
               <input
@@ -229,7 +233,7 @@ export default function LoginPassword() {
                 className="svg-icon icon-editPswIcon passwordInput__container-label__icon passwordInput__container-label__icon"
               >
                 <use href="#icon-editPswIcon"></use></svg
-              ><span data-v-ea5b66c8="">New login password</span>
+              ><span data-v-ea5b66c8="">{t('New login password')}</span>
             </div>
             <div data-v-ea5b66c8="" className="passwordInput__container-input">
               <input
@@ -260,7 +264,7 @@ export default function LoginPassword() {
                 className="svg-icon icon-editPswIcon passwordInput__container-label__icon passwordInput__container-label__icon"
               >
                 <use href="#icon-editPswIcon"></use></svg
-              ><span data-v-ea5b66c8="">Confirm new password</span>
+              ><span data-v-ea5b66c8="">{t('Confirm new password')}</span>
             </div>
             <div data-v-ea5b66c8="" className="passwordInput__container-input">
               <input
@@ -286,12 +290,12 @@ export default function LoginPassword() {
             style={{display: 'none'}}
           >
             <span data-v-5beab1ae=""
-              >Entered twice the password does not match!</span
+              >{t('Entered twice the password does not match')}!</span
             >
           </div>
          
           <div data-v-5beab1ae="" className="LoginP-container-remember">
-            <span data-v-5beab1ae="">Contact customer service</span
+            <span data-v-5beab1ae="">{t('Contact customer service')}</span
             ><i
               data-v-5beab1ae=""
               className="van-badge__wrapper van-icon van-icon-arrow"
@@ -300,7 +304,7 @@ export default function LoginPassword() {
             >
           </div>
           <div data-v-5beab1ae="" className="LoginP-container-button">
-            <button data-v-5beab1ae="" type="submit" onClick={handleSubmit}>Save changes</button>
+            <button data-v-5beab1ae="" type="submit" onClick={handleSubmit}>{t('Save changes')}</button>
           </div>
         </div>
       </div>
