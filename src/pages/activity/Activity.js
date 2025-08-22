@@ -9641,7 +9641,7 @@ export default function Activity() {
                 </div>
               </div>
             </div>
-            <div data-v-4a7709f3="" className="box">
+            {/* <div data-v-4a7709f3="" className="box">
               <img
                 data-v-4a7709f3=""
                 src="assets/png/new/Banner_20240110082959xdnc.png"
@@ -9652,7 +9652,7 @@ export default function Activity() {
 {t('Big Manipur Tips and Trick Avoid Scammers')}
                 </div>
               </div>
-            </div>
+            </div> */}
             <div data-v-4a7709f3="" className="box">
               <img
                 data-v-4a7709f3=""

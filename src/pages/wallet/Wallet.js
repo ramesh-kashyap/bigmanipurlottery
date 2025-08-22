@@ -9856,30 +9856,31 @@ export default function Promotion(){
           src="/assets/png/icon_sevice-9f0c8455.png"
         /> */}
       </div>
+      
       <div data-v-6ab3f23e="" className="tabbar__container"
             style={{'--f13b4d11-currentFontFamily': "'Roboto', 'Inter', sans-serif"}}>
             <div data-v-6ab3f23e="" className="tabbar__container-item"><svg data-v-6ab3f23e=""
                     className="svg-icon icon-home" onClick={()=> navigate('/index')}>
                     <use href="#icon-home"></use>
-                </svg><span data-v-6ab3f23e="" onClick={() => navigate('/index')}>Home</span></div>
+                </svg><span data-v-6ab3f23e="" onClick={() => navigate('/index')}>{t('Home')}</span></div>
             <div data-v-6ab3f23e="" className="tabbar__container-item"><svg data-v-6ab3f23e=""
                     className="svg-icon icon-activity" onClick={()=> navigate('/activity')}><use href="#icon-activity"></use>                   
                 </svg>
-                <span data-v-6ab3f23e="" onClick={()=> navigate('/activity')}>Activity</span></div>
+                <span data-v-6ab3f23e="" onClick={()=> navigate('/activity')}>{t('Activity')}</span></div>
             <div data-v-6ab3f23e="" className="tabbar__container-item"onClick={()=> navigate('/promotion')}><svg data-v-6ab3f23e=""
                     className="svg-icon icon-promotion" >
                     <use href="#icon-promotion"></use>
                 </svg>
                 <div data-v-6ab3f23e="" className="promotionBg"></div>
                 <span data-v-6ab3f23e="" onClick={()=> navigate('/promotion')}>
-                    Promotion</span>
+                    {t('Promotion')}</span>
             </div>
             <div data-v-6ab3f23e="" className={`tabbar__container-item ${activeLink === '/wallet' ? 'active':''}`}><svg data-v-6ab3f23e="" className="svg-icon icon-wallet">
             <use href="#icon-wallet" onClick={()=> navigate('/wallet')}></use>
-                </svg><span data-v-6ab3f23e=""  onClick={()=> navigate('/wallet')}>Wallet</span></div>
+                </svg><span data-v-6ab3f23e=""  onClick={()=> navigate('/wallet')}>{t('Wallet')}</span></div>
             <div data-v-6ab3f23e="" className="tabbar__container-item"><svg data-v-6ab3f23e="" className="svg-icon icon-main"  onClick={()=> navigate('/account')}>
             <use href="#icon-main"></use>
-                </svg><span data-v-6ab3f23e="" onClick={()=> navigate('/account')}>Account</span></div>
+                </svg><span data-v-6ab3f23e="" onClick={()=> navigate('/account')}>{t('Account')}</span></div>
         </div>
       
       <div
