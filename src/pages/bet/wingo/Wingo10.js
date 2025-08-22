@@ -10331,7 +10331,7 @@ export default function Wingo10() {
         </div>
       </div>
       <div data-v-d485a39d="" className="Trend__C-body1">
-        <div data-v-d485a39d="" className="Trend__C-body1-line">Statistic (last 100 Periods)</div>
+        <div data-v-d485a39d="" className="Trend__C-body1-line">{t('Statistic last 100 Periods')}</div>
         <div data-v-d485a39d="" className="Trend__C-body1-line lottery">
           <div data-v-d485a39d="">{t('Winning number')}</div>
           <div data-v-d485a39d="" className="Trend__C-body1-line-num">
@@ -10348,7 +10348,7 @@ export default function Wingo10() {
           </div>
         </div>
         <div data-v-d485a39d="" className="Trend__C-body1-line">
-          <div data-v-d485a39d="">Missing</div>
+          <div data-v-d485a39d="">{t('Missing')}</div>
           <div data-v-d485a39d="" className="Trend__C-body1-line-num">
             <div data-v-d485a39d="">2</div>
             <div data-v-d485a39d="">23</div>
@@ -10363,7 +10363,7 @@ export default function Wingo10() {
           </div>
         </div>
         <div data-v-d485a39d="" className="Trend__C-body1-line">
-          <div data-v-d485a39d="">Avg missing</div>
+          <div data-v-d485a39d="">{t('Avg missing')}</div>
           <div data-v-d485a39d="" className="Trend__C-body1-line-num">
             <div data-v-d485a39d="">7</div>
             <div data-v-d485a39d="">13</div>
@@ -10378,7 +10378,7 @@ export default function Wingo10() {
           </div>
         </div>
         <div data-v-d485a39d="" className="Trend__C-body1-line">
-          <div data-v-d485a39d="">Frequency</div>
+          <div data-v-d485a39d="">{t('Frequency')}</div>
           <div data-v-d485a39d="" className="Trend__C-body1-line-num">
             <div data-v-d485a39d="">12</div>
             <div data-v-d485a39d="">9</div>
@@ -10393,7 +10393,7 @@ export default function Wingo10() {
           </div>
         </div>
         <div data-v-d485a39d="" className="Trend__C-body1-line">
-          <div data-v-d485a39d="">Max consecutive</div>
+          <div data-v-d485a39d="">{t('Max consecutive')}</div>
           <div data-v-d485a39d="" className="Trend__C-body1-line-num">
             <div data-v-d485a39d="">2</div>
             <div data-v-d485a39d="">2</div>

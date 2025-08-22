@@ -10321,7 +10321,7 @@ export default function Wingo5() {
         </div>
       </div>
       <div data-v-d485a39d="" className="Trend__C-body1">
-        <div data-v-d485a39d="" className="Trend__C-body1-line">{t('Statistic (last 100 Periods')}</div>
+        <div data-v-d485a39d="" className="Trend__C-body1-line">{t('Statistic last 100 Periods')}</div>
         <div data-v-d485a39d="" className="Trend__C-body1-line lottery">
           <div data-v-d485a39d="">{t('Winning number')}</div>
           <div data-v-d485a39d="" className="Trend__C-body1-line-num">
