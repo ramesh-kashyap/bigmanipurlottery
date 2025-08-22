@@ -10449,11 +10449,11 @@ const claimBonus= async (id) => {
             </div>
             <div data-v-eaa4a307="" className="vip-content-recordVsrule-con"  style={{display: activeHistory === 'history2' ? 'block':'none'}}>
                 <div data-v-eaa4a307="" className="con-content">
-                  <div data-v-eaa4a307="" className="con-content__title">
+                  {/* <div data-v-eaa4a307="" className="con-content__title">
                     <h1 data-v-eaa4a307="">{t('VIP privileges')}</h1>
                     <p data-v-eaa4a307="">{t('VIP rule description')}</p>
-                  </div>
-                  <div data-v-eaa4a307="" className="con-content__rules">
+                  </div> */}
+                  {/* <div data-v-eaa4a307="" className="con-content__rules">
                     <div
                       data-v-eaa4a307=""
                       className="con-content__rules-item ruleHead"
@@ -10655,7 +10655,7 @@ const claimBonus= async (id) => {
                         the member's VIP level.
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
           </div>
