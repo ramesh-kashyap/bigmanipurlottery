@@ -5,10 +5,12 @@ import { useNavigate } from 'react-router-dom';
 import Api from '../../services/Api';
 import { useToast } from '../../components/ToastContext'; 
 import ClipboardJS from 'clipboard';
-
+import { useTranslation } from "react-i18next";
 
 export default function TeamPartner(){
     const navigate =  useNavigate();
+    const { t } = useTranslation();
+    
     const { showToast } = useToast();
  
     const [invitationLink, setInvitationLink] = useState('');
@@ -4625,27 +4627,27 @@ return(
                         <div data-v-12a80a3e="" className="navbar__content-left"><i data-v-12a80a3e=""
                                 className="van-badge__wrapper van-icon van-icon-arrow-left" onClick={()=>navigate('/promotion')}></i></div>
                         <div data-v-12a80a3e="" className="navbar__content-center">
-                            <div data-v-12a80a3e="" className="navbar__content-title">Partner rewards</div>
+                            <div data-v-12a80a3e="" className="navbar__content-title">{t('Partner rewards')}</div>
                         </div>
                         <div data-v-12a80a3e="" className="navbar__content-right"></div>
                     </div>
                 </div>
             </div>
             <div data-v-28c19aaa="" className="partner-banner">
-                <h2 data-v-28c19aaa="">Invite friends to get max rewards</h2>
+                <h2 data-v-28c19aaa="">{t('Invite friends to get max rewards')}</h2>
                 <input type="text" value={invitationLink} readOnly />
 
                 <p data-v-28c19aaa="">₹1,888.00</p>
             </div>
             <div data-v-28c19aaa="" className="partner-main">
-                <div data-v-28c19aaa="" className="partner-item"><span data-v-28c19aaa="">Invitation count</span><span
+                <div data-v-28c19aaa="" className="partner-item"><span data-v-28c19aaa="">{t('Invitation count')}</span><span
                         data-v-28c19aaa="" className="number">0</span></div>
-                <div data-v-28c19aaa="" className="partner-item"><span data-v-28c19aaa="">Effective Invitation
+                <div data-v-28c19aaa="" className="partner-item"><span data-v-28c19aaa="">{t('Effective Invitation')}
                         count</span><span data-v-28c19aaa="" className="count">0</span></div>
-                <div data-v-28c19aaa="" className="partner-item"><span data-v-28c19aaa="">Invitation total bonus
+                <div data-v-28c19aaa="" className="partner-item"><span data-v-28c19aaa="">{t('Invitation total bonus')}
                     </span><span data-v-28c19aaa="" className="money">₹0.00</span></div>
                 <div data-v-28c19aaa="" className="partner-entry">
-                    <div data-v-28c19aaa="">Invitation record <svg data-v-28c19aaa="" fill="none" height="36"
+                    <div data-v-28c19aaa="">{t('Invitation record')} <svg data-v-28c19aaa="" fill="none" height="36"
                             viewBox="0 0 37 36" width="37" xmlns="http://www.w3.org/2000/svg">
                             <path data-v-28c19aaa="" clip-rule="evenodd"
                                 d="M11.3008 26.5V24.3644L19.0121 17.5665L11.3008 10.6356V8.5L20.1579 16.4653L21.3008 17.5665L20.1579 18.6677L11.3008 26.5Z"
@@ -4655,7 +4657,7 @@ return(
                                 fill="#666666" fill-rule="evenodd"></path>
                         </svg></div>
                 </div>
-                <div data-v-28c19aaa="" className="partner-title">Invitation link</div>
+                <div data-v-28c19aaa="" className="partner-title">{t('Invitation link')}</div>
                 <div data-v-28c19aaa="" className="partner-code"><span
                         data-v-28c19aaa="">https://www.bigmanipurlottery.in/register?invitationCode=6fGGw42409..</span><span
                         data-v-28c19aaa="" onClick={fetchPromotionInfo} className='copy-btn'><svg data-v-28c19aaa="" className="svg-icon icon-copy">
@@ -4674,62 +4676,62 @@ return(
                     <div data-v-28c19aaa="" className="partner-rule-title"><svg data-v-28c19aaa=""
                             className="svg-icon icon-shuoming img img">
                             <use href="#icon-shuoming"></use>
-                        </svg><span data-v-28c19aaa="">Invitation rules</span></div>
-                    <div data-v-28c19aaa="" className="tip">If you invites player A, within <span
-                            data-v-28c19aaa="">3</span> Day</div>
+                        </svg><span data-v-28c19aaa="">{t('Invitation rules')}</span></div>
+                    <div data-v-28c19aaa="" className="tip">{t('If you invites player A, within')} <span
+                            data-v-28c19aaa="">3</span> {t('Day')}</div>
                     <div data-v-28c19aaa="" className="partner-rule-table">
                         <div data-v-28c19aaa="" className="head">
-                            <div data-v-28c19aaa="">When Player A</div>
-                            <div data-v-28c19aaa="" className="bouns">You get bonus</div>
+                            <div data-v-28c19aaa="">{t('When Player A')}</div>
+                            <div data-v-28c19aaa="" className="bouns">{t('You get bonus')}</div>
                         </div>
                         <div data-v-28c19aaa="" className="item">
-                            <div data-v-28c19aaa="" className="left">1st deposit</div>
+                            <div data-v-28c19aaa="" className="left">{t('1st deposit')}</div>
                             <div data-v-28c19aaa="" className="right">
                                 <div data-v-28c19aaa="" className="line">
                                     <div data-v-28c19aaa=""><span data-v-28c19aaa=""><span
-                                                data-v-28c19aaa="">₹100</span> ≤ Amount&lt;<span
-                                                data-v-28c19aaa="">₹500</span></span><span data-v-28c19aaa="">and
-                                            Turnover ≥ <span data-v-28c19aaa="">₹500</span></span></div>
+                                                data-v-28c19aaa="">₹100</span> ≤ {t('Amount')}&lt;<span
+                                                data-v-28c19aaa="">₹500</span></span><span data-v-28c19aaa="">{t('and')}
+                                            {t('Turnover')} ≥ <span data-v-28c19aaa="">₹500</span></span></div>
                                     <div data-v-28c19aaa="">₹28</div>
                                 </div>
                                 <div data-v-28c19aaa="" className="line">
                                     <div data-v-28c19aaa=""><span data-v-28c19aaa=""><span
-                                                data-v-28c19aaa="">₹500</span> ≤ Amount&lt;<span
-                                                data-v-28c19aaa="">₹1,200</span></span><span data-v-28c19aaa="">and
-                                            Turnover ≥ <span data-v-28c19aaa="">₹2,500</span></span></div>
+                                                data-v-28c19aaa="">₹500</span> ≤ {t('Amount')}&lt;<span
+                                                data-v-28c19aaa="">₹1,200</span></span><span data-v-28c19aaa="">{t('and')}
+                                            {t('Turnover')} ≥ <span data-v-28c19aaa="">₹2,500</span></span></div>
                                     <div data-v-28c19aaa="">₹68</div>
                                 </div>
                                 <div data-v-28c19aaa="" className="line">
                                     <div data-v-28c19aaa=""><span data-v-28c19aaa=""><span
-                                                data-v-28c19aaa="">₹1,200</span> ≤ Amount&lt;<span
-                                                data-v-28c19aaa="">₹5,000</span></span><span data-v-28c19aaa="">and
-                                            Turnover ≥ <span data-v-28c19aaa="">₹6,000</span></span></div>
+                                                data-v-28c19aaa="">₹1,200</span> ≤ {t('Amount')}&lt;<span
+                                                data-v-28c19aaa="">₹5,000</span></span><span data-v-28c19aaa="">{t('and')}
+                                            {t('Turnover')} ≥ <span data-v-28c19aaa="">₹6,000</span></span></div>
                                     <div data-v-28c19aaa="">₹128</div>
                                 </div>
                                 <div data-v-28c19aaa="" className="line">
                                     <div data-v-28c19aaa=""><span data-v-28c19aaa=""><span
-                                                data-v-28c19aaa="">₹5,000</span> ≤ Amount&lt;<span
-                                                data-v-28c19aaa="">₹12,000</span></span><span data-v-28c19aaa="">and
-                                            Turnover ≥ <span data-v-28c19aaa="">₹25,000</span></span></div>
+                                                data-v-28c19aaa="">₹5,000</span> ≤ {t('Amount')}&lt;<span
+                                                data-v-28c19aaa="">₹12,000</span></span><span data-v-28c19aaa="">{t('and')}
+                                            {t('Turnover')} ≥ <span data-v-28c19aaa="">₹25,000</span></span></div>
                                     <div data-v-28c19aaa="">₹328</div>
                                 </div>
                                 <div data-v-28c19aaa="" className="line">
                                     <div data-v-28c19aaa=""><span data-v-28c19aaa=""><span
-                                                data-v-28c19aaa="">₹12,000</span> ≤ Amount&lt;<span
-                                                data-v-28c19aaa="">₹60,000</span></span><span data-v-28c19aaa="">and
-                                            Turnover ≥ <span data-v-28c19aaa="">₹60,000</span></span></div>
+                                                data-v-28c19aaa="">₹12,000</span> ≤ {t('Amount')}&lt;<span
+                                                data-v-28c19aaa="">₹60,000</span></span><span data-v-28c19aaa="">{t('and')}
+                                            {t('Turnover')} ≥ <span data-v-28c19aaa="">₹60,000</span></span></div>
                                     <div data-v-28c19aaa="">₹528</div>
                                 </div>
                                 <div data-v-28c19aaa="" className="line">
-                                    <div data-v-28c19aaa=""><span data-v-28c19aaa="">Amount ≥ <span
-                                                data-v-28c19aaa="">₹60,000</span></span><span data-v-28c19aaa="">and
-                                            Turnover ≥ <span data-v-28c19aaa="">₹300,000</span></span></div>
+                                    <div data-v-28c19aaa=""><span data-v-28c19aaa="">{t('Amount')} ≥ <span
+                                                data-v-28c19aaa="">₹60,000</span></span><span data-v-28c19aaa="">{t('and')}
+                                            {t('Turnover')} ≥ <span data-v-28c19aaa="">₹300,000</span></span></div>
                                     <div data-v-28c19aaa="">₹1,888</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div data-v-28c19aaa="" className="redTip">*Each deposit can only get one bonus.</div>
+                    <div data-v-28c19aaa="" className="redTip">*{t('Each deposit can only get one bonus.')}</div>
                     <div data-v-28c19aaa="" className="partner-rule-text">
                         <p data-v-28c19aaa="">eg: <br/> Player A 1st deposit <span
                                 style={{color:'var(--norm_red-color)'}}>₹99.00</span> and turnover <span
