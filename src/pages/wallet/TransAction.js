@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Api from '../../services/Api';
+import { useTranslation } from "react-i18next";
 
 export default function TransAction() {
+       const { t } = useTranslation();
+  
   const [isVisible, setIsVisible] = useState(false);
   const [isSecondVisible, setIsSecondVisible] = useState(false);
   const [isTire, setIsTire] = useState('tire1');
@@ -9596,7 +9599,7 @@ export default function TransAction() {
               <div data-v-12a80a3e="" className="navbar__content-center">
                 
                 <div data-v-12a80a3e="" className="navbar__content-title">
-                  Transaction history
+                  {t('Transaction history')}
                 </div>
               </div>
               <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -9615,7 +9618,7 @@ export default function TransAction() {
                   <span
                     data-v-fa757a88=""
                     className="ar-searchbar__selector-default"
-                    >All</span
+                    >{t('All')}</span
                   ><i
                     data-v-fa757a88=""
                     className="van-badge__wrapper van-icon van-icon-arrow-down"  onClick={handleToggle}
@@ -9632,7 +9635,7 @@ export default function TransAction() {
                   <span
                     data-v-fa757a88=""
                     className="ar-searchbar__selector-default"
-                    >Choose a date</span
+                    >{t('Choose a date')}</span
                   ><i
                     data-v-fa757a88=""
                     className="van-badge__wrapper van-icon van-icon-arrow-down"  onClick={handleSecondToggle}
@@ -9665,12 +9668,12 @@ export default function TransAction() {
                 type="button"
                 className="van-picker__cancel van-haptics-feedback" onClick={handleCancel}
               >
-                Cancel</button
+                {t('Cancel')}</button
               ><button
                 type="button"
                 className="van-picker__confirm van-haptics-feedback"   onClick={handleConfirm} 
               >
-                Confirm
+                {t('Confirm')}
               </button>
             </div>
             
@@ -9698,7 +9701,7 @@ export default function TransAction() {
                     className="van-picker-column__item van-picker-column__item--selected" id="tire1" onClick={()=>tire('tire1')}
                     style={{height: '44px'}}
                   >
-                    <div className="van-ellipsis">Recharge Activation Bonus</div>
+                    <div className="van-ellipsis">{t('Recharge Activation Bonus')}</div>
                   </li>
                   <li
                     role="button"
@@ -9706,7 +9709,7 @@ export default function TransAction() {
                     className="van-picker-column__item" id="tire2" onClick={()=>tire('tire2')}
                     style={{height: '44px'}}
                   >
-                    <div className="van-ellipsis">Level Up Bonus</div>
+                    <div className="van-ellipsis">{t('Level Up Bonus')}</div>
                   </li>
                   <li
                     role="button"
@@ -9714,7 +9717,7 @@ export default function TransAction() {
                     className="van-picker-column__item" id="tire3" onClick={()=>tire('tire3')}
                     style={{height: '44px'}}
                   >
-                    <div className="van-ellipsis">Registration Bonus</div>
+                    <div className="van-ellipsis">{t('Registration Bonus')}</div>
                   </li>
                   <li
                     role="button"
@@ -9722,7 +9725,7 @@ export default function TransAction() {
                     className="van-picker-column__item" id="tire4" onClick={()=>tire('tire4')}
                     style={{height: '44px'}}
                   >
-                    <div className="van-ellipsis">Self Trading Bonus</div>
+                    <div className="van-ellipsis">{t('Self Trading Bonus')}</div>
                   </li>
                   <li
                     role="button"
@@ -9730,7 +9733,7 @@ export default function TransAction() {
                     className="van-picker-column__item" id="tire5" onClick={()=>tire('tire5')}
                     style={{height: '44px'}}
                   >
-                    <div className="van-ellipsis">Daily Recharge Bonus</div>
+                    <div className="van-ellipsis">{t('Daily Recharge Bonus')}</div>
                   </li>  
                   <li
                     role="button"
@@ -9738,7 +9741,7 @@ export default function TransAction() {
                     className="van-picker-column__item" id="tire6" onClick={()=>tire('tire6')}
                     style={{height: '44px'}}
                   >
-                    <div className="van-ellipsis">Salary Bonus</div>
+                    <div className="van-ellipsis">{t('Salary Bonus')}</div>
                   </li>  
                   <li
                     role="button"
@@ -9746,7 +9749,7 @@ export default function TransAction() {
                     className="van-picker-column__item" id="tire7" onClick={()=>tire('tire7')}
                     style={{height: '44px'}}
                   >
-                    <div className="van-ellipsis">Company Turnover Profit</div>
+                    <div className="van-ellipsis">{t('Company Turnover Profit')}</div>
                   </li>                 
                 </ul>
               </div>
@@ -9787,14 +9790,14 @@ export default function TransAction() {
                 type="button"
                 className="van-picker__cancel van-haptics-feedback" onClick={handleSecondCancel}
               >
-                Cancel
+                {t('Cancel')}
               </button>
-              <div className="van-picker__title van-ellipsis">Choose a date</div>
+              <div className="van-picker__title van-ellipsis">{t('Choose a date')}</div>
               <button
                 type="button"
                 className="van-picker__confirm van-haptics-feedback" onClick={handleSecondCancel}
               >
-                Confirm
+                {t('Confirm')}
               </button>
             </div>
             
@@ -10267,7 +10270,7 @@ export default function TransAction() {
 {filteredTransaction.length === 0 ? (
         <div data-v-cbab7763="" className="infiniteScroll__loading">
            
-        <div data-v-cbab7763="">No more</div>
+        <div data-v-cbab7763="">{t('No more')}</div>
       </div>
       ) : (
         filteredTransaction.map((history, index) => (
@@ -10287,8 +10290,7 @@ export default function TransAction() {
 
                 <div
                   data-v-2565e76d=""
-                  className="transRecord__container-content__card-top"
-                >
+                  className="transRecord__container-content__card-top">
 
                   <h3 data-v-2565e76d="" >{history.remarks}</h3>
                 </div>
@@ -10297,19 +10299,21 @@ export default function TransAction() {
                   className="transRecord__container-content__card-mid"
                 >
                   <div data-v-2565e76d="" className="line">
-                    <div data-v-2565e76d="" className="left">Detail</div>
-                    <div data-v-2565e76d="" className="right">  {history.remarks}</div>
+                    <div data-v-2565e76d="" className="left">{t('Detail')}</div>
+                    <div data-v-2565e76d="" className="right"> {history.remarks}</div>
                   </div>
                   <div data-v-2565e76d="" className="line">
-                    <div data-v-2565e76d="" className="left">Time</div>
+                    <div data-v-2565e76d="" className="left">{t('Time')}</div>
                     <div data-v-2565e76d="" className="right">
                     {history.updated_at}
                     </div>
                   </div>
                   <div data-v-2565e76d="" className="line">
-                    <div data-v-2565e76d="" className="left">Balance</div>
+                    <div data-v-2565e76d="" className="left">{t('Balance')}</div>
                     <div data-v-2565e76d="" className="right green" >
+
                     {history.comm}
+
                     </div>
                   </div>
                 </div>
