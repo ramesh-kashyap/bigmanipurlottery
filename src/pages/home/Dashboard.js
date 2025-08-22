@@ -10708,7 +10708,7 @@ const [isVisible, setIsVisible] = useState(true);
                                     data-origin="/assets/png/lotterycategory_202307140102511fow.png"/>
                             </div>
                             <div data-v-ffb14677="" className="luckyWinners__container-wrapper__item-winAmount">
-                                <h1 data-v-ffb14677="">Receive ₹31.36</h1><span data-v-ffb14677="">{t('Winning amount')}</span>
+                                <h1 data-v-ffb14677="">{t('Receive')}₹31.36</h1><span data-v-ffb14677="">{t('Winning amount')}</span>
                             </div>
                         </div>
                         <div data-v-ffb14677="" className="luckyWinners__container-wrapper__item">

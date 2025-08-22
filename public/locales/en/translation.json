@@ -661,7 +661,15 @@
 "Frequency": "आवृत्ति",
 "Max consecutive missing": "अधिकतम लगातार मिसिंग",
 "Max consecutive": "अधिकतम लगातार",
-"Transaction history": "लेन-देन इतिहास"
+"Transaction history": "लेन-देन इतिहास",
+"the reward has no limitation, the more you invited the more rewards you will get it": "इनाम की कोई सीमा नहीं है, जितने अधिक लोगों को आमंत्रित करेंगे उतने अधिक इनाम प्राप्त होंगे",
+  "If the conditions are met the rewards will be automatically credited to players balance": "यदि शर्तें पूरी होती हैं, तो इनाम स्वचालित रूप से खिलाड़ी के बैलेंस में जोड़ दिया जाएगा",
+  "*Each deposit can only get one bonus.": "*प्रत्येक जमा पर केवल एक बोनस मिलेगा।",
+  "1st deposit": "पहली जमा",
+  "Amount": "राशि",
+  "and Turnover": "और टर्नओवर"
+  
+
 
 
 
