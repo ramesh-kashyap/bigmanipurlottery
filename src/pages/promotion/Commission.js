@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Api from '../../services/Api';
+import { useTranslation } from "react-i18next";
+
  export default function Commission(){
  const navigate =  useNavigate();
-  
+         const { t } = useTranslation();
+
     const [isVisible, setIsVisible] = useState(false);
 
 
@@ -222,7 +225,7 @@ return(
               <div data-v-12a80a3e="" className="navbar__content-center">
                 
                 <div data-v-12a80a3e="" className="navbar__content-title">
-                  Commission Details
+                  {t('Commission Details')}
                 </div>
               </div>
               <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -242,7 +245,7 @@ return(
                     <span
                       data-v-fa757a88=""
                       className="ar-searchbar__selector-default"
-                      >Choose a Date</span
+                      >{t('Choose a Date')}</span
                     ><i
                       data-v-fa757a88=""
                       className="van-badge__wrapper van-icon van-icon-arrow-down" onClick={handleToggle}
@@ -264,7 +267,7 @@ return(
             <svg data-v-f84b843f="" className="svg-icon icon-empty">
               <use href="#icon-empty"></use>
             </svg>
-            <p data-v-f84b843f="">No data</p>
+            <p data-v-f84b843f="">{t('No data')}</p>
           </div>
         ) : (
           filteredHistory.map((history, index) => (
@@ -283,17 +286,17 @@ return(
 
         <div data-v-10d1559c="" className="TeamReport__C-body-item-detail" >
           <div data-v-10d1559c="" className="TeamReport__C-body-item-detail-lv">
-            Level<span data-v-10d1559c="">{history.level}</span>
+            {t('Level')}<span data-v-10d1559c="">{history.level}</span>
           </div>
           <div data-v-10d1559c="" className="TeamReport__C-body-item-detail-commission">
-            Commission<span data-v-10d1559c="">{history.commission}</span>
+            {t('Commission')}<span data-v-10d1559c="">{history.commission}</span>
           </div>
           <div data-v-10d1559c="" className="TeamReport__C-body-item-detail-commission" >
-           Total Bet amount<span data-v-10d1559c="">{history.total_bet}</span>
+           {t('Total Bet amount')}<span data-v-10d1559c="">{history.total_bet}</span>
           </div>
           
           <div data-v-10d1559c="" className="TeamReport__C-body-item-detail-time">
-            Time<span data-v-10d1559c="">{history.updated_at}</span>
+            {t('Time')}<span data-v-10d1559c="">{history.updated_at}</span>
           </div>
         </div>
       </div>
@@ -329,11 +332,11 @@ return(
   <div data-v-10d1559c="" className="van-picker">
     <div className="van-picker__toolbar">
       <button type="button" className="van-picker__cancel van-haptics-feedback" onClick={handleCancel}>
-        Cancel
+        {t('Cancel')}
       </button>
-      <div className="van-picker__title van-ellipsis">Choose a date</div>
+      <div className="van-picker__title van-ellipsis">{t('Choose a date')}</div>
       <button type="button" className="van-picker__confirm van-haptics-feedback"  onClick={handleConfirm2}>
-        Confirm
+       {t('Confirm')}
       </button>
     </div>
     

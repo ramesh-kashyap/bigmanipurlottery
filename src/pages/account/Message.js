@@ -9578,7 +9578,7 @@ export default function Message() {
               </span>
             </div>
             <div data-v-00f99608="" className="notification-container-content-desc">
-              {t('Due to unstable of bank india will have delay or failed on payment, so if you are experiencing any issues with making a  payment, we recommend switching to a different payment channel and attempting to deposit again. to ensure your transaction smooth and fast we suggesting to do payment using barcode method or PAYTM method, also for using PhonePe sometimes will encountering delay or failed payment, Your satisfaction is our priority. Thank you for your understanding and continued support')}.
+{t('Due to unstable of bank india will have delay or failed on payment, so if you are experiencing any issues with making a  payment, we recommend switching to a different payment channel and attempting to deposit again. to ensure your transaction smooth and fast we suggesting to do payment using barcode method or PAYTM method, also for using PhonePe sometimes will encountering delay or failed payment, Your satisfaction is our priority. Thank you for your understanding and continued support.')}
             </div>
             <h5 data-v-00f99608="">2024-06-04 20:00:14</h5>
           </div>
@@ -9590,7 +9590,8 @@ export default function Message() {
               <svg data-v-00f99608="" className="svg-icon icon-notificationIcon">
                 <use href="#icon-notificationIcon"></use></svg
               ><span data-v-00f99608=""
-                > {t('PREVENTING BEING SCAMMED / HACKED DUE SOMEONE PROCLAIMING AS BIG MANIPUR CUSTOMER SERVICE')}
+                >
+{t('PREVENTING BEING SCAMMED / HACKED DUE SOMEONE PROCLAIMING AS BIG MANIPUR CUSTOMER SERVICE')}
               </span>
             </div>
             <div data-v-00f99608="" className="notification-container-content-desc">

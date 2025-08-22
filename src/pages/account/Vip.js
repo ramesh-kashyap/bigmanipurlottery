@@ -10362,7 +10362,9 @@ const claimBonus= async (id) => {
                 </div>
               </div>
               <div data-v-4e842459="" className="card-bottom">
-                <h1 data-v-4e842459="">{t('Level up rewards')}</h1>
+                <h1 data-v-4e842459="">{t("Level up rewards")}
+
+</h1>
                 <span data-v-4e842459="">{t('Each account can only receive 1 time')}</span>
               </div>
             </div>

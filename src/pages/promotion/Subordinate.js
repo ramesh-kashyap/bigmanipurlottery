@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Api from '../../services/Api';
+import { useTranslation } from "react-i18next";
 
 import dayjs from 'dayjs'; // to help with date comparison
 import 'dayjs/locale/en'; // Load locale
@@ -12,6 +13,7 @@ const formatTimestampToIST = (timestamp) => {
 
 
 export default function Subordinate() {
+         const { t } = useTranslation();
 
   const navigate = useNavigate();
   const [subordinate, setSubordinate] = useState([]);
@@ -9618,7 +9620,7 @@ style={{maskType: 'alpha'}}
               </div>
               <div data-v-12a80a3e="" className="navbar__content-center">
                 <div data-v-12a80a3e="" className="navbar__content-title">
-                  New subordinates
+                  {t('New subordinates')}
                 </div>
               </div>
               <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -9648,7 +9650,7 @@ style={{maskType: 'alpha'}}
           }}
           onClick={() => setActiveTab('today')}
         >
-          <span className="van-tab__text van-tab__text--ellipsis">Today</span>
+          <span className="van-tab__text van-tab__text--ellipsis">{t('Today')}</span>
         </div>
 
         <div
@@ -9666,7 +9668,7 @@ style={{maskType: 'alpha'}}
           }}
           onClick={() => setActiveTab('yesterday')}
         >
-          <span className="van-tab__text van-tab__text--ellipsis">Yesterday</span>
+          <span className="van-tab__text van-tab__text--ellipsis">{t('Yesterday')}</span>
         </div>
 
         <div
@@ -9684,7 +9686,7 @@ style={{maskType: 'alpha'}}
           }}
           onClick={() => setActiveTab('month')}
         >
-          <span className="van-tab__text van-tab__text--ellipsis">This month</span>
+          <span className="van-tab__text van-tab__text--ellipsis">{t('This month')}</span>
         </div>
       </div>
             <div className="van-tabs__content"></div>
@@ -9699,10 +9701,10 @@ style={{maskType: 'alpha'}}
             <div key={index} data-v-221aa0df="" className="subordinate__container-content__item ar-1px-b">
               <div data-v-221aa0df="">
                 <span data-v-221aa0df="">{history.phone}</span>
-                <span data-v-221aa0df="">UID - {history.id_user}</span>
+                <span data-v-221aa0df="">{t('UID')} - {history.id_user}</span>
               </div>
               <div data-v-221aa0df="">
-                <span data-v-221aa0df="">My Team</span>
+                <span data-v-221aa0df="">{t('My Team')}</span>
                 <span data-v-221aa0df="">{formatTimestampToIST(history.time)}</span>
               </div>
             </div>
@@ -9716,7 +9718,7 @@ style={{maskType: 'alpha'}}
               <svg data-v-f84b843f="" className="svg-icon icon-empty">
                 <use href="#icon-empty"></use>
               </svg>
-              <p data-v-f84b843f="">No data</p>
+              <p data-v-f84b843f="">{t('No data')}</p>
             </div>
           </div>
         )}
@@ -9750,7 +9752,7 @@ style={{maskType: 'alpha'}}
         ></i
       >
       <div className="van-toast__text">
-        Error: 22 Your account is already logged in somewhere else
+        {t('Error: 22 Your account is already logged in somewhere else')}
       </div>
     </div>
 

@@ -9770,7 +9770,7 @@ export default function Promotion(){
               >
             </div>
           </div>
-          <div data-v-600663f7="" className="promote__cell-item" onClick={()=>navigate('/promotion/PromotionRule')}>
+          {/* <div data-v-600663f7="" className="promote__cell-item" onClick={()=>navigate('/promotion/PromotionRule')}>
             <div data-v-600663f7="" className="label">
               <svg data-v-600663f7="" className="svg-icon icon-invite_reg">
                 <use href="#icon-invite_reg"></use></svg
@@ -9784,7 +9784,7 @@ export default function Promotion(){
                 ></i
               >
             </div>
-          </div>
+          </div> */}
           <div data-v-600663f7="" className="promote__cell-item" onClick={()=>navigate('/promotion/Server')}>
             <div data-v-600663f7="" className="label">
               <svg data-v-600663f7="" className="svg-icon icon-server">

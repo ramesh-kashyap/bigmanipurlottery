@@ -1,6 +1,10 @@
 import React from 'react'
+import { useNavigate } from 'react-router';
+import { useTranslation } from "react-i18next";
 
 export default function Records() {
+                   const { t } = useTranslation();
+  
   return (
     <div style={{fontSize: '12px'}}> 
 
@@ -9516,7 +9520,7 @@ export default function Records() {
             <div data-v-12a80a3e="" className="navbar__content-center">
              
               <div data-v-12a80a3e="" className="navbar__content-title">
-                Invitation record
+                {t('Invitation record')}
               </div>
             </div>
             <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -9530,7 +9534,7 @@ export default function Records() {
       >
         <div data-v-67e25db3="" role="feed" className="van-list" aria-busy="false">
          
-          <div className="van-list__finished-text">No more</div>
+          <div className="van-list__finished-text">{t('No more')}</div>
          
           <div className="van-list__placeholder"></div>
         </div>
@@ -9564,7 +9568,7 @@ export default function Records() {
     >
      
       <div className="van-dialog__content van-dialog__content--isolated">
-        <div className="van-dialog__message">Please enter gift code</div>
+        <div className="van-dialog__message">{t('Please enter gift code')}</div>
       </div>
       <div className="van-hairline--top van-dialog__footer">
        <button
@@ -9572,7 +9576,7 @@ export default function Records() {
           className="van-button van-button--default van-button--large van-dialog__confirm"
         >
           <div className="van-button__content">
-           <span className="van-button__text">Confirm</span
+           <span className="van-button__text">{t('Confirm')}</span
             >
           </div>
         </button>
@@ -9591,7 +9595,7 @@ export default function Records() {
         ></i
       >
       <div className="van-toast__text">
-        Error: 502 The deposit amount does not meet the standard
+       {t(' Error: 502 The deposit amount does not meet the standard')}
       </div>
      
     </div>

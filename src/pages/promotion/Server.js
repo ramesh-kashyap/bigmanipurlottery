@@ -1,6 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
+
 export default function Server() {
+         const { t } = useTranslation();
+
   const navigate = useNavigate();
   return (
     <div style={{fontSize: '12px',height:'0px'}}>
@@ -9511,7 +9515,7 @@ export default function Server() {
                 </div>
                 <div data-v-12a80a3e="" className="navbar__content-center">
                   <div data-v-12a80a3e="" className="navbar__content-title">
-                    Agent line customer service
+                    {t('Agent line customer service')}
                   </div>
                 </div>
                 <div data-v-12a80a3e="" className="navbar__content-right"></div>

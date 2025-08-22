@@ -2,9 +2,12 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
+import { useTranslation } from "react-i18next";
 
 
 export default function ActivityDetail() {
+                     const { t } = useTranslation();
+  
   const navigate = useNavigate();
   return (
     <div style={{fontSize: '12px'}}> 
@@ -9513,7 +9516,7 @@ export default function ActivityDetail() {
             <div data-v-12a80a3e="" className="navbar__content-center">
             
               <div data-v-12a80a3e="" className="navbar__content-title">
-                Activity details
+                {t('Activity details')}
               </div>
             </div>
             <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -9556,19 +9559,18 @@ export default function ActivityDetail() {
   
   <div data-v-cfff515d="" className="active-box">
     <div data-v-cfff515d="" className="title">
-      Become Agent Enjoy Luxury Rewards
+      {t('Become Agent Enjoy Luxury Rewards')}
     </div>
     <div data-v-cfff515d="">
       <p></p>
-      <blockquote>DamanGames Offer Agents With Luxury Rewards</blockquote>
+      <blockquote>{t('DamanGames Offer Agents With Luxury Rewards')}</blockquote>
       <br /> {/* ✅ Correct */}
       <blockquote>
-        After You Referral Someone And Meet The Requirement, You Need To Contact
-        Your Teacher To Receive The Corresponding Gold
+        {t('After You Referral Someone And Meet The Requirement, You Need To Contact Your Teacher To Receive The Corresponding Gold')}
       </blockquote>
       <br /> {/* ✅ Correct */}
       <blockquote>
-        For More Details Visit DamanGames VIP Website : <br />{" "}
+       {t('For More Details Visit DamanGames VIP Website')} : <br />{" "}
         <a href="https://vip.bigmanipurlottery.in/" target="_blank" rel="noreferrer">
           https://vip.bigmanipurlottery.in/
         </a>

@@ -9649,7 +9649,7 @@ export default function Activity() {
               />
               <div data-v-4a7709f3="" className="box-content">
                 <div data-v-4a7709f3="" className="box-title">
-                  {t('Big Manipur Tips and Trick Avoid Scammer')}
+{t('Big Manipur Tips and Trick Avoid Scammers')}
                 </div>
               </div>
             </div>
