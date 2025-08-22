@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Api from '../../services/Api';
 import { useToast } from '../../components/ToastContext'; 
+import { useTranslation } from "react-i18next";
 
 export default function DailySignI() {
 
+                   const { t } = useTranslation();
 
 
 
@@ -9581,7 +9583,7 @@ export default function DailySignI() {
               <div data-v-12a80a3e="" className="navbar__content-center">
             
                 <div data-v-12a80a3e="" className="navbar__content-title">
-                  Attendance
+                  {t('Attendance')}
                 </div>
               </div>
               <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -9590,19 +9592,19 @@ export default function DailySignI() {
         </div>
         <div data-v-f1e983bd="" className="dailySignIn__container-hero">
           <div data-v-f1e983bd="" className="dailySignIn__container-hero__header">
-            <h1 data-v-f1e983bd="">Attendance bonus</h1>
+            <h1 data-v-f1e983bd="">{t('Attendance bonus')}</h1>
             <p data-v-f1e983bd="">
-              Get rewards based on consecutive login days
+              {t('Get rewards based on consecutive login days')}
             </p>
             <div data-v-f1e983bd="">
-              Attended consecutively<span data-v-f1e983bd="">{dailySignI.attendanceDays}</span>Day
+              {t('Attended consecutively')}<span data-v-f1e983bd="">{dailySignI.attendanceDays}</span>{t('Day')}
             </div>
-            <p data-v-f1e983bd="">Accumulated</p>
+            <p data-v-f1e983bd="">{t('Accumulated')}</p>
             <h1 data-v-f1e983bd="">{dailySignI.accumulatedBonus}</h1>
           </div>
           <div data-v-f1e983bd="" className="dailySignIn__container-hero__footer">
-            <button data-v-f1e983bd="" onClick={()=>navigate('/activity/DailySignIn/Rules')}> Game Rules</button
-            ><button data-v-f1e983bd="" onClick={()=>navigate('/activity/DailySignIn/Record')}>Attendance history</button>
+            <button data-v-f1e983bd="" onClick={()=>navigate('/activity/DailySignIn/Rules')}>{t('Game Rules')}</button
+            ><button data-v-f1e983bd="" onClick={()=>navigate('/activity/DailySignIn/Record')}>{t('Attendance history')}</button>
           </div>
         </div>
         <div data-v-f1e983bd="" className="dailySignIn__container-content">
@@ -9776,7 +9778,7 @@ export default function DailySignI() {
             data-v-f1e983bd=""
             className="dailySignIn__container-content__footer"
           >
-            <button data-v-f1e983bd="" className=""  onClick={attendanceBonus }>Attendance</button>
+            <button data-v-f1e983bd="" className=""  onClick={attendanceBonus }>{t('Attendance')}</button>
           </div>
         </div>
       </div>
@@ -9809,7 +9811,7 @@ export default function DailySignI() {
     >
      
       <div className="van-dialog__content van-dialog__content--isolated">
-        <div className="van-dialog__message">Please enter gift code</div>
+        <div className="van-dialog__message">{t('Please enter gift code')}</div>
       </div>
       <div className="van-hairline--top van-dialog__footer">
        <button
@@ -9817,7 +9819,7 @@ export default function DailySignI() {
           className="van-button van-button--default van-button--large van-dialog__confirm"
         >
           <div className="van-button__content">
-           <span className="van-button__text">Confirm</span
+           <span className="van-button__text">{t('Confirm')}</span
             >
           </div>
         </button>
@@ -9836,7 +9838,7 @@ export default function DailySignI() {
         ></i
       >
       <div className="van-toast__text">
-        Error: 502 The deposit amount does not meet the standard
+        {t('Error: 502 The deposit amount does not meet the standard')}
       </div>
      
     </div>

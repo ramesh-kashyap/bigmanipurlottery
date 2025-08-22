@@ -1,7 +1,11 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from "react-i18next";
+
 
 export default function Superjackpot_rule() {
+    const { t } = useTranslation();
+  
   const navigate =useNavigate();
   return (
     <div style={{fontSize: '12px'}}>
@@ -9516,7 +9520,7 @@ export default function Superjackpot_rule() {
               </div>
               <div data-v-12a80a3e="" className="navbar__content-center">
                 
-                <div data-v-12a80a3e="" className="navbar__content-title">Rule</div>
+                <div data-v-12a80a3e="" className="navbar__content-title">{t('Rule')}</div>
               </div>
               <div data-v-12a80a3e="" className="navbar__content-right"></div>
             </div>
@@ -9526,12 +9530,9 @@ export default function Superjackpot_rule() {
           <div data-v-bc9939e5="" className="rule-content">
             <div data-v-bc9939e5="" className="rule-content-top">
               <div data-v-bc9939e5="" className="rule-content-top-right">
-                <h3 data-v-bc9939e5="">Super Jackpot</h3>
+                <h3 data-v-bc9939e5="">{t('Super Jackpot')}</h3>
                 <p data-v-bc9939e5="">
-                  When you win the Super Jackpot in the game, you can get
-                  additional platform bonuses, and the bonuses will be
-                  distributed to you according to the multiple of the winning
-                  prize
+                  {t('When you win the Super Jackpot in the game, you can get additional platform bonuses, and the bonuses will be distributed to you according to the multiple of the winning prize')}
                 </p>
               </div>
             </div>
@@ -9540,8 +9541,7 @@ export default function Superjackpot_rule() {
                 <use href="#icon-warningTriangle"></use>
               </svg>
               <p data-v-bc9939e5="">
-                Warning: Please claim all bonuses before the event ends, after
-                the event ends, you will lose the chance to get the bonus
+                {t('Warning: Please claim all bonuses before the event ends, after the event ends, you will lose the chance to get the bonus')}
               </p>
             </div>
           </div>
@@ -9551,13 +9551,13 @@ export default function Superjackpot_rule() {
             <svg data-v-bc9939e5="" className="svg-icon icon-superJackpotRule">
               <use href="#icon-superJackpotRule"></use>
             </svg>
-            Bonus
+            {t('Bonus')}
           </div>
           <div data-v-bc9939e5="" className="table-container">
             <div data-v-bc9939e5="" className="table-title">
-              <div data-v-bc9939e5="">Winning rate</div>
-              <div data-v-bc9939e5="">Bet amount</div>
-              <div data-v-bc9939e5="">Bonus</div>
+              <div data-v-bc9939e5="">{t('Winning rate')}</div>
+              <div data-v-bc9939e5="">{t('Bet amount')}</div>
+              <div data-v-bc9939e5="">{t('Bonus')}</div>
             </div>
             <div data-v-bc9939e5="" className="table-content">
               <div data-v-bc9939e5="">10X-19X</div>
@@ -9589,8 +9589,7 @@ export default function Superjackpot_rule() {
             <svg data-v-bc9939e5="" className="svg-icon icon-rightTriangle">
               <use href="#icon-rightTriangle"></use>
             </svg>
-            All event interpretation rights belong to the platform. If you have
-            any questions, please contact customer service now
+            {t('All event interpretation rights belong to the platform. If you have any questions, please contact customer service now')}
           </div>
           <div data-v-bc9939e5="" className="jackpot-rule-custom">
           <svg
@@ -9599,7 +9598,7 @@ export default function Superjackpot_rule() {
             >
               <use href="#icon-customerPublic"></use>
             </svg>
-            Contact customer service
+            {t('Contact customer service')}
           </div>
         </div>
       </div>
@@ -9632,7 +9631,7 @@ export default function Superjackpot_rule() {
     >
       
       <div className="van-dialog__content van-dialog__content--isolated">
-        <div className="van-dialog__message">Please enter gift code</div>
+        <div className="van-dialog__message">{t('Please enter gift code')}</div>
       </div>
       <div className="van-hairline--top van-dialog__footer">
     <button
@@ -9640,7 +9639,7 @@ export default function Superjackpot_rule() {
           className="van-button van-button--default van-button--large van-dialog__confirm"
         >
           <div className="van-button__content">
-            <span className="van-button__text">Confirm</span
+            <span className="van-button__text">{t('Confirm')}</span
             >
           </div>
         </button>
@@ -9659,7 +9658,7 @@ export default function Superjackpot_rule() {
         ></i
       >
       <div className="van-toast__text">
-        Error: 502 The deposit amount does not meet the standard
+        {t('Error: 502 The deposit amount does not meet the standard')}
       </div>
      
     </div>

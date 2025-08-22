@@ -4,14 +4,11 @@ import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown , faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { useToast } from '../../components/ToastContext'; 
-
-
-
-
+import { useTranslation } from "react-i18next";
 
 
 export default function Login() {
-
+  const { t } = useTranslation();
   const { showToast } = useToast();
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -9647,14 +9644,14 @@ const [isDropdownOpen, setIsDropdownOpen] = useState(false);
         </div>
         <div data-v-47f4cc84="" className="login__container-heading">
           <h1 data-v-47f4cc84="" className="login__container-heading__title">
-            Log in
+            {t('Log in')}
           </h1>
           <div data-v-47f4cc84="" className="login__container-heading__subTitle">
             <div data-v-47f4cc84="">
-              Please log in with your phone number or email
+              {t('Please log in with your phone number or email')}
             </div>
             <div data-v-47f4cc84="">
-              If you forget your password, please contact customer service
+              {t('If you forget your password, please contact customer service')}
             </div>
           </div>
         </div>
@@ -9667,7 +9664,7 @@ const [isDropdownOpen, setIsDropdownOpen] = useState(false);
         <svg data-v-47f4cc84="" className="svg-icon icon-phone">
           <use xlinkHref="#icon-phone"></use>
         </svg>
-        <div data-v-47f4cc84="">Log in with phone</div>
+        <div data-v-47f4cc84="">{t('Log in with phone')}</div>
       </div>
 
       <div
@@ -9687,7 +9684,7 @@ const [isDropdownOpen, setIsDropdownOpen] = useState(false);
             <use xlinkHref="#icon-user"></use>
           </svg>
         </div>
-        <div data-v-47f4cc84="">Email Login</div>
+        <div data-v-47f4cc84="">{t('Email Login')}</div>
       </div>
         </div>
         <div data-v-47f4cc84="" className="login__container-form">
@@ -9706,7 +9703,7 @@ const [isDropdownOpen, setIsDropdownOpen] = useState(false);
                 <div data-v-50aa8bb0="" className="phoneInput__container-label">
                   <svg data-v-50aa8bb0="" className="svg-icon icon-phone">
                     <use xlinkHref="#icon-phone"></use></svg
-                  ><span data-v-50aa8bb0="">Phone number</span>
+                  ><span data-v-50aa8bb0="">{t('Phone number')}</span>
                 </div>
                 <div data-v-50aa8bb0="" className="phoneInput__container-input">
                 <div data-v-50aa8bb0="" className="phoneInput__container-input">
@@ -9740,7 +9737,7 @@ const [isDropdownOpen, setIsDropdownOpen] = useState(false);
                     data-v-50aa8bb0=""
                     type="text"
                     value={username}
-                    onChange={(e) => setUsername(e.target.value)}                    placeholder="Please enter the phone number"
+                    onChange={(e) => setUsername(e.target.value)}                    placeholder={t('Please enter the phone number')}
                   />
                 </div>
               </div>
@@ -9755,13 +9752,13 @@ const [isDropdownOpen, setIsDropdownOpen] = useState(false);
                     className="svg-icon icon-editPswIcon passwordInput__container-label__icon passwordInput__container-label__icon"
                   >
                     <use xlinkHref="#icon-editPswIcon"></use></svg
-                  ><span data-v-ea5b66c8="">Password</span>
+                  ><span data-v-ea5b66c8="">{t('Password')}</span>
                 </div>
                 <div data-v-ea5b66c8="" className="passwordInput__container-input">
                 <input
         data-v-ea5b66c8=""
         type={isPasswordVisible ? 'text' : 'password'}
-        placeholder="Password"
+        placeholder={t('Password')}
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         maxLength="32"
@@ -9793,9 +9790,9 @@ const [isDropdownOpen, setIsDropdownOpen] = useState(false);
                 </div>
               </div>
               <div data-v-33f88764="" className="signIn__container-button">
-                <button data-v-33f88764="" className="active" type="click" onClick={handleSubmit}>Log in</button>
+                <button data-v-33f88764="" className="active" type="click" onClick={handleSubmit}>{t('Log in')}</button>
                 
-                <button data-v-33f88764="" className="register" onClick={()=>navigate('/register')}>Register</button>
+                <button data-v-33f88764="" className="register" onClick={()=>navigate('/register')}>{t('Register')}</button>
               </div>
            
               <div data-v-33f88764="" className="signIn_footer">
@@ -9806,7 +9803,7 @@ const [isDropdownOpen, setIsDropdownOpen] = useState(false);
                   >
                     <use xlinkHref="#icon-clock_b"></use>
                   </svg>
-                  <div data-v-33f88764="" className="font24">Forgot password</div>
+                  <div data-v-33f88764="" className="font24">{t('Forgot password')}</div>
                 </div>
                 <div data-v-33f88764="" className="customcon"   onClick={() => (window.location.href = 'https://t.me/it_zafira_6732')}>
                   <svg
@@ -9815,7 +9812,7 @@ const [isDropdownOpen, setIsDropdownOpen] = useState(false);
                   >
                     <use xlinkHref="#icon-customer_b"></use>
                   </svg>
-                  <div data-v-33f88764="" className="font24">Customer Service</div>
+                  <div data-v-33f88764="" className="font24">{t('Customer Service')}</div>
                 </div>
               </div>
               <div
@@ -9839,23 +9836,22 @@ const [isDropdownOpen, setIsDropdownOpen] = useState(false);
                     />
                   </div>
                   <div data-v-3e71d3da="" className="dialog__container-title">
-                    <h1 data-v-3e71d3da="">Account has been locked</h1>
+                    <h1 data-v-3e71d3da="">{t('Account has been locked')}</h1>
                   </div>
                   <div data-v-3e71d3da="" className="dialog__container-content">
                     <div data-v-33f88764="" className="idlockTip">
-                      You Have Entered Wrong Password More Then 10 Times
-                      <br data-v-33f88764="" />Please Use Forgot Password To
-                      Change New Password For Unlock And Log In
+                      {t('You Have Entered Wrong Password More Then 10 Times')}
+                      <br data-v-33f88764="" />{t('Please Use Forgot Password To Change New Password For Unlock And Log In')}
                     </div>
                   </div>
                   <div data-v-3e71d3da="" className="dialog__container-footer">
-                    <button data-v-33f88764="" className="dialogBtn">Cancel</button
+                    <button data-v-33f88764="" className="dialogBtn">{t('Cancel')}</button
                     ><button data-v-33f88764="" className="dialogBtn">
                       <img
                         data-v-33f88764=""
                         src="/assets/png/iconservr-dafbd4f0.png"
                       />
-                      Contact customer service
+                      {t('Contact customer service')}
                     </button>
                   </div>
                   
@@ -9881,7 +9877,7 @@ const [isDropdownOpen, setIsDropdownOpen] = useState(false);
                       className="svg-icon icon-email emailinput__container-label__icon emailinput__container-label__icon"
                     >
                       <use xlinkHref="#icon-email"></use></svg
-                    ><span data-v-4499df08="">Mail</span>
+                    ><span data-v-4499df08="">{t('Mail')}</span>
                   </div>
                   <div data-v-4499df08="" className="emailinput__container-input">
                     <input
@@ -9907,7 +9903,7 @@ const [isDropdownOpen, setIsDropdownOpen] = useState(false);
                     className="svg-icon icon-editPswIcon passwordInput__container-label__icon passwordInput__container-label__icon"
                   >
                     <use xlinkHref="#icon-editPswIcon"></use></svg
-                  ><span data-v-ea5b66c8="">Password</span>
+                  ><span data-v-ea5b66c8="">{t('Password')}</span>
                 </div>
                 <div data-v-ea5b66c8="" className="passwordInput__container-input">
                 <input
@@ -9945,8 +9941,8 @@ const [isDropdownOpen, setIsDropdownOpen] = useState(false);
                 </div>
               </div>
               <div data-v-436a69c4="" className="signIn__container-button">
-              <button data-v-33f88764="" className="active" type="click" onClick={handleSubmit}>Log in</button>
-              <button data-v-436a69c4="" className="register">Register</button>
+              <button data-v-33f88764="" className="active" type="click" onClick={handleSubmit}>{t('Log in')}</button>
+              <button data-v-436a69c4="" className="register">{t('Register')}</button>
               </div>
               <div data-v-436a69c4="" className="signIn_footer">
                 <div data-v-436a69c4="" className="forgetcon">
@@ -9956,7 +9952,7 @@ const [isDropdownOpen, setIsDropdownOpen] = useState(false);
                   >
                     <use xlinkHref="#icon-clock_b"></use>
                   </svg>
-                  <div data-v-436a69c4="" className="font24">Forgot password</div>
+                  <div data-v-436a69c4="" className="font24">{t('Forgot password')}</div>
                 </div>
                 <div data-v-436a69c4="" className="customcon">
                   <svg
@@ -9965,7 +9961,7 @@ const [isDropdownOpen, setIsDropdownOpen] = useState(false);
                   >
                     <use xlinkHref="#icon-customer_b"></use>
                   </svg>
-                  <div data-v-436a69c4="" className="font24">Customer Service</div>
+                  <div data-v-436a69c4="" className="font24">{t('Customer Service')}</div>
                 </div>
               </div>
               <div
@@ -9988,23 +9984,22 @@ const [isDropdownOpen, setIsDropdownOpen] = useState(false);
                     />
                   </div>
                   <div data-v-3e71d3da="" className="dialog__container-title">
-                    <h1 data-v-3e71d3da="">Account has been locked</h1>
+                    <h1 data-v-3e71d3da="">{t('Account has been locked')}</h1>
                   </div>
                   <div data-v-3e71d3da="" className="dialog__container-content">
                     <div data-v-436a69c4="" className="idlockTip">
-                      You Have Entered Wrong Password More Then 10 Times
-                      <br data-v-436a69c4="" />Please Use Forgot Password To
-                      Change New Password For Unlock And Log In
+                      {t('You Have Entered Wrong Password More Then 10 Times')}
+                      <br data-v-436a69c4="" />{t('Please Use Forgot Password To Change New Password For Unlock And Log In')}
                     </div>
                   </div>
                   <div data-v-3e71d3da="" className="dialog__container-footer">
-                    <button data-v-436a69c4="" className="dialogBtn">Cancel</button
+                    <button data-v-436a69c4="" className="dialogBtn">{t('Cancel')}</button
                     ><button data-v-436a69c4="" className="dialogBtn">
                       <img
                         data-v-436a69c4=""
                         src="/assets/png/iconservr-dafbd4f0.png"
                       />
-                      Contact customer service
+                      {t('Contact customer service')}
                     </button>
                   </div>
                   

@@ -11,6 +11,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useToast } from '../../../components/ToastContext'; 
 
+import { useTranslation } from "react-i18next";
 
 
 const SOCKET_URL = 'https://gurugames.org';
@@ -29,6 +30,8 @@ const countDownDate = new Date("2030-07-16T23:59:59.9999999+01:00").getTime();
 
 
 export default function D5(){
+     const { t } = useTranslation();
+  
   const { showToast } = useToast();
 
 
@@ -684,11 +687,11 @@ useEffect(() => {
               <svg data-v-7dd1adab="" className="svg-icon icon-lottyWallet">
                 <use href="#icon-lottyWallet"></use>
               </svg>
-              <div data-v-7dd1adab="">Wallet balance</div>
+              <div data-v-7dd1adab="">{t('Wallet balance')}</div>
             </div>
             <div data-v-7dd1adab="" className="Wallet__C-balance-l3">
-              <div data-v-7dd1adab="">Withdraw</div>
-              <div data-v-7dd1adab="">Deposit</div>
+              <div data-v-7dd1adab="">{t('Withdraw')}</div>
+              <div data-v-7dd1adab="">{t('Deposit')}</div>
             </div>
           </div>
         </div>
@@ -698,17 +701,10 @@ useEffect(() => {
           </svg>
           <div className="noticeBar__container-body">
             <div className="noticeBar__container-body-text" onClick={handleOpenBetPopup}>
-              Due to unstable of bank india will have delay or failed on
-              payment, so if you are experiencing any issues with making a
-              payment, we recommend switching to a different payment channel and
-              attempting to deposit again. to ensure your transaction smooth and
-              fast we suggesting to do payment using barcode method or PAYTM
-              method, also for using PhonePe sometimes will encountering delay
-              or failed payment, Your satisfaction is our priority. Thank you
-              for your understanding and continued support.
+              {t('Due to unstable of bank india will have delay or failed on payment, so if you are experiencing any issues with making a payment, we recommend switching to a different payment channel and attempting to deposit again. to ensure your transaction smooth and fast we suggesting to do payment using barcode method or PAYTM method, also for using PhonePe sometimes will encountering delay or failed payment, Your satisfaction is our priority. Thank you for your understanding and continued support')}
             </div>
           </div>
-          <button className="hotIcon">Detail</button>
+          <button className="hotIcon">{t('Detail')}</button>
         </div>
         <div data-v-17d56002="" data-v-4f526022="" className="GameList__C">
           <div data-v-17d56002="" className="GameList__C-item" onClick={() => {navigate('/home/AllLotteryGames/5D');}}>
@@ -730,7 +726,7 @@ useEffect(() => {
         <div data-v-69f351dd="" className="FDTL__C">
           <div data-v-69f351dd="" className="FDTL__C-l1">
             <div data-v-69f351dd="" className="left">
-              <div data-v-69f351dd="">Period</div>
+              <div data-v-69f351dd="">{t('Period')}</div>
               <div data-v-69f351dd="" className="FDTL__C-rule">
                 <svg
                   data-v-69f351dd=""
@@ -746,10 +742,10 @@ useEffect(() => {
                     stroke="currentColor"
                     strokeWidth="1.2"
                   ></path></svg
-                >How to play
+                > {t('How to play')}
               </div>
             </div>
-            <div data-v-69f351dd="">Time remaining</div>
+            <div data-v-69f351dd="">{t('Time remaining')}</div>
           </div>
           <div data-v-69f351dd="" className="FDTL__C-l2">
             <div data-v-69f351dd="">{lastResult.period + 1}</div>
@@ -1173,7 +1169,7 @@ useEffect(() => {
             <div data-v-baf77bdf="" className={join==='c'?'active':''} onClick={()=>{setJoin('c')}}>C</div>
             <div data-v-baf77bdf="" className={join==='d'?'active':''} onClick={()=>{setJoin('d')}}>D</div>
             <div data-v-baf77bdf="" className={join==='e'?'active':''} onClick={()=>{setJoin('e')}}>E</div>
-            <div data-v-baf77bdf="" className={join==='total'?'active':''} onClick={()=>{setJoin('total')}}>SUM</div>
+            <div data-v-baf77bdf="" className={join==='total'?'active':''} onClick={()=>{setJoin('total')}}>{t('SUM')}</div>
           </div>
           <div data-v-baf77bdf="" className="FDB__C-H">
   <div
@@ -1181,7 +1177,7 @@ useEffect(() => {
     className={listJoin.includes('b') ? 'active' : ''}
     onClick={() => handleSelection('b', 'FDB__C-H')}
   >
-    <span data-v-baf77bdf="">Big</span>
+    <span data-v-baf77bdf="">{t('Big')}</span>
     <span data-v-baf77bdf="">1.98</span>
   </div>
   <div
@@ -1189,7 +1185,7 @@ useEffect(() => {
     className={listJoin.includes('s') ? 'active' : ''}
     onClick={() => handleSelection('s', 'FDB__C-H')}
   >
-    <span data-v-baf77bdf="">Small</span>
+    <span data-v-baf77bdf="">{t('Small')}</span>
     <span data-v-baf77bdf="">1.98</span>
   </div>
   <div
@@ -1197,7 +1193,7 @@ useEffect(() => {
     className={listJoin.includes('c') ? 'active' : ''}
     onClick={() => handleSelection('c', 'FDB__C-H')}
   >
-    <span data-v-baf77bdf="">Odd</span>
+    <span data-v-baf77bdf="">{t('Odd')}</span>
     <span data-v-baf77bdf="">1.98</span>
   </div>
   <div
@@ -1205,7 +1201,7 @@ useEffect(() => {
     className={listJoin.includes('l') ? 'active' : ''}
     onClick={() => handleSelection('l', 'FDB__C-H')}
   >
-    <span data-v-baf77bdf="">Even</span>
+    <span data-v-baf77bdf="">{t('Even')}</span>
     <span data-v-baf77bdf="">1.98</span>
   </div>
 </div>
@@ -1251,7 +1247,7 @@ useEffect(() => {
             <div data-v-baf77bdf="" className={join==='c'?'active':''} onClick={()=>{setJoin('c')}}>C</div>
             <div data-v-baf77bdf="" className={join==='d'?'active':''} onClick={()=>{setJoin('d')}}>D</div>
             <div data-v-baf77bdf="" className={join==='e'?'active':''} onClick={()=>{setJoin('e')}}>E</div>
-            <div data-v-baf77bdf="" className={join==='total'?'active':''} onClick={()=>{setJoin('total')}}>SUM</div>
+            <div data-v-baf77bdf="" className={join==='total'?'active':''} onClick={()=>{setJoin('total')}}>{t('SUM')}</div>
           </div>
               <div data-v-baf77bdf="" className="FDB__C-H">
   <div
@@ -1259,7 +1255,7 @@ useEffect(() => {
     className={listJoin.includes('b') ? 'active' : ''}
     onClick={() => handleSelection('b', 'FDB__C-H')}
   >
-    <span data-v-baf77bdf="">Big</span>
+    <span data-v-baf77bdf="">{t('Big')}</span>
     <span data-v-baf77bdf="">1.98</span>
   </div>
   <div
@@ -1267,7 +1263,7 @@ useEffect(() => {
     className={listJoin.includes('s') ? 'active' : ''}
     onClick={() => handleSelection('s', 'FDB__C-H')}
   >
-    <span data-v-baf77bdf="">Small</span>
+    <span data-v-baf77bdf="">{t('Small')}</span>
     <span data-v-baf77bdf="">1.98</span>
   </div>
   <div
@@ -1275,7 +1271,7 @@ useEffect(() => {
     className={listJoin.includes('c') ? 'active' : ''}
     onClick={() => handleSelection('c', 'FDB__C-H')}
   >
-    <span data-v-baf77bdf="">Odd</span>
+    <span data-v-baf77bdf="">{t('Odd')}</span>
     <span data-v-baf77bdf="">1.98</span>
   </div>
   <div
@@ -1283,7 +1279,7 @@ useEffect(() => {
     className={listJoin.includes('l') ? 'active' : ''}
     onClick={() => handleSelection('l', 'FDB__C-H')}
   >
-    <span data-v-baf77bdf="">Even</span>
+    <span data-v-baf77bdf="">{t('Even')}</span>
     <span data-v-baf77bdf="">1.98</span>
   </div>
 </div>
@@ -1304,7 +1300,7 @@ useEffect(() => {
   ))}
 </div>
               <div data-v-7f36fe93="" className="Betting__Popup-body-line">
-                Balance
+                {t('Balance')}
                 <div data-v-7f36fe93="" className="Betting__Popup-body-line-list">
                   <div data-v-7f36fe93=""  className={`Betting__Popup-body-line-item ${balance === 1 ? 'bgcolor' : ''}`}
                     onClick={() => handleSelectBalance(1)}>1</div>
@@ -1317,7 +1313,7 @@ useEffect(() => {
                 </div>
               </div>
               <div data-v-7f36fe93="" className="Betting__Popup-body-line">
-                Quantity
+                {t('Quantity')}
                 <div data-v-7f36fe93="" className="Betting__Popup-body-line-btnL">
                   <div data-v-7f36fe93="" className="Betting__Popup-btn bgcolor" onClick={() => setQuantity((prev) => prev > 0 ? prev - 1 : 0)}>-</div>
                   <div data-v-7f36fe93="" className="van-cell van-field Betting__Popup-input">
@@ -1386,23 +1382,23 @@ useEffect(() => {
                 </div>
               </div>
 
-              <div data-v-7f36fe93="" className="Betting__Popup-body-line"><span data-v-7f36fe93="" className="Betting__Popup-agree active">I
-        agree</span><span data-v-7f36fe93="" className="Betting__Popup-preSaleShow">《Pre-sale rules》</span></div>
+              <div data-v-7f36fe93="" className="Betting__Popup-body-line"><span data-v-7f36fe93="" className="Betting__Popup-agree active">
+                {t('I agree')}</span><span data-v-7f36fe93="" className="Betting__Popup-preSaleShow">《Pre-sale rules》</span></div>
               
               
             </div>
             <div data-v-7181abf7="" className="Betting__Popup-foot">
-              <div data-v-7181abf7="" className="Betting__Popup-foot-c" onClick={() => {setShowBetPopup(false);  setListJoin([]); setJoin('a') }}>Cancel</div>
+              <div data-v-7181abf7="" className="Betting__Popup-foot-c" onClick={() => {setShowBetPopup(false);  setListJoin([]); setJoin('a') }}>{t('Cancel')}</div>
               <div data-v-7181abf7="" className="Betting__Popup-foot-s bgcolor" onClick={handleJoin}>
-                Total amount₹{balance*quantity*listJoin.length}
+                {t('Total amount')}₹{balance*quantity*listJoin.length}
               </div>
             </div>
           </div>
         </div>
         <div data-v-72f81e71="" data-v-4f526022="" className="RecordNav__C">
-          <div data-v-72f81e71="" className={` ${activeSection === 'section1' ? 'active' : ''}`} onClick={() => showSection('section1')}>Game history</div>
-          <div data-v-72f81e71=""  className={` ${activeSection === 'section2' ? 'active' : ''}`} onClick={() => showSection('section2')}>Chart</div>
-          <div data-v-72f81e71=""  className={` ${activeSection === 'section3' ? 'active' : ''}`} onClick={() => showSection('section3')}>My history</div>
+          <div data-v-72f81e71="" className={` ${activeSection === 'section1' ? 'active' : ''}`} onClick={() => showSection('section1')}>{t('Game history')}</div>
+          <div data-v-72f81e71=""  className={` ${activeSection === 'section2' ? 'active' : ''}`} onClick={() => showSection('section2')}>{t('Chart')}</div>
+          <div data-v-72f81e71=""  className={` ${activeSection === 'section3' ? 'active' : ''}`} onClick={() => showSection('section3')}>{t('My history')}</div>
         </div>
         <div
           data-v-9215aba8=""
@@ -1413,9 +1409,9 @@ useEffect(() => {
         >
           <div data-v-9215aba8="" className="GameRecord__C-head">
             <div data-v-9215aba8="" className="van-row">
-              <div data-v-9215aba8="" className="van-col van-col--8">Period</div>
-              <div data-v-9215aba8="" className="van-col van-col--12">Result</div>
-              <div data-v-9215aba8="" className="van-col van-col--4">Total</div>
+              <div data-v-9215aba8="" className="van-col van-col--8">{t('Period')}</div>
+              <div data-v-9215aba8="" className="van-col van-col--12">{t('Result')}</div>
+              <div data-v-9215aba8="" className="van-col van-col--4">{t('Total')}</div>
             </div>
           </div>
           <div data-v-9215aba8="" className="GameRecord__C-body">
@@ -1475,8 +1471,8 @@ useEffect(() => {
           </div>
           <div data-v-9d93d892="" className="Trend__C-head">
             <div data-v-9d93d892="" className="van-row">
-              <div data-v-9d93d892="" className="van-col van-col--8">Period</div>
-              <div data-v-9d93d892="" className="van-col van-col--16">Number</div>
+              <div data-v-9d93d892="" className="van-col van-col--8">{t('Period')}</div>
+              <div data-v-9d93d892="" className="van-col van-col--16">{t('Number')}</div>
             </div>
           </div>
          
@@ -1521,7 +1517,7 @@ useEffect(() => {
         >
           <div data-v-36ddca8e="" className="MyGameRecord__C-head">
             <div data-v-36ddca8e="" className="MyGameRecord__C-head-moreB">
-              Detail
+              {t('Detail')}
               <svg data-v-36ddca8e="" className="svg-icon icon-rightCircle">
                 <use href="#icon-rightCircle"></use>
               </svg>
@@ -1587,8 +1583,8 @@ useEffect(() => {
               <div data-v-4f526022=""></div>
             </div>
             <div data-v-3e71d3da="" className="dialog__container-footer">
-              <button data-v-3e71d3da="">Confirm</button
-              ><button data-v-3e71d3da="">Cancel</button>
+              <button data-v-3e71d3da="">{t('Confirm')}</button
+              ><button data-v-3e71d3da="">{t('Cancel')}</button>
             </div>
           </div>
           <div data-v-3e71d3da="" className="dialog__outside"></div>
@@ -1619,19 +1615,19 @@ useEffect(() => {
             </div>
             <div data-v-baf77bdf="" className="FDB__C-H">
               <div data-v-baf77bdf="" className="active">
-                <span data-v-baf77bdf="">Big</span
+                <span data-v-baf77bdf="">{t('Big')}</span
                 ><span data-v-baf77bdf="">1.98</span>
               </div>
               <div data-v-baf77bdf="" className="">
-                <span data-v-baf77bdf="">Small</span
+                <span data-v-baf77bdf="">{t('Small')}</span
                 ><span data-v-baf77bdf="">1.98</span>
               </div>
               <div data-v-baf77bdf="" className="">
-                <span data-v-baf77bdf="">Odd</span
+                <span data-v-baf77bdf="">{t('Odd')}</span
                 ><span data-v-baf77bdf="">1.98</span>
               </div>
               <div data-v-baf77bdf="" className="">
-                <span data-v-baf77bdf="">Even</span
+                <span data-v-baf77bdf="">{t('Even')}</span
                 ><span data-v-baf77bdf="">1.98</span>
               </div>
             </div>
@@ -1678,7 +1674,7 @@ useEffect(() => {
               </div>
             </div>
             <div data-v-7181abf7="" className="Betting__Popup-body-line">
-              Balance
+              {t('Balance')}
               <div data-v-7181abf7="" className="Betting__Popup-body-line-list">
                 <div
                   data-v-7181abf7=""
@@ -1698,7 +1694,7 @@ useEffect(() => {
               </div>
             </div>
             <div data-v-7181abf7="" className="Betting__Popup-body-line">
-              Quantity
+              {t('Quantity')}
               <div data-v-7181abf7="" className="Betting__Popup-body-line-btnL">
                 <div data-v-7181abf7="" className="Betting__Popup-btn bgcolor">
                   -
@@ -1767,16 +1763,16 @@ useEffect(() => {
             </div>
             <div data-v-7181abf7="" className="Betting__Popup-body-line">
               <span data-v-7181abf7="" className="Betting__Popup-agree active"
-                >I agree</span
+                >{t('I agree')}</span
               ><span data-v-7181abf7="" className="Betting__Popup-preSaleShow"
                 >《Pre-sale rules》</span
               >
             </div>
           </div>
           <div data-v-7181abf7="" className="Betting__Popup-foot">
-            <div data-v-7181abf7="" className="Betting__Popup-foot-c">Cancel</div>
+            <div data-v-7181abf7="" className="Betting__Popup-foot-c">{t('Cancel')}</div>
             <div data-v-7181abf7="" className="Betting__Popup-foot-s bgcolor">
-              Total amount₹1.00
+              {t('Total amount')}₹1.00
             </div>
           </div>
         </div>
@@ -1806,19 +1802,19 @@ useEffect(() => {
             </div>
             <div data-v-baf77bdf="" className="FDB__C-H">
               <div data-v-baf77bdf="" className="">
-                <span data-v-baf77bdf="">Big</span
+                <span data-v-baf77bdf="">{t('Big')}</span
                 ><span data-v-baf77bdf="">1.98</span>
               </div>
               <div data-v-baf77bdf="" className="">
-                <span data-v-baf77bdf="">Small</span
+                <span data-v-baf77bdf="">{t('Small')}</span
                 ><span data-v-baf77bdf="">1.98</span>
               </div>
               <div data-v-baf77bdf="" className="">
-                <span data-v-baf77bdf="">Odd</span
+                <span data-v-baf77bdf="">{t('Odd')}</span
                 ><span data-v-baf77bdf="">1.98</span>
               </div>
               <div data-v-baf77bdf="" className="">
-                <span data-v-baf77bdf="">Even</span
+                <span data-v-baf77bdf="">{t('Even')}</span
                 ><span data-v-baf77bdf="">1.98</span>
               </div>
             </div>
@@ -1976,21 +1972,21 @@ useEffect(() => {
         >
           <div data-v-e05c7c66="" className="WinningTip__C-body">
             <div data-v-e05c7c66="" className="WinningTip__C-body-l1">
-              Congratulations
+              {t('Congratulations')}!
             </div>
             <div data-v-e05c7c66="" className="WinningTip__C-body-l2">
-              Lottery results
+              {t('Lottery results')}:
               <div data-v-e05c7c66="" className="line1">
                 <div data-v-e05c7c66="">
-                  <div data-v-e05c7c66="" className="title sum">SUM</div>
+                  <div data-v-e05c7c66="" className="title sum">{t('SUM')}</div>
                   <div data-v-e05c7c66="" className="num"></div>
                 </div>
               </div>
             </div>
             <div data-v-e05c7c66="" className="WinningTip__C-body-l3">
-              <div data-v-e05c7c66="" className="head">Bonus</div>
+              <div data-v-e05c7c66="" className="head">{t('Bonus')}</div>
               <div data-v-e05c7c66="" className="bonus"></div>
-              <div data-v-e05c7c66="" className="gameDetail">Period:</div>
+              <div data-v-e05c7c66="" className="gameDetail">{t('Period')}:</div>
             </div>
             <div data-v-e05c7c66="" className="WinningTip__C-body-l4">
               <div data-v-e05c7c66="" className="acitveBtn"></div>

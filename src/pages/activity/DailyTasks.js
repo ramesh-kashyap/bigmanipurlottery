@@ -1,7 +1,10 @@
 import React from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
+import { useTranslation } from "react-i18next";
 
 export default function DailyTasks() {
+         const { t } = useTranslation();
+    
     const navigate = useNavigate();
   return (
     <div style={{fontSize: '12px'}}>
@@ -4504,7 +4507,7 @@ export default function DailyTasks() {
                             <div data-v-d7213382="" className="navi-record"><svg data-v-d7213382=""
                                     className="svg-icon icon-watchCollection">
                                     <use href="#icon-watchCollection"></use>
-                                </svg><span data-v-d7213382="">Collection record</span></div>
+                                </svg><span data-v-d7213382="">{t('Collection record')}</span></div>
                         </div>
                     </div>
                 </div>
@@ -4512,11 +4515,10 @@ export default function DailyTasks() {
             <div data-v-d7213382="" className="task-banner">
                 <div data-v-d7213382="">
                     <div data-v-d7213382="">
-                    <div data-v-d7213382="" className="banner-title">Activity Award</div>
+                    <div data-v-d7213382="" className="banner-title">{t('Activity Award')}</div>
                     <div data-v-d7213382="" className="banner-content">
-                        <div data-v-d7213382="">Complete weekly/daily tasks to receive rich rewards</div>
-                        <div data-v-d7213382="">Weekly rewards cannot be accumulated to the next week, and daily rewards
-                            cannot be accumulated to the next day.</div>
+                        <div data-v-d7213382="">{t('Complete weekly/daily tasks to receive rich rewards')}</div>
+                        <div data-v-d7213382="">{t('Weekly rewards cannot be accumulated to the next week, and daily rewards cannot be accumulated to the next day')}.</div>
                     </div>
                     </div>
                 </div>

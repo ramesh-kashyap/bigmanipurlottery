@@ -1,8 +1,11 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 export default function SuperJackpot() {
     const navigate = useNavigate();
+             const { t } = useTranslation();
+    
   return (
     <div style={{fontSize: '12px'}}>
 
@@ -4497,7 +4500,7 @@ export default function SuperJackpot() {
                         <div data-v-12a80a3e="" className="navbar__content-left" onClick={()=>navigate('/activity')}><i data-v-12a80a3e=""
                                 className="van-badge__wrapper van-icon van-icon-arrow-left"></i></div>
                         <div data-v-12a80a3e="" className="navbar__content-center">
-                            <div data-v-12a80a3e="" className="navbar__content-title">Super Jackpot</div>
+                            <div data-v-12a80a3e="" className="navbar__content-title">{t('Super Jackpot')}</div>
                         </div>
                         <div data-v-12a80a3e="" className="navbar__content-right"></div>
                     </div>
@@ -4505,26 +4508,23 @@ export default function SuperJackpot() {
             </div>
             <div data-v-6243ef37="" className="Xg-info">
                 <div data-v-6243ef37="">
-                    <h3 data-v-6243ef37="" className="tit">Super Jackpot</h3>
-                    <p data-v-6243ef37="" className="tip">When you get the Super Jackpot in 【Slots】Can get 1 additional
-                        bonus</p>
-                    <p data-v-6243ef37="" className="txt">The reward is valid for 1 day, and you will not be able to claim
-                        it after it expires!</p>
+                    <h3 data-v-6243ef37="" className="tit">{t('Super Jackpot')}</h3>
+                    <p data-v-6243ef37="" className="tip">{t('When you get the Super Jackpot in 【Slots】Can get 1 additional bonus')}</p>
+                    <p data-v-6243ef37="" className="txt">{t('The reward is valid for 1 day, and you will not be able to claim it after it expires')}!</p>
                 </div>
             </div>
             <div data-v-6243ef37="" className="Xg-page-wrap">
                 <div data-v-6243ef37="" className="receive-all no-receive"><svg data-v-6243ef37=""
                         className="svg-icon icon-super_no icon icon">
                         <use href="#icon-super_no"></use>
-                    </svg><span data-v-6243ef37="">Receive in
-                        batches</span></div>
+                    </svg><span data-v-6243ef37="">{t('Receive in batches')}</span></div>
                 <ul data-v-6243ef37="" className="tab">
                     <li data-v-6243ef37="" className="tab-item"  onClick={()=>navigate('/main/SuperJackpot/rule')}><svg data-v-6243ef37="" className="svg-icon icon-rule">
                             <use href="/main/SuperJackpot/rule"></use>
-                        </svg><span data-v-6243ef37="">Rule</span></li>
+                        </svg><span data-v-6243ef37="">{t('Rule')}</span></li>
                     <li data-v-6243ef37="" className="tab-item" onClick={()=>navigate('/main/SuperJackpot/star')}><svg data-v-6243ef37="" className="svg-icon icon-winningStar">
                             <use href="/main/SuperJackpot/star"></use>
-                        </svg><span data-v-6243ef37="">Winning star</span></li>
+                        </svg><span data-v-6243ef37="">{t('Winning star')}</span></li>
                 </ul>
                 <div data-v-cbab7763="" data-v-6243ef37="" className="infiniteScroll"
                     id="refresh6f95108ebda8438184a98dce9b919177">
@@ -4534,26 +4534,27 @@ export default function SuperJackpot() {
                                 className="svg-icon icon-empty">
                                 <use href="#icon-empty"></use>
                             </svg>
-                            <p data-v-6243ef37="">You don't have a big jackpot yet, let's bet</p>
+                            <p data-v-6243ef37="">{t('You don have a big jackpot yet let bet')}
+</p>
                         </div>
                     </div>
                 </div>
-                <div data-v-6243ef37="" className="go-bet">Go bet</div>
+                <div data-v-6243ef37="" className="go-bet">{t('Go bet')}</div>
             </div>
             <div data-v-3e71d3da="" data-v-6243ef37="" className="dialog inactive">
                 <div data-v-3e71d3da="" className="dialog__container" role="dialog" tabIndex="0">
                     <div data-v-3e71d3da="" className="dialog__container-img"><img data-v-3e71d3da="" className="succed" alt=""
                             data-origin="/assets/png/succeed-83674414.png" src="/assets/png/succeed-83674414.png"/></div>
                     <div data-v-3e71d3da="" className="dialog__container-title">
-                        <h1 data-v-3e71d3da="">Successfully received!</h1>
+                        <h1 data-v-3e71d3da="">{t('Successfully received')}!</h1>
                     </div>
                     <div data-v-3e71d3da="" className="dialog__container-content">
                         <div data-v-6243ef37="" className="Laundry-Con">
-                            <div data-v-6243ef37="" className="Laundry-Con_tip">Mega Jackpot Bonus!</div>
+                            <div data-v-6243ef37="" className="Laundry-Con_tip">{t('Mega Jackpot Bonus')}!</div>
                         </div>
                     </div>
                     <div data-v-3e71d3da="" className="dialog__container-footer"><button
-                            data-v-3e71d3da="">OK</button></div>
+                            data-v-3e71d3da="">{t('OK')}</button></div>
                 </div>
                 <div data-v-3e71d3da="" className="dialog__outside"></div>
             </div>

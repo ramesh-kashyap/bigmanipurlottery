@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Api from '../../services/Api';
+import { useTranslation } from "react-i18next";
+
 export default function Laundry() {
+         const { t } = useTranslation();
 
   const navigate = useNavigate();
   const [laundry, setLaundry] = useState([]);
@@ -9563,7 +9566,7 @@ export default function Laundry() {
               <div data-v-12a80a3e="" className="navbar__content-center">
                
                 <div data-v-12a80a3e="" className="navbar__content-title">
-                  Rebate
+                  {t('Rebate')}
                 </div>
               </div>
               <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -9574,13 +9577,13 @@ export default function Laundry() {
         <div data-v-cdf0e578="" className="laundry-page_container">
           <div data-v-cdf0e578="" className="laundry-page_box">
             <div data-v-cdf0e578="" className="title">
-              Lottery-Total betting rebate
+              {t('Lottery-Total betting rebate')}
             </div>
             <div data-v-cdf0e578="" className="lab">
               <svg data-v-cdf0e578="" className="svg-icon icon-rebateRealTime">
                 <use href="#icon-rebateRealTime"></use>
               </svg>
-              Real-time count
+              {t('Real-time count')}
             </div>
             <div data-v-cdf0e578="" className="number">
               <svg data-v-cdf0e578="" className="svg-icon icon-rebate">
@@ -9592,36 +9595,36 @@ export default function Laundry() {
 
             </div>
             <div data-v-cdf0e578="" className="txt">
-              Upgrade VIP level to increase rebate rate
+              {t('Upgrade VIP level to increase rebate rate')}
             </div>
             <div data-v-cdf0e578="" className="c-row">
               <div data-v-cdf0e578="" className="item">
                 <div data-v-cdf0e578=""  style={{display: 'none'}}>
-                  <p data-v-cdf0e578="" className="tit">Today rebate</p>
+                  <p data-v-cdf0e578="" className="tit">{t('Today rebate')}</p>
                   <span data-v-cdf0e578="" className="num"> </span>
                 </div>
                 <div data-v-cdf0e578="" >
-                  <p data-v-cdf0e578="" className="tit">Rebate rate</p>
+                  <p data-v-cdf0e578="" className="tit">{t('Rebate rate')}</p>
                   <span data-v-cdf0e578="" className="num red">0.03%</span>
                 </div>
               </div>
               <div data-v-cdf0e578="" className="item">
-                <p data-v-cdf0e578="" className="tit">Total rebate</p>
+                <p data-v-cdf0e578="" className="tit">{t('Total rebate')}</p>
                 <span data-v-cdf0e578="" className="num">{laundry.netAmount>0?laundry.netAmount: 0}</span>
               </div>
             </div>
             <div data-v-cdf0e578="" className="tip">
-              Automatic code washing at 01:00:00 every morning
+              {t('Automatic code washing at 01:00:00 every morning')}
             </div>
             <button 
   data-v-cdf0e578="" 
   className="btn" 
   onClick={getRebateBonus}
 >
-  One-Click Rebate
+  {t('One-Click Rebate')}
 </button>
             <p data-v-cdf0e578="" className="rule"  style={{display: 'none'}}>
-              Learn the rules<img
+              {t('Learn the rules')}<img
                 data-v-cdf0e578=""
                 className="rule-img"
                 src="/assets/png/ruleicon-81461832.png"
@@ -9696,22 +9699,22 @@ export default function Laundry() {
               />
             </div>
             <div data-v-3e71d3da="" className="dialog__container-title">
-              <h1 data-v-3e71d3da="">Lottery-Betting rebate</h1>
+              <h1 data-v-3e71d3da="">{t('Lottery-Betting rebate')}</h1>
             </div>
             <div data-v-3e71d3da="" className="dialog__container-content">
               <div data-v-cdf0e578="" className="Laundry-Con">
                 <div data-v-cdf0e578="" className="Laundry-Con_tip">
-                  One-Click Rebate succesfull
+                  {t('One-Click Rebate succesfull')}
                 </div>
                 <div data-v-cdf0e578="" className="Laundry-Con_txt">
-                  Rebate amount:<span data-v-cdf0e578="" className="number"
+                  {t('Rebate amount')}:<span data-v-cdf0e578="" className="number"
                     >0.00</span
                   >
                 </div>
               </div>
             </div>
             <div data-v-3e71d3da="" className="dialog__container-footer">
-              <button data-v-3e71d3da="">Confirm</button
+              <button data-v-3e71d3da="">{t('Confirm')}</button
               >
             </div>
            

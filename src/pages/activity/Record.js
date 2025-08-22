@@ -1,6 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
+
 export default function Record() {
+                       const { t } = useTranslation();
+  
   const navigate = useNavigate();
   return (
     <div style={{fontSize: '12px'}}> 
@@ -9520,7 +9524,7 @@ export default function Record() {
               <div data-v-12a80a3e="" className="navbar__content-center">
                 
                 <div data-v-12a80a3e="" className="navbar__content-title">
-                  Attendance history
+                  {t('Attendance history')}
                 </div>
               </div>
               <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -9547,7 +9551,7 @@ export default function Record() {
               <svg data-v-f84b843f="" className="svg-icon icon-empty">
                 <use href="#icon-empty"></use>
               </svg>
-              <p data-v-f84b843f="">No data</p>
+              <p data-v-f84b843f="">{t('No data')}</p>
             </div>
           </div>    
         </div>

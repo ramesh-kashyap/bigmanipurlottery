@@ -4,8 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import { useToast } from '../../components/ToastContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown , faChevronLeft } from '@fortawesome/free-solid-svg-icons';
-export default function Register() {
+import { useTranslation } from "react-i18next";
 
+export default function Register() {
+    const { t } = useTranslation();
     const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -9643,11 +9645,11 @@ export default function Register() {
       </div>
       <div data-v-4752d5f1="" className="resgister__C-heading">
         <h1 data-v-4752d5f1="" className="resgister__C-heading__title">
-          Register
+          {t('Register')}
         </h1>
         <div data-v-4752d5f1="" className="resgister__C-heading__subTitle">
           <span data-v-4752d5f1=""
-            >Please register by phone number or email</span
+            >{t('Please register by phone number or email')}</span
           >
         </div>
       </div>
@@ -9656,7 +9658,7 @@ export default function Register() {
           <svg data-v-4752d5f1="" className="svg-icon icon-phone">
             <use href="#icon-phone"></use>
           </svg>
-          <div data-v-4752d5f1="">Register your phone</div>
+          <div data-v-4752d5f1="">{t('Register your phone')}</div>
         </div>
         
       </div>
@@ -9676,7 +9678,7 @@ export default function Register() {
               <div data-v-50aa8bb0="" className="phoneInput__container-label">
                 <svg data-v-50aa8bb0="" className="svg-icon icon-phone">
                   <use href="#icon-phone"></use></svg
-                ><span data-v-50aa8bb0="">Phone number</span>
+                ><span data-v-50aa8bb0="">{t('Phone number')}</span>
               </div>
               <div data-v-50aa8bb0="" className="phoneInput__container-input">
               <div data-v-5067ef5e="" data-v-50aa8bb0="" className="dropdown">
@@ -9708,7 +9710,7 @@ export default function Register() {
                 data-v-50aa8bb0=""
                 type="text"
                 name="phone"
-                placeholder="Please enter the phone number"
+                placeholder={t('Please enter the phone number')}
                 value={phone} 
                 onChange={(e) => setPhone(e.target.value)}
               />
@@ -9745,8 +9747,8 @@ export default function Register() {
                   className="van-badge__wrapper van-icon van-icon-warning-o"
                   ></i
                 ><span data-v-c17848a2=""
-                  >Did not receive verification code?</span
-                ><span data-v-c17848a2="">Contact customer service</span>
+                  >{t('Did not receive verification code?')}</span
+                ><span data-v-c17848a2="">{t('Contact customer service')}</span>
               </div>
             </div>
             <div
@@ -9760,13 +9762,13 @@ export default function Register() {
                   className="svg-icon icon-editPswIcon passwordInput__container-label__icon passwordInput__container-label__icon"
                 >
                   <use href="#icon-editPswIcon"></use></svg
-                ><span data-v-ea5b66c8="">Set password</span>
+                ><span data-v-ea5b66c8="">{t('Set password')}</span>
               </div>
               <div data-v-ea5b66c8="" className="passwordInput__container-input">
               <input
                 type={isPasswordVisible1 ? 'text':'password'}
                 name="password"
-                placeholder="Set password"
+                placeholder={t('Set password')}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 data-v-ea5b66c8=""
@@ -9785,8 +9787,7 @@ export default function Register() {
             >
               <div data-v-e26f70e7="" className="tipbg"></div>
               <span data-v-e26f70e7=""
-                >The password must be at least 8 digits and must contain
-                letters + numbers</span
+                >{t('The password must be at least 8 digits and must contain letters + numbers')}</span
               >
             </div>
             <div
@@ -9800,7 +9801,7 @@ export default function Register() {
                   className="svg-icon icon-editPswIcon passwordInput__container-label__icon passwordInput__container-label__icon"
                 >
                   <use href="#icon-editPswIcon"></use></svg
-                ><span data-v-ea5b66c8="">Confirm password</span>
+                ><span data-v-ea5b66c8="">{t('Confirm password')}</span>
               </div>
               <div data-v-ea5b66c8="" className="passwordInput__container-input">
                 
@@ -9808,7 +9809,7 @@ export default function Register() {
                 data-v-ea5b66c8=""
                 type={isPasswordVisible ?'text':'password'}
                 name="confirmPassword"
-                placeholder="Confirm password"
+                placeholder={t('Confirm password')}
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
               /><img
@@ -9825,7 +9826,7 @@ export default function Register() {
               style={{display : 'none'}}
             >
               <span data-v-e26f70e7=""
-                >Entered twice the password does not match!</span
+                >{t('Entered twice the password does not match!')}</span
               >
             </div>
             <div data-v-e26f70e7="" className="register__container-invitation">
@@ -9835,7 +9836,7 @@ export default function Register() {
               >
                 <svg data-v-e26f70e7="" className="svg-icon icon-invitation">
                   <use href="#icon-invitation"></use></svg
-                ><span data-v-e26f70e7="">Invite code</span>
+                ><span data-v-e26f70e7="">{t('Invite code')}</span>
               </div>
               <div
                 data-v-e26f70e7=""
@@ -9845,7 +9846,7 @@ export default function Register() {
                 data-v-e26f70e7=""
                 type="text"
                 name="invitecode"
-                placeholder="Enter invite code"
+                placeholder={t('Enter invite code')}
                 value={invitecode}
                 onChange={(e) => setInvitecode(e.target.value)}
               />
@@ -9866,18 +9867,18 @@ export default function Register() {
                   >
                 </div>
                 <span className="van-checkbox__label"
-                  >I have read and agree
-                  <span data-v-e26f70e7="">【Privacy Agreement】</span></span
+                  >{t('I have read and agree')}
+                  <span data-v-e26f70e7="">{t('【Privacy Agreement】')}</span></span
                 >
               </div>
             </div>
             <div data-v-e26f70e7="" className="register__container-button">
-              <button data-v-e26f70e7="" type="submit">Register</button
+              <button data-v-e26f70e7="" type="submit">{t('Register')}</button
               ><button data-v-e26f70e7="" className="login">
                 <div data-v-e26f70e7="" className="account">
-                  I have an account
+                  {t('I have an account')}
                 </div>
-                <div data-v-e26f70e7="" className="loginin" onClick={()=>navigate('/login')}>Login</div>
+                <div data-v-e26f70e7="" className="loginin" onClick={()=>navigate('/login')}>{t('login')}</div>
               </button>
             </div>
             </form>

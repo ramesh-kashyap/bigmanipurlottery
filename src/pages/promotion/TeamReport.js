@@ -2,10 +2,13 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Api from '../../services/Api';
 import { useToast } from '../../components/ToastContext'; 
+import { useTranslation } from "react-i18next";
 
 
 
 export default function TeamReport(){
+       const { t } = useTranslation();
+  
   const navigate =  useNavigate();
   const [isVisible, setIsVisible] = useState(false);
   const [isSecondVisible, setIsSecondVisible] = useState(false);
@@ -9759,7 +9762,7 @@ console.log(formattedFullDate);
               <div data-v-12a80a3e="" className="navbar__content-center">
                 
                 <div data-v-12a80a3e="" className="navbar__content-title">
-                  Subordinate data
+                  {t('Subordinate data')}
                 </div>
               </div>
               <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -9779,7 +9782,7 @@ console.log(formattedFullDate);
                 auto-complete="new-password"
                 autocomplete="off"
                 className="searchbar-container__searchbar"
-                placeholder="Search subordinate UID"
+  placeholder={t('Search subordinate UID')} 
                 maxlength="30"
                 value={searchTerm}
                 onChange={handleSearch}
@@ -9816,29 +9819,29 @@ console.log(formattedFullDate);
            <div data-v-10d1559c="" className="header-container">
             <div data-v-10d1559c="">
               <div data-v-10d1559c="" className="num">{teamRecord.totalDepositCount}</div>
-              <div data-v-10d1559c="">Deposit number</div>
+              <div data-v-10d1559c="">{t('Deposit number')}</div>
             </div>
             <div data-v-10d1559c="">
               <div data-v-10d1559c="" className="num">{teamRecord.totalDepositAmount}</div>
-              <div data-v-10d1559c="">Deposit amount</div>
+              <div data-v-10d1559c="">{t('Deposit amount')}</div>
             </div>
             <div data-v-10d1559c="">
               <div data-v-10d1559c="" className="num">{teamRecord.totalBetCount}</div>
-              <div data-v-10d1559c="">Number of bettors</div> 
+              <div data-v-10d1559c="">{t('Number of bettors')}</div> 
             </div>
             <div data-v-10d1559c="">
               <div data-v-10d1559c="" className="num">{teamRecord.totalBetAmount}</div>
-              <div data-v-10d1559c="">Total bet</div>
+              <div data-v-10d1559c="">{t('Total bet')}</div>
             </div>
             <div data-v-10d1559c="">
               <div data-v-10d1559c="" className="num">{teamRecord.totalFirstDeposits}</div>
               <div data-v-10d1559c="">
-                Number of people making first deposit
+                {t('Number of people making first deposit')}
               </div>
             </div>
             <div data-v-10d1559c="">
               <div data-v-10d1559c="" className="num">{teamRecord.totalFirstDepositsAmount}</div>
-              <div data-v-10d1559c="">First deposit amount</div>
+              <div data-v-10d1559c="">{t('First deposit amount')}</div>
             </div>
           </div> 
            {filteredReports.length === 0 ? (
@@ -9850,7 +9853,7 @@ console.log(formattedFullDate);
             <svg data-v-f84b843f="" className="svg-icon icon-empty">
               <use href="#icon-empty"></use>
             </svg>
-            <p data-v-f84b843f="">No data</p>
+            <p data-v-f84b843f="">{t('No data')}</p>
           </div>
         ) : (
           filteredReports.map((history, index) => (
@@ -9858,7 +9861,7 @@ console.log(formattedFullDate);
           <div   key={index} data-v-cbab7763="" data-v-10d1559c="" className="infiniteScroll" id="refresh0f885699af8c4c80976c554b8e8b6dd5">
       <div data-v-10d1559c="" className="TeamReport__C-body-item">
         <div data-v-10d1559c="" className="TeamReport__C-body-item-head">
-          <div data-v-10d1559c="" className="title">UID : {history.id_user}</div>
+          <div data-v-10d1559c="" className="title">{t('UID')} : {history.id_user}</div>
           <svg data-v-10d1559c="" className="svg-icon icon-copy"  onClick={() => fetchPromotionInfo(history.id_user)} >
             <use xlinkHref="#icon-copy"></use>
           </svg>
@@ -9869,17 +9872,17 @@ console.log(formattedFullDate);
 
         <div data-v-10d1559c="" className="TeamReport__C-body-item-detail">
           <div data-v-10d1559c="" className="TeamReport__C-body-item-detail-lv">
-            Level<span data-v-10d1559c="">{history.level}</span>
+            {t('Level')}<span data-v-10d1559c="">{history.level}</span>
           </div>
           <div data-v-10d1559c="" className="TeamReport__C-body-item-detail-commission">
-            Deposit amount<span data-v-10d1559c="">{history.total_money}</span>
+            {t('Deposit amount')}<span data-v-10d1559c="">{history.total_money}</span>
           </div>
           <div data-v-10d1559c="" className="TeamReport__C-body-item-detail-commission" >
-           Total Bet amount<span data-v-10d1559c="">{history.total_bet}</span>
+           {t('Total Bet amount')}<span data-v-10d1559c="">{history.total_bet}</span>
           </div>
           
           <div data-v-10d1559c="" className="TeamReport__C-body-item-detail-time">
-            Time<span data-v-10d1559c="">{formatDate(history.updated_at)}</span>  
+            {t('Time')}<span data-v-10d1559c="">{formatDate(history.updated_at)}</span>  
           </div>
         </div>
       </div>
@@ -9907,12 +9910,12 @@ console.log(formattedFullDate);
   <div data-v-10d1559c="" className="van-picker">
     <div className="van-picker__toolbar">
       <button type="button" className="van-picker__cancel van-haptics-feedback" onClick={handleCancel}>
-        Cancel</button
+        {t('Cancel')}</button
       ><button
         type="button"
         className="van-picker__confirm van-haptics-feedback"   onClick={handleConfirm}
       >
-        Confirm
+        {t('Confirm')}
       </button>
     </div>
     
@@ -9939,7 +9942,7 @@ console.log(formattedFullDate);
             className="van-picker-column__item van-picker-column__item--selected" id="All" onClick={()=>tier('All')}
             style={{height: '44px'}} 
           >
-            <div className="van-ellipsis">All</div>
+            <div className="van-ellipsis">{t('All')}</div>
           </li>
           <li
             role="button"
@@ -9947,7 +9950,7 @@ console.log(formattedFullDate);
             className="van-picker-column__item" id="tier2" onClick={()=>tier('tier2')}
             style={{height: '44px'}}
           >
-            <div className="van-ellipsis">Tier 1</div>
+            <div className="van-ellipsis">{t('Tier')} 1</div>
           </li>
           <li
             role="button"
@@ -9955,7 +9958,7 @@ console.log(formattedFullDate);
             className="van-picker-column__item" id="tier3" onClick={()=>tier('tier3')}
             style={{height: '44px'}}
           >
-            <div className="van-ellipsis">Tier 2</div>
+            <div className="van-ellipsis">{t('Tier')} 2</div>
           </li>
           <li
             role="button"
@@ -9963,7 +9966,7 @@ console.log(formattedFullDate);
             className="van-picker-column__item" id="tier4" onClick={()=>tier('tier4')}
             style={{height: '44px'}}
           >
-            <div className="van-ellipsis">Tier 3</div>
+            <div className="van-ellipsis">{t('Tier')} 3</div>
           </li>
           <li
             role="button"
@@ -9971,7 +9974,7 @@ console.log(formattedFullDate);
             className="van-picker-column__item" id="tier5" onClick={()=>tier('tier5')}
             style={{height: '44px'}}
           >
-            <div className="van-ellipsis">Tier 4</div>
+            <div className="van-ellipsis">{t('Tier')} 4</div>
           </li>
           <li
             role="button"
@@ -9979,7 +9982,7 @@ console.log(formattedFullDate);
             className="van-picker-column__item" id="tier6" onClick={()=>tier('tier6')}
             style={{height: '44px'}}
           >
-            <div className="van-ellipsis">Tier 5</div>
+            <div className="van-ellipsis">{t('Tier')} 5</div>
           </li>
           <li
             role="button"
@@ -9987,7 +9990,7 @@ console.log(formattedFullDate);
             className="van-picker-column__item" id="tier7" onClick={()=>tier('tier7')}
             style={{height: '44px'}}
           >
-            <div className="van-ellipsis">Tier 6</div>
+            <div className="van-ellipsis">{t('Tier')} 6</div>
           </li>
         </ul>
       </div>
@@ -10012,11 +10015,11 @@ console.log(formattedFullDate);
   <div data-v-10d1559c="" className="van-picker">
     <div className="van-picker__toolbar">
       <button type="button" className="van-picker__cancel van-haptics-feedback" onClick={handleSecondCancel}>
-        Cancel
+       {t('Cancel')}
       </button>
-      <div className="van-picker__title van-ellipsis">Choose a date</div>
+      <div className="van-picker__title van-ellipsis">{t('Choose a date')}</div>
       <button type="button" className="van-picker__confirm van-haptics-feedback"  onClick={handleConfirm2}>
-        Confirm
+        {t('Confirm')}
       </button>
     </div>
     

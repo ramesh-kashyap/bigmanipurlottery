@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Api from '../../services/Api';
 import { useToast } from '../../components/ToastContext'; 
+import { useTranslation } from "react-i18next";
 
 
 
 export default function InvitationBonu() {
+          const { t } = useTranslation();
  
     const navigate = useNavigate();
     const [bonus, setBonus] = useState([]);
@@ -9667,7 +9669,7 @@ export default function InvitationBonu() {
             <div data-v-12a80a3e="" className="navbar__content-center">
              
               <div data-v-12a80a3e="" className="navbar__content-title">
-                Invitation bonus
+                {t('Invitation bonus')}
               </div>
             </div>
             <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -9680,17 +9682,17 @@ export default function InvitationBonu() {
         style={{'--f13b4d11CurrentFontFamily': "'Roboto', 'Inter', 'sansSerif"}}
       >
         <div data-v-b733e3c6="" className="title left">
-          Invite friends and deposit
+          {t('Invite friends and deposit')}
         </div>
         <div data-v-b733e3c6="" className="bonus-header-flex">
           <div data-v-b733e3c6="">
             <div data-v-b733e3c6="" className="tip left">
-              Both parties can receive rewards
+              {t('Both parties can receive rewards')}
             </div>
             <div data-v-b733e3c6="" className="tip left">
-              Invite friends to register and recharge to receive rewards
+              {t('Invite friends to register and recharge to receive rewards')}
             </div>
-            <div data-v-b733e3c6="" className="tip left">activity date</div>
+            <div data-v-b733e3c6="" className="tip left">{t('activity date')}</div>
             <div data-v-b733e3c6="" className="time left">
               2000-01-01 - 2099-01-01
             </div>
@@ -9698,9 +9700,9 @@ export default function InvitationBonu() {
         </div>
         <div data-v-b733e3c6="" className="nav">                    
         <div data-v-b733e3c6="" className="rule" onClick={() => navigate('/activity/DailySignIn/Rules')}>
-          Invitation reward rules</div>         
+          {t('Invitation reward rules')}</div>         
           <div data-v-b733e3c6="" className="record"  onClick={() => navigate('/main/InvitationBonus/Record')}
-          >Invitation record</div>
+          >{t('Invitation record')}</div>
         </div>
       </div>
       <div
@@ -9711,32 +9713,32 @@ export default function InvitationBonu() {
         <div data-v-b733e3c6="" className="bonus-items">
           <div data-v-b733e3c6="" className="head">
             <div data-v-b733e3c6="" className="left">
-              Bonus
+              {t('Bonus')}
               <div data-v-b733e3c6="">1</div>
             </div>
             <div data-v-b733e3c6="" className="right">₹55.00</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Number of invitees</div>
+            <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             <div data-v-b733e3c6="" className="people">1</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Recharge per people</div>
+            <div data-v-b733e3c6="" className="text">{t('Recharge per people')}</div>
             <div data-v-b733e3c6="" className="num">₹500.00</div>
           </div>
           <div data-v-b733e3c6="" className="line"></div>
           <div data-v-b733e3c6="" className="task">
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="peopleval">{bonus.totalMembers} / 1</div>
-              <div data-v-b733e3c6="" className="text">Number of invitees</div>
+              <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             </div>
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="rechargeval">{bonus.totalActiveMember} / 1</div>
-              <div data-v-b733e3c6="" className="text">Deposit number</div>
+              <div data-v-b733e3c6="" className="text">{t('Deposit number')}</div>
             </div>
           </div>
           { bonus.task1 ?
-          <div data-v-b733e3c6="" className="btn ">Recieved</div>
+          <div data-v-b733e3c6="" className="btn ">{t('Recieved')}</div>
           :
            checkBonus(1)?
            <div 
@@ -9747,39 +9749,38 @@ export default function InvitationBonu() {
       Claim
     </div>
           :
-          <div data-v-b733e3c6="" className="btn">Unfinished</div>
+          <div data-v-b733e3c6="" className="btn">{t('Unfinished')}</div>
 
 }
         </div>
         <div data-v-b733e3c6="" className="bonus-items">
           <div data-v-b733e3c6="" className="head">
             <div data-v-b733e3c6="" className="left">
-              Bonus
-              <div data-v-b733e3c6="">2</div>
+{t('Bonus')}              <div data-v-b733e3c6="">2</div>
             </div>
             <div data-v-b733e3c6="" className="right">₹155.00</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Number of invitees</div>
+            <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             <div data-v-b733e3c6="" className="people">3</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Recharge per people</div>
+            <div data-v-b733e3c6="" className="text">{t('Recharge per people')}</div>
             <div data-v-b733e3c6="" className="num">₹500.00</div>
           </div>
           <div data-v-b733e3c6="" className="line"></div>
           <div data-v-b733e3c6="" className="task">
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="peopleval">{bonus.totalMembers} / 3</div>
-              <div data-v-b733e3c6="" className="text">Number of invitees</div>
+              <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             </div>
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="rechargeval">{bonus.totalActiveMember} / 3</div>
-              <div data-v-b733e3c6="" className="text">Deposit number</div>
+              <div data-v-b733e3c6="" className="text">{t('Deposit number')}</div>
             </div>
           </div>
           { bonus.task2 ?
-    <div data-v-b733e3c6="" className="btn ">Recieved</div>
+    <div data-v-b733e3c6="" className="btn ">{t('Recieved')}</div>
     :
     checkBonus(2) ?  // For task1, pass 1 as the task number
     <div 
@@ -9790,38 +9791,38 @@ export default function InvitationBonu() {
       Claim
     </div>
     :
-    <div data-v-b733e3c6="" className="btn">Unfinished</div>
+    <div data-v-b733e3c6="" className="btn">{t('Unfinished')}</div>
   }
         </div>
         <div data-v-b733e3c6="" className="bonus-items">
           <div data-v-b733e3c6="" className="head">
             <div data-v-b733e3c6="" className="left">
-              Bonus
+              {t('Bonus')}
               <div data-v-b733e3c6="">3</div>
             </div>
             <div data-v-b733e3c6="" className="right">₹555.00</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Number of invitees</div>
+            <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             <div data-v-b733e3c6="" className="people">10</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Recharge per people</div>
+            <div data-v-b733e3c6="" className="text">{t('Recharge per people')}</div>
             <div data-v-b733e3c6="" className="num">₹500.00</div>
           </div>
           <div data-v-b733e3c6="" className="line"></div>
           <div data-v-b733e3c6="" className="task">
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="peopleval">{bonus.totalMembers} / 10</div>
-              <div data-v-b733e3c6="" className="text">Number of invitees</div>
+              <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             </div>
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="rechargeval">{bonus.totalActiveMember} / 10</div>
-              <div data-v-b733e3c6="" className="text">Deposit number</div>
+              <div data-v-b733e3c6="" className="text">{t('Deposit number')}</div>
             </div>
           </div>
            { bonus.task3 ?
-    <div data-v-b733e3c6="" className="btn ">Recieved</div>
+    <div data-v-b733e3c6="" className="btn ">{t('Recieved')}</div>
     :
     checkBonus(3) ?  // For task1, pass 1 as the task number
 <div 
@@ -9831,38 +9832,38 @@ export default function InvitationBonu() {
     >
       Claim
     </div>    :
-    <div data-v-b733e3c6="" className="btn">Unfinished</div>
+    <div data-v-b733e3c6="" className="btn">{t('Unfinished')}</div>
   }
         </div>
         <div data-v-b733e3c6="" className="bonus-items">
           <div data-v-b733e3c6="" className="head">
             <div data-v-b733e3c6="" className="left">
-              Bonus
+              {t('Bonus')}
               <div data-v-b733e3c6="">4</div>
             </div>
             <div data-v-b733e3c6="" className="right">₹1,555.00</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Number of invitees</div>
+            <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             <div data-v-b733e3c6="" className="people">30</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Recharge per people</div>
+            <div data-v-b733e3c6="" className="text">{t('Recharge per people')}</div>
             <div data-v-b733e3c6="" className="num">₹500.00</div>
           </div>
           <div data-v-b733e3c6="" className="line"></div>
           <div data-v-b733e3c6="" className="task">
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="peopleval">{bonus.totalMembers} / 30</div>
-              <div data-v-b733e3c6="" className="text">Number of invitees</div>
+              <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             </div>
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="rechargeval">{bonus.totalActiveMember} / 30</div>
-              <div data-v-b733e3c6="" className="text">Deposit number</div>
+              <div data-v-b733e3c6="" className="text">{t('Deposit number')}</div>
             </div>
           </div>
            { bonus.task4 ?
-    <div data-v-b733e3c6="" className="btn ">Recieved</div>
+    <div data-v-b733e3c6="" className="btn ">{t('Recieved')}</div>
     :
     checkBonus(4) ?  // For task1, pass 1 as the task number
 <div 
@@ -9872,38 +9873,38 @@ export default function InvitationBonu() {
     >
       Claim
     </div>    :
-    <div data-v-b733e3c6="" className="btn">Unfinished</div>
+    <div data-v-b733e3c6="" className="btn">{t('Unfinished')}</div>
   }
         </div>
         <div data-v-b733e3c6="" className="bonus-items">
           <div data-v-b733e3c6="" className="head">
             <div data-v-b733e3c6="" className="left">
-              Bonus
+              {t('Bonus')}
               <div data-v-b733e3c6="">5</div>
             </div>
             <div data-v-b733e3c6="" className="right">₹2,775.00</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Number of invitees</div>
+            <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             <div data-v-b733e3c6="" className="people">50</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Recharge per people</div>
+            <div data-v-b733e3c6="" className="text">{t('Recharge per people')}</div>
             <div data-v-b733e3c6="" className="num">₹500.00</div>
           </div>
           <div data-v-b733e3c6="" className="line"></div>
           <div data-v-b733e3c6="" className="task">
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="peopleval">{bonus.totalMembers} / 50</div>
-              <div data-v-b733e3c6="" className="text">Number of invitees</div>
+              <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             </div>
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="rechargeval">{bonus.totalActiveMember} / 50</div>
-              <div data-v-b733e3c6="" className="text">Deposit number</div>
+              <div data-v-b733e3c6="" className="text">{t('Deposit number')}</div>
             </div>
           </div>
            { bonus.task5 ?
-    <div data-v-b733e3c6="" className="btn ">Recieved</div>
+    <div data-v-b733e3c6="" className="btn ">{t('Recieved')}</div>
     :
     checkBonus(5) ?  // For task1, pass 1 as the task number
 <div 
@@ -9913,38 +9914,38 @@ export default function InvitationBonu() {
     >
       Claim
     </div>    :
-    <div data-v-b733e3c6="" className="btn">Unfinished</div>
+    <div data-v-b733e3c6="" className="btn">{t('Unfinished')}</div>
   }
         </div>
         <div data-v-b733e3c6="" className="bonus-items">
           <div data-v-b733e3c6="" className="head">
             <div data-v-b733e3c6="" className="left">
-              Bonus
+             {t('Bonus')}
               <div data-v-b733e3c6="">6</div>
             </div>
             <div data-v-b733e3c6="" className="right">₹4,165.00</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Number of invitees</div>
+            <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             <div data-v-b733e3c6="" className="people">75</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Recharge per people</div>
+            <div data-v-b733e3c6="" className="text">{t('Recharge per people')}</div>
             <div data-v-b733e3c6="" className="num">₹500.00</div>
           </div>
           <div data-v-b733e3c6="" className="line"></div>
           <div data-v-b733e3c6="" className="task">
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="peopleval">{bonus.totalMembers} / 75</div>
-              <div data-v-b733e3c6="" className="text">Number of invitees</div>
+              <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             </div>
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="rechargeval">{bonus.totalActiveMember} / 75</div>
-              <div data-v-b733e3c6="" className="text">Deposit number</div>
+              <div data-v-b733e3c6="" className="text">{t('Deposit number')}</div>
             </div>
           </div>
            { bonus.task6 ?
-    <div data-v-b733e3c6="" className="btn ">Recieved</div>
+    <div data-v-b733e3c6="" className="btn ">{t('Recieved')}</div>
     :
     checkBonus(6) ?  // For task1, pass 1 as the task number
 <div 
@@ -9954,38 +9955,38 @@ export default function InvitationBonu() {
     >
       Claim
     </div>    :
-    <div data-v-b733e3c6="" className="btn">Unfinished</div>
+    <div data-v-b733e3c6="" className="btn">{t('Unfinished')}</div>
   }
         </div>
         <div data-v-b733e3c6="" className="bonus-items">
           <div data-v-b733e3c6="" className="head">
             <div data-v-b733e3c6="" className="left">
-              Bonus
+             {t('Bonus')}
               <div data-v-b733e3c6="">7</div>
             </div>
             <div data-v-b733e3c6="" className="right">₹5,555.00</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Number of invitees</div>
+            <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             <div data-v-b733e3c6="" className="people">100</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Recharge per people</div>
+            <div data-v-b733e3c6="" className="text">{t('Recharge per people')}</div>
             <div data-v-b733e3c6="" className="num">₹500.00</div>
           </div>
           <div data-v-b733e3c6="" className="line"></div>
           <div data-v-b733e3c6="" className="task">
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="peopleval">{bonus.totalMembers} / 100</div>
-              <div data-v-b733e3c6="" className="text">Number of invitees</div>
+              <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             </div>
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="rechargeval">{bonus.totalActiveMember} / 100</div>
-              <div data-v-b733e3c6="" className="text">Deposit number</div>
+              <div data-v-b733e3c6="" className="text">{t('Deposit number')}</div>
             </div>
           </div>
            { bonus.task7 ?
-    <div data-v-b733e3c6="" className="btn ">Recieved</div>
+    <div data-v-b733e3c6="" className="btn ">{t('Recieved')}</div>
     :
     checkBonus(7) ?  // For task1, pass 1 as the task number
 <div 
@@ -9995,38 +9996,38 @@ export default function InvitationBonu() {
     >
       Claim
     </div>    :
-    <div data-v-b733e3c6="" className="btn">Unfinished</div>
+    <div data-v-b733e3c6="" className="btn">{t('Unfinished')}</div>
   }
         </div>
         <div data-v-b733e3c6="" className="bonus-items">
           <div data-v-b733e3c6="" className="head">
             <div data-v-b733e3c6="" className="left">
-              Bonus
+             {t('Bonus')}
               <div data-v-b733e3c6="">8</div>
             </div>
             <div data-v-b733e3c6="" className="right">₹11,111.00</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Number of invitees</div>
+            <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             <div data-v-b733e3c6="" className="people">200</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Recharge per people</div>
+            <div data-v-b733e3c6="" className="text">{t('Recharge per people')}</div>
             <div data-v-b733e3c6="" className="num">₹500.00</div>
           </div>
           <div data-v-b733e3c6="" className="line"></div>
           <div data-v-b733e3c6="" className="task">
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="peopleval">{bonus.totalMembers} / 200</div>
-              <div data-v-b733e3c6="" className="text">Number of invitees</div>
+              <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             </div>
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="rechargeval">{bonus.totalActiveMember} / 200</div>
-              <div data-v-b733e3c6="" className="text">Deposit number</div>
+              <div data-v-b733e3c6="" className="text">{t('Deposit number')}</div>
             </div>
           </div>
            { bonus.task8 ?
-    <div data-v-b733e3c6="" className="btn ">Recieved</div>
+    <div data-v-b733e3c6="" className="btn ">{t('Recieved')}</div>
     :
     checkBonus(8) ?  // For task1, pass 1 as the task number
 <div 
@@ -10036,38 +10037,38 @@ export default function InvitationBonu() {
     >
       Claim
     </div>    :
-    <div data-v-b733e3c6="" className="btn">Unfinished</div>
+    <div data-v-b733e3c6="" className="btn">{t('Unfinished')}</div>
   }
         </div>
         <div data-v-b733e3c6="" className="bonus-items">
           <div data-v-b733e3c6="" className="head">
             <div data-v-b733e3c6="" className="left">
-              Bonus
+            {t('Bonus')}
               <div data-v-b733e3c6="">9</div>
             </div>
             <div data-v-b733e3c6="" className="right">₹27,777.00</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Number of invitees</div>
+            <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             <div data-v-b733e3c6="" className="people">500</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Recharge per people</div>
+            <div data-v-b733e3c6="" className="text">{t('Recharge per people')}</div>
             <div data-v-b733e3c6="" className="num">₹500.00</div>
           </div>
           <div data-v-b733e3c6="" className="line"></div>
           <div data-v-b733e3c6="" className="task">
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="peopleval">{bonus.totalMembers} / 500</div>
-              <div data-v-b733e3c6="" className="text">Number of invitees</div>
+              <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             </div>
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="rechargeval">{bonus.totalActiveMember} / 500</div>
-              <div data-v-b733e3c6="" className="text">Deposit number</div>
+              <div data-v-b733e3c6="" className="text">{t('Deposit number')}</div>
             </div>
           </div>
            { bonus.task9 ?
-    <div data-v-b733e3c6="" className="btn ">Recieved</div>
+    <div data-v-b733e3c6="" className="btn ">{t('Recieved')}</div>
     :
     checkBonus(9) ?  // For task1, pass 1 as the task number
 <div 
@@ -10077,38 +10078,38 @@ export default function InvitationBonu() {
     >
       Claim
     </div>    :
-    <div data-v-b733e3c6="" className="btn">Unfinished</div>
+    <div data-v-b733e3c6="" className="btn">{t('Unfinished')}</div>
   }
         </div>
         <div data-v-b733e3c6="" className="bonus-items">
           <div data-v-b733e3c6="" className="head">
             <div data-v-b733e3c6="" className="left">
-              Bonus
+              {t('Bonus')}
               <div data-v-b733e3c6="">10</div>
             </div>
             <div data-v-b733e3c6="" className="right">₹48,555.00</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Number of invitees</div>
+            <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             <div data-v-b733e3c6="" className="people">1000</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Recharge per people</div>
+            <div data-v-b733e3c6="" className="text">{t('Recharge per people')}</div>
             <div data-v-b733e3c6="" className="num">₹500.00</div>
           </div>
           <div data-v-b733e3c6="" className="line"></div>
           <div data-v-b733e3c6="" className="task">
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="peopleval">{bonus.totalMembers} / 1000</div>
-              <div data-v-b733e3c6="" className="text">Number of invitees</div>
+              <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             </div>
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="rechargeval">{bonus.totalActiveMember} / 1000</div>
-              <div data-v-b733e3c6="" className="text">Deposit number</div>
+              <div data-v-b733e3c6="" className="text">{t('Deposit number')}</div>
             </div>
           </div>
            { bonus.task10 ?
-    <div data-v-b733e3c6="" className="btn ">Recieved</div>
+    <div data-v-b733e3c6="" className="btn ">{t('Recieved')}</div>
     :
     checkBonus(10) ?  // For task1, pass 1 as the task number
 <div 
@@ -10118,38 +10119,38 @@ export default function InvitationBonu() {
     >
       Claim
     </div>    :
-    <div data-v-b733e3c6="" className="btn">Unfinished</div>
+    <div data-v-b733e3c6="" className="btn">{t('Unfinished')}</div>
   }
         </div>
         <div data-v-b733e3c6="" className="bonus-items">
           <div data-v-b733e3c6="" className="head">
             <div data-v-b733e3c6="" className="left">
-              Bonus
+             {t('Bonus')}
               <div data-v-b733e3c6="">11</div>
             </div>
             <div data-v-b733e3c6="" className="right">₹355,555.00</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Number of invitees</div>
+            <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             <div data-v-b733e3c6="" className="people">5000</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Recharge per people</div>
+            <div data-v-b733e3c6="" className="text">{t('Recharge per people')}</div>
             <div data-v-b733e3c6="" className="num">₹500.00</div>
           </div>
           <div data-v-b733e3c6="" className="line"></div>
           <div data-v-b733e3c6="" className="task">
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="peopleval">{bonus.totalMembers} / 5000</div>
-              <div data-v-b733e3c6="" className="text">Number of invitees</div>
+              <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             </div>
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="rechargeval">{bonus.totalActiveMember} / 5000</div>
-              <div data-v-b733e3c6="" className="text">Deposit number</div>
+              <div data-v-b733e3c6="" className="text">{t('Deposit number')}</div>
             </div>
           </div>
            { bonus.task11 ?
-    <div data-v-b733e3c6="" className="btn ">Recieved</div>
+    <div data-v-b733e3c6="" className="btn ">{t('Recieved')}</div>
     :
     checkBonus(11) ?  // For task1, pass 1 as the task number
 <div 
@@ -10159,38 +10160,38 @@ export default function InvitationBonu() {
     >
       Claim
     </div>    :
-    <div data-v-b733e3c6="" className="btn">Unfinished</div>
+    <div data-v-b733e3c6="" className="btn">{t('Unfinished')}</div>
   }
         </div>
         <div data-v-b733e3c6="" className="bonus-items">
           <div data-v-b733e3c6="" className="head">
             <div data-v-b733e3c6="" className="left">
-              Bonus
+             {t('Bonus')}
               <div data-v-b733e3c6="">12</div>
             </div>
             <div data-v-b733e3c6="" className="right">₹755,555.00</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Number of invitees</div>
+            <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             <div data-v-b733e3c6="" className="people">10000</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Recharge per people</div>
+            <div data-v-b733e3c6="" className="text">{t('Recharge per people')}</div>
             <div data-v-b733e3c6="" className="num">₹500.00</div>
           </div>
           <div data-v-b733e3c6="" className="line"></div>
           <div data-v-b733e3c6="" className="task">
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="peopleval">{bonus.totalMembers} / 10000</div>
-              <div data-v-b733e3c6="" className="text">Number of invitees</div>
+              <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             </div>
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="rechargeval">{bonus.totalActiveMember} / 10000</div>
-              <div data-v-b733e3c6="" className="text">Deposit number</div>
+              <div data-v-b733e3c6="" className="text">{t('Deposit number')}</div>
             </div>
           </div>
            { bonus.task12 ?
-    <div data-v-b733e3c6="" className="btn ">Recieved</div>
+    <div data-v-b733e3c6="" className="btn ">{t('Recieved')}</div>
     :
     checkBonus(12) ?  // For task1, pass 1 as the task number
 <div 
@@ -10200,38 +10201,38 @@ export default function InvitationBonu() {
     >
       Claim
     </div>    :
-    <div data-v-b733e3c6="" className="btn">Unfinished</div>
+    <div data-v-b733e3c6="" className="btn">{t('Unfinished')}</div>
   }
         </div>
          <div data-v-b733e3c6="" className="bonus-items">
           <div data-v-b733e3c6="" className="head">
             <div data-v-b733e3c6="" className="left">
-              Bonus
+             {t('Bonus')}
               <div data-v-b733e3c6="">13</div>
             </div>
             <div data-v-b733e3c6="" className="right">₹1,555,555.00</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Number of invitees</div>
+            <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             <div data-v-b733e3c6="" className="people">20000</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Recharge per people</div>
+            <div data-v-b733e3c6="" className="text">{t('Recharge per people')}</div>
             <div data-v-b733e3c6="" className="num">₹500.00</div>
           </div>
           <div data-v-b733e3c6="" className="line"></div>
           <div data-v-b733e3c6="" className="task">
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="peopleval">{bonus.totalMembers} / 20000</div>
-              <div data-v-b733e3c6="" className="text">Number of invitees</div>
+              <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             </div>
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="rechargeval">{bonus.totalActiveMember} / 20000</div>
-              <div data-v-b733e3c6="" className="text">Deposit number</div>
+              <div data-v-b733e3c6="" className="text">{t('Deposit number')}</div>
             </div>
           </div>
            { bonus.task13 ?
-    <div data-v-b733e3c6="" className="btn ">Recieved</div>
+    <div data-v-b733e3c6="" className="btn ">{t('Recieved')}</div>
     :
     checkBonus(13) ?  // For task1, pass 1 as the task number
 <div 
@@ -10241,38 +10242,38 @@ export default function InvitationBonu() {
     >
       Claim
     </div>    :
-    <div data-v-b733e3c6="" className="btn">Unfinished</div>
+    <div data-v-b733e3c6="" className="btn">{t('Unfinished')}</div>
   }
         </div>
          <div data-v-b733e3c6="" className="bonus-items">
           <div data-v-b733e3c6="" className="head">
             <div data-v-b733e3c6="" className="left">
-              Bonus
+              {t('Bonus')}
               <div data-v-b733e3c6="">14</div>
             </div>
             <div data-v-b733e3c6="" className="right">₹3,555,555.00</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Number of invitees</div>
+            <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             <div data-v-b733e3c6="" className="people">50000</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Recharge per people</div>
+            <div data-v-b733e3c6="" className="text">{t('Recharge per people')}</div>
             <div data-v-b733e3c6="" className="num">₹500.00</div>
           </div>
           <div data-v-b733e3c6="" className="line"></div>
           <div data-v-b733e3c6="" className="task">
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="peopleval">{bonus.totalMembers} / 50000</div>
-              <div data-v-b733e3c6="" className="text">Number of invitees</div>
+              <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             </div>
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="rechargeval">{bonus.totalActiveMember} / 50000</div>
-              <div data-v-b733e3c6="" className="text">Deposit number</div>
+              <div data-v-b733e3c6="" className="text">{t('Deposit number')}</div>
             </div>
           </div>
            { bonus.task14 ?
-    <div data-v-b733e3c6="" className="btn ">Recieved</div>
+    <div data-v-b733e3c6="" className="btn ">{t('Recieved')}</div>
     :
     checkBonus(14) ?  // For task1, pass 1 as the task number
 <div 
@@ -10282,38 +10283,38 @@ export default function InvitationBonu() {
     >
       Claim
     </div>    :
-    <div data-v-b733e3c6="" className="btn">Unfinished</div>
+    <div data-v-b733e3c6="" className="btn">{t('Unfinished')}</div>
   }
         </div>
          <div data-v-b733e3c6="" className="bonus-items">
           <div data-v-b733e3c6="" className="head">
             <div data-v-b733e3c6="" className="left">
-              Bonus
+             {t('Bonus')}
               <div data-v-b733e3c6="">15</div>
             </div>
             <div data-v-b733e3c6="" className="right">₹7,555,555.00</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Number of invitees</div>
+            <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             <div data-v-b733e3c6="" className="people">100000</div>
           </div>
           <div data-v-b733e3c6="" className="detail">
-            <div data-v-b733e3c6="" className="text">Recharge per people</div>
+            <div data-v-b733e3c6="" className="text">{t('Recharge per people')}</div>
             <div data-v-b733e3c6="" className="num">₹500.00</div>
           </div>
           <div data-v-b733e3c6="" className="line"></div>
           <div data-v-b733e3c6="" className="task">
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="peopleval">{bonus.totalMembers} / 100000</div>
-              <div data-v-b733e3c6="" className="text">Number of invitees</div>
+              <div data-v-b733e3c6="" className="text">{t('Number of invitees')}</div>
             </div>
             <div data-v-b733e3c6="">
               <div data-v-b733e3c6="" className="rechargeval">{bonus.totalActiveMember} / 100000</div>
-              <div data-v-b733e3c6="" className="text">Deposit number</div>
+              <div data-v-b733e3c6="" className="text">{t('Deposit number')}</div>
             </div>
           </div>
            { bonus.task15 ?
-    <div data-v-b733e3c6="" className="btn ">Recieved</div>
+    <div data-v-b733e3c6="" className="btn ">{t('Recieved')}</div>
     :
     checkBonus(15) ?  // For task1, pass 1 as the task number
 <div 
@@ -10323,7 +10324,7 @@ export default function InvitationBonu() {
     >
       Claim
     </div>    :
-    <div data-v-b733e3c6="" className="btn">Unfinished</div>
+    <div data-v-b733e3c6="" className="btn">{t('Unfinished')}</div>
   }
         </div>
 

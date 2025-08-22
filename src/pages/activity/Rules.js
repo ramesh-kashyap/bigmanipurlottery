@@ -1,8 +1,12 @@
 import React from 'react';
+import { useTranslation } from "react-i18next";
+
 import { useNavigate } from 'react-router';
 
 
 export default function Rules() {
+                 const { t } = useTranslation();
+  
   const navigate = useNavigate();
   return (
     <div style={{fontSize: '12px'}}>
@@ -9522,7 +9526,7 @@ export default function Rules() {
               <div data-v-12a80a3e="" className="navbar__content-center">
                 
                 <div data-v-12a80a3e="" className="navbar__content-title">
-                  Game Rules
+                  {t('Game Rules')}
                 </div>
               </div>
               <div data-v-12a80a3e="" className="navbar__content-right"></div>
@@ -9542,19 +9546,19 @@ export default function Rules() {
                 data-v-c1e312a2=""
                 className="dailySignInRules__container-hero__wrapper-title"
               >
-                Continuous attendance
+                {t('Continuous attendance')}
               </div>
               <div
                 data-v-c1e312a2=""
                 className="dailySignInRules__container-hero__wrapper-title"
               >
-                Accumulated amount
+                {t('Accumulated amount')}
               </div>
               <div
                 data-v-c1e312a2=""
                 className="dailySignInRules__container-hero__wrapper-title"
               >
-                Attendance bonus
+                {t('Attendance bonus')}
               </div>
             </div>
             <ul data-v-c1e312a2="">
@@ -9600,37 +9604,35 @@ export default function Rules() {
           <svg data-v-b64fa971="" className="svg-icon icon-ruleHead">
             <use href="#icon-ruleHead"></use>
           </svg>
-          <div data-v-b64fa971="" className="head">Rules</div>
+          <div data-v-b64fa971="" className="head">{t('Rules')}</div>
           <div data-v-b64fa971="">
             <div data-v-b64fa971="">
-              The higher the number of consecutive login days, the more rewards
-              you get, up to 7 consecutive days
+              {t('The higher the number of consecutive login days, the more rewards you get, up to 7 consecutive days')}
             </div>
           </div>
           <div data-v-b64fa971="">
             <div data-v-b64fa971="">
-              During the activity, please check once a day
+             {t('During the activity, please check once a day')}
             </div>
           </div>
           <div data-v-b64fa971="">
             <div data-v-b64fa971="">
-              Players with no deposit history cannot claim the bonus
+              {t('Players with no deposit history cannot claim the bonus')}
             </div>
           </div>
           <div data-v-b64fa971="">
             <div data-v-b64fa971="">
-              Deposit requirements must be met from day one
+             {t('Deposit requirements must be met from day one')}
             </div>
           </div>
           <div data-v-b64fa971="">
             <div data-v-b64fa971="">
-              The platform reserves the right to final interpretation of this
-              activity
+              {t('The platform reserves the right to final interpretation of this activity')}
             </div>
           </div>
           <div data-v-b64fa971="">
             <div data-v-b64fa971="">
-              When you encounter problems, please contact customer service
+              {t('When you encounter problems, please contact customer service')}
             </div>
           </div>
         </div>
